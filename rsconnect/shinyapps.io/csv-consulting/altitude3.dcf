@@ -1,0 +1,10 @@
+name: altitude3
+title:
+username: csv-consulting
+account: csv-consulting
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15914431
+bundleId: 11110055
+url: https://csv-consulting.shinyapps.io/altitude3/
+version: 1
