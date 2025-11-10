@@ -29,6 +29,7 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
 
 .cache <- new.env(parent = emptyenv())
 .cache$data <- list()
+.cache$series <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
 .cache$paths <- list(
   hm1  = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hm1-\\d{8}\\.xlsx$"))),
   hm2  = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hm2-\\d{8}\\.xlsx$"))),
@@ -42,6 +43,7 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
   hm10 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hm10-\\d{8}\\.xlsx$"))),
   hm14 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hm14-\\d{8}\\.xlsx$"))),
   hs32 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hs32-\\d{8}\\.xlsx$"))),
+  hc35 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(latest_file(dir = "data-raw/RBNZ", pattern = "^hc35-\\d{8}\\.xlsx$"))),
   hb1 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(
     latest_file(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xlsx$"),
     latest_file(dir = "data-raw/RBNZ", pattern = "^hb1-daily-1999-2017-\\d{8}\\.xlsx$"),
@@ -80,6 +82,7 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
 
 
 
+.cache$paths
 .load_data <- function(name, return = TRUE, refresh = "Auto", specific = NULL) {
   rds_file <- .rds_path(name)
 
@@ -131,8 +134,7 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
         .tempfile <- dplyr::bind_rows(.tempfile, x) |> dplyr::distinct()
       }
     }
-
-    if (identical(.specific, "RBNZ")) {
+    if (.specific == "RBNZ") {
       .tempfile <- .tempfile |>
         dplyr::rename(Date = Series.Id) |>
         dplyr::mutate(Date = as.Date(Date)) |>
