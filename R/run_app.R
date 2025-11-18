@@ -9,11 +9,10 @@ suppressMessages(suppressWarnings(library(thematic)))
 
 
 run_app <- function() {
-  source("R/utils_data.r", local = FALSE)
-  source("R/shiny/ui.r", local = FALSE)
-  source("R/shiny/server.r", local = FALSE)
-  source("R/plotly_elements.r", local = FALSE)
-  #rbnz <- readRDS("data/rbnz.rds")
-  #server <- function(input, output, session) app_server(input, output, session, rbnz)
+  source("r/utils_data.r", local = FALSE)
+  source("r/plotly_elements.r", local = FALSE)
+  source("r/plotly_rbnz.r", local = FALSE)
+  source("r/shiny/ui.r", local = FALSE)
+  source("r/shiny/server.r", local = FALSE)
   shiny::shinyApp(ui, server, options = list(port = 5555))
 }

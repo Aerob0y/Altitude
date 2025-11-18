@@ -1,6 +1,7 @@
 
 
 source("r/shiny/ui/ui_rbnz.r")
+source("r/shiny/ui/ui_misc.r")
 
 themex <- bslib::bs_theme(
   base_font_weight = 500,
@@ -9,14 +10,20 @@ themex <- bslib::bs_theme(
 
 ui <- fluidPage(
   theme = themex,
-  style = "background-color: #A6CAEC !important;",
+  style = "
+   background-color: #A6CAEC !important;
+   padding: 0px; 
+   margin: 0px; 
+   height: 500px;
+   max-height: 100%;",
   tags$head(
     tags$style(HTML("
       @media print {
       .rangeselector, .rangeselector-container { display: none !important;}
       }
-      html, body, .page, .bslib-page, .bslib-card { height: 100%; }
-      .bslib-page > .bslib-card { flex: 1 1 auto; }
+      html, body, .page, .bslib-page, .bslib-card { height: 100%; padding: 0px; margin: 0px; }
+      .bslib-gap-spacing { margin: 0px; padding: 0px; !important}
+      .bslib-page > .bslib-card { flex: 1 1 auto; padding: 0px; margin: 0px !important; }
       #hb1_plot { height: 100% !important; min-height: 0; }
 
       /* Sidebar background and text color */
@@ -37,7 +44,7 @@ ui <- fluidPage(
       "Economic Indicators",
       nav_panel("Daily exchange rates and TWI", ui_hb1x),
       nav_panel("Daily wholesale interest rates", ui_hb2x),
-      nav_panel("Residential mortgage loan reconciliation", ui_hc35x),
+      #nav_panel("Residential mortgage loan reconciliation", ui_hc35x),
       nav_panel("Prices", ui_hm1x),
       nav_panel("Consumption", ui_hm2x),
       nav_panel("Investment", ui_hm3x),
@@ -45,13 +52,17 @@ ui <- fluidPage(
       nav_panel("GDP", ui_hm5x),
       nav_panel("National Saving", ui_hm6x),
       nav_panel("Balance of Payments", ui_hm7x),
-      nav_panel("Overseas Trade", ui_hm8x),
-      nav_panel("Labour Market", ui_hm9x),
+      #nav_panel("Overseas Trade", ui_hm8x),
+      #nav_panel("Labour Market", ui_hm9x),
       nav_panel("Housing", ui_hm10x),
-      nav_panel("Expectations", ui_hm14x),
-      nav_panel("Loans", ui_hs32x),
+      nav_panel("Expectations", ui_hm14x)
+      #nav_panel("Loans", ui_hs32x),
+    ),
+    nav_menu(
+      "Tourism Indicators",
+      nav_panel("Fuel", ui_fuel)
     )
   ),
   id = "tab",
-  style = "background-color: #FFFFFF !important;"
+  style = "background-color: #FFFFFF !important; padding: 0px; margin: 0px; height: 100%;"
 )

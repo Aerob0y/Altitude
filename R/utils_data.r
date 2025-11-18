@@ -52,7 +52,8 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
   hb2 = list(specific = "RBNZ", detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE, files = c(
     latest_file(dir = "data-raw/RBNZ", pattern = "^hb2-daily-\\d{8}\\.xlsx$"),
     latest_file(dir = "data-raw/RBNZ", pattern = "^hb2-daily-close-1985-2017.xlsx$")
-  ))
+  )),
+  fuel = list(specific = "fuel", detectDates = TRUE, sheet = 1, startRow = 1, skipEmptyRows = TRUE, files = c("data/Fuel/fuel_data.csv"))
 )
 
 
@@ -79,10 +80,6 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
   # RDS is fresh if it's as new or newer than the newest source
   !is.na(rds_time) && rds_time >= newest_source_time
 }
-
-
-
-.cache$paths
 .load_data <- function(name, return = TRUE, refresh = "Auto", specific = NULL) {
   rds_file <- .rds_path(name)
 
@@ -121,13 +118,21 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
     .tempfile <- NULL  # important: initialize
     for (n in .files) {
       if (is.na(n) || !nzchar(n)) next
-      x <- openxlsx::read.xlsx(
-        n,
-        detectDates   = isTRUE(.detect_dates),
-        sheet         = .sheet,
-        startRow      = .start_row,
-        skipEmptyRows = isTRUE(.skip_empty_rows)
-      )
+      if (grepl("\\.csv$", n, ignore.case = TRUE)) {
+        x <- read.csv(n, stringsAsFactors = FALSE, check.names = FALSE)
+      } else if (grepl("\\.rds$", n, ignore.case = TRUE)) {
+        x <- readRDS(n)
+      } else if (grepl("\\.xlsx$", n, ignore.case = TRUE)) {
+        x <- openxlsx::read.xlsx(
+          n,
+          detectDates   = isTRUE(.detect_dates),
+          sheet         = .sheet,
+          startRow      = .start_row,
+          skipEmptyRows = isTRUE(.skip_empty_rows)
+        )
+      } else {
+        stop(paste0("Unsupported file type for '", n, "'"))
+      }
       if (is.null(.tempfile)) {
         .tempfile <- x
       } else {
@@ -141,6 +146,12 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
         dplyr::arrange(Date) |>
         date_summarise(Date)
     }
+    if (.specific == "fuel") {
+      .tempfile <- .tempfile |>
+        dplyr::rename(Date = Month) |>
+        dplyr::mutate(Date = as.Date(Date,format = "%d/%m/%Y")) |>
+        dplyr::arrange(Date)
+    }
 
     .cache$data[[name]] <- .tempfile
     dir.create(dirname(rds_file), showWarnings = FALSE, recursive = TRUE)
@@ -150,3 +161,5 @@ latest_file <- function(dir = "data-raw/RBNZ", pattern = "^hb1-daily-\\d{8}\\.xl
 
   if (return) .cache$data[[name]]
 }
+
+
