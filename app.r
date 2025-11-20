@@ -1,4 +1,2 @@
-library(shiny)
-source("r/run_app.R", local = FALSE)
-#source("R/run_app.R")
+source("r/run_app.R", local = TRUE, echo = TRUE)
 run_app()

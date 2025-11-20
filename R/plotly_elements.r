@@ -218,10 +218,7 @@ generic_plotly <- function(
   for (key in series$Series.Id) {
 
     s <- series[series$Series.Id == key, ]
-    print("HERE")
-    print(dim)
-    print(s$Dim)
-    axis_side <- if (is.null(dim) || dim[1] == s$Dim[1]) "y" else "y2"
+    axis_side <- if (is.null(unique_dims$Dim[1]) || unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
     if (s$Primary == "number"){
       col_use <- cc[[cx[i]]]
     } else {

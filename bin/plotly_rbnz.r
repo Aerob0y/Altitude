@@ -3,11 +3,11 @@
 
 
 rbnz_series <- function(col = NULL, u = TRUE, filter_graph, filter_group = NULL, filter_series = NULL, split = NULL, dim = NULL, adj = NULL, names = NULL) {
-  if (!is.null(col) && !(col %in% names(.cache$series))) {
+  if (!is.null(col) && !(col %in% names(.cache$data[["series"]]))) {
     stop(sprintf("Unknown column '%s'. Try one of: %s",
-                 col, paste(names(.cache$series), collapse = ", ")))
+                 col, paste(names(.cache$data[["series"]]), collapse = ", ")))
   }
-  t <- .cache$series %>%
+  t <- .cache$data[["series"]] %>%
     filter(Graph == filter_graph) %>%
     filter(if (!is.null(filter_group)) Grouping == filter_group else TRUE) %>%
     filter(if (!is.null(filter_series)) Series.Id == filter_series else TRUE) %>%
@@ -26,7 +26,7 @@ rbnz_series <- function(col = NULL, u = TRUE, filter_graph, filter_group = NULL,
 
 rbnz_plotly <- function(g, group = NULL, group_fallback = NULL,  split = NULL, split_fallback = NULL, adj = NULL, dim = NULL, dim_fallback = NULL, title = NULL, subtitle = NULL, names = NULL, names_fallback = NULL) {
   d <- .load_data(g)
-  s <- .cache$series
+  s <- .cache$data[["series"]]
   fallback <- FALSE
 
   # Apply filters
@@ -37,7 +37,7 @@ rbnz_plotly <- function(g, group = NULL, group_fallback = NULL,  split = NULL, s
   if (!is.null(names))      {s <- s %>% filter(Names %in% names)}
   if (!is.null(adj))      {s <- s %>% filter(Adj %in% adj)}
   if (nrow(s) == 0) {
-    s <- .cache$series
+    s <- .cache$data[["series"]]
     fallback <- TRUE
 
     if (!is.null(group_fallback)) {group <- group_fallback}

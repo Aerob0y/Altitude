@@ -1,137 +1,160 @@
 
-
-
 server <- function(input, output) {
-  output$hb1_plotx <- renderPlotly({
-    x <-   if (input$Currency1 == "-" && input$Currency2 == "-") {paste(input$Currency1,input$Currency2, sep = " & ")
-    } else if (input$Currency1 != "-" && input$Currency2 == "-" || input$Currency1 == input$Currency2) {paste(input$Currency1)
-    } else if (input$Currency1 == "-" && input$Currency2 != "-") {paste(input$Currency2)
-    } else {paste(input$Currency1, "and", input$Currency2)
-    }
-    x <- paste("Daily exchange rates: ", x)
-    rbnz_plotly(title = "Exchange rates", subtitle = x, g = "hb1", split = c(input$Currency1, input$Currency2))
-  })
-  output$hb2_plotx <- renderPlotly({
-    #rbnz_plotly(title = "Daily Wholesale Interest Rates", subtitle = paste("RBNZ:", input$hb2_group), g = "hb2", split = input$hb2_split, group = input$hb2_group,
-    #  split_fallback = c("Official Cash Rate (OCR)"), group_fallback = c("OCR")
-    #)
-    x <- input$hb2_tier %>% unlist(.hb2_tier, use.names = FALSE) %>% unique()
-    y <- .hb2_tier$'Swap rates close' %>% unlist(use.names = FALSE) %>% unique()
-    rbnz_plotly(title = "Daily Wholesale Interest Rates", g = "hb2", names = x, names_fallback = y)
-  })
-
-  output$hm1_plotx <- renderPlotly({
-    rbnz_plotly(title = "Prices", subtitle = paste("RBNZ:", input$hm1_metric), g = "hm1", split = input$hm1_input, dim = input$hm1_metric)
-  })
-
-
-  output$hm2_plotx <- renderPlotly({
-    x <- if(input$hm2_split2 == "-") {
-      c(input$hm2_split)
-    } else {
-      c(input$hm2_split, input$hm2_split2)
-    }
-    rbnz_plotly(title = "Consumption", subtitle = paste("RBNZ:", paste(x, collapse = " and ")), g = "hm2", split = x)
-  })
-
-  #HM3 Investment
-  output$hm3_plotx <- renderPlotly({
-    x <- if(input$hm3_split2 == "-") {
-      c(input$hm3_split)
-    } else {
-      c(input$hm3_split, input$hm3_split2)
-    }
-
-    a <- rbnz_series(col = 'Grouping', split = input$hm3_split, filter_graph = 'hm3')
-    b <- rbnz_series(col = 'Grouping', split = input$hm3_split2, filter_graph = 'hm3')
-    y <- unique(c(a, b))
-    rbnz_plotly(title = "Investment", subtitle = paste("RBNZ:", paste(y, collapse = " and ")), g = "hm3", split = x)
-  })
-
-
-  #dim = input$hm4_dim, split = input$hm4_split
-  output$hm4_plotx <- renderPlotly({
-    rbnz_plotly(title = "Domestic Trade", subtitle = paste("RBNZ: ", input$hm4_group), g = "hm4", group = input$hm4_group)
-  })
-
-  output$hm5_plotx <- renderPlotly({
-    #if (length(input$hm5_names[1]) == 0) {
-    #  print("X")
-    #  x <- .cache$series %>% filter(Graph == "hm5") %>%
-    #  filter((Adj == input$hm5_dim1 & Split == input$hm5_split1) | (Adj == input$hm5_dim2 & Split == input$hm5_split2)) %>% 
-    #  select(Names) %>% unique() %>% unlist() %>% as.vector()
-    #} else {
-    #  print("Y")
-    #  x <- input$hm5_names %>% unique() %>% unlist() %>% as.vector()
-    #}
-    x <- if (length(input$hm5_names) <= 2) {
-      paste(input$hm5_names, collapse = " & ")
-    } else {
-        "Various Measures"
-    }
-    rbnz_plotly(title = "GDP", subtitle = x, g = "hm5", names = input$hm5_names, names_fallback = 'Export of Goods & Services (Nominal $m)')
-  })
-  output$hm6_plotx <- renderPlotly({
-    rbnz_plotly(title = "National Saving", subtitle = "RBNZ: Savings by Group", g = "hm6", names = input$hm6_names)
-  })
-  output$hm7_plotx <- renderPlotly({
-    rbnz_plotly(title = "Balance of Payments", subtitle = "Subtitle", g = "hm7", group = input$hm7_group)
-  })
-  output$hm8_plotx <- renderPlotly({
-    x <- if(input$hm8_group2 == "-") {
-      c("Export", "Import")
-    } else {
-      input$hm8_group2
-    }
-    rbnz_plotly(title = "Overseas Trade", subtitle = paste(unique(c(input$hm8_group1, input$hm8_group2), collapse = " & ")), g = "hm8", split = x, group = c(input$hm8_group1, input$hm8_group2))
-  })
-  output$hm9_plotx <- renderPlotly({
-    rbnz_plotly(title = "Labour Market", subtitle = "Subtitle", g = "hm9", adj = input$hm9_adj, split = input$hm9_split)
-  })
-  output$hm10_plotx <- renderPlotly({
-    rbnz_plotly(title = "Housing", subtitle = paste("RBNZ: ", paste(unique(c(input$hm10_split_1, input$hm10_split_2)), collapse = " & ")), g = "hm10", split = c(input$hm10_split_1, input$hm10_split_2)) 
-  })
-
-  output$hm14_plotx <- renderPlotly({
-    x <- if (length(input$hm14_split) <= 2) {
-      paste0(input$hm14_split, collapse = " & ")
-    } else if (length(input$hm14_group) <= 2) {
-       paste0(input$hm14_group, collapse = " & ")
-    } else {
-      "Perceptions of the Economy"
-    }
-    #rbnz_plotly(title = "Business Expectations", subtitle = x, g = "hm14", split = input$hm14_split, group = input$hm14_group)
-    rbnz_plotly(title = "Business Expectations", subtitle = x, g = "hm14", split = input$hm14_split, group = input$hm14_group, group_fallback = c("1 year out", "2 years out","5 years out"))
-  })
-
-  output$hs32_plotx <- renderPlotly({
-    switch(input$hs32_adj,
-      "Total" = {
-        rbnz_plotly(title = "Loans", subtitle = "Lending by group", g = "hs32", adj = c("Total"))
-      },
-      "Use" = {
-        rbnz_plotly(title = "Loans", subtitle = "Lending by group", g = "hs32", split = input$hs32_split)
-      },
-      "Type" = {
-        rbnz_plotly(title = "Loans", subtitle = "Lending by group", g = "hs32", group = input$hs32_group)
-      }
+  #hb1 Exchange rates
+  output$hb1_plot <- renderPlotly({
+    valid_inputs <- unique(c(input$Currency1, input$Currency2)) |> setdiff("-")
+    generic_plotly(
+      data = load_data("hb1"),
+      t1 = "Daily exchange rates and TWI",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = valid_inputs)),
+      k = "Date"
     )
   })
-  output$hc35_plotx <- renderPlotly({
-    switch(input$hc35_adj,
-      "Total" = {
-        rbnz_plotly(title = "Residential mortgage loan reconciliation", subtitle = "Lending by group", g = "hc35", adj = c("Total"))
-      },
-      "Use" = {
-        rbnz_plotly(title = "Residential mortgage loan reconciliation", subtitle = "Lending by group", g = "hc35", split = input$hc35_split)
-      },
-      "Type" = {
-        rbnz_plotly(title = "Residential mortgage loan reconciliation", subtitle = "Lending by group", g = "hc35", group = input$hc35_group)
-      }
+  #hb2 Interest rates
+  output$hb2_plot <- renderPlotly({
+    valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
+    generic_plotly(
+      data = load_data("hb2"),
+      t1 = "Daily wholesale interest rates",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
+      k = "Date"
     )
   })
-  output$fuel_plot <- renderPlotly({
-    fuel_plotly()
+  #hm1 Prices
+  output$hm1_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm1"),
+      t1 = "Prices",
+      t2 =  paste("RBNZ:", input$hm1_metric),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm1"), Split = input$hm1_input, Dim = input$hm1_metric)),
+      k = "Date"
+    )
+  })
+  #hm2 Consumption
+  output$hm2_plot <- renderPlotly({
+    valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) %>% setdiff("-")
+    generic_plotly(
+      data = load_data("hm2"),
+      t1 = "Consumption",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm2"), Split = valid_inputs)),
+      k = "Date"
+    )
+  })
+  #hm3 Investment
+  output$hm3_plot <- renderPlotly({
+    valid_inputs <- unique(c(input$hm3_split, input$hm3_split2)) %>% setdiff("-")
+    generic_plotly(
+      data = load_data("hm3"),
+      t1 = "Investment",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm3"), Split = valid_inputs)),
+      k = "Date"
+    )
+  })
+  #hm4 Domestic Trade
+  output$hm4_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm4"),
+      t1 = "Domestic Trade",
+      t2 =  paste("RBNZ:", input$hm4_group),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm4"), Group = input$hm4_group)),
+      k = "Date"
+    )
+  })
+  #hm5 Wages
+  output$hm5_plot <- renderPlotly({
+    valid_inputs <- input$hm5_names %>% unlist(use.names = FALSE) %>% unique()
+    generic_plotly(
+      data = load_data("hm5"),
+      t1 = "GDP",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm5"), Names = valid_inputs)),
+      k = "Date"
+    )
+  })
+  #hm6 Labour Market
+  output$hm6_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm6"),
+      t1 = "National Saving",
+      t2 =  paste("RBNZ:", paste(input$hm6_names, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm6"), Names = input$hm6_names)),
+      k = "Date"
+    )
+  })
+  #hm7 Balance of Payments
+  output$hm7_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm7"),
+      t1 = "Balance of Payments",
+      t2 =  paste("RBNZ:", input$hm7_group),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm7"), Group = input$hm7_group)),
+      k = "Date"
+    )
+  })
+  #hm8 Government
+  output$hm8_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm8"),
+      t1 = "Overseas Trade",
+      t2 =  paste("RBNZ:", paste(unique(c(input$hm8_group1, input$hm8_group2)), collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm8"), Split = input$hm8_split, Dim = input$hm8_dim)),
+      k = "Date"
+    )
+  })
+  #hm9 National Saving
+  output$hm9_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm9"),
+      t1 = "National Saving",
+      t2 =  paste("RBNZ:", paste(input$hm9_names, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm9"), Adj = input$hm9_adj, Split = input$hm9_split)),
+      k = "Date"
+    )
+  })
+  #hm10 Housing
+  output$hm10_plot <- renderPlotly({
+    valid_inputs <- unique(c(input$hm10_split_1, input$hm10_split_2)) %>% setdiff("-")
+    generic_plotly(
+      data = load_data("hm10"),
+      t1 = "Housing",
+      t2 =  paste("RBNZ:", paste(valid_inputs, collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm10"), Split = valid_inputs)),
+      k = "Date"
+    )
+  })
+  #hm14 Construction
+  output$hm14_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hm14"),
+      t1 = "Construction",
+      t2 =  paste("RBNZ:", paste(unique(c(input$hm14_dim, input$hm14_split)), collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm14"), Dim = input$hm14_dim, Split = input$hm14_split)),
+      k = "Date"
+    )
   })
 
+  #hs35 Retail Sales
+  output$hc35_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hc35"),
+      t1 = "Residential mortgage loan reconciliation",
+      t2 =  paste("RBNZ:", paste(unique(c(input$hc35_group, input$hc35_split)), collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hc35"), Split = input$hc35_split)),
+      k = "Date"
+    )
+  })
+  #hs32 Loans
+  output$hs32_plot <- renderPlotly({
+    generic_plotly(
+      data = load_data("hs32"),
+      t1 = "Loans",
+      t2 =  paste("RBNZ:", paste(unique(c(input$hs32_adj, input$hs32_group)), collapse = " and ")),
+      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hs32"), Adj = input$hs32_adj, Group = input$hs32_group)),
+      k = "Date"
+    )
+  })
 }

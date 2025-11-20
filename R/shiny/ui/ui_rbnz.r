@@ -1,251 +1,235 @@
-
-
-source("r/plotly_rbnz.r")
-
-
-.hb1_split <- rbnz_series(col = "Split", filter_graph = "hb1")
-ui_hb1x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("Currency1", "Currency",  choices = Filter(Negate(is.na), .hb1_split), selected = 'NZD/USD', multiple = FALSE),
-      selectInput("Currency2", "Second Currency", choices = c("-", Filter(Negate(is.na), .hb1_split)), selected = '-', multiple = FALSE),
-      style = "height: 100%;"
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hb1_plotx',  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-  ), style = "background-color: #EDF2F3 !important; height: 600px;"
-)
-
-
-.hb2_split <- Filter(Negate(is.na), rbnz_series(col = "Split", filter_graph = "hb2"))
-.hb2_group <- Filter(Negate(is.na), rbnz_series(col = "Grouping", filter_graph = "hb2"))
-.hb2_tier <- list()
-for (i in seq_along(.hb2_group)) {
-  .hb2_tier[[.hb2_group[i]]] <- Filter(Negate(is.na), rbnz_series(col = "Names", filter_graph = "hb2", filter_group = .hb2_group[i]))
-}
-.hb2_tier
-
-ui_hb2x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      #checkboxGroupInput("hb2_tier", "Select", choices = .hb2_tier, selected =  .hb2_tier$'Swap rates close')
-      selectInput("hb2_tier", "Select", choices = .hb2_tier, selected =  c("Official Cash Rate (OCR)", .hb2_tier$'Swap rates close'[c(1,2,3,4)]), multiple = TRUE)
-      #checkboxGroupInput("hb2_split", "Rates",  choices = Filter(Negate(is.na), .hb2_split), selected = Filter(Negate(is.na), .hb2_split)[1:5]),
-      #selectInput("hb2_group", "Grouping", choices = Filter(Negate(is.na), .hb2_group), selected = Filter(Negate(is.na), .hb2_group)[1], multiple = FALSE)
-      #selectInput("y", "yy:", choices = c("A","B"), selected = 'A', multiple = FALSE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hb2_plotx',  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%; padding: 0px; margin: 0px;")
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-
-
-
-.hc35_group <- rbnz_series(col = 'Grouping', filter_graph = 'hc35')
-.hc35_split <- rbnz_series(col = 'Split', filter_graph = 'hc35')
-.hc35_adj <- rbnz_series(col = 'Adj', filter_graph = 'hc35')
-
-ui_hc35x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      #radioButtons("hc35_adj", "Adj",  choices = Filter(Negate(is.na), .hc35_adj), selected = Filter(Negate(is.na), .hc35_adj)[1]),
-      radioButtons("hc35_group", "Grouping",  choices = Filter(Negate(is.na), .hc35_group), selected = Filter(Negate(is.na), .hc35_group)[1]),
-      checkboxGroupInput("hc35_split", "Split:", choices = Filter(Negate(is.na), .hc35_split), selected = Filter(Negate(is.na), .hc35_split)[c(1,3,4)] )
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hc35_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm1_split <- rbnz_series(col = "Names", filter_graph = "hm1")
-.hm1_metrics <- rbnz_series(col = "Dim", filter_graph = "hm1")
-ui_hm1x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm1_metric", "Index:", choices = Filter(Negate(is.na), .hm1_metrics), selected = 'y/y%'),
-      checkboxGroupInput("hm1_input", "Price Measure:",  choices = Filter(Negate(is.na), .hm1_split), selected = Filter(Negate(is.na), .hm1_split)[1:5])
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm1_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm2_split <- rbnz_series(col = 'Split', filter_graph = 'hm2')
-.hm2_dim <- rbnz_series(col = 'Dim', filter_graph = 'hm2')
-
-ui_hm2x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      #checkboxGroupInput("hm2_split", "xx",  choices = Filter(Negate(is.na), .hm2_split), selected = Filter(Negate(is.na), .hm2_split)[1]),
-      selectInput("hm2_split", "Series 1:", choices = Filter(Negate(is.na), .hm2_split), selected = 'Retail trade sales NZDm(r) s.a.', multiple = FALSE),
-      selectInput("hm2_split2", "Series 2:", choices = c("-", Filter(Negate(is.na), .hm2_split)), selected = 'Retail trade volumes NZDm(r) s.a.', multiple = FALSE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm2_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-# Investment
-.hm3_split <- rbnz_series(col = 'Split', filter_graph = 'hm3')
-.hm3_dim <- rbnz_series(col = 'Dim', filter_graph = 'hm3')
-ui_hm3x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm3_split", "Series 1:",  choices = Filter(Negate(is.na), .hm3_split), selected = .hm3_split[1]),
-      selectInput("hm3_split2", "Series 2:", choices = c("-", Filter(Negate(is.na), .hm3_split)), selected = "-")
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm3_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-#.hm4_split <- rbnz_series(col = 'Split', filter_graph = 'hm4')
-#.hm4_dim <- rbnz_series(col = 'Dim', filter_graph = 'hm4')
-.hm4_group <- rbnz_series(col = 'Grouping', filter_graph = 'hm4')
-ui_hm4x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      #selectInput("hm4_dim", "xx",  choices =  Filter(Negate(is.na), .hm4_dim), selected = '($m s.a.)'),
-      selectInput("hm4_group", "Series:",  choices =  Filter(Negate(is.na), .hm4_group), selected = 'Operating income')
-      #checkboxGroupInput("hm4_split", "yy:", choices = Filter(Negate(is.na), .hm4_split), selected = 'Manufacturing operating income')
-
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm4_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm5_split <- rbnz_series(col = "Split", filter_graph = "hm5")
-.hm5_split <- .hm5_split[!is.na(.hm5_split)]  # drop NAs
-
-.hm5_choices <- lapply(.hm5_split, function(split) {
-  # One split at a time
-  names_vec <- rbnz_series(
-    col          = "Names",
-    filter_graph = "hm5",
-    split        = split
+# hb1 Exchange rates UI
+ui_hb1 <- memoise(function() {
+  hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
+  ui_hb1 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("Currency1", "Currency",  choices = Filter(Negate(is.na), hb1_split), selected = "NZD/USD", multiple = FALSE),
+        selectInput("Currency2", "Second Currency", choices = c("-", Filter(Negate(is.na), hb1_split)), selected = "-", multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hb1_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
   )
+})
+# hb2 Interest rates UI
+ui_hb2 <- memoise(function() {
+  hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) %>%
+    group_by(Group) %>%
+    summarise(value = list(Names)) %>%
+    deframe()
 
-  # Codes like A1, A2, ..., using u = FALSE as you did
-  adj_codes <- rbnz_series(
-    col          = "Adj",
-    filter_graph = "hm5",
-    split        = split,
-    u            = FALSE
+  ui_hb2 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hb2_tier", "Interest Rate Tier",  choices = hb2_tier, selected = hb2_tier, multiple = TRUE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hb2_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
   )
-
-  # This creates a *named vector*: names = labels, values = codes
-  setNames(adj_codes, names_vec)
 })
 
-names(.hm5_choices) <- .hm5_split
+# hm1 Prices UI
+ui_hm1 <- memoise(function() {
+  hm1_input <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm1")))
+  hm1_metric <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm1")))
 
-ui_hm5x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      #selectInput("hm5_split1", "Metric1",  choices =  c("-", Filter(Negate(is.na), .hm5_split)), selected = 'Imports of goods and services'),
-      #selectInput("hm5_dim1", "Show As:", choices =  c("-",Filter(Negate(is.na), .hm5_dim)), selected = 'Real $m'),
-      #selectInput("hm5_split2", "Metric2",  choices =  c("-", Filter(Negate(is.na), .hm5_split)), selected = 'Exports of goods and services'),
-      #selectInput("hm5_dim2", "Show As:", choices =  c("-",Filter(Negate(is.na), .hm5_dim)), selected = 'Real $m'),
-      #selectInput("hm5_names", "All options", choices =  Filter(Negate(is.na), .hm5_names), selected = "", multiple = TRUE),
-      selectInput("hm5_names", "Series:",  choices = .hm5_choices, multiple = TRUE, .hm5_choices)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm5_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
+  ui_hm1 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm1_input", "Price Type",  choices = hm1_input, selected = hm1_input[1], multiple = FALSE),
+        selectInput("hm1_metric", "Metric",  choices = hm1_metric, selected = hm1_metric[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm1_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
 
+# hm2 Consumption UI
+ui_hm2 <- memoise(function() {
+  hm2_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm2")))
+  ui_hm2 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm2_split", "Consumption Type",  choices = hm2_split, selected = hm2_split[1], multiple = FALSE),
+        selectInput("hm2_split2", "Second Consumption Type",  choices = c("-", hm2_split), selected = "-", multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm2_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
 
-.hm6_names <- rbnz_series(col = 'Names', filter_graph = 'hm6')
-ui_hm6x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm6_names", "Group",  choices = Filter(Negate(is.na), .hm6_names), selected = Filter(Negate(is.na), .hm6_names)[1], multiple = TRUE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm6_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
+# hm3 Investment UI
+ui_hm3 <- memoise(function() {
+  hm3_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm3")))
+  ui_hm3 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm3_split", "Investment Type",  choices = hm3_split, selected = hm3_split[1], multiple = FALSE),
+        selectInput("hm3_split2", "Second Investment Type",  choices = c("-", hm3_split), selected = "-", multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm3_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm4 Domestic Trade UI
+ui_hm4 <- memoise(function() {
+  hm4_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm4")))
+  ui_hm4 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm4_group", "Trade Group",  choices = hm4_group, selected = hm4_group[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm4_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm5 GDP UI
+ui_hm5 <- memoise(function() {
+  hm5_names <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("hm5")))
+  ui_hm5 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm5_names", "GDP Measures",  choices = hm5_names, selected = c("Export of Goods & Services (Nominal $m)"), multiple = TRUE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm5_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm6 National Saving UI
+ui_hm6 <- memoise(function() {
+  hm6_names <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("hm6")))
+  ui_hm6 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm6_names", "Saving Types",  choices = hm6_names, selected = c("National Saving"), multiple = TRUE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm6_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm7 Balance of Payments UI
+ui_hm7 <- memoise(function() {
+  hm7_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm7")))
+  ui_hm7 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm7_group", "Balance Group",  choices = hm7_group, selected = hm7_group[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm7_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
 
-.hm7_group <- rbnz_series(col = 'Grouping', filter_graph = 'hm7')
-ui_hm7x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm7_group", "Series",  choices = Filter(Negate(is.na), .hm7_group), selected = Filter(Negate(is.na), .hm7_group)[1], multiple = TRUE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm7_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-
-.hm8_group <- rbnz_series(col = 'Grouping', filter_graph = 'hm8')
-.hm8_split <- rbnz_series(col = 'Split', filter_graph = 'hm8')
-
-ui_hm8x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm8_group1", "Dim",  choices = Filter(Negate(is.na), .hm8_group), selected = Filter(Negate(is.na), .hm8_group)[1], multiple = FALSE),
-      selectInput("hm8_group2", "Dim", choices = c("-", Filter(Negate(is.na), .hm8_group)), selected = "-", multiple = FALSE),
-      selectInput("hm8_split", "Split", choices = c("-", Filter(Negate(is.na), .hm8_split)), selected = "-", multiple = FALSE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm8_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm9_adj <- rbnz_series(col = 'Adj', filter_graph = 'hm9')
-.hm9_split <- rbnz_series(col = 'Split', filter_graph = 'hm9')
-ui_hm9x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm9_split", "Split",  choices = Filter(Negate(is.na), .hm9_split), selected = Filter(Negate(is.na), .hm9_split)[1], multiple = TRUE),
-      selectInput("hm9_adj", "Dim", choices = Filter(Negate(is.na), .hm9_adj), selected = Filter(Negate(is.na), .hm9_adj)[1], multiple = TRUE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm9_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm10_split <- rbnz_series(col = 'Split', filter_graph = 'hm10')
-ui_hm10x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      selectInput("hm10_split_1", "Metric 1",  choices = Filter(Negate(is.na), .hm10_split), selected = Filter(Negate(is.na), .hm10_split)[1], multiple = FALSE),
-      selectInput("hm10_split_2", "Metric 2",  choices = Filter(Negate(is.na), .hm10_split), selected = Filter(Negate(is.na), .hm10_split)[2], multiple = FALSE)
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm10_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-.hm14_split <- rbnz_series(col = 'Split', filter_graph = 'hm14')
-.hm14_group <- rbnz_series(col = 'Grouping', filter_graph = 'hm14')
-ui_hm14x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      radioButtons("hm14_split", "Split",  choices = Filter(Negate(is.na), .hm14_split), selected = Filter(Negate(is.na), .hm14_split)[1]),
-      checkboxGroupInput("hm14_group", "Group",  choices = Filter(Negate(is.na), .hm14_group), selected = Filter(Negate(is.na), .hm14_group)[1])
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hm14_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
-
-
-.hs32_group <- rbnz_series(col = 'Grouping', filter_graph = 'hs32')
-.hs32_split <- rbnz_series(col = 'Split', filter_graph = 'hs32')
-.hs32_adj <- rbnz_series(col = 'Adj', filter_graph = 'hs32')
-x <- c("Total", "Use", "Type")
-ui_hs32x <- fluidPage(
-  page_sidebar(
-    sidebar = sidebar(
-      class = 'csv-sidebar', position = "right",
-      radioButtons("hs32_adj", "Breakdown",  choices = Filter(Negate(is.na), x), selected = Filter(Negate(is.na), x)[2]),
-      checkboxGroupInput("hs32_group", "Grouping",  choices = Filter(Negate(is.na), .hs32_group), selected = Filter(Negate(is.na), .hs32_group)),
-      checkboxGroupInput("hs32_split", "Split:", choices = Filter(Negate(is.na), .hs32_split), selected = Filter(Negate(is.na), .hs32_split))
-    ),
-    card(class = 'csv-card', full_screen = TRUE, plotlyOutput('hs32_plotx',  height = "100%"))
-  ), style = "background-color: #EDF2F3 !important; width: 100%;"
-)
+# hm8 Overseas Trade UI
+ui_hm8 <- memoise(function() {
+  hm8_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm8")))
+  hm8_dim <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm8")))
+  ui_hm8 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm8_split", "Trade Type",  choices = hm8_split, selected = hm8_split[1], multiple = FALSE),
+        selectInput("hm8_dim", "Metric",  choices = hm8_dim, selected = hm8_dim[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm8_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm9 Labour Market UI
+ui_hm9 <- memoise(function() {
+  hm9_adj <- filter_series(guide_rbnz, column = "Adj", apply_filters = list(Graph = c("hm9")))
+  hm9_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm9")))
+  ui_hm9 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm9_adj", "Adjustment Type",  choices = hm9_adj, selected = hm9_adj[1], multiple = FALSE),
+        selectInput("hm9_split", "Labour Market Type",  choices = hm9_split, selected = hm9_split[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm9_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm10 Housing UI
+ui_hm10 <- memoise(function() {
+  hm10_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm10")))
+  ui_hm10 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm10_split_1", "Housing Type",  choices = hm10_split, selected = hm10_split[1], multiple = FALSE),
+        selectInput("hm10_split_2", "Second Housing Type",  choices = c("-", hm10_split), selected = "-", multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm10_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hm14 Expectations UI
+ui_hm14 <- memoise(function() {
+  hm14_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm14")))
+  hm14_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm14")))
+  ui_hm14 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hm14_split", "Expectation Type",  choices = hm14_split, selected = hm14_split[1], multiple = TRUE),
+        selectInput("hm14_group", "Time Horizon",  choices = hm14_group, selected = c("1 year out", "2 years out","5 years out"), multiple = TRUE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm14_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hs32 Loans UI
+ui_hs32 <- memoise(function() {
+  hs32_adj <- filter_series(guide_rbnz, column = "Adj", apply_filters = list(Graph = c("hs32")))
+  hs32_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hs32")))
+  hs32_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hs32")))
+  ui_hs32 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hs32_adj", "Adjustment Type",  choices = hs32_adj, selected = hs32_adj[1], multiple = FALSE),
+        selectInput("hs32_split", "Loan Use Type",  choices = hs32_split, selected = hs32_split[1], multiple = TRUE),
+        selectInput("hs32_group", "Loan Type",  choices = hs32_group, selected = hs32_group[1], multiple = TRUE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hs32_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
+# hs35 Retail Sales UI
+ui_hc35 <- memoise(function() {
+  hc35_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hc35")))
+  ui_hc35 <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("hc35_split", "Retail Sales Type",  choices = hc35_split, selected = hc35_split[1], multiple = FALSE),
+        style = "height: 100%;"
+      ),
+      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hc35_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
+    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  )
+})
