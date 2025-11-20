@@ -1,4 +1,6 @@
 # hb1 Exchange rates UI
+?page_sidebar
+library(bslib)
 ui_hb1 <- memoise(function() {
   hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
   ui_hb1 <- fluidPage(
@@ -13,11 +15,15 @@ ui_hb1 <- memoise(function() {
     ), style = "background-color: #EDF2F3 !important; height: 600px;"
   )
 })
+filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
+library(tidyverse)
+
+
 # hb2 Interest rates UI
 ui_hb2 <- memoise(function() {
-  hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) %>%
-    group_by(Group) %>%
-    summarise(value = list(Names)) %>%
+  hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) |>
+    group_by(Group) |>
+    summarise(value = list(Names)) |>
     deframe()
 
   ui_hb2 <- fluidPage(

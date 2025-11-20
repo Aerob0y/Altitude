@@ -34,7 +34,7 @@ server <- function(input, output) {
   })
   #hm2 Consumption
   output$hm2_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) %>% setdiff("-")
+    valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) |> setdiff("-")
     generic_plotly(
       data = load_data("hm2"),
       t1 = "Consumption",
@@ -45,7 +45,7 @@ server <- function(input, output) {
   })
   #hm3 Investment
   output$hm3_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm3_split, input$hm3_split2)) %>% setdiff("-")
+    valid_inputs <- unique(c(input$hm3_split, input$hm3_split2)) |> setdiff("-")
     generic_plotly(
       data = load_data("hm3"),
       t1 = "Investment",
@@ -66,7 +66,7 @@ server <- function(input, output) {
   })
   #hm5 Wages
   output$hm5_plot <- renderPlotly({
-    valid_inputs <- input$hm5_names %>% unlist(use.names = FALSE) %>% unique()
+    valid_inputs <- input$hm5_names |> unlist(use.names = FALSE) |> unique()
     generic_plotly(
       data = load_data("hm5"),
       t1 = "GDP",
@@ -117,7 +117,7 @@ server <- function(input, output) {
   })
   #hm10 Housing
   output$hm10_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm10_split_1, input$hm10_split_2)) %>% setdiff("-")
+    valid_inputs <- unique(c(input$hm10_split_1, input$hm10_split_2)) |> setdiff("-")
     generic_plotly(
       data = load_data("hm10"),
       t1 = "Housing",

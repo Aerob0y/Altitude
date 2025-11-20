@@ -2,7 +2,6 @@
 guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
 
 filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
-  
   #if (!column %in% names(guide) && !is.null(column)) {stop(sprintf("Unknown column '%s'. Try one of: %s", column, paste(names(guide), collapse = ", ")))}
 
   t <- guide
@@ -11,7 +10,7 @@ filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fall
       filter_name <- names(apply_filters)[f]
       filter_values <- apply_filters[[f]]
       if (length(filter_values) > 0) {
-        t <- t %>%
+        t <- t |>
           filter(get(filter_name) %in% filter_values)
       }
     }
@@ -20,15 +19,15 @@ filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fall
         filter_name <- names(apply_fallbacks)[f]
         filter_values <- apply_fallbacks[[f]]
         if (length(filter_values) > 0) {
-          t <- guide %>%
+          t <- guide |>
             filter(get(filter_name) %in% filter_values)
         }
       }
     }
   }
   if (!is.null(column)) {
-    t <- t %>%
-      select(all_of(column)) %>%
+    t <- t |>
+      select(all_of(column)) |>
       unique()
     t[complete.cases(t), ]
   } else {

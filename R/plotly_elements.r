@@ -21,7 +21,7 @@ cc <- list(
 )
 
 custom_download_button <- function(p) {
-  p <- p %>% config(
+  p <- p |> config(
     modeBarButtonsToRemove = list("toImage"),
     modeBarButtonsToAdd = list(
       list(
@@ -174,8 +174,8 @@ generic_plotly <- function(
   p <- plotly::plot_ly(data, x = ~get(k))
   p <- custom_download_button(p)
   tick_format_1 <- ".2f"
-  unique_dims <- series %>% select(Dim) %>% unique()
-  unique_groups <- series %>% select(Grouping, Dim) %>% unique()
+  unique_dims <- series |> select(Dim) |> unique()
+  unique_groups <- series |> select(Grouping, Dim) |> unique()
   title_1 <- ""
   title_2 <- ""
   if (length(unique(unique_groups$Grouping)) == 2) {
@@ -226,7 +226,7 @@ generic_plotly <- function(
     }
 
     if (!is.null(s)) {
-      p <- p %>% add_trace(
+      p <- p |> add_trace(
         y    = data[[s$Series.Id]],
         name = s$Names,
         type = "scatter",
@@ -239,7 +239,7 @@ generic_plotly <- function(
     }
     i <- i + 1
   }
-    p <- p %>%
+    p <- p |>
       plotly::layout(
         title  = standard_title(t1, t2),
         hovermode = "x unified",
@@ -253,10 +253,10 @@ generic_plotly <- function(
           tickformat = tick_format_1
         )
       )
-    p <- p %>%
+    p <- p |>
       plotly::layout(legend = standard_legend())
   if (length(unique_dims$Dim) >= 2) {
-    p <- p %>%
+    p <- p |>
       plotly::layout(
         yaxis2 = standard_yaxis(
           #title      = dim[2],
