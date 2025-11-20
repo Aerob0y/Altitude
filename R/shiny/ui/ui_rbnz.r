@@ -1,6 +1,5 @@
 # hb1 Exchange rates UI
-?page_sidebar
-library(bslib)
+
 ui_hb1 <- memoise(function() {
   hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
   ui_hb1 <- fluidPage(

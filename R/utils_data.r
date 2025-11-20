@@ -1,5 +1,7 @@
 .cache <- new.env(parent = emptyenv())
-guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
+#guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
+guide_rbnz <- readRDS("reference/RBNZ_Series.rds")
+#saveRDS(guide_rbnz, file = "reference/RBNZ_Series.rds", compress = FALSE)
 
 filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
   #if (!column %in% names(guide) && !is.null(column)) {stop(sprintf("Unknown column '%s'. Try one of: %s", column, paste(names(guide), collapse = ", ")))}

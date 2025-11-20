@@ -158,3 +158,5 @@ server <- function(input, output) {
     )
   })
 }
+
+load_data("hm1")
