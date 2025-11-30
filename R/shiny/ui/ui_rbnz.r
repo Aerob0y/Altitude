@@ -1,22 +1,22 @@
-# hb1 Exchange rates UI
-
+# hb1 Exchange rates UI ----
 ui_hb1 <- memoise(function() {
   hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
-  ui_hb1 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("Currency1", "Currency",  choices = Filter(Negate(is.na), hb1_split), selected = "NZD/USD", multiple = FALSE),
-        selectInput("Currency2", "Second Currency", choices = c("-", Filter(Negate(is.na), hb1_split)), selected = "-", multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hb1_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("Currency1", "Currency", choices  = hb1_split, selected = "NZD/USD", multiple = FALSE),
+    selectInput("Currency2", "Second Currency", choices  = c("-", hb1_split), selected = "-", multiple = FALSE)
   )
+  ui_single(insert_inputs, p = "hb1_plot", h = "600px")
 })
-filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
-library(tidyverse)
 
+# hb1 Exchange rates UI ----
+ui_hb1 <- memoise(function() {
+  hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
+  insert_inputs <- tagList(
+    selectInput("Currency1", "Currency", choices  = hb1_split, selected = "NZD/USD", multiple = FALSE),
+    selectInput("Currency2", "Second Currency", choices  = c("-", hb1_split), selected = "-", multiple = FALSE)
+  )
+  ui_single(insert_inputs, p = "hb1_plot", h = "600px")
+})
 
 # hb2 Interest rates UI
 ui_hb2 <- memoise(function() {
@@ -24,217 +24,256 @@ ui_hb2 <- memoise(function() {
     group_by(Group) |>
     summarise(value = list(Names)) |>
     deframe()
-
-  ui_hb2 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hb2_tier", "Interest Rate Tier",  choices = hb2_tier, selected = hb2_tier, multiple = TRUE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hb2_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hb2_tier", "Interest Rate Tier",  choices = hb2_tier, selected = c(hb2_tier$`Cash rate`, hb2_tier$`Swap rates close`[3]), multiple = TRUE)
   )
+  ui_single(insert_inputs, p = "hb2_plot", h = "600px")
 })
 
 # hm1 Prices UI
 ui_hm1 <- memoise(function() {
   hm1_input <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm1")))
   hm1_metric <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm1")))
-
-  ui_hm1 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm1_input", "Price Type",  choices = hm1_input, selected = hm1_input[1], multiple = FALSE),
-        selectInput("hm1_metric", "Metric",  choices = hm1_metric, selected = hm1_metric[1], multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm1_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hm1_metric", "Metric",  choices = hm1_metric, selected = "y/y%", multiple = FALSE),
+    checkboxGroupInput("hm1_input", "Price Index (5 Max)",  choices = hm1_input, selected = hm1_input[c(1, 4, 5, 6)])
   )
+  ui_single(insert_inputs, p = "hm1_plot", h = "600px")
 })
 
 # hm2 Consumption UI
 ui_hm2 <- memoise(function() {
   hm2_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm2")))
-  ui_hm2 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm2_split", "Consumption Type",  choices = hm2_split, selected = hm2_split[1], multiple = FALSE),
-        selectInput("hm2_split2", "Second Consumption Type",  choices = c("-", hm2_split), selected = "-", multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm2_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hm2_split", "Consumption Type (vs)",  choices = hm2_split, selected = "General government consumption expenditure (GDP) NZDm(r) s.a.", multiple = FALSE),
+    selectInput("hm2_split2", NULL,  choices = c("-", hm2_split), selected = "Private consumption expenditure (GDP) %(r) s.a.", multiple = FALSE)
   )
+  ui_single(insert_inputs, p = "hm2_plot", h = "600px")
 })
 
 # hm3 Investment UI
 ui_hm3 <- memoise(function() {
   hm3_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm3")))
-  ui_hm3 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm3_split", "Investment Type",  choices = hm3_split, selected = hm3_split[1], multiple = FALSE),
-        selectInput("hm3_split2", "Second Investment Type",  choices = c("-", hm3_split), selected = "-", multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm3_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hm3_split", "Investment Type",  choices = hm3_split, selected = hm3_split[1], multiple = FALSE),
+    selectInput("hm3_split2", "Second Investment Type",  choices = c("-", hm3_split), selected = hm3_split[4], multiple = FALSE)
   )
+  ui_single(insert_inputs, p = "hm3_plot", h = "600px")
 })
 # hm4 Domestic Trade UI
 ui_hm4 <- memoise(function() {
-  hm4_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm4")))
-  ui_hm4 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm4_group", "Trade Group",  choices = hm4_group, selected = hm4_group[1], multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm4_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  hm4_group <- filter_series(guide_rbnz, column = "Grouping", apply_filters = list(Graph = c("hm4")))
+  hm4_dim <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm4")))
+  insert_inputs <- tagList(
+    selectInput("hm4_dim", "Dimension",  choices = hm4_dim, selected = hm4_dim[1], multiple = FALSE),
+    selectInput("hm4_group", "Trade Group",  choices = hm4_group, selected = hm4_group[1], multiple = FALSE)
   )
+  ui_single(insert_inputs, p = "hm4_plot", h = "600px")
 })
+
 # hm5 GDP UI
 ui_hm5 <- memoise(function() {
   hm5_names <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("hm5")))
-  ui_hm5 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm5_names", "GDP Measures",  choices = hm5_names, selected = c("Export of Goods & Services (Nominal $m)"), multiple = TRUE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm5_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  hm5_tier <- filter_series(guide_rbnz, column = c("Split", "Names"), apply_filters = list(Graph = c("hm5"))) |>
+    group_by(Split) |>
+    summarise(value = list(Names)) |>
+    deframe()
+  insert_inputs <- tagList(
+    selectInput("hm5_names", "GDP Measures (Max 4)",  choices = hm5_tier, selected = c("GDP - Expenditure (Real $m s.a.)","GDP - Expenditure (Real y/y%)"), multiple = TRUE)
   )
+  ui_single(insert_inputs, p = "hm5_plot", h = "600px")
 })
+
+
 # hm6 National Saving UI
 ui_hm6 <- memoise(function() {
   hm6_names <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("hm6")))
-  ui_hm6 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm6_names", "Saving Types",  choices = hm6_names, selected = c("National Saving"), multiple = TRUE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm6_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hm6_names", "Saving Types",  choices = hm6_names, selected = hm6_names, multiple = TRUE)
   )
-})
-# hm7 Balance of Payments UI
-ui_hm7 <- memoise(function() {
-  hm7_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm7")))
-  ui_hm7 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm7_group", "Balance Group",  choices = hm7_group, selected = hm7_group[1], multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm7_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
-  )
+  ui_single(insert_inputs, p = "hm6_plot", h = "600px")
 })
 
+# hm7 Balance of Payments UI
+ui_hm7 <- memoise(function() {
+  hm7_group <- filter_series(guide_rbnz, column = "Grouping", apply_filters = list(Graph = c("hm7")))
+  insert_inputs <- tagList(
+    selectInput("hm7_group", "Balance Group",  choices = hm7_group, selected = hm7_group[1], multiple = FALSE)
+  )
+  ui_single(insert_inputs, p = "hm7_plot", h = "600px")
+})
+  
 # hm8 Overseas Trade UI
 ui_hm8 <- memoise(function() {
   hm8_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm8")))
-  hm8_dim <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm8")))
-  ui_hm8 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm8_split", "Trade Type",  choices = hm8_split, selected = hm8_split[1], multiple = FALSE),
-        selectInput("hm8_dim", "Metric",  choices = hm8_dim, selected = hm8_dim[1], multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm8_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  hm8_grouping <- filter_series(guide_rbnz, column = "Grouping", apply_filters = list(Graph = c("hm8")))
+  insert_inputs <- tagList(
+    selectInput("hm8_grouping", "Metric",  choices = hm8_grouping, selected = hm8_grouping[1], multiple = FALSE),
+    checkboxGroupInput("hm8_split", "Trade Type",  choices = hm8_split, selected = hm8_split)
   )
+  ui_single(insert_inputs, p = "hm8_plot", h = "600px")
 })
+
 # hm9 Labour Market UI
 ui_hm9 <- memoise(function() {
-  hm9_adj <- filter_series(guide_rbnz, column = "Adj", apply_filters = list(Graph = c("hm9")))
-  hm9_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm9")))
-  ui_hm9 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm9_adj", "Adjustment Type",  choices = hm9_adj, selected = hm9_adj[1], multiple = FALSE),
-        selectInput("hm9_split", "Labour Market Type",  choices = hm9_split, selected = hm9_split[1], multiple = FALSE),
-        style = "height: 100%;"
+  hm9_tier <- filter_series(guide_rbnz, column = c("Split", "Names", "Grouping"), apply_filters = list(Graph = "hm9")) |>
+    group_by(Split) |>
+    summarise(
+      value = list(
+        as.list(stats::setNames(Names, Grouping))
       ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm9_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+      .groups = "drop"
+    ) |>
+    deframe()
+  insert_inputs <- tagList(
+    selectInput("hm9_tier1", "Metric (max 4)",  choices = hm9_tier, selected = c("Labour force participation rate	 - % s.a.", "Labour cost index (LCI) - y/y%"), multiple = TRUE),
   )
+  ui_single(insert_inputs, p = "hm9_plot", h = "600px")
 })
+
 # hm10 Housing UI
 ui_hm10 <- memoise(function() {
   hm10_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm10")))
-  ui_hm10 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm10_split_1", "Housing Type",  choices = hm10_split, selected = hm10_split[1], multiple = FALSE),
-        selectInput("hm10_split_2", "Second Housing Type",  choices = c("-", hm10_split), selected = "-", multiple = FALSE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm10_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+  insert_inputs <- tagList(
+    selectInput("hm10_split_1", "Metric",  choices = hm10_split, selected = hm10_split[1], multiple = FALSE),
+    selectInput("hm10_split_2", NULL,  choices = c("-", hm10_split), selected = hm10_split[2], multiple = FALSE)
   )
+  ui_single(insert_inputs, p = "hm10_plot", h = "600px")
 })
+
 # hm14 Expectations UI
 ui_hm14 <- memoise(function() {
   hm14_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm14")))
-  hm14_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hm14")))
-  ui_hm14 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hm14_split", "Expectation Type",  choices = hm14_split, selected = hm14_split[1], multiple = TRUE),
-        selectInput("hm14_group", "Time Horizon",  choices = hm14_group, selected = c("1 year out", "2 years out","5 years out"), multiple = TRUE),
-        style = "height: 100%;"
+  hm14_group <- filter_series(guide_rbnz, column = "Grouping", apply_filters = list(Graph = c("hm14")))
+    hm14_tier <- filter_series(guide_rbnz, column = c("Split", "Names", "Grouping"), apply_filters = list(Graph = "hm14")) |>
+    group_by(Split) |>
+    summarise(
+      value = list(
+        as.list(stats::setNames(Names, Grouping))
       ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hm14_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+      .groups = "drop"
+    ) |>
+    deframe()
+
+  insert_inputs <- tagList(
+    selectInput("hm14_tier", "Expectation Type",  choices = hm14_tier, selected = c("Annual GDP growth - 1 year out", "Annual CPI growth - 1 year out","Perception of monetary conditions (net) - 1 year out"), multiple = TRUE)
   )
+  ui_single(insert_inputs, p = "hm14_plot", h = "600px")
 })
-# hs32 Loans UI
-ui_hs32 <- memoise(function() {
-  hs32_adj <- filter_series(guide_rbnz, column = "Adj", apply_filters = list(Graph = c("hs32")))
-  hs32_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hs32")))
-  hs32_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hs32")))
-  ui_hs32 <- fluidPage(
-    page_sidebar(
-      sidebar = sidebar(
-        class = "csv-sidebar", position = "right",
-        selectInput("hs32_adj", "Adjustment Type",  choices = hs32_adj, selected = hs32_adj[1], multiple = FALSE),
-        selectInput("hs32_split", "Loan Use Type",  choices = hs32_split, selected = hs32_split[1], multiple = TRUE),
-        selectInput("hs32_group", "Loan Type",  choices = hs32_group, selected = hs32_group[1], multiple = TRUE),
-        style = "height: 100%;"
-      ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hs32_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
-  )
-})
+
 # hs35 Retail Sales UI
 ui_hc35 <- memoise(function() {
   hc35_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hc35")))
-  ui_hc35 <- fluidPage(
+  hc35_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hc35")))
+  insert_inputs <- tagList(
+    selectInput("hc35_group", "Lending Group",  choices = hc35_group, selected = hc35_group[1], multiple = FALSE),
+    checkboxGroupInput("hc35_split", "Lending",  choices = hc35_split, selected = hc35_split[c(1,3,4)])
+  )
+  ui_single(insert_inputs, p = "hc35_plot", h = "600px")
+})
+
+ui_fuel <- memoise(function() {
+  insert_inputs <- tagList(
+    selectInput("fuel_unit", "Fuel Unit",  choices = c("USD per Barrel", "NZD per Barrel"), selected = "USD per Barrel", multiple = FALSE)
+  )
+  ui_single(insert_inputs, p = "fuel_plot", h = "600px")
+})
+
+# accommodation data UI
+ui_adp <- memoise(function() {
+  if (exists("adp_propertytype", envir = .cache)) {return(.cache[["adp_propertytype"]])}
+  else {
+    adp_propertytype <- load_adp() %>% select(`PropertyType`) %>% unique()
+    .cache[["adp_propertytype"]] <- adp_propertytype
+    adp_propertytype
+  }
+  if (exists("adp_region", envir = .cache)) {return(.cache[["adp_region"]])}
+  else {
+    adp_region <- load_adp() %>% select(Regions) %>% unique()
+    adp_region <- adp_region[!adp_region$Region %in% c("New Zealand"), ]
+    .cache[["adp_region"]] <- adp_region
+    adp_region
+  }
+  adp_metric <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("adp")))
+
+  insert_inputs <- tagList(
+    selectInput("adp_metric", "Metric",  choices = adp_metric, selected = adp_metric[1], multiple = FALSE),
+    selectInput("adp_wrap", "Group",  choices = c("Group", "Region", "PropertyType"), selected = "Group", multiple = FALSE),
+    selectInput("adp_region", "Region",  choices = adp_region, selected = "Total", multiple = TRUE),
+    selectInput("adp_propertytype", "Property Type",  choices = adp_propertytype, selected = adp_propertytype, multiple = TRUE)
+  )
+  ui_single(insert_inputs, p = "adp_plot", h = "600px")
+})
+
+get_data_filters <- function(i, data) {
+  if (exists(i, envir = .cache)) {return(.cache[[i]])}
+  else {
+    data_filters <- data %>% pull(!!sym(i)) %>% unique() %>% as.vector() %>% sort()
+    .cache[[i]] <- data_filters
+    data_filters
+  }
+}
+
+load_data("border") %>% colnames()
+
+ui_border <- memoise(function() {
+  border_split <- c("Residency/Country", "Overseas Port","New Zealand Port", "Passenger Type", "Travel Purpose")
+  border_country <- get_data_filters("Residency/Country", load_data("border"))
+  overseas_port <- get_data_filters("Overseas Port", load_data("border"))
+  nz_port <- get_data_filters("New Zealand Port", load_data("border"))
+  border_type <- get_data_filters("Passenger Type", load_data("border"))
+  travel_purpose <- get_data_filters("Travel Purpose", load_data("border"))
+
+
+  ui_border <- fluidPage(
     page_sidebar(
       sidebar = sidebar(
         class = "csv-sidebar", position = "right",
-        selectInput("hc35_split", "Retail Sales Type",  choices = hc35_split, selected = hc35_split[1], multiple = FALSE),
-        style = "height: 100%;"
+        selectInput("border_split", "border_split",  choices =  border_split, selected = border_split[1], multiple = FALSE),
+        selectInput("border_country", "border_country",  choices =  border_country, selected = c(), multiple = TRUE),
+        selectInput("border_os_port", "border_os_port",  choices = overseas_port, selected = c(), multiple = TRUE),
+        selectInput("border_nz_port", "border_nz_port",  choices = nz_port, selected = c(), multiple = TRUE),
+        selectInput("border_passenger_type", "border_passenger_type",  choices = border_type, selected = c(), multiple = TRUE),
+        selectInput("border_purpose", "border_purpose",  choices = travel_purpose, selected = c(), multiple = TRUE),
+        style = "height: 100%;",
+        width = 300
       ),
-      card(class = "csv-card", full_screen = TRUE, plotlyOutput("hc35_plot",  height = "100%"), style = "height: 600px; max-width: 900px; width: 100%;")
-    ), style = "background-color: #EDF2F3 !important; height: 600px;"
+      card(
+        class = "csv-card", full_screen = TRUE, plotlyOutput("border_plot",  height = "600px"),
+        style = "height: 600px; max-width: 900px; width: 100%;"
+      )
+    ), style = "background-color: #EDF2F3 !important; height: 100%;"
+  )
+})
+
+ui_bond <- memoise(function() {
+  if (exists("bond_region", envir = .cache)) {return(.cache[["bond_region"]])}
+  else {
+    bond_location <- load_data("bond") %>% select(`Location`) %>% unique()
+    .cache[["bond_location"]] <- bond_location
+    bond_location
+  }
+  bond_metric <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("bond")))
+  insert_inputs <- tagList(
+    selectInput("bond_metric", "Metric",  choices = bond_metric, selected = bond_metric[1], multiple = FALSE),
+    selectInput("bond_location", "Location",  choices = bond_location, selected = c("ALL"), multiple = TRUE)
+  )
+  ui_bond <- ui_single(insert_inputs, p = "bond_plot", h = "600px")
+})
+
+ui_ect <- memoise(function() {
+  ui_ect  <- fluidPage(
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar", position = "right",
+        selectInput("fuel_unit", "Fuel Unit",  choices = c("USD per Barrel", "NZD per Barrel"), selected = "USD per Barrel", multiple = FALSE),
+        style = "height: 100%;",
+        width = 300
+      ),
+      card(
+        class = "csv-card", full_screen = TRUE, plotlyOutput("fuel_plot",  height = "600px"),
+        style = "height: 600px; max-width: 900px; width: 100%;"
+      )
+    ), style = "background-color: #EDF2F3 !important; height: 100%;"
   )
 })

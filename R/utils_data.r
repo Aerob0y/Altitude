@@ -1,11 +1,7 @@
 .cache <- new.env(parent = emptyenv())
-#guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
 guide_rbnz <- readRDS("reference/RBNZ_Series.rds")
-#saveRDS(guide_rbnz, file = "reference/RBNZ_Series.rds", compress = FALSE)
 
 filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
-  #if (!column %in% names(guide) && !is.null(column)) {stop(sprintf("Unknown column '%s'. Try one of: %s", column, paste(names(guide), collapse = ", ")))}
-
   t <- guide
   if (!is.null(apply_filters) || !is.null(apply_fallbacks)) {
     for (f in seq_along(apply_filters)) {
@@ -37,8 +33,8 @@ filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fall
   }
 }
 
-load_data <- function(name) {
-  if (exists(name, envir = .cache)) {return(.cache[[name]])}
+load_data <- function(name, refresh_cache = FALSE) {
+  if (exists(name, envir = .cache) && !refresh_cache) {return(.cache[[name]])}
   f <- list.files(
     "data",
     pattern = paste0(name, ".rds"),
@@ -51,4 +47,29 @@ load_data <- function(name) {
   f <- paste0("data/", f)
   .cache[[name]] <- readRDS(f[1])
   .cache[[name]]
+}
+
+load_fuel <- function() {
+  if (exists("fuel_convert", envir = .cache)) {return(.cache[["fuel_convert"]])}
+  nzd_usd <- load_data("hb1") %>% select(Date, EXR.DS11.D06) %>% rename(Date = Date, USD_NZD = EXR.DS11.D06)
+  result <- merge(load_data("fuel"), nzd_usd, by = 'Date', all.x = TRUE)
+  result <- arrange(result, Date)
+  result <- fill(result, USD_NZD, .direction = "down")
+  result <- rename(result, c("USD per Barrel" = "Price"))
+  result <- filter(result, !is.na(USD_NZD))
+  result <- result %>% mutate('NZD per Barrel' = (`USD per Barrel`/ USD_NZD))
+  .cache[["fuel_convert"]] <- result
+  .cache[["fuel_convert"]]
+}
+
+
+load_adp <- function() {
+  if (exists("adpByRTO", envir = .cache)) {return(.cache[["adpByRTO"]])}
+  if (file.exists("data/ADP/adpByRTO.rds")) {
+    .cache[["adpByRTO"]] <- readRDS("data/ADP/adpByRTO.rds")
+    .cache[["adpByRTO"]]
+  }
+  else {
+    stop("No RDS file found for ADP dataset in data/ADP/ directory")
+  }
 }

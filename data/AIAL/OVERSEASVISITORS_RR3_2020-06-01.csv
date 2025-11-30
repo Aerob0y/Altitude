@@ -1,0 +1,746 @@
+MonthOfTravel,DayOfTravel,OverSeasPort,customs_port_code,passenger_type_code,direction_code,clnpr_code,overseas_state_code,main_country_visited_code,AgeAtTravelRange,sex_code,losa_range,travel_purpose_code,occupation_code,ta_code,TotalPassengerMovements
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,33
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,27
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,24
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,21
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,24
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,21
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,21
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,21
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,21
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,18
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,18
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,18
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,15
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,18
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,15
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,15
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,18
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,15
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,15
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,15
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,12
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,15
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,12
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,M,28+ days,B,unavailable,unavailable,12
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,12
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,12
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,12
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,12
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,9
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,9
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,9
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,9
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,9
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,25 - 34 years,F,28+ days,E,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,15 to 27 days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,15 to 27 days,V,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,O,unavailable,unavailable,6
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,M,15 to 27 days,B,unavailable,unavailable,6
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,O,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,15 to 27 days,V,unavailable,unavailable,6
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,M,28+ days,O,unavailable,unavailable,6
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,15 to 27 days,O,unavailable,unavailable,6
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,15 to 27 days,V,unavailable,unavailable,6
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,6
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,6
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AE,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,6
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,6
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,6
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,DE,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,M,less than 7 days,N,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AE,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,Less than 1 year,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,SA,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,QA,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,KW,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,35 - 44 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,28+ days,E,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AE,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,45 - 54 years,M,less than 7 days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AE,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,25 - 34 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,45 - 54 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,SA,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,45 - 54 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,IUE,AKL,V,A,NU,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,Less than 1 year,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,65 - 74 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,LV,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,ZZS,NPL,V,A,AU,unavailable,unavailable,25 - 34 years,M,8 - 14 days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,NZ,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,65 - 74 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,BH,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,25 - 34 years,M,8 - 14 days,B,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,75+,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,45 - 54 years,M,8 - 14 days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,PG,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,SA,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,M,8 - 14 days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,FR,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,XX,unavailable,unavailable,55 - 64 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BR,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AE,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,65 - 74 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,IT,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NZ,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,XX,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,28+ days,E,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,IUE,AKL,V,A,NU,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,GB,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,XX,unavailable,unavailable,35 - 44 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,75+,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,MY,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,ZA,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BR,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CR,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,XX,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CR,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,MY,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,SE,unavailable,unavailable,55 - 64 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MNL,AKL,V,A,PH,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,KE,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,IQ,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,QA,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,19 - 24 years,F,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,45 - 54 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NL,unavailable,unavailable,19 - 24 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,BH,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,NZ,unavailable,unavailable,Less than 1 year,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NL,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CL,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,75+,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AF,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,12 - 18 years,M,28+ days,E,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,DK,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,75+,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,RU,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NZ,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,DE,unavailable,unavailable,55 - 64 years,F,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,12 - 18 years,M,28+ days,E,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,VLI,WPI,V,A,VU,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,GB,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NZ,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,Less than 1 year,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,IN,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,QA,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,IUE,AKL,V,A,NU,unavailable,unavailable,19 - 24 years,F,28+ days,E,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NZ,unavailable,unavailable,19 - 24 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,NZ,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,QA,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NP,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,65 - 74 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,ZA,unavailable,unavailable,19 - 24 years,F,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,CA,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ZA,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,IE,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,EG,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,PPG,AKL,V,A,XX,unavailable,unavailable,19 - 24 years,F,less than 7 days,N,unavailable,unavailable,3
+202006,unavailable,PPG,AKL,V,A,XX,unavailable,unavailable,25 - 34 years,F,less than 7 days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,FR,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,FR,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,65 - 74 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,ES,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,DE,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BR,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,XX,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,NZ,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CFS,OPX,V,A,US,unavailable,unavailable,65 - 74 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,ID,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,XX,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,SA,unavailable,unavailable,25 - 34 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,PPT,OPX,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,TZ,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,AU,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,55 - 64 years,F,8 - 14 days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,NL,unavailable,unavailable,25 - 34 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,IT,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,55 - 64 years,M,8 - 14 days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,less than 7 days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,less than 7 days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,PH,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,IE,unavailable,unavailable,01 - 11 years,F,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,IE,unavailable,unavailable,01 - 11 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,XX,unavailable,unavailable,25 - 34 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,DE,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,VLI,WPI,V,A,VU,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,IE,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,IE,unavailable,unavailable,35 - 44 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,NL,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CA,unavailable,unavailable,25 - 34 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,FR,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,55 - 64 years,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,NZ,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,ZA,unavailable,unavailable,25 - 34 years,M,28+ days,E,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,PL,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,PH,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,XX,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,XX,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,IQ,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,01 - 11 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,65 - 74 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,55 - 64 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,MO,unavailable,unavailable,55 - 64 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,CG,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,65 - 74 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,XX,unavailable,unavailable,01 - 11 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NL,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,SA,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AE,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,NZ,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,less than 7 days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,CN,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,VC,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,PPT,AKL,V,A,PF,unavailable,unavailable,55 - 64 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BR,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,XX,unavailable,unavailable,Less than 1 year,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,FJ,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,PG,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,75+,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,25 - 34 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,ES,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,CAN,AKL,V,A,CN,unavailable,unavailable,35 - 44 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,NZ,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,F,28+ days,E,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,IT,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,25 - 34 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,US,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,IUE,AKL,V,A,DK,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,12 - 18 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,12 - 18 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,PH,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,QA,unavailable,unavailable,35 - 44 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,TW,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,Less than 1 year,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NZ,unavailable,unavailable,45 - 54 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,PPT,AKL,V,A,PF,unavailable,unavailable,65 - 74 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,E,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,NZ,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,PPT,AKL,V,A,PF,unavailable,unavailable,12 - 18 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ET,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,IUE,AKL,V,A,NU,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,SG,unavailable,unavailable,19 - 24 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,25 - 34 years,F,less than 7 days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,01 - 11 years,F,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,MY,unavailable,unavailable,25 - 34 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,KR,unavailable,unavailable,01 - 11 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,M,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,12 - 18 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,IN,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,FR,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,19 - 24 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,75+,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,QA,unavailable,unavailable,55 - 64 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,35 - 44 years,F,8 - 14 days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,75+,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,PF,unavailable,unavailable,19 - 24 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,KW,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TH,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,GB,unavailable,unavailable,25 - 34 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,GB,unavailable,unavailable,12 - 18 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,01 - 11 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,F,28+ days,E,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,DE,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,JP,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,IN,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,IN,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,ZA,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,19 - 24 years,F,28+ days,E,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,25 - 34 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,BR,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BR,unavailable,unavailable,19 - 24 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,IN,unavailable,unavailable,Less than 1 year,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,XX,unavailable,unavailable,Less than 1 year,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,IL,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,ZA,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,RW,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SIN,CHC,V,A,SG,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AE,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,TBU,AKL,V,A,TO,unavailable,unavailable,55 - 64 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,CH,unavailable,unavailable,55 - 64 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,75+,F,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,12 - 18 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,ID,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,TW,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,KR,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,WS,unavailable,unavailable,45 - 54 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AG,unavailable,unavailable,19 - 24 years,F,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,MY,unavailable,unavailable,55 - 64 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,DK,unavailable,unavailable,19 - 24 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SHA,AKL,V,A,CN,unavailable,unavailable,55 - 64 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,AS,unavailable,unavailable,25 - 34 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,NZ,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,GB,unavailable,unavailable,55 - 64 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,FR,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,PPT,OPX,V,A,AU,unavailable,unavailable,65 - 74 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,PG,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,Less than 1 year,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,75+,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AE,unavailable,unavailable,35 - 44 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,EZE,AKL,V,A,UY,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,35 - 44 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,35 - 44 years,F,less than 7 days,O,unavailable,unavailable,3
+202006,unavailable,SIN,AKL,V,A,SG,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SEL,AKL,V,A,KR,unavailable,unavailable,19 - 24 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,45 - 54 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,KR,unavailable,unavailable,35 - 44 years,M,8 - 14 days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,M,15 to 27 days,N,unavailable,unavailable,3
+202006,unavailable,ZZS,WRE,V,A,AU,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,LAX,AKL,V,A,US,unavailable,unavailable,45 - 54 years,M,15 to 27 days,V,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,45 - 54 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,PE,unavailable,unavailable,75+,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,QA,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,45 - 54 years,M,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,NP,unavailable,unavailable,01 - 11 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,KE,unavailable,unavailable,25 - 34 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,NZ,unavailable,unavailable,55 - 64 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,H,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,XX,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,35 - 44 years,M,28+ days,O,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,JP,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,TW,unavailable,unavailable,35 - 44 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,SD,unavailable,unavailable,45 - 54 years,F,28+ days,H,unavailable,unavailable,3
+202006,unavailable,NAN,AKL,V,A,FJ,unavailable,unavailable,45 - 54 years,F,28+ days,B,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,BN,unavailable,unavailable,25 - 34 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,DK,unavailable,unavailable,45 - 54 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,NRT,AKL,V,A,NZ,unavailable,unavailable,45 - 54 years,M,28+ days,V,unavailable,unavailable,3
+202006,unavailable,ZZS,AKL,V,A,XX,unavailable,unavailable,45 - 54 years,M,15 to 27 days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,TW,unavailable,unavailable,25 - 34 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,MEL,AKL,V,A,AU,unavailable,unavailable,19 - 24 years,F,15 to 27 days,O,unavailable,unavailable,3
+202006,unavailable,HKG,AKL,V,A,HK,unavailable,unavailable,65 - 74 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,GB,unavailable,unavailable,Less than 1 year,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,APW,AKL,V,A,AU,unavailable,unavailable,01 - 11 years,M,28+ days,N,unavailable,unavailable,3
+202006,unavailable,RAR,AKL,V,A,CK,unavailable,unavailable,01 - 11 years,F,28+ days,N,unavailable,unavailable,3
+202006,unavailable,XXA,AKL,V,A,CN,unavailable,unavailable,45 - 54 years,F,28+ days,V,unavailable,unavailable,3
+202006,unavailable,BNE,AKL,V,A,XX,unavailable,unavailable,35 - 44 years,M,28+ days,B,unavailable,unavailable,3
+202006,unavailable,SYD,AKL,V,A,AU,unavailable,unavailable,55 - 64 years,F,15 to 27 days,O,unavailable,unavailable,3

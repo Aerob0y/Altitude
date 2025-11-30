@@ -104,6 +104,10 @@ rbnz_fetch_xlsx <- function(
       tmp <- file_temp(ext = "xlsx")
       writeBin(res$content, tmp)
       file_copy(tmp, fn, overwrite = TRUE)
+      openxlsx::read.xlsx(tmp, detectDates = TRUE, sheet = "Data", startRow = 5, skipEmptyRows = TRUE) %>%
+        rename(Date = 1) %>%
+        mutate(Date = as.Date(Date)) %>%
+        saveRDS(file = paste0("data/RBNZ/", key, ".rds"), compress = FALSE)
       file_delete(tmp)
 
       hdrs <- parse_headers_list(res$headers)
