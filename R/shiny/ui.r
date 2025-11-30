@@ -30,6 +30,27 @@ ui_single <- function(insert_inputs, h = "600px", p) {
   )
 }
 
+ui_single2 <- function(insert_inputs, h = "600px", p) {
+  
+
+    page_sidebar(
+      sidebar = sidebar(
+        class = "csv-sidebar",
+        position = "left",
+        open = "closed",
+        insert_inputs,
+        style = "height: 100%;"
+      ),
+      card(
+        #class = "csv-card",
+        full_screen = TRUE,
+        plotlyOutput(p,  height = h, width = "100%"),
+        width = "100%",
+        height = "100%",
+        fill = TRUE
+      )
+    )  
+}
 
 
 ui <- fluidPage(
@@ -135,6 +156,7 @@ ui <- fluidPage(
 
   navset_tab(
     nav_panel("Overview", uiOutput("slides_ui")),
+    nav_panel("Highlights", uiOutput("a_ui")),
     nav_menu(
       "Economic Indicators",
       nav_panel("Daily exchange rates and TWI", ui_hb1_main()),

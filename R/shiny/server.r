@@ -21,6 +21,7 @@ server <- function(input, output) {
   output$ect_ui    <- renderUI({ui_ect()})
   output$border_ui <- renderUI({ui_border()})
   output$slides_ui <- renderUI({ui_slides()})
+  output$a_ui      <- renderUI({ui_a})
 
 
   #hb1 Exchange rates
@@ -63,55 +64,30 @@ output$hb1_plot_main2 <- renderPlotly({
         k = "Date"
       )
     })
-  
- # output$hb1_plot <- hb1_plot_obj()
-
-
-
-  #hb2 Interest rates
-  output$hb2_plot <- renderPlotly({
-    valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
-    if (length(valid_inputs) == 0) {
-      valid_inputs <- c("Official Cash Rate (OCR)")
-    }
-      generic_plotly(
-        data = load_data("hb2"),
-        titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
-        k = "Date",
-        years = 15
-      )
-  })
-
   # hb2 module server ----
-mod_hb2_server <- function(id) {
-  moduleServer(id, function(input, output, session) {
-
-    hb2_plot <- reactive({
-      valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
-    if (length(valid_inputs) == 0) {
-      valid_inputs <- c("Official Cash Rate (OCR)")
-    }
-
-      generic_plotly(
-      data = load_data("hb2"),
-      titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
-      k = "Date",
-      years = 15
-    )
+  mod_hb2_server <- function(id) {
+    moduleServer(id, function(input, output, session) {
+      hb2_plot <- reactive({
+        print("hb2_plot reactive")
+        valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
+        if (length(valid_inputs) == 0) {
+          valid_inputs <- c("Official Cash Rate (OCR)")
+        }
+        generic_plotly(
+          data = load_data("hb2"),
+          titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
+          series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
+          k = "Date",
+          years = 15
+        )
+      })
+      output$plot <- renderPlotly({hb2_plot()})
     })
-
-    output$plot <- renderPlotly({
-      hb2_plot()
-    })
-
-    # optional, if you ever want the plot object outside:
-    return(hb2_plot)
-  })
-}
-mod_hb2_server("hb2_main")
-mod_hb2_server("hb2_alt")
+  }
+  mod_hb2_server("hb2_main")
+  mod_hb2_server("hb2_alt")
+  mod_hb2_server("hb2_a")
+  mod_hb2_server("hb2_b")
 
 
 
@@ -491,7 +467,7 @@ output$adp_plot <- renderPlotly({
         div(class = "slide-subtitle", "Globally, central banks have increased interest rates, cooling the economy to battle inflation.  The last mile is the hardest, the inflation battle is not yet over."),
         fluidRow(
           column(7, ui_hb1_alt()),
-          column(5, mod_hb2_ui("hb2_alt"))
+          column(5, "mod_hb2_ui(hb2_alt)")
         ),
         br(),
         div(class = "slide-text",

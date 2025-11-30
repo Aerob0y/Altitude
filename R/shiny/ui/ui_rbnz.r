@@ -34,19 +34,14 @@ ui_hb1_alt <- memoise(function() {
 # hb2 module UI ----
 mod_hb2_ui <- function(id) {
   ns <- NS(id)
-
-    hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) |>
+  hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) |>
     group_by(Group) |>
     summarise(value = list(Names)) |>
     deframe()
-
-
   insert_inputs <- tagList(
     selectInput(ns("hb2_tier"), "Interest Rate Tier",  choices = hb2_tier, selected = c(hb2_tier$`Cash rate`, hb2_tier$`Swap rates close`[3]), multiple = TRUE)
   )
-
-  # assuming ui_single(insert_inputs, p = <plotOutputId>, h = <height>)
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single2(insert_inputs, p = ns("plot"), h = "600px")
 }
 
 

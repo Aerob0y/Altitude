@@ -15,7 +15,9 @@ run_app <- function() {
   suppressMessages(suppressWarnings(library(scales)))
   #library(request)
   library(tidyverse)
-  suppressMessages(suppressWarnings(library(bslib, include.only = c("navset_tab", "nav_menu", "nav_panel", "page_sidebar","sidebar","card"))))
+  library(bslib)
+  library(bsicons)
+  #suppressMessages(suppressWarnings(library(bslib, include.only = c("navset_tab", "nav_menu", "nav_panel", "page_sidebar","sidebar","card"))))
   suppressMessages(suppressWarnings(library(stats, include.only = c("setNames", "na.omit", "complete.cases"))))
   suppressMessages(suppressWarnings(library(dplyr, include.only = c("filter", "group_by", "summarise", "collapse", "all_of", "collapse",  "select"))))
   suppressMessages(suppressWarnings(library(tidyr, include.only = c("fill"))))
@@ -30,3 +32,4 @@ run_app <- function() {
 
   shiny::shinyApp(ui, server, options = list(port = 5555))
 }
+
