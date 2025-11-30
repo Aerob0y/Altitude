@@ -30,6 +30,8 @@ ui_single <- function(insert_inputs, h = "600px", p) {
   )
 }
 
+
+
 ui <- fluidPage(
   id = "root",   # give the outer page an ID we can hook CSS onto
 
@@ -135,8 +137,8 @@ ui <- fluidPage(
     nav_panel("Overview", uiOutput("slides_ui")),
     nav_menu(
       "Economic Indicators",
-      nav_panel("Daily exchange rates and TWI", uiOutput("hb1_ui")),
-      nav_panel("Daily wholesale interest rates", uiOutput("hb2_ui")),
+      nav_panel("Daily exchange rates and TWI", ui_hb1_main()),
+      nav_panel("Daily wholesale interest rates", mod_hb2_ui("hb2_main")),
       nav_panel("Residential mortgage loan reconciliation", uiOutput("hc35_ui")),
       nav_panel("Prices", uiOutput("hm1_ui")),
       nav_panel("Consumption", uiOutput("hm2_ui")),

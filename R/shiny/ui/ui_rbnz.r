@@ -1,34 +1,66 @@
-# hb1 Exchange rates UI ----
-ui_hb1 <- memoise(function() {
-  hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
+# First set of controls + plot
+ui_hb1_main <- memoise(function() {
+  hb1_split <- filter_series(guide_rbnz, column = "Split",
+                             apply_filters = list(Graph = c("hb1")))
   insert_inputs <- tagList(
-    selectInput("Currency1", "Currency", choices  = hb1_split, selected = "NZD/USD", multiple = FALSE),
-    selectInput("Currency2", "Second Currency", choices  = c("-", hb1_split), selected = "-", multiple = FALSE)
+    selectInput("Currency1_main",  "Currency",        choices = hb1_split,
+                selected = "NZD/USD", multiple = FALSE),
+    selectInput("Currency2_main",  "Second Currency", choices = c("-", hb1_split),
+                selected = "-",     multiple = FALSE)
   )
-  ui_single(insert_inputs, p = "hb1_plot", h = "600px")
+  ui_single(insert_inputs, p = "hb1_plot_main", h = "600px")
 })
 
-# hb1 Exchange rates UI ----
-ui_hb1 <- memoise(function() {
-  hb1_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hb1")))
+# Second set of controls + plot (e.g. in another tab/box)
+ui_hb1_alt <- memoise(function() {
+  hb1_split <- filter_series(guide_rbnz, column = "Split",
+                             apply_filters = list(Graph = c("hb1")))
   insert_inputs <- tagList(
-    selectInput("Currency1", "Currency", choices  = hb1_split, selected = "NZD/USD", multiple = FALSE),
-    selectInput("Currency2", "Second Currency", choices  = c("-", hb1_split), selected = "-", multiple = FALSE)
+    selectInput("Currency1_alt",  "Currency",        choices = hb1_split,
+                selected = "NZD/USD", multiple = FALSE),
+    selectInput("Currency2_alt",  "Second Currency", choices = c("-", hb1_split),
+                selected = "-",     multiple = FALSE)
   )
-  ui_single(insert_inputs, p = "hb1_plot", h = "600px")
+  ui_single(insert_inputs, p = "hb1_plot_main2", h = "600px")
 })
 
-# hb2 Interest rates UI
-ui_hb2 <- memoise(function() {
-  hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) |>
+
+
+
+# hb1 Exchange rates UI ----
+
+
+
+# hb2 module UI ----
+mod_hb2_ui <- function(id) {
+  ns <- NS(id)
+
+    hb2_tier <- filter_series(guide_rbnz, column = c("Group", "Names"), apply_filters = list(Graph = c("hb2"))) |>
     group_by(Group) |>
     summarise(value = list(Names)) |>
     deframe()
+
+
   insert_inputs <- tagList(
-    selectInput("hb2_tier", "Interest Rate Tier",  choices = hb2_tier, selected = c(hb2_tier$`Cash rate`, hb2_tier$`Swap rates close`[3]), multiple = TRUE)
+    selectInput(ns("hb2_tier"), "Interest Rate Tier",  choices = hb2_tier, selected = c(hb2_tier$`Cash rate`, hb2_tier$`Swap rates close`[3]), multiple = TRUE)
   )
-  ui_single(insert_inputs, p = "hb2_plot", h = "600px")
-})
+
+  # assuming ui_single(insert_inputs, p = <plotOutputId>, h = <height>)
+  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # hm1 Prices UI
 ui_hm1 <- memoise(function() {

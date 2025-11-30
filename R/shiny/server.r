@@ -1,7 +1,6 @@
 
 server <- function(input, output) {
-  output$hb1_ui    <- renderUI({ui_hb1()})
-  output$hb2_ui    <- renderUI({ui_hb2()})
+  #output$hb1_ui    <- renderUI({ui_hb1_main()})
   output$hc35_ui   <- renderUI({ui_hc35()})
   output$hm1_ui    <- renderUI({ui_hm1()})
   output$hm2_ui    <- renderUI({ui_hm2()})
@@ -21,27 +20,51 @@ server <- function(input, output) {
   output$bond_ui   <- renderUI({ui_bond()})
   output$ect_ui    <- renderUI({ui_ect()})
   output$border_ui <- renderUI({ui_border()})
+  output$slides_ui <- renderUI({ui_slides()})
+
 
   #hb1 Exchange rates
-  output$hb1_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$Currency1, input$Currency2)) |> setdiff("-")
-    generic_plotly(
-      data = load_data("hb1"),
-      titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = valid_inputs)),
-      k = "Date"
-    )
-  })
-short_title("NZD/USD")
-filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = c("NZD/USD")))
-    generic_plotly(
-      data = load_data("hb1"),
-      titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title("NZD/USD"))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = "NZD/USD")),
-      k = "Date"
-    )
-  
+hb1_plot_obj <- function(a, b) {
+  valid_inputs <- unique(c(a, b)) |> setdiff("-")
 
+  generic_plotly(
+    data   = load_data("hb1"),
+    titles = c(
+      "Daily exchange rates and TWI",
+      paste("RBNZ:", short_title(valid_inputs))
+    ),
+    series = filter_series(
+      guide_rbnz,
+      apply_filters = list(Graph = "hb1", Split = valid_inputs)
+    ),
+    k = "Date"
+  )
+}
+
+
+
+# First plot (driven by _main inputs)
+output$hb1_plot_main <- renderPlotly({
+  hb1_plot_obj(input$Currency1_main, input$Currency2_main)
+})
+
+# Second plot (driven by _alt inputs)
+output$hb1_plot_main2 <- renderPlotly({
+  hb1_plot_obj(input$Currency1_alt, input$Currency2_alt)
+})
+
+    output$hb1_plot <-
+    renderPlotly({
+      valid_inputs <- unique(c(input$Currency1, input$Currency2)) |> setdiff("-")
+      generic_plotly(
+        data = load_data("hb1"),
+        titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
+        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = valid_inputs)),
+        k = "Date"
+      )
+    })
+  
+ # output$hb1_plot <- hb1_plot_obj()
 
 
 
@@ -51,14 +74,52 @@ filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = c("NZD/
     if (length(valid_inputs) == 0) {
       valid_inputs <- c("Official Cash Rate (OCR)")
     }
-    generic_plotly(
+      generic_plotly(
+        data = load_data("hb2"),
+        titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
+        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
+        k = "Date",
+        years = 15
+      )
+  })
+
+  # hb2 module server ----
+mod_hb2_server <- function(id) {
+  moduleServer(id, function(input, output, session) {
+
+    hb2_plot <- reactive({
+      valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
+    if (length(valid_inputs) == 0) {
+      valid_inputs <- c("Official Cash Rate (OCR)")
+    }
+
+      generic_plotly(
       data = load_data("hb2"),
       titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
       series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
       k = "Date",
       years = 15
     )
+    })
+
+    output$plot <- renderPlotly({
+      hb2_plot()
+    })
+
+    # optional, if you ever want the plot object outside:
+    return(hb2_plot)
   })
+}
+mod_hb2_server("hb2_main")
+mod_hb2_server("hb2_alt")
+
+
+
+
+
+
+
+
 
   #hm1 Prices
   output$hm1_plot <- renderPlotly({
@@ -421,16 +482,16 @@ output$adp_plot <- renderPlotly({
     slide(ifelse(slide() == 1, n_slides, slide() - 1) )   # wrap around
   })
 
+
   # Slide content (plots + text) per slide
   output$slide_body <- renderUI({
     s <- slide()
-    
     if (s == 1) {
       tagList(
         div(class = "slide-subtitle", "Globally, central banks have increased interest rates, cooling the economy to battle inflation.  The last mile is the hardest, the inflation battle is not yet over."),
         fluidRow(
-          column(7, renderUI({ui_hb2("hb2_tier")})),
-          column(5, "XX")
+          column(7, ui_hb1_alt()),
+          column(5, mod_hb2_ui("hb2_alt"))
         ),
         br(),
         div(class = "slide-text",
@@ -476,6 +537,7 @@ output$adp_plot <- renderPlotly({
       )
     }
   })
+  
 
 
 
