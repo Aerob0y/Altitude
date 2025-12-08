@@ -16,6 +16,9 @@ run_app <- function() {
   source("r/shiny/ui/ui_rbnz.r")
   source("r/shiny/ui/ui_slides.r")
 
+  module_files <- list.files("R/shiny/modules", full.names = TRUE, pattern = "\\.R$")
+  lapply(module_files, source)
+
   #server elements
   source("r/shiny/server/server_rbnz.r")
   #shiny
