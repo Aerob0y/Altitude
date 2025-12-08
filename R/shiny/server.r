@@ -1,29 +1,9 @@
 
 server <- function(input, output) {
-  #output$hb1_ui    <- renderUI({ui_hb1_main()})
+  register_rbnz_modules()
 
-  mod_hb2_server("hb2_main")
-  mod_hb2_server("hb2_alt")
-  mod_hb2_server("hb2_a")
-  mod_hb2_server("hb2_b")
-
-  output$hc35_ui   <- renderUI({ui_hc35()})
-  output$hm1_ui    <- renderUI({ui_hm1()})
-  output$hm2_ui    <- renderUI({ui_hm2()})
-  output$hm3_ui    <- renderUI({ui_hm3()})
-  output$hm4_ui    <- renderUI({ui_hm4()})
-  output$hm5_ui    <- renderUI({ui_hm5()})
-  output$hm6_ui    <- renderUI({ui_hm6()})
-  output$hm7_ui    <- renderUI({ui_hm7()})
-  output$hm8_ui    <- renderUI({ui_hm8()})
-  output$hm9_ui    <- renderUI({ui_hm9()})
-  output$hm10_ui   <- renderUI({ui_hm10()})
-  output$hm14_ui   <- renderUI({ui_hm14()})
   output$hs32_ui   <- renderUI({ui_hs32()})
-  output$hc35_ui   <- renderUI({ui_hc35()})
-  output$fuel_ui   <- renderUI({ui_fuel()})
   output$adp_ui    <- renderUI({ui_adp()})
-  output$bond_ui   <- renderUI({ui_bond()})
   output$ect_ui    <- renderUI({ui_ect()})
   output$border_ui <- renderUI({ui_border()})
   output$slides_ui <- renderUI({ui_slides()})
@@ -304,7 +284,7 @@ output$adp_plot <- renderPlotly({
         div(class = "slide-subtitle", "Globally, central banks have increased interest rates, cooling the economy to battle inflation.  The last mile is the hardest, the inflation battle is not yet over."),
         fluidRow(
           column(7, ui_hb1_alt()),
-          column(5, "mod_hb2_ui(hb2_alt)")
+          column(5, mod_hb2_ui("hb2_alt"))
         ),
         br(),
         div(class = "slide-text",
