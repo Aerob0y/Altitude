@@ -23,6 +23,11 @@ cc <- c(
 )
 
 
+`%||%` <- function(a, b) {
+  if (!is.null(a)) a else b
+}
+
+
 palettes <- list(
   teal = unlist(cc[c("teal_dark", "teal_base", "teal_lite", "teal_snow")]),
   navy = unlist(cc[c("navy_dark", "navy_base", "navy_lite", "navy_snow")]),
@@ -42,6 +47,34 @@ pal_qual_main <- c(
 
 # navy “spread” (replacement for your navy_spread vector)
 pal_navy_seq <- palettes$navy  # dark → snow
+
+graph_specs <- list(
+  hb2 = list(
+    title = "Daily wholesale interest rates",
+    subtitle_prefix = "RBNZ:",
+    yaxis_titles = c("", ""),
+    max_series = 4,
+    palette = "qual",
+    years = 15
+  ),
+  hm2 = list(
+    title = "Consumption",
+    subtitle_prefix = "RBNZ:",
+    yaxis_titles = c("", ""),
+    max_series = 5,
+    palette = "qual",
+    years = 10
+  ),
+  hm5 = list(
+    title = "GDP",
+    subtitle_prefix = "RBNZ:",
+    yaxis_titles = c("", ""),
+    max_series = 4,
+    palette = "qual",
+    years = 10
+  )
+)
+
 
 assign_series_colours <- function(series) {
   if (!"Palette"   %in% names(series)) stop("series must have a 'Palette' column")
@@ -233,29 +266,40 @@ short_title <- function(elements = c()) {
 }
 
 
-generic_plotly <- function(
-  data,
-  titles       = c("", ""),
-  yaxis_titles = c("", ""),
-  series,
-  split = NULL,
-  k,
-  years = 10
-) {
-  # 1) Colour assignment ----------------------------------------------------
-  series <- assign_series_colours(series)
+warn_missing_series <- function(data, series_ids, graph_id = NULL) {
+  missing <- setdiff(series_ids, names(data))
+  if (length(missing) > 0) {
+    prefix <- if (!is.null(graph_id)) paste0("[", graph_id, "] ") else ""
+    warning(prefix, "Series not found in dataset: ", paste(missing, collapse = ", "), call. = FALSE)
+  }
+  missing
+}
 
-  # 2) Base plot (one-liner split handling) --------------------------------
-  p <- plotly::plot_ly(
-    data,
-    x     = ~ get(k),
-    split = if (!is.null(split)) ~ get(split) else NULL
-  )
 
-  # 3) Axis metadata --------------------------------------------------------
+prepare_series_for_graph <- function(series, spec = NULL) {
+  max_series <- if (!is.null(spec)) spec$max_series %||% NULL else NULL
+  palette    <- if (!is.null(spec)) spec$palette %||% NULL else NULL
+
+  if (!is.null(max_series)) {
+    series <- series |> slice_head(n = max_series)
+  }
+
+  if (!is.null(palette) && "Palette" %in% names(series)) {
+    series$Palette <- ifelse(is.na(series$Palette), palette, series$Palette)
+  }
+
+  assign_series_colours(series)
+}
+
+
+prepare_generic_plot_data <- function(data, series, k, split = NULL, graph_id = NULL) {
+  missing <- warn_missing_series(data, series$Series.Id, graph_id)
+  if (length(missing)) {
+    series <- series |> filter(!Series.Id %in% missing)
+  }
+
   unique_dims <- unique(series[c("Dim", "Tick", "Prefix")])
 
-  # helper to grab axis colour from first series on that dimension
   get_axis_colour_for_dim <- function(dim_value) {
     rows <- which(series$Dim == dim_value)
     if (!length(rows)) return(NULL)
@@ -274,12 +318,40 @@ generic_plotly <- function(
     NULL
   }
 
-  # 4) Add series traces ----------------------------------------------------
+  list(
+    data = data,
+    series = series,
+    split = split,
+    k = k,
+    unique_dims = unique_dims,
+    axis_color_1 = axis_color_1,
+    axis_color_2 = axis_color_2
+  )
+}
+
+
+build_generic_plot <- function(
+  prepared,
+  title,
+  subtitle = "",
+  yaxis_titles = c("", ""),
+  years = 10
+) {
+  data <- prepared$data
+  series <- prepared$series
+  split <- prepared$split
+  k <- prepared$k
+  unique_dims <- prepared$unique_dims
+
+  p <- plotly::plot_ly(
+    data,
+    x     = ~ get(k),
+    split = if (!is.null(split)) ~ get(split) else NULL
+  )
+
   for (i in seq_len(nrow(series))) {
     s <- series[i, ]
-
-    # Decide which y-axis
-    axis_side <- if (unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
+    axis_side <- if (nrow(unique_dims) >= 1 && unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
 
     col_use <- s$colour
     is_bar  <- s$Style == "Bar"
@@ -313,10 +385,14 @@ generic_plotly <- function(
     }
   }
 
-  # 5) Layout ---------------------------------------------------------------
+  primary_prefix <- if (nrow(unique_dims) >= 1) unique_dims$Prefix[1] else ""
+  primary_tick   <- if (nrow(unique_dims) >= 1) unique_dims$Tick[1] else ".2f"
+  secondary_prefix <- if (nrow(unique_dims) >= 2) unique_dims$Prefix[2] else ""
+  secondary_tick   <- if (nrow(unique_dims) >= 2) unique_dims$Tick[2] else ".2f"
+
   p |>
     plotly::layout(
-      title     = standard_title(titles[1], titles[2]),
+      title     = standard_title(title, subtitle),
       legend    = standard_legend(),
       hovermode = "x unified",
       barmode   = "stack",
@@ -324,20 +400,42 @@ generic_plotly <- function(
       xaxis     = standard_date_xaxis(y = years),
       yaxis  = standard_yaxis(
         title      = yaxis_titles[1],
-        tickprefix = unique_dims$Prefix[1],
-        c          = axis_color_1,
-        tickformat = unique_dims$Tick[1]
+        tickprefix = primary_prefix,
+        c          = prepared$axis_color_1,
+        tickformat = primary_tick
       ),
       yaxis2 = standard_yaxis(
         title      = yaxis_titles[2],
-        tickprefix = unique_dims$Prefix[2],
-        tickformat = unique_dims$Tick[2],
+        tickprefix = secondary_prefix,
+        tickformat = secondary_tick,
         y          = "secondary",
-        c          = axis_color_2
+        c          = prepared$axis_color_2
       )
     )
 }
 
+
+generic_plotly <- function(
+  data,
+  titles       = c("", ""),
+  yaxis_titles = c("", ""),
+  series,
+  split = NULL,
+  k,
+  years = 10,
+  graph_id = NULL,
+  spec = NULL
+) {
+  series <- prepare_series_for_graph(series, spec)
+  prepared <- prepare_generic_plot_data(data, series, k, split = split, graph_id = graph_id)
+  build_generic_plot(
+    prepared,
+    title        = titles[1],
+    subtitle     = titles[2],
+    yaxis_titles = yaxis_titles,
+    years        = years
+  )
+}
 
 plot_ts_by_region <- function(
   data,

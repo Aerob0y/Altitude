@@ -1,16 +1,29 @@
 mod_hb2_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     hb2_plot <- reactive({
+      spec <- graph_specs$hb2
       valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
       if (length(valid_inputs) == 0) {
         valid_inputs <- c("Official Cash Rate (OCR)")
       }
-      generic_plotly(
+      hb2_series <- filter_series(
+        guide_rbnz,
+        apply_filters = list(Graph = c("hb2"), Names = valid_inputs)
+      ) |> prepare_series_for_graph(spec)
+
+      prepared <- prepare_generic_plot_data(
         data = load_data("hb2"),
-        titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
+        series = hb2_series,
         k = "Date",
-        years = 15
+        graph_id = "hb2"
+      )
+
+      build_generic_plot(
+        prepared,
+        title = spec$title,
+        subtitle = paste(spec$subtitle_prefix, short_title(valid_inputs)),
+        yaxis_titles = spec$yaxis_titles,
+        years = spec$years
       )
     })
     output$plot <- renderPlotly({hb2_plot()})
@@ -38,12 +51,26 @@ mod_hm1_server <- function(id) {
 mod_hm2_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     hm2_plot <- reactive({
+      spec <- graph_specs$hm2
       valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) |> setdiff("-")
-      generic_plotly(
+      hm2_series <- filter_series(
+        guide_rbnz,
+        apply_filters = list(Graph = c("hm2"), Split = valid_inputs)
+      ) |> prepare_series_for_graph(spec)
+
+      prepared <- prepare_generic_plot_data(
         data = load_data("hm2"),
-        titles = c("Consumption", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm2"), Split = valid_inputs)),
-        k = "Date"
+        series = hm2_series,
+        k = "Date",
+        graph_id = "hm2"
+      )
+
+      build_generic_plot(
+        prepared,
+        title = spec$title,
+        subtitle = paste(spec$subtitle_prefix, short_title(valid_inputs)),
+        yaxis_titles = spec$yaxis_titles,
+        years = spec$years
       )
     })
     output$plot <- renderPlotly({hm2_plot()})
@@ -84,13 +111,27 @@ mod_hm4_server <- function(id) {
 mod_hm5_server <- function(id) {
   moduleServer(id, function(input, output, session) {
     hm5_plot <- renderPlotly({
+      spec <- graph_specs$hm5
       valid_inputs <- input$hm5_names |> unlist(use.names = FALSE) |> unique()
-      valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 4))]
-      generic_plotly(
+      valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), spec$max_series))]
+      hm5_series <- filter_series(
+        guide_rbnz,
+        apply_filters = list(Graph = c("hm5"), Names = valid_inputs)
+      ) |> prepare_series_for_graph(spec)
+
+      prepared <- prepare_generic_plot_data(
         data = load_data("hm5"),
-        titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm5"), Names = valid_inputs)),
-        k = "Date"
+        series = hm5_series,
+        k = "Date",
+        graph_id = "hm5"
+      )
+
+      build_generic_plot(
+        prepared,
+        title = spec$title,
+        subtitle = paste(spec$subtitle_prefix, short_title(valid_inputs)),
+        yaxis_titles = spec$yaxis_titles,
+        years = spec$years
       )
     })
     output$plot <- renderPlotly({hm5_plot()})
