@@ -1,6 +1,12 @@
 
 server <- function(input, output) {
   #output$hb1_ui    <- renderUI({ui_hb1_main()})
+
+  mod_hb2_server("hb2_main")
+  mod_hb2_server("hb2_alt")
+  mod_hb2_server("hb2_a")
+  mod_hb2_server("hb2_b")
+
   output$hc35_ui   <- renderUI({ui_hc35()})
   output$hm1_ui    <- renderUI({ui_hm1()})
   output$hm2_ui    <- renderUI({ui_hm2()})
@@ -65,29 +71,6 @@ output$hb1_plot_main2 <- renderPlotly({
       )
     })
   # hb2 module server ----
-  mod_hb2_server <- function(id) {
-    moduleServer(id, function(input, output, session) {
-      hb2_plot <- reactive({
-        print("hb2_plot reactive")
-        valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
-        if (length(valid_inputs) == 0) {
-          valid_inputs <- c("Official Cash Rate (OCR)")
-        }
-        generic_plotly(
-          data = load_data("hb2"),
-          titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-          series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb2"), Names = valid_inputs)),
-          k = "Date",
-          years = 15
-        )
-      })
-      output$plot <- renderPlotly({hb2_plot()})
-    })
-  }
-  mod_hb2_server("hb2_main")
-  mod_hb2_server("hb2_alt")
-  mod_hb2_server("hb2_a")
-  mod_hb2_server("hb2_b")
 
 
 
@@ -95,152 +78,6 @@ output$hb1_plot_main2 <- renderPlotly({
 
 
 
-
-
-  #hm1 Prices
-  output$hm1_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hm1"),
-      titles = c("Prices", paste("RBNZ:", input$hm1_metric)),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm1"), Split = input$hm1_input[seq_len(min(length(input$hm1_input), 5))], Dim = input$hm1_metric)),
-      k = "Date"
-    )
-  })
-  #hm2 Consumption
-  output$hm2_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) |> setdiff("-")
-    generic_plotly(
-      data = load_data("hm2"),
-      titles = c("Consumption", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm2"), Split = valid_inputs)),
-      k = "Date"
-    )
-  })
-  #hm3 Investment
-  output$hm3_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm3_split, input$hm3_split2)) |> setdiff("-")
-    generic_plotly(
-      data = load_data("hm3"),
-      titles = c("Investment", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm3"), Split = valid_inputs)),
-      k = "Date"
-    )
-  })
-  #hm4 Domestic Trade
-  output$hm4_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hm4"),
-      titles = c("Domestic Trade", paste("RBNZ:", short_title(input$hm4_group))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm4"), Grouping = input$hm4_group)),
-      k = "Date"
-    )
-  })
-  #hm5 Wages
-  output$hm5_plot <- renderPlotly({
-    valid_inputs <- input$hm5_names |> unlist(use.names = FALSE) |> unique()
-    valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 4))]
-    generic_plotly(
-      data = load_data("hm5"),
-      titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm5"), Names = valid_inputs)),
-      k = "Date"
-    )
-  })
-  #hm6 Labour Market
-  output$hm6_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hm6"),
-      titles = c("National Saving", paste("RBNZ:", short_title(input$hm6_names))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm6"), Names = input$hm6_names)),
-      k = "Date"
-    )
-  })
-  #hm7 Balance of Payments
-  output$hm7_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hm7"),
-      titles = c("Balance of Payments", paste("RBNZ:", input$hm7_group)),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm7"), Grouping = input$hm7_group)),
-      k = "Date"
-    )
-  })
-  #hm8 Government
-  output$hm8_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hm8"),
-      titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_group1, input$hm8_group2))))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm8"), Split = input$hm8_split, Grouping = input$hm8_grouping)),
-      k = "Date"
-    )
-  })
-  
-  #hm9 National Saving
-  output$hm9_plot <- renderPlotly({
-    x <- input$hm9_tier1
-    if (length(x) >= 4) {x <- x[1:4]}
-    if (length(x) == 0) {x <- c("Labour force participation rate	 - % s.a.", "Labour cost index (LCI) - y/y%")}
-    generic_plotly(
-      data = load_data("hm9"),
-      titles = c("National Saving", paste("RBNZ:", short_title(x))),  
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm9"), Names = x)),
-      k = "Date"
-    )
-  })
-  #hm10 Housing
-  output$hm10_plot <- renderPlotly({
-    valid_inputs <- unique(c(input$hm10_split_1, input$hm10_split_2)) |> setdiff("-")
-    generic_plotly(
-      data = load_data("hm10"),
-      titles = c("Housing", paste("RBNZ:", short_title(valid_inputs))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm10"), Split = valid_inputs)),
-      k = "Date"
-    )
-  })
-  #hm14 Construction
-  output$hm14_plot <- renderPlotly({
-    x <- input$hm14_tier
-    if (length(x) >= 4) {x <- x[1:4]}
-    if (length(x) == 0) {x <- c("Annual GDP growth - 1 year out", "Annual CPI growth - 1 year out","Perception of monetary conditions (net) - 1 year out")}
-    generic_plotly(
-      data = load_data("hm14"),
-      titles = c("Perceptions and Expectations", ""),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm14"), Names = input$hm14_tier)),
-      k = "Date"
-    )
-  })
-
-  #hs35 Retail Sales
-  output$hc35_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("hc35"),
-      titles = c("Residential mortgage loan reconciliation", paste("RBNZ:", short_title(unique(c(input$hc35_group, input$hc35_split))))),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hc35"), Split = input$hc35_split, Group = input$hc35_group)),
-      k = "Date"
-    )
-  })
-
-  #Fuel
-  output$fuel_plot <- renderPlotly({
-    generic_plotly(
-      data = load_data("fuel"),
-      titles = c("Jet A1 Fuel Prices per Barrel", paste("In", input$fuel_unit)),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("fuel"), Split = input$fuel_unit)),
-      k = "Date"
-    )
-  })
-
-  #Bond 
-  output$bond_plot <- renderPlotly({
-    data <- load_data("bond")
-    data <- data %>% filter(Location %in% input$bond_location)
-    plot_long(
-      data = data,
-      titles = c("Bond Prices", ""),
-      series = filter_series(guide_rbnz, apply_filters = list(Graph = c("bond"), Names = input$bond_metric)),
-      k = "Date",
-      split = "Location"
-    )
-  })
 
   #Bond
   output$border_plot <- renderPlotly({
@@ -362,7 +199,7 @@ output$adp_plot <- renderPlotly({
       input_adp_propertytype <- "Total"
     }
 
-    data_grouped <- load_adp() %>%
+    data_grouped <- load_data("adpByRTO") %>%
       filter(Regions %in% input_adp_region) %>%
       filter(PropertyType %in% input_adp_propertytype)
 

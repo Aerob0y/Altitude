@@ -1,35 +1,26 @@
 # Initialization script for the Shiny application
 
 
-#suppressMessages(suppressWarnings(library(ggplot2)))
-#suppressMessages(suppressWarnings(library(bslib)))
-#suppressMessages(suppressWarnings(library(plotly)))
-#suppressMessages(suppressWarnings(library(thematic)))
-
+cache <- new.env(parent = emptyenv())
+guide_rbnz <- readRDS("reference/RBNZ_Series.rds")
 
 run_app <- function() {
-  #suppressMessages(suppressWarnings(library(dplyr)))
-  suppressMessages(suppressWarnings(library(memoise)))
-  suppressMessages(suppressWarnings(library(jsonlite)))
-  suppressMessages(suppressWarnings(library(shiny)))
-  suppressMessages(suppressWarnings(library(scales)))
-  #library(request)
-  library(tidyverse)
-  library(bslib)
-  library(bsicons)
-  #suppressMessages(suppressWarnings(library(bslib, include.only = c("navset_tab", "nav_menu", "nav_panel", "page_sidebar","sidebar","card"))))
-  suppressMessages(suppressWarnings(library(stats, include.only = c("setNames", "na.omit", "complete.cases"))))
-  suppressMessages(suppressWarnings(library(dplyr, include.only = c("filter", "group_by", "summarise", "collapse", "all_of", "collapse",  "select"))))
-  suppressMessages(suppressWarnings(library(tidyr, include.only = c("fill"))))
-  suppressMessages(suppressWarnings(library(tibble, include.only = c("as_tibble", "deframe"))))
-  suppressMessages(suppressWarnings(library(stringr, include.only = c("str_replace_all"))))
-  suppressMessages(suppressWarnings(library(plotly)))
-  suppressMessages(suppressWarnings(library(plotly, include.only = c("renderPlotly","plotlyOutput","config","layout","add_trace","subplot", "add_bars"))))
+  # Libraries
+  # datasets
+
   source("r/utils_data.r")
   source("r/plotly_elements.r")
+
+  # ui elements
+  source("r/shiny/ui/ui_elements.r")
+  source("r/shiny/ui/ui_rbnz.r")
+  source("r/shiny/ui/ui_slides.r")
+
+  #server elements
+  source("r/shiny/server/server_rbnz.r")
+  #shiny
   source("r/shiny/server.r")
   source("r/shiny/ui.r")
 
   shiny::shinyApp(ui, server, options = list(port = 5555))
 }
-

@@ -207,18 +207,20 @@ ui_fuel <- memoise(function() {
 })
 
 # accommodation data UI
+
+
 ui_adp <- memoise(function() {
-  if (exists("adp_propertytype", envir = .cache)) {return(.cache[["adp_propertytype"]])}
+  if (exists("adp_propertytype", envir = cache)) {return(cache[["adp_propertytype"]])}
   else {
-    adp_propertytype <- load_adp() %>% select(`PropertyType`) %>% unique()
-    .cache[["adp_propertytype"]] <- adp_propertytype
+    adp_propertytype <- load_data("adpByRTO") %>% select(`PropertyType`) %>% unique()
+    cache[["adp_propertytype"]] <- adp_propertytype
     adp_propertytype
   }
-  if (exists("adp_region", envir = .cache)) {return(.cache[["adp_region"]])}
+  if (exists("adp_region", envir = cache)) {return(cache[["adp_region"]])}
   else {
-    adp_region <- load_adp() %>% select(Regions) %>% unique()
+    adp_region <- load_data("adpByRTO") %>% select(Regions) %>% unique()
     adp_region <- adp_region[!adp_region$Region %in% c("New Zealand"), ]
-    .cache[["adp_region"]] <- adp_region
+    cache[["adp_region"]] <- adp_region
     adp_region
   }
   adp_metric <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("adp")))
@@ -233,10 +235,10 @@ ui_adp <- memoise(function() {
 })
 
 get_data_filters <- function(i, data) {
-  if (exists(i, envir = .cache)) {return(.cache[[i]])}
+  if (exists(i, envir = cache)) {return(cache[[i]])}
   else {
     data_filters <- data %>% pull(!!sym(i)) %>% unique() %>% as.vector() %>% sort()
-    .cache[[i]] <- data_filters
+    cache[[i]] <- data_filters
     data_filters
   }
 }
@@ -274,10 +276,10 @@ ui_border <- memoise(function() {
 })
 
 ui_bond <- memoise(function() {
-  if (exists("bond_region", envir = .cache)) {return(.cache[["bond_region"]])}
+  if (exists("bond_region", envir = cache)) {return(cache[["bond_region"]])}
   else {
     bond_location <- load_data("bond") %>% select(`Location`) %>% unique()
-    .cache[["bond_location"]] <- bond_location
+    cache[["bond_location"]] <- bond_location
     bond_location
   }
   bond_metric <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("bond")))

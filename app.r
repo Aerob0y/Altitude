@@ -1,8 +1,20 @@
 # Run the Shiny Application
-#guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
 #saveRDS(guide_rbnz, file = "reference/RBNZ_Series.rds", compress = FALSE)
 
-source("r/run_app.R", local = TRUE, echo = TRUE)
+suppressMessages(suppressWarnings(library(memoise)))
+suppressMessages(suppressWarnings(library(jsonlite)))
+suppressMessages(suppressWarnings(library(shiny)))
+suppressMessages(suppressWarnings(library(scales)))
+suppressMessages(library(tidyverse))
+suppressMessages(library(bslib))
+suppressMessages(library(bsicons))
+suppressMessages(suppressWarnings(library(stats)))
+suppressMessages(suppressWarnings(library(dplyr)))
+suppressMessages(suppressWarnings(library(tidyr)))
+suppressMessages(suppressWarnings(library(tibble)))
+suppressMessages(suppressWarnings(library(stringr)))
+suppressMessages(suppressWarnings(library(plotly)))
+suppressMessages(suppressWarnings(library(plotly)))
+guide_rbnz <- openxlsx::read.xlsx("reference/RBNZ_Series.xlsx", detectDates = TRUE, sheet = "Series Definitions", startRow = 1, skipEmptyRows = TRUE)
+source("r/run_app.R", local = FALSE, echo = TRUE)
 run_app()
-
-
