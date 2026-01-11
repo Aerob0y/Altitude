@@ -1,8 +1,6 @@
 
 register_modules <- function(tabs) {
-  #mod_hb1_server("hb1_main", enabled = reactive(TRUE))
   mod_hb1_server("hb1_main", selected_tab = tabs)
-
   mod_hb2_server("hb2_main", enabled = reactive(TRUE))
   mod_hb2_server("hb2_alt", enabled = reactive(TRUE))
   mod_hb2_server("hb2_a", enabled = reactive(TRUE))
@@ -23,25 +21,41 @@ register_modules <- function(tabs) {
   mod_bond_server("bond", enabled = reactive(TRUE))
 }
 
-server <- function(input, output) {
+server <- function(input, output, session) {
+
   tabs <- reactive(input$main_nav)
-
-  observeEvent(input$main_nav, {
-  cat("main_nav changed to:", input$main_nav, "\n")
-}, ignoreInit = FALSE)
-
   register_modules(tabs)
-  
 
   output$hb1_ui_lazy <- renderUI({
-    print("here")
-    req(input$main_nav == "hb1")
+    #req(input$main_nav == "hb1")
     mod_hb1_ui("hb1_main")
-    
   })
-  outputOptions(output, "hb1_ui_lazy", suspendWhenHidden = FALSE)
+
+  observe({
+  cat("main_nav exists? ", "main_nav" %in% names(reactiveValuesToList(input)), "\n")
+})
+
+observeEvent(input$main_nav, {
+  cat("input$main_nav changed to:", input$main_nav, "\n")
+}, ignoreInit = FALSE)
+
+
+observeEvent(input$main_nav, {
+  cat("main_nav changed ->", shQuote(input$main_nav), "\n")
+  str(input$main_nav)
+}, ignoreInit = FALSE)
+
+observe({
+  cat("---- inputs ----\n")
+  print(names(reactiveValuesToList(input)))
+})
+
+
 
 }
+
+
+
 server2 <- function(input, output) {
 
   output$hs32_ui   <- renderUI({ui_hs32()})

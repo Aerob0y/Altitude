@@ -27,29 +27,33 @@ mod_hb1_ui <- function(id) {
 }
 
 
+mod_hb1_server <- function(id, selected_tab) {
+  print("hb1_server loaded")
 
-
-mod_hb1_server <- function(id, enabled = reactive(TRUE), selected_tab) {
-  
   moduleServer(id, function(input, output, session) {
-    hb1_data <- reactive({
-      load_data("hb1")
-    })
+    enabled <- reactive(identical(selected_tab(), "hb1"))
+
     observeEvent(selected_tab(), {
       cat("selected tab:", selected_tab(), "\n")
-    }, ignoreInit = FALSE)
+    }, ignoreInit = TRUE)
+
+    # Load data only when hb1 tab is active
+    hb1_data <- eventReactive(enabled(), {
+      req(enabled())
+      load_data("hb1")
+    }, ignoreInit = TRUE)
 
     hb1_plot <- reactive({
       req(enabled())
-      if (checks$sourcenames) {t <- "Daily exchange rates and TWI - HB1"}
-      else {t <- "Daily exchange rates and TWI"}
+      d <- hb1_data()
+
+      t <- if (checks$sourcenames) "Daily exchange rates and TWI - HB1" else "Daily exchange rates and TWI"
+
       valid_inputs <- unique(c(input$Currency1_main, input$Currency2_main)) |> setdiff("-")
+
       generic_plotly(
-        data = hb1_data(),
-        titles = c(
-          t,
-          paste("RBNZ:", short_title(valid_inputs))
-        ),
+        data = d,
+        titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
           guide_rbnz,
           apply_filters = list(Graph = "hb1", Split = valid_inputs)
@@ -58,6 +62,9 @@ mod_hb1_server <- function(id, enabled = reactive(TRUE), selected_tab) {
         years = 15
       )
     })
-    output$plot <- renderPlotly({ hb1_plot() })
+
+    output$plot <- renderPlotly(hb1_plot())
   })
 }
+
+
