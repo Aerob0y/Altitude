@@ -7,11 +7,15 @@ mod_hm7_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm7_server <- function(id) {
+mod_hm7_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm7_data <- reactive({
+      load_data("hm7")
+    })
     hm7_plot <- reactive({
+      req(enabled())
       generic_plotly(
-        data = load_data("hm7"),
+        data = hm7_data(),
         titles = c("Balance of Payments", paste("RBNZ:", input$hm7_group)),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm7"), Grouping = input$hm7_group)),
         k = "Date"

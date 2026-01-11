@@ -1,7 +1,7 @@
 mod_bond_ui <- function(id) {
   ns <- NS(id)
-  bond_locations <- load_data("bond") %>% dplyr::pull(Location) %>% unique()
-  bond_metrics <- filter_series(guide_rbnz, apply_filters = list(Graph = c("bond"), Names = NULL))
+  bond_locations <- load_data("bond_locations") %>% unique()
+  bond_metrics <- filter_series(guide_rbnz, column = "Names", apply_filters = list(Graph = c("bond")))
   insert_inputs <- tagList(
     selectInput(ns("bond_location"), "Location", choices = bond_locations, selected = bond_locations, multiple = TRUE),
     selectInput(ns("bond_metric"), "Metric", choices = bond_metrics, selected = bond_metrics[1], multiple = FALSE)
@@ -9,11 +9,15 @@ mod_bond_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_bond_server <- function(id) {
+mod_bond_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    bond_data <- reactive({
+      load_data("bond")
+    })
     bond_plot <- reactive({
-      data <- load_data("bond")
-      data <- data %>% dplyr::filter(Location %in% input$bond_location)
+      req(enabled())
+      print("bond_plot reactive")
+      data <- bond_data() %>% dplyr::filter(Location %in% input$bond_location)
       plot_long(
         data = data,
         titles = c("Bond Prices", ""),

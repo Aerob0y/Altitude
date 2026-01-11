@@ -1,5 +1,5 @@
 # First set of controls + plot
-ui_hb1_main <- memoise(function() {
+ui_hb1_main_remove <- function() {
   hb1_split <- filter_series(guide_rbnz, column = "Split",
                              apply_filters = list(Graph = c("hb1")))
   insert_inputs <- tagList(
@@ -9,10 +9,10 @@ ui_hb1_main <- memoise(function() {
                 selected = "-",     multiple = FALSE)
   )
   ui_single(insert_inputs, p = "hb1_plot_main", h = "600px")
-})
+}
 
 # Second set of controls + plot (e.g. in another tab/box)
-ui_hb1_alt <- memoise(function() {
+ui_hb1_alt_remove <- function() {
   hb1_split <- filter_series(guide_rbnz, column = "Split",
                              apply_filters = list(Graph = c("hb1")))
   insert_inputs <- tagList(
@@ -22,12 +22,10 @@ ui_hb1_alt <- memoise(function() {
                 selected = "-",     multiple = FALSE)
   )
   ui_single(insert_inputs, p = "hb1_plot_main2", h = "600px")
-})
-
-
+}
 
 # hm1 Prices UI
-ui_hm1 <- memoise(function() {
+ui_hm1_remove <- memoise(function() {
   hm1_input <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hm1")))
   hm1_metric <- filter_series(guide_rbnz, column = "Dim", apply_filters = list(Graph = c("hm1")))
   insert_inputs <- tagList(
@@ -212,7 +210,6 @@ get_data_filters <- function(i, data) {
   }
 }
 
-load_data("border") %>% colnames()
 
 ui_border <- memoise(function() {
   border_split <- c("Residency/Country", "Overseas Port","New Zealand Port", "Passenger Type", "Travel Purpose")

@@ -1,62 +1,55 @@
 
+register_modules <- function(tabs) {
+  #mod_hb1_server("hb1_main", enabled = reactive(TRUE))
+  mod_hb1_server("hb1_main", selected_tab = tabs)
+
+  mod_hb2_server("hb2_main", enabled = reactive(TRUE))
+  mod_hb2_server("hb2_alt", enabled = reactive(TRUE))
+  mod_hb2_server("hb2_a", enabled = reactive(TRUE))
+  mod_hb2_server("hb2_b", enabled = reactive(TRUE))
+  mod_hm1_server("hm1", enabled = reactive(TRUE))
+  mod_hm2_server("hm2", enabled = reactive(TRUE))
+  mod_hm3_server("hm3", enabled = reactive(TRUE))
+  mod_hm4_server("hm4", enabled = reactive(TRUE))
+  mod_hm5_server("hm5", enabled = reactive(TRUE))
+  mod_hm6_server("hm6", enabled = reactive(TRUE))
+  mod_hm7_server("hm7", enabled = reactive(TRUE))
+  mod_hm8_server("hm8", enabled = reactive(TRUE))
+  mod_hm9_server("hm9", enabled = reactive(TRUE))
+  mod_hm10_server("hm10", enabled = reactive(TRUE))
+  mod_hm14_server("hm14", enabled = reactive(TRUE))
+  mod_hc35_server("hc35", enabled = reactive(TRUE))
+  mod_fuel_server("fuel", enabled = reactive(TRUE))
+  mod_bond_server("bond", enabled = reactive(TRUE))
+}
+
 server <- function(input, output) {
-  register_rbnz_modules()
+  tabs <- reactive(input$main_nav)
+
+  observeEvent(input$main_nav, {
+  cat("main_nav changed to:", input$main_nav, "\n")
+}, ignoreInit = FALSE)
+
+  register_modules(tabs)
+  
+
+  output$hb1_ui_lazy <- renderUI({
+    print("here")
+    req(input$main_nav == "hb1")
+    mod_hb1_ui("hb1_main")
+    
+  })
+  outputOptions(output, "hb1_ui_lazy", suspendWhenHidden = FALSE)
+
+}
+server2 <- function(input, output) {
 
   output$hs32_ui   <- renderUI({ui_hs32()})
   output$adp_ui    <- renderUI({ui_adp()})
   output$ect_ui    <- renderUI({ui_ect()})
   output$border_ui <- renderUI({ui_border()})
   output$slides_ui <- renderUI({ui_slides()})
-  output$a_ui      <- renderUI({ui_a})
-
-
-  #hb1 Exchange rates
-hb1_plot_obj <- function(a, b) {
-  valid_inputs <- unique(c(a, b)) |> setdiff("-")
-
-  generic_plotly(
-    data   = load_data("hb1"),
-    titles = c(
-      "Daily exchange rates and TWI",
-      paste("RBNZ:", short_title(valid_inputs))
-    ),
-    series = filter_series(
-      guide_rbnz,
-      apply_filters = list(Graph = "hb1", Split = valid_inputs)
-    ),
-    k = "Date"
-  )
-}
-
-
-
-# First plot (driven by _main inputs)
-output$hb1_plot_main <- renderPlotly({
-  hb1_plot_obj(input$Currency1_main, input$Currency2_main)
-})
-
-# Second plot (driven by _alt inputs)
-output$hb1_plot_main2 <- renderPlotly({
-  hb1_plot_obj(input$Currency1_alt, input$Currency2_alt)
-})
-
-    output$hb1_plot <-
-    renderPlotly({
-      valid_inputs <- unique(c(input$Currency1, input$Currency2)) |> setdiff("-")
-      generic_plotly(
-        data = load_data("hb1"),
-        titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hb1"), Split = valid_inputs)),
-        k = "Date"
-      )
-    })
-  # hb2 module server ----
-
-
-
-
-
-
+  output$overview_ui      <- renderUI({ui_overview})
 
 
   #Bond
@@ -249,92 +242,4 @@ output$adp_plot <- renderPlotly({
     )
 
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  n_slides <- 3
-  slide <- reactiveVal(1)
-  observeEvent(input$n, {
-    slide(ifelse(slide() == n_slides, 1, slide() + 1) )   # wrap around
-  })
-  observeEvent(input$p, {
-    slide(ifelse(slide() == 1, n_slides, slide() - 1) )   # wrap around
-  })
-
-
-  # Slide content (plots + text) per slide
-  output$slide_body <- renderUI({
-    s <- slide()
-    if (s == 1) {
-      tagList(
-        div(class = "slide-subtitle", "Globally, central banks have increased interest rates, cooling the economy to battle inflation.  The last mile is the hardest, the inflation battle is not yet over."),
-        fluidRow(
-          column(7, ui_hb1_alt()),
-          column(5, mod_hb2_ui("hb2_alt"))
-        ),
-        br(),
-        div(class = "slide-text",
-            tags$strong("Inflation busting"), tags$br(),
-            tags$ul(
-              tags$li("Post-COVID, inflation surged and central banks hiked policy rates."),
-              tags$li("Higher rates cooled demand and helped bring inflation down."),
-              tags$li("The last mile back to target is taking longer.")
-            )
-        )
-      )
-    } else if (s == 2) {
-      tagList(
-        div(class = "slide-subtitle", "Labour market"),
-        fluidRow(
-          column(8, "XX"),
-          column(4,
-                 div(class = "slide-text",
-                     tags$ul(
-                       tags$li("Job growth has slowed from its peak."),
-                       tags$li("Wage growth has rolled over but remains elevated."),
-                       tags$li("Unemployment is drifting higher from very low levels.")
-                     )
-                 )
-          )
-        )
-      )
-    } else if (s == 3) {
-      tagList(
-        div(class = "slide-subtitle", "Housing & construction"),
-        fluidRow(
-          column(8, "XX"),
-          column(4,
-                 div(class = "slide-text",
-                     tags$ul(
-                       tags$li("House prices have stabilised after the correction."),
-                       tags$li("Construction activity is easing from very high levels."),
-                       tags$li("Higher rates and costs continue to weigh on new builds.")
-                     )
-                 )
-          )
-        )
-      )
-    }
-  })
-  
-
-
-
-
-
-
 }

@@ -1,4 +1,5 @@
 mod_hc35_ui <- function(id) {
+  
   ns <- NS(id)
   hc35_split <- filter_series(guide_rbnz, column = "Split", apply_filters = list(Graph = c("hc35")))
   hc35_group <- filter_series(guide_rbnz, column = "Group", apply_filters = list(Graph = c("hc35")))
@@ -9,11 +10,14 @@ mod_hc35_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hc35_server <- function(id) {
+mod_hc35_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hc35_data <- reactive({
+      load_data("hc35")
+    })
     hc35_plot <- reactive({
       generic_plotly(
-        data = load_data("hc35"),
+        data = hc35_data(),
         titles = c("Residential mortgage loan reconciliation", paste("RBNZ:", short_title(unique(c(input$hc35_group, input$hc35_split))))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hc35"), Split = input$hc35_split, Group = input$hc35_group)),
         k = "Date"

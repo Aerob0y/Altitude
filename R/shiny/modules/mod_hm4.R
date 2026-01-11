@@ -9,11 +9,15 @@ mod_hm4_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm4_server <- function(id) {
+mod_hm4_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm4_data <- reactive({
+      load_data("hm4")
+    })
     hm4_plot <- reactive({
+      req(enabled())
       generic_plotly(
-        data = load_data("hm4"),
+        data = hm4_data(),
         titles = c("Domestic Trade", paste("RBNZ:", short_title(input$hm4_group))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm4"), Grouping = input$hm4_group)),
         k = "Date"

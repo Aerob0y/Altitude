@@ -8,12 +8,16 @@ mod_hm2_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm2_server <- function(id) {
+mod_hm2_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm2_data <- reactive({
+      load_data("hm2")
+    })
     hm2_plot <- reactive({
+      req(enabled())
       valid_inputs <- unique(c(input$hm2_split, input$hm2_split2)) |> setdiff("-")
       generic_plotly(
-        data = load_data("hm2"),
+        data = hm2_data(),
         titles = c("Consumption", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm2"), Split = valid_inputs)),
         k = "Date"

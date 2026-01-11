@@ -7,11 +7,15 @@ mod_hm6_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm6_server <- function(id) {
+mod_hm6_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm6_data <- reactive({
+      load_data("hm6")
+    })
     hm6_plot <- reactive({
+      req(enabled())
       generic_plotly(
-        data = load_data("hm6"),
+        data = hm6_data(),
         titles = c("National Saving", paste("RBNZ:", short_title(input$hm6_names))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm6"), Names = input$hm6_names)),
         k = "Date"

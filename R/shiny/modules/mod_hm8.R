@@ -9,11 +9,15 @@ mod_hm8_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm8_server <- function(id) {
+mod_hm8_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm8_data <- reactive({
+      load_data("hm8")
+    })
     hm8_plot <- reactive({
+      req(enabled())
       generic_plotly(
-        data = load_data("hm8"),
+        data = hm8_data(),
         titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_group1, input$hm8_group2))))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm8"), Split = input$hm8_split, Grouping = input$hm8_grouping)),
         k = "Date"

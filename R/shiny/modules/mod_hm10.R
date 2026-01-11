@@ -8,12 +8,16 @@ mod_hm10_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm10_server <- function(id) {
+mod_hm10_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm10_data <- reactive({
+      load_data("hm10")
+    })
     hm10_plot <- reactive({
+      req(enabled())
       valid_inputs <- unique(c(input$hm10_split_1, input$hm10_split_2)) |> setdiff("-")
       generic_plotly(
-        data = load_data("hm10"),
+        data = hm10_data(),
         titles = c("Housing", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm10"), Split = valid_inputs)),
         k = "Date"

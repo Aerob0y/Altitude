@@ -15,14 +15,18 @@ mod_hm9_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm9_server <- function(id) {
+mod_hm9_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm9_data <- reactive({
+      load_data("hm9")
+    })
     hm9_plot <- reactive({
+      req(enabled())
       x <- input$hm9_tier1
       if (length(x) >= 4) {x <- x[1:4]}
       if (length(x) == 0) {x <- c("Labour force participation rate       - % s.a.", "Labour cost index (LCI) - y/y%")}
       generic_plotly(
-        data = load_data("hm9"),
+        data = hm9_data(),
         titles = c("National Saving", paste("RBNZ:", short_title(x))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm9"), Names = x)),
         k = "Date"

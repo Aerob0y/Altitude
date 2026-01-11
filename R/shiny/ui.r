@@ -101,12 +101,15 @@ ui <- fluidPage(
     "))
   ),
 
+
   navset_tab(
-    nav_panel("Overview", uiOutput("slides_ui")),
-    nav_panel("Highlights", uiOutput("a_ui")),
+  #navset_card(
+    
+    #nav_panel("Overview", uiOutput("a_ui")),
+    nav_panel("Overview", ui_overview),
+    nav_panel("Daily exchange rates and TWI", value = "hb1", uiOutput("hb1_ui_lazy")),
     nav_menu(
       "Economic Indicators",
-      nav_panel("Daily exchange rates and TWI", ui_hb1_main()),
       nav_panel("Daily wholesale interest rates", mod_hb2_ui("hb2_main")),
       nav_panel("Residential mortgage loan reconciliation", mod_hc35_ui("hc35")),
       nav_panel("Prices", mod_hm1_ui("hm1")),
@@ -119,17 +122,17 @@ ui <- fluidPage(
       nav_panel("Overseas Trade", mod_hm8_ui("hm8")),
       nav_panel("Labour Market", mod_hm9_ui("hm9")),
       nav_panel("Housing", mod_hm10_ui("hm10")),
-      nav_panel("Expectations", mod_hm14_ui("hm14")),
-      nav_panel("ECT", uiOutput("ect_ui"))
+      nav_panel("Expectations", mod_hm14_ui("hm14"))
+      #nav_panel("ECT", uiOutput("ect_ui"))
     ),
     nav_menu(
       "Tourism Indicators",
       nav_panel("Fuel", mod_fuel_ui("fuel")),
-      nav_panel("Accommodation", uiOutput("adp_ui")),
-      nav_panel("Border Movements", uiOutput("border_ui")),
-      nav_panel("Bond Data", mod_bond_ui("bond"))
+      #nav_panel("Accommodation", uiOutput("adp_ui")),
+      #nav_panel("Border Movements", uiOutput("border_ui")),
+      nav_panel("Bond Data", mod_bond_ui("bond"), id = "bond_data")
     ),
-    id = "tab"
+    id = "main_nav"
   )
 )
 

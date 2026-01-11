@@ -1,5 +1,6 @@
 
 ui_single <- function(insert_inputs, h = "600px", p) {
+  if (checks$ui_elements) {print("Using ui_single")}  # DEBUG
   div(
     style = "
       flex: 1 1 auto;
@@ -26,6 +27,7 @@ ui_single <- function(insert_inputs, h = "600px", p) {
 }
 
 ui_single2 <- function(insert_inputs, h = "600px", p) {
+  if (checks$ui_elements) {print("Using ui_single2")}  # DEBUG
     page_sidebar(
       sidebar = sidebar(
         class = "csv-sidebar",
@@ -44,5 +46,3 @@ ui_single2 <- function(insert_inputs, h = "600px", p) {
       )
     )
 }
-
-

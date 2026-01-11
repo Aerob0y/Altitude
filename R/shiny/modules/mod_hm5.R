@@ -20,13 +20,17 @@ mod_hm5_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm5_server <- function(id) {
+mod_hm5_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm5_data <- reactive({
+      load_data("hm5")
+    })
     hm5_plot <- reactive({
+      req(enabled())
       valid_inputs <- input$hm5_names |> unlist(use.names = FALSE) |> unique()
       valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 4))]
       generic_plotly(
-        data = load_data("hm5"),
+        data = hm5_data(),
         titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm5"), Names = valid_inputs)),
         k = "Date"

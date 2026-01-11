@@ -26,9 +26,13 @@ mod_hm14_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
-mod_hm14_server <- function(id) {
+mod_hm14_server <- function(id, enabled = reactive(TRUE)) {
   moduleServer(id, function(input, output, session) {
+    hm14_data <- reactive({
+      load_data("hm14")
+    })
     hm14_plot <- reactive({
+      req(enabled())
       x <- input$hm14_tier
       if (length(x) >= 4) {x <- x[1:4]}
       if (length(x) == 0) {
@@ -39,7 +43,7 @@ mod_hm14_server <- function(id) {
         )
       }
       generic_plotly(
-        data = load_data("hm14"),
+        data = hm14_data(),
         titles = c("Perceptions and Expectations", ""),
         series = filter_series(guide_rbnz, apply_filters = list(Graph = c("hm14"), Names = x)),
         k = "Date"
