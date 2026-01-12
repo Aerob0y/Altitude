@@ -29,19 +29,19 @@ mod_hb1_ui <- function(id) {
 
 mod_hb1_server <- function(id, selected_tab) {
   print("hb1_server loaded")
-
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), "hb1"))
+    enabled <- reactive(TRUE)
 
     observeEvent(selected_tab(), {
       cat("selected tab:", selected_tab(), "\n")
-    }, ignoreInit = TRUE)
+    }, ignoreInit = FALSE)
 
     # Load data only when hb1 tab is active
     hb1_data <- eventReactive(enabled(), {
       req(enabled())
       load_data("hb1")
-    }, ignoreInit = TRUE)
+    }, ignoreInit = FALSE)
 
     hb1_plot <- reactive({
       req(enabled())
@@ -66,5 +66,3 @@ mod_hb1_server <- function(id, selected_tab) {
     output$plot <- renderPlotly(hb1_plot())
   })
 }
-
-

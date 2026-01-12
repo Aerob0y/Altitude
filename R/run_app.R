@@ -5,14 +5,13 @@ checks <- list(
   ui_elements = FALSE,
   sourcenames = TRUE,
   ui_module = TRUE
-
 )
 source("r/utils/open_lib.r") # Load required libraries
 source("r/utils/utils_data.r") # data sources, caching, filtering
 source("r/utils/plotly_elements.r") # plotly customisations
 source("r/shiny/ui/ui_elements.r") # common UI elements
 
-list.files("r/shiny/modules", full.names = TRUE, pattern = "\\.R$") %>% lapply(source)  # load all modules
+list.files("r/shiny/modules", full.names = TRUE, pattern = "\\.r$") %>% lapply(source)  # load all modules
 
 source("r/shiny/ui/ui_slides.r") # slides UI elements
 
