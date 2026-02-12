@@ -1,0 +1,85 @@
+<div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:8px 0;">
+  <label>Series:</label>
+  <select id="seriesSelect" multiple size="6" style="min-width:280px;"></select>
+  <button id="allBtn">All</button>
+  <button id="noneBtn">None</button>
+</div>
+
+<div id="plot" style="width:100%; height:700px;"></div>
+
+<script>
+async function loadJSON(url){
+  const r = await fetch(url, {cache:"no-store"});
+  if(!r.ok) throw new Error(`Failed to fetch ${url}: ${r.status}`);
+  return await r.json();
+}
+
+function toTrace(data, g){
+  // Wide data: data is array of rows, each row has Date + columns keyed by g.id
+  const x = data.map(d => d.Date);
+  const y = data.map(d => d[g.id]);
+
+  const isBar  = (g.style || "").toLowerCase() === "bar";
+  const isFill = (g.style || "").toLowerCase() === "fill";
+
+  return {
+    name: g.name,
+    x, y,
+    type: isBar ? "bar" : "scatter",
+    mode: isBar ? undefined : "lines",
+    stackgroup: isFill ? "one" : undefined,
+    hovertemplate: `%{x}<br>${g.name}: %{y}<extra></extra>`,
+    // you can also store metadata for later:
+    meta: g,
+    visible: true
+  };
+}
+
+(async function(){
+  const base = "./"; // or "/Published/Standalone/" depending on your hosting path
+
+  const wide = await loadJSON(base + "hb1.json");
+  const guide = await loadJSON(base + "hb1_guide.json");
+
+  const traces = guide.map(g => toTrace(wide, g));
+
+  const layout = {
+    title: {text: "HB1", x: 0},
+    hovermode: "x unified",
+    legend: {orientation:"h", x:0.5, xanchor:"center", y:-0.15, yanchor:"top"},
+    margin: {t:60, r:20, b:60, l:60},
+    xaxis: {type:"date"}
+    // yaxis formatting can be “best effort” unless you enforce one dimension at a time.
+  };
+
+  await Plotly.newPlot("plot", traces, layout, {displayModeBar:true});
+
+  // Build filter UI
+  const sel = document.getElementById("seriesSelect");
+  guide.forEach((g, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = g.name;
+    opt.selected = true;
+    sel.appendChild(opt);
+  });
+
+  function applyVisibility(){
+    const chosen = new Set([...sel.selectedOptions].map(o => parseInt(o.value, 10)));
+    const vis = traces.map((_, i) => chosen.has(i));  // bool per trace
+    Plotly.restyle("plot", {visible: vis});
+  }
+
+  sel.addEventListener("change", applyVisibility);
+
+  document.getElementById("allBtn").addEventListener("click", () => {
+    [...sel.options].forEach(o => o.selected = true);
+    applyVisibility();
+  });
+
+  document.getElementById("noneBtn").addEventListener("click", () => {
+    [...sel.options].forEach(o => o.selected = false);
+    applyVisibility();
+  });
+})();
+</script>
