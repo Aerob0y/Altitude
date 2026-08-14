@@ -22,6 +22,7 @@ server <- function(input, output, session) {
   mod_fuel_server("fuel_main",  selected_tab = tab, activate_on = "fuel")
   #mod_adp_server("adp_main",  selected_tab = tab, activate_on = "adp")
   mod_bond_server("bond_main",  selected_tab = tab, activate_on = "bond")
+  mod_border_server("border_main",  selected_tab = tab, activate_on = "border")
 
 
   # generate ui when needed
@@ -44,5 +45,5 @@ server <- function(input, output, session) {
   output$fuel_ui <- renderUI({mod_fuel_ui("fuel_main")})
   #output$adp_ui <- renderUI({mod_adp_ui("adp_main")})
   output$bond_ui <- renderUI({mod_bond_ui("bond_main")})
-
+  output$border_ui <- renderUI({mod_border_ui("border_main")})
 }

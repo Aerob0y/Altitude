@@ -37,4 +37,3 @@ update_bond_data <- function(only_rds = FALSE) {
     saveRDS(data, file = "app/data/Bond/bond.rds", compress = FALSE)
   }
 }
-update_bond_data(only_rds = FALSE)

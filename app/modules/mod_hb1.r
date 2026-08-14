@@ -26,13 +26,8 @@ mod_hb1_ui <- function(id) {
           tags$div(class = "dl-panel", mod_download_ui(ns("dl")))
         )
       )
-
     )
-
   )
-
-
-
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }
 
@@ -47,8 +42,6 @@ mod_hb1_server <- function(id, selected_tab, activate_on) {
       print("hb1_server loaded")
       load_data("hb1")
     }, ignoreInit = FALSE)
-
-
 
     #dl2 <- reactive({
     #  return(list(format=input$dl_format, width=input$dl_width, height=input$dl_height,  scale=2))

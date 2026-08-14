@@ -123,4 +123,4 @@ download_latest_ect <- function(
     filter(Group == "Totals - Electronic card transactions by division, percentage changes")
   saveRDS(ect_totals_percentage_changes, file = "app/data/ECT/ect_totals_percentage_changes.rds", compress = FALSE)
 }
-download_latest_ect()
+

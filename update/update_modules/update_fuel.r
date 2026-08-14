@@ -48,4 +48,4 @@ update_fuel_data <- function(location = "app/data/Fuel/fuel_data.csv", n = 12, r
   invisible(result)
 }
 
-update_fuel_data()
+

@@ -1,5 +1,3 @@
-`%||%` <- function(x, y) if (is.null(x)) y else x
-
 mod_download_ui <- function(id) {
   ns <- NS(id)
 
@@ -24,8 +22,6 @@ mod_download_ui <- function(id) {
     )
   )
 }
-
-
 
 mod_download_server <- function(id,
                                 defaults = list(format="png", width=1920, height=1080, scale=2, clean=FALSE)) {
@@ -52,6 +48,10 @@ mod_download_server <- function(id,
   })
 }
 
+to_rgba <- function(col, alpha = 0.25) {
+  rgb <- grDevices::col2rgb(col)
+  sprintf("rgba(%d,%d,%d,%.3f)", rgb[1], rgb[2], rgb[3], alpha)
+}
 
 ### Colour definitions and plotly custom elements ----------------------------
 cc <- c(
@@ -184,7 +184,6 @@ standard_yaxis <- function(formatting = list()) {
     f$showgrid <- TRUE
     f$rangemode <- "tozero"
   }
-  
   f
 }
 
@@ -209,78 +208,6 @@ standard_date_xaxis <- function(title = list(text = NULL), y = 10, clean_ui = FA
 }
 
 ### Misc Plotly Elenents ----------------------------
-
-
-
-
-
-
-
-
-
-download_buttonx <- function(p) {
-  p <- p |> config(
-    modeBarButtonsToRemove = list("toImage"),
-    modeBarButtonsToAdd = list(
-      list(
-        name  = "Download (clean)",
-        title = "Download without range buttons",
-        icon  = htmlwidgets::JS("Plotly.Icons.camera"),
-        click = htmlwidgets::JS(
-          "function(gd){
-             var opts = {format:'png', width:2000, height:1200, scale:3};
-             var off = {
-               'xaxis.rangeselector.visible': false,
-               'xaxis.rangeslider.visible': false
-             };
-             Plotly.relayout(gd, off)
-               .then(function(){ return Plotly.downloadImage(gd, opts); })
-               .then(function(){
-                 // restore whatever you had before
-                 Plotly.relayout(gd, {
-                   'xaxis.rangeselector.visible': true
-                 });
-               });
-           }")
-      )
-    )
-  )
-  p
-}
-
-
-test <- function(p) {
-  p <- p |> config(
-    modeBarButtonsToRemove = list("toImage"),
-    modeBarButtonsToAdd = list(
-      list(
-        name  = "Download (clean)",
-        title = "Download without range buttons",
-        icon  = htmlwidgets::JS("Plotly.Icons.camera"),
-        click = htmlwidgets::JS(
-          "function(gd){
-             var fmt = (prompt('File type: png / jpeg / svg', 'png') || 'png')
-                .toLowerCase().trim();
-             console.log('Hello, JavaScript!');
-             var off = {
-               'xaxis.rangeselector.visible': false,
-               'xaxis.rangeslider.visible': false
-             };
-             Plotly.relayout(gd, off)
-               .then(function(){ return Plotly.downloadImage(gd, opts); })
-               .then(function(){
-                 // restore whatever you had before
-                 Plotly.relayout(gd, {
-                   'xaxis.rangeselector.visible': true
-                 });
-               });
-           }")
-      )
-    )
-  )
-  p
-}
-
 
 download_button <- function(p) {
   p |> plotly::config(
@@ -330,8 +257,6 @@ download_button <- function(p) {
   )
 }
 
-
-
 short_title <- function(elements = c()) {
   element_length <- length(elements)
   if (element_length == 0) {return("")}
@@ -350,8 +275,9 @@ assign_series_colours <- function(series) {
   if (!"Palette"   %in% names(series)) series$Palette <- "qual"
   if (!"ColourKey" %in% names(series)) series$ColourKey <- "teal_base"
 
-  s <- series %>%
-    group_by(Palette, ColourKey) %>%  # or just by Palette if you prefer
+  s <- series
+  s <- s %>% group_by(Palette, ColourKey)
+  s <- s %>%
     mutate(
       .idx = row_number(),
       colour = case_when(
@@ -377,43 +303,60 @@ assign_series_colours <- function(series) {
     ) %>%
     ungroup() %>%
     select(-.idx)
-
   s
 }
 
 ### Standard Plot ----------------------------
 add_series <- function(p, data, s, axis_side, split = NULL) {
-
-  split_colors <- NULL
   if (!is.null(split)) {
-    split_colors <- assign_series_colours(as_tibble(data[[split]])) %>% pull(colour)
-    print(split_colors)
+    data <- dplyr::filter(data, .data[[split]] == s$Split)
+    if (s$Style %in% c("Line")){
+      stack_id <- paste0("one_", s$Split)  # keep split groups separate
+    } else {
+      stack_id <- "one"
+    }
+    nm <- s$Split
+  } else {
+    nm <- s$Name
   }
-
   if (s$Style == "Bar") {
     p <- p |> plotly::add_bars(
       y      = data[[s$ID]],
-      name   = s$Name,
-      marker = list(color = s$colour),
+      name = nm,
+      marker = list(color = to_rgba(s$colour, 1)),
       yaxis  = axis_side
     )
-  } else {
-    p <- p |>
-      plotly::add_trace(
-        y    = data[[s$ID]],
-        name = if (is.null(split)) s$Name else data[[split]],
-        type = "scatter",
-        mode = "lines",
-        line = list(
-          color = if (is.null(split)) s$colour else split_colors,
-          split = if (is.null(split)) NULL else data[[split]],
-          dash  = if (s$Style == "Dashed") "dot" else "solid",
-          shape = "spline"
-        ),
-        stackgroup = if (s$Style == "Fill") "one" else NULL,
-        fillcolor  = if (s$Style == "Fill") s$colour else NULL,
-        yaxis      = axis_side
-      )
+  } else if (s$Style == "Line" || s$Style == "Dashed") {
+
+    p <- p |> plotly::add_trace(
+      data = data,
+      y = ~.data[[s$ID]],
+      name = nm,
+      type = "scatter",
+      mode = "lines",
+      stackgroup = stack_id,
+      line = list(
+        #color = to_rgba(s$colour, 1),
+        color = s$colour,
+        dash  = if (s$Style == "Dashed") "dot" else "solid",
+        shape = "spline"
+      ),
+      fill = "none",
+      stackgroup = NULL,
+      yaxis = axis_side
+    )
+  } else if (s$Style %in% c("Fill", "Area")) {
+    p <- p |> plotly::add_trace(
+      data = data,
+      y = ~.data[[s$ID]],
+      name = nm,
+      type = "scatter",
+      mode = "none",
+      stackgroup = stack_id,
+      fill = "tonexty",
+      fillcolor = to_rgba(s$colour, 0.7),
+      yaxis = axis_side
+    )
   }
   p
 }
@@ -470,10 +413,14 @@ x_plotly <- function(
     dplyr::arrange(Style)
   ord <- order(factor(series$Style, levels = c("Fill", "Bar", "Line"), ordered = TRUE))
   series <- series[ord, ]
-  series <- assign_series_colours(series)
-  #print(series[, c("Name", "Style", "colour")])
 
-
+  if (!is.null(split)) {
+    v <- data[[split]] %>% unique()
+    series <- series |> tidyr::crossing(Split = v)
+    series <- assign_series_colours(series)
+  } else {
+    series <- assign_series_colours(series)
+  }
 
   unique_dims <- series %>% group_by(Dim, Tick, Prefix, Style) %>% summarise(colour  = first(colour), .groups = "keep")
   ord <- order(factor(unique_dims$Style, levels = c("Fill", "Bar", "Line"), ordered = TRUE))
@@ -489,6 +436,7 @@ x_plotly <- function(
   for (i in seq_len(nrow(series))) {
     s <- series[i, ]
     axis_side <- if (unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
+
     p <- p %>% add_series(data, s, axis_side, split)
   }
 
@@ -513,359 +461,4 @@ x_plotly <- function(
     toImageButtonOptions = dl
   )
   p
-}
-
-
-
-
-
-generic_plotly <- function(
-  data,
-  titles       = c("", ""),
-  yaxis_titles = c("", ""),
-  series,
-  split = NULL,
-  k,
-  years = 10
-) {
-  # 1) Colour assignment ----------------------------------------------------
-  series <- assign_series_colours(series)
-
-  # 2) Base plot (one-liner split handling) --------------------------------
-  p <- plotly::plot_ly(
-    data,
-    x     = ~ get(k),
-    split = if (!is.null(split)) ~ get(split) else NULL
-  )
-
-  # 3) Axis metadata --------------------------------------------------------
-  unique_dims <- unique(series[c("Dim", "Tick", "Prefix")])
-
-  # helper to grab axis colour from first series on that dimension
-  get_axis_colour_for_dim <- function(dim_value) {
-    rows <- which(series$Dim == dim_value)
-    if (!length(rows)) return(NULL)
-    series$colour[rows[1]]
-  }
-
-  axis_color_1 <- if (nrow(unique_dims) >= 1) {
-    get_axis_colour_for_dim(unique_dims$Dim[1])
-  } else {
-    "black"
-  }
-
-  axis_color_2 <- if (nrow(unique_dims) >= 2) {
-    get_axis_colour_for_dim(unique_dims$Dim[2])
-  } else {
-    NULL
-  }
-
-  # 4) Add series traces ----------------------------------------------------
-  for (i in seq_len(nrow(series))) {
-    s <- series[i, ]
-
-    # Decide which y-axis
-    axis_side <- if (unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
-
-    col_use <- s$colour
-    is_bar  <- s$Style == "Bar"
-    is_fill <- s$Style == "Fill"
-    is_dash <- s$Style == "Dashed"
-
-    if (is_bar) {
-      p <- p |>
-        plotly::add_bars(
-          y      = data[[s$ID]],
-          name   = s$Name,
-          marker = list(color = col_use),
-          yaxis  = axis_side
-        )
-    } else {
-      p <- p |>
-        plotly::add_trace(
-          y    = data[[s$ID]],
-          name = s$Name,
-          type = "scatter",
-          mode = "lines",
-          line = list(
-            color = col_use,
-            dash  = if (is_dash) "dot" else "solid",
-            shape = "spline"
-          ),
-          stackgroup = if (is_fill) "one" else NULL,
-          fillcolor  = if (is_fill) col_use else NULL,
-          yaxis      = axis_side
-        )
-    }
-  }
-
-  # 5) Layout ---------------------------------------------------------------
-  p |>
-    plotly::layout(
-      title     = standard_title(titles[1], titles[2]),
-      legend    = standard_legend(),
-      hovermode = "x unified",
-      barmode   = "stack",
-      margin    = standard_margin,
-      xaxis     = standard_date_xaxis(y = years),
-
-      yaxis  = standard_yaxis_new(
-        list(
-          title      = yaxis_titles[1],
-          tickprefix = unique_dims$Prefix[1],
-          c          = axis_color_1,
-          tickformat = unique_dims$Tick[1]
-        )
-      ),
-      
-
-
-      yaxis2 = standard_yaxis_new(
-        list(
-          title      = yaxis_titles[2],
-          tickprefix = unique_dims$Prefix[2],
-          tickformat = unique_dims$Tick[2],
-          y          = "secondary",
-          c          = axis_color_2
-        )
-      )
-      #)
-    )
-}
-plot_ts_by_region <- function(
-  data,
-  date_col   = "Date",
-  region_col = "Region",
-  value_col  = "Guest arrivals",
-  titles      = c("", ""),
-  subtitle   = "",
-  years      = 10,
-  palette    = pal_qual_main,  # reuse your main qualitative palette
-  series
-) {
-  # Ensure the columns exist
-  stopifnot(all(c(date_col, region_col, value_col) %in% names(data)))
-  
-  # Set up factors and colours ----------------------------------------------
-  reg <- sort(unique(data[[region_col]]))
-  n_reg <- length(reg)
-  # If more regions than palette colours, interpolate
-  if (n_reg <= length(palette)) {
-    cols <- palette[seq_len(n_reg)]
-  } else {
-    cols <- grDevices::colorRampPalette(palette)(n_reg)
-  }
-  name(cols) <- reg
-  # Build plot --------------------------------------------------------------
-  p <- plotly::plot_ly(
-    data  = data,
-    x     = ~ .data[[date_col]],
-    color = ~ .data[[region_col]],
-    colors = cols
-  ) |>
-    plotly::add_lines(
-      y           = ~ .data[[value_col]],
-      text        = ~ .data[[region_col]],
-      hovertemplate = paste0(
-        "%{x}<br>",
-        value_col, ": %{y:,.0f}<br>",
-        region_col, ": %{text}<extra></extra>"
-      ),
-      connectgaps = TRUE  # <-- important
-    )
-
-  p |>
-    plotly::layout(
-      title     = standard_title(titles[1], titles[2]),
-      legend    = standard_legend(),
-      hovermode = "x unified",
-      margin    = standard_margin,
-      xaxis     = standard_date_xaxis(y = years),
-      yaxis     = standard_yaxis(
-        title = value_col,
-        c     = cc[["grey_base"]]
-      )
-    )
-}
-generic_plotly2 <- function(
-  data,
-  titles       = c("", ""),
-  yaxis_titles = c("", ""),
-  series,
-  split = NULL,
-  k,
-  years = 10,
-  shape = "wide"
-) {
-      # Set up factors and colours ----------------------------------------------
-  if (!is.null(split)) {
-  reg <- sort(unique(data[[split]]))
-  n_reg <- length(reg)
-  # If more regions than palette colours, interpolate
-  if (n_reg <= length(pal_qual_main)) {
-    cols <- pal_qual_main[seq_len(n_reg)]
-  } else {
-    cols <- grDevices::colorRampPalette(pal_qual_main)(n_reg)
-  }
-  names(cols) <- reg
-}
-  # 1) Colour assignment ----------------------------------------------------
-
-  if(shape == "wide") {series <- assign_series_colours(series)}
-
-  # 2) Base plot (one-liner split handling) --------------------------------
-  p <- plotly::plot_ly(
-    data,
-    x     = ~ get(k),
-    color = if (!is.null(split)) ~ .data[[split]] else NULL,
-    colors = if (!is.null(split)) cols else NULL
-  )
-
-  # 3) Axis metadata --------------------------------------------------------
-  unique_dims <- unique(series[c("Dim", "Tick", "Prefix")])
-
-
-
-  # helper to grab axis colour from first series on that dimension
-  get_axis_colour_for_dim <- function(dim_value) {
-    rows <- which(series$Dim == dim_value)
-    if (!length(rows)) return(NULL)
-    series$colour[rows[1]]
-  }
-
-  axis_color_1 <- if (nrow(unique_dims) >= 1 && shape == "wide") {
-    get_axis_colour_for_dim(unique_dims$Dim[1])
-  } else {
-    "black"
-  }
-
-  axis_color_2 <- if (nrow(unique_dims) >= 2 && shape == "wide") {
-    get_axis_colour_for_dim(unique_dims$Dim[2])
-  } else {
-    "black"
-  }
-  # 4) Add series traces ----------------------------------------------------
-  for (i in seq_len(nrow(series))) {
-    s <- series[i, ]
-
-    # Decide which y-axis
-    axis_side <- if (unique_dims$Dim[1] == s$Dim[1]) "y" else "y2"
-
-    col_use <- s$colour
-    is_bar  <- s$Style == "Bar"
-    is_fill <- s$Style == "Fill"
-    is_dash <- s$Style == "Dashed"
-    if (is_bar) {
-      p <- p |>
-        plotly::add_bars(
-          y      = data[[s$ID]],
-          name   = if(shape == "wide") s$Name,
-          #marker = if (shape == "wide") list(color = col_use),
-          yaxis  = axis_side
-        )
-    } else {
-      p <- p |>
-        plotly::add_trace(
-          y    = data[[s$ID]],
-          name = if(shape == "wide") s$Name,
-          type = "scatter",
-          mode = "lines",
-          line = list(
-            color = if (shape == "wide") col_use,
-            dash  = if (is_dash) "dot" else "solid",
-            shape = "spline"
-          ),
-          stackgroup = if (is_fill) "one" else NULL,
-          #fillcolor  = if (is_fill) (if (shape == "wide") col_use) else NULL,
-          yaxis      = axis_side
-        )
-    }
-  }
-
-  # 5) Layout ---------------------------------------------------------------
-  p |>
-    plotly::layout(
-      title     = standard_title(titles[1], titles[2]),
-      legend    = standard_legend(),
-      hovermode = "x unified",
-      barmode   = "stack",
-      margin    = standard_margin,
-      xaxis     = standard_date_xaxis(y = years),
-      yaxis  = standard_yaxis(
-        list(
-          title      = yaxis_titles[1],
-          c          = axis_color_1,
-          tickprefix = unique_dims$Prefix[1],
-          tickformat = unique_dims$Tick[1]
-        )
-      ),
-      yaxis2 = standard_yaxis(
-        list(
-          title      = yaxis_titles[2],
-          c          = axis_color_2,
-          tickprefix = unique_dims$Prefix[2],
-          tickformat = unique_dims$Tick[2],
-          y          = "secondary"
-        )
-      )
-    )
-}
-plot_long <- function(
-  data,
-  k   = "Date",
-  split      = "",
-  series,
-  titles      = c("", ""),
-  years      = 10,
-  palette    = pal_qual_main  # reuse your main qualitative palette
-) {
-  # Ensure the columns exist
-  
-
-  metric    <- series$Name[1]
-  stopifnot(all(c(k) %in% names(data)))
-  stopifnot(all(c(split) %in% names(data)))
-  stopifnot(all(c(metric) %in% names(data)))
-
-  stopifnot(all(c(k, split, metric) %in% names(data)))
-  # Set up factors and colours ----------------------------------------------
-  reg <- sort(unique(data[[split]]))
-  n_reg <- length(reg)
-  # If more regions than palette colours, interpolate
-  if (n_reg <= length(palette)) {
-    cols <- palette[seq_len(n_reg)]
-  } else {
-    cols <- grDevices::colorRampPalette(palette)(n_reg)
-  }
-  names(cols) <- reg
-  # Build plot --------------------------------------------------------------
-  p <- plotly::plot_ly(
-    data  = data,
-    x     = ~ .data[[k]],
-    color = ~ .data[[split]],
-    colors = cols
-  ) |>
-    plotly::add_lines(
-      y           = ~ .data[[metric]],
-      text        = ~ .data[[split]],
-      hovertemplate = paste0(
-        "%{x}<br>",
-        metric, ": %{y:,.0f}<br>",
-        split, ": %{text}<extra></extra>"
-      ),
-      connectgaps = TRUE  # <-- important
-    )
-
-  p |>
-    plotly::layout(
-      title     = standard_title(titles[1], titles[2]),
-      legend    = standard_legend(),
-      hovermode = "x unified",
-      margin    = standard_margin,
-      xaxis     = standard_date_xaxis(y = years),
-      yaxis     = standard_yaxis(
-        title = metric,
-        c     = cc[["grey_base"]]
-      )
-    )
 }

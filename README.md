@@ -32,3 +32,7 @@ Altitude/
 ├─ .Rbuildignore                  # ignore inst/app/www dev bits, etc.
 ├─ .gitignore
 └─ README.md
+
+
+python -m http.server 8000
+http://localhost:8000/embed_filter.html

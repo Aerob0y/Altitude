@@ -154,4 +154,3 @@ rbnz_fetch_all <- function() {
     "hs32"
   ))
 }
-rbnz_fetch_all()

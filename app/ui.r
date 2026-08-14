@@ -202,9 +202,14 @@ ui <- fluidPage(
       nav_panel("CoreLogic", value = "hm10", uiOutput("hm10_ui")),
       nav_panel("Survey of expectations", value = "hm14", uiOutput("hm14_ui")),
       nav_panel("Banks: Loans by product", value = "hs32", uiOutput("hs32_ui")),
-      nav_panel("Fuel", value = "fuel", uiOutput("fuel_ui")),
+      
       #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
       nav_panel("Bond", value = "bond", uiOutput("bond_ui"))
+    ),
+    nav_menu(
+      "Tourism & Migration",
+      nav_panel("Border", value = "border", uiOutput("border_ui")),
+      nav_panel("Fuel", value = "fuel", uiOutput("fuel_ui"))
     ),
 
     id = "main_nav"

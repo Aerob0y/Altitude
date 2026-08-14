@@ -80,43 +80,6 @@ load_data <- function(name, refresh_cache = FALSE) {
 }
 
 guide_rbnz <- tribble(
-  ~Data,	~ID,                ~Name,	                        ~Class_1,	          ~Class_2,                         	~Class_3,                ~Unit,	    ~Dim,	             ~Tick,	 ~Palette,	~ColourKey,	~Style, ~Prefix,
-  "hb1", "EXRT.DS41.NZB17",	  "17 currency basket",            "Index",	          "TWI",                              "17 currency basket",	   "Index",   "TWI",	           ".0f",  "qual",   "black",   "Line", "",
-  "hb1", "EXR.DS11.D06",      "United States dollar",         "NZD/USD",          "Exchange rates (quoted per NZ$)",  "United States dollar",  "NZD/USD", "NZD to $USD",     ".2f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D04",      "UK pound sterling",            "NZD/GBP",          "Exchange rates (quoted per NZ$)",  "UK pound sterling",     "NZD/GBP", "NZD to £GBP",     ".2f",  "qual",   "black",   "Line", "£",
-  "hb1", "EXR.DS11.D01",      "Australian dollar",            "NZD/AUD",          "Exchange rates (quoted per NZ$)",  "Australian dollar",     "NZD/AUD", "NZD to $AUD",     ".2f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D05",      "Japanese yen",                 "NZD/JPY",          "Exchange rates (quoted per NZ$)",  "Japanese yen",          "NZD/JPY", "NZD to ¥JPY",     ".0f",  "qual",   "black",   "Line", "¥",
-  "hb1", "EXR.DS11.D03",      "European euro",                "NZD/EUR",          "Exchange rates (quoted per NZ$)",  "European euro",         "NZD/EUR", "NZD to €EUR",     ".2f",  "qual",   "black",   "Line", "€",
-  "hb1", "EXR.DS11.D02",      "Canadian dollar",              "NZD/CAD",          "Exchange rates (quoted per NZ$)",  "Canadian dollar",       "NZD/CAD", "NZD to $CAD",     ".2f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D12",      "South Korean won",             "NZD/KRW",          "Exchange rates (quoted per NZ$)",  "South Korean won",      "NZD/KRW", "NZD to ₩KRW",     ".0f",  "qual",   "black",   "Line", "₩",
-  "hb1", "EXR.DS11.D11",      "Chinese renminbi",             "NZD/CNY",          "Exchange rates (quoted per NZ$)",  "Chinese renminbi",      "NZD/CNY", "NZD to ¥CNY",     ".2f",  "qual",   "black",   "Line", "¥",
-  "hb1", "EXR.DS11.D14",      "Malaysian ringgit",            "NZD/MYR",          "Exchange rates (quoted per NZ$)",  "Malaysian ringgit",     "NZD/MYR", "NZD to RM",       ".2f",  "qual",   "black",   "Line", "RM",
-  "hb1", "EXR.DS11.D08",      "Hong Kong dollar",             "NZD/HKD",          "Exchange rates (quoted per NZ$)",  "Hong Kong dollar",      "NZD/HKD", "NZD to $HK",      ".2f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D13",      "Indonesian rupiah",            "NZD/IDR",          "Exchange rates (quoted per NZ$)",  "Indonesian rupiah",     "NZD/IDR", "NZD to p (IDR)",  ".0f",  "qual",   "black",   "Line", "p",
-  "hb1", "EXR.DS11.D15",      "Thai baht",                    "NZD/THB",          "Exchange rates (quoted per NZ$)",  "Thai baht",             "NZD/THB", "NZD to B (THB)",  ".0f",  "qual",   "black",   "Line", "B",
-  "hb1", "EXR.DS11.D09",      "Singapore dollar",             "NZD/SGD",          "Exchange rates (quoted per NZ$)",  "Singapore dollar",      "NZD/SGD", "NZD to $SGD",     ".2f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D16",      "New Taiwan dollar",            "NZD/TWD",          "Exchange rates (quoted per NZ$)",  "New Taiwan dollar",     "NZD/TWD", "NZD to $NT",      ".0f",  "qual",   "black",   "Line", "$",
-  "hb1", "EXR.DS11.D31",      "Indian rupee",                 "NZD/INR",          "Exchange rates (quoted per NZ$)",  "Indian rupee",          "NZD/INR", "NZD to ₹INR",     ".0f",  "qual",   "black",   "Line", "₹",
-  "hb1", "EXR.DS11.D32",      "Philippine peso",              "NZD/PHP",          "Exchange rates (quoted per NZ$)",  "Philippine peso",       "NZD/PHP", "NZD to ₱PHP",     ".0f",  "qual",   "black",   "Line", "₱",
-  "hb1", "EXR.DS11.D33",      "Vietnamese dong",              "NZD/VND",          "Exchange rates (quoted per NZ$)",  "Vietnamese dong",       "NZD/VND", "NZD to ₫VND",     ".0f",  "qual",   "black",   "Line", "₫",
-  "hb1", "EXRT.DS41.N",       "Base June 1979=100",           "Index Historic",   "Historical TWI",                   "Base June 1979=100",   "Index",    "TWI (H)",         ".0f",  "qual",   "black",   "Line", "",
-
-  "hb2", "INM.DP1.N",	        "Official Cash Rate (OCR)",	    "OCR",	            "Official Cash Rate (OCR)",		      "",                     "%pa",      "%",	             ".1f",  "qual",   "black",   "Line", "",
-  "hb2", "INM.DG101.NZZCF",	  "1 year (bond)",	              "Secondary market", "1 year",                           "",                     "%pa",	    "%",               ".1f",	 "qual",   "black",   "Line", "",
-  "hb2", "INM.DG102.NZZCF",	  "2 year (bond)",	              "Secondary market", "2 year",                           "",		                  "%pa",	    "%",	             ".1f",	 "qual",   "black",   "Line", "",
-  "hb2", "INM.DG105.NZZCF",	  "5 year (bond)",	              "Secondary market", "5 year",                           "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DG110.NZZCF",	  "10 year (bond)",	              "Secondary market", "10 year",                          "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DS01.NZZC",	    "1 year (swap)",	              "Swap rates close",	"1 year",                           "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DS02.NZZC", 	  "2 year (swap)",	              "Swap rates close",	"2 year",                           "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DS05.NZZC",	    "5 year (swap)",	              "Swap rates close",	"5 year",                           "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DS10.NZZC",	    "10 year (swap)",	              "Swap rates close",	"10 year",                          "",		                  "%pa",	    "%",	             ".1f",	 "qual",		"black",	"Line",	 "",
-  "hb2", "INM.DS61.NZZC",	    "Spread 2-10 year",	            "Swap rates close",	"Spread 2-10 year",                 "",		                  "bps",	    "bps",	           ".1f",	 "qual",   "black",   "Line", ""
-
-)
-
-guide_rbnz
-
-guide_rbnz <- tribble(
   ~Data,	  ~ID,                ~Name,	                        ~Class_1,	          ~Class_2,                         	~Class_3,                ~Unit,	    ~Dim,	             ~Tick,	 ~Palette,	~ColourKey,	~Style, ~Prefix,
   "Data",	  "ID",                "Name",	                      "Class_1",	        "Class_2",                         	"Class_3",               "Unit",	  "Dim",	           "Tick", "Palette",	"ColourKey", "Style", "Prefix",
   "hb1",    "EXRT.DS41.NZB17", "17 currency basket", "Index", "TWI", "17 currency basket", "Index", "TWI", ".0f", "qual", "black", "Line", "",
@@ -501,7 +464,7 @@ guide_rbnz <- tribble(
 "bond", "Upper Quartile Rent", "Upper Quartile Rent", "", "", "", "", "$", ",d", "qual", "black", "Line", "",
 "bond", "Lower Quartile Rent", "Lower Quartile Rent", "", "", "", "", "$", ",d", "qual", "black", "Line", "",
 "bond", "Log Std Dev Weekly Rent", "Log Std Dev Weekly Rent", "", "", "", "", "$", ",d", "qual", "black", "Line", "",
-"border", "border", "TotalPassengers", "", "", "", "", "", ",d", "qual", "black", "Line", ""
+"border", "Arrivals", "Arrivals", "-", "-", "-", "-", "-", ",d", "qual", "black", "Area", ""
 )
 
 guide_rbnz <- guide_rbnz |>
@@ -512,3 +475,19 @@ guide_rbnz <- guide_rbnz |>
       ordered = TRUE
     )
   )
+
+load_series <- function(data_name, drop_na = FALSE, max_unique = 100, refresh_cache = FALSE) {
+  data_series <- paste(data_name, "series", sep = "_")
+  if (checks$load_data) print(paste0("load_names: ", data_series))
+  if (exists(data_series, envir = cache) && !refresh_cache) {return(cache[[data_series]])}
+  df <- load_data(data_name)
+  out <- lapply(df, function(x) {
+    u <- unique(x)
+    if (drop_na) u <- u[!is.na(u)]
+    u
+  })
+  names(out) <- names(df)
+  n <- out[sapply(out, length) <= max_unique]
+  cache[[data_series]] <- n
+  cache[[data_series]]
+}

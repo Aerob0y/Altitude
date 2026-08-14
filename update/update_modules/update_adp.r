@@ -60,10 +60,8 @@ x <- fromJSON("app/data/ADP/adpByRTO.json", simplifyVector = FALSE)
   out %>%
     saveRDS("app/data/ADP/adpByRTO.rds")
 }
-#rds_adp_data()
 
 update_adp_data <- function() {
   download_if_updated_etag("https://teic.mbie.govt.nz/ste/data/views/theEconomy/economicResilience/adpByRTO.json", "app/data/ADP/adpByRTO.json")
   rds_adp_data()
 }
-update_adp_data()
