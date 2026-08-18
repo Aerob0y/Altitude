@@ -5,6 +5,7 @@
 
 source("app/utils/load_utils.r") # shared dependencies and helpers
 source("app/ui/ui_elements.r") # common UI elements
+source("app/ui/ui_slides.r") # overview and dataset guide
 
 # Load modules
 purrr::walk(

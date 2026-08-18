@@ -6,6 +6,7 @@
 ui <- fluidPage(
   id = "root",   # give the outer page an ID we can hook CSS onto
   tags$head(
+    includeCSS("app/www/overview.css"),
     tags$style(HTML('
 
     #root .bslib-sidebar-layout {
@@ -184,7 +185,7 @@ ui <- fluidPage(
 
 
   navset_tab(
-    nav_panel("Overview", value = "overview", "uiOutput()"),
+    nav_panel("Overview", value = "overview", ui_overview),
     nav_menu(
       "Economic indicators",
       nav_panel("Exchange Rates",  value = "hb1",  uiOutput("hb1_ui")),
