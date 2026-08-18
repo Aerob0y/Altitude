@@ -1,5 +1,3 @@
-
-
 to_rgba <- function(col, alpha = 0.25) {
   rgb <- grDevices::col2rgb(col)
   sprintf("rgba(%d,%d,%d,%.3f)", rgb[1], rgb[2], rgb[3], alpha)

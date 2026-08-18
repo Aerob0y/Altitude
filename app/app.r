@@ -3,8 +3,7 @@
 #`%||%` <- function(x, y) if (is.null(x)) y else x
 
 
-source("app/utils/utils_data.r") # data sources, caching, filtering
-source("app/utils/plotly_elements.r") # plotly customisations
+source("app/utils/load_utils.r") # shared dependencies and helpers
 source("app/ui/ui_elements.r") # common UI elements
 
 # Load modules
