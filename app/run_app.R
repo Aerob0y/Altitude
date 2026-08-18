@@ -1,7 +1,7 @@
 # Initialization script for the Shiny application
 source("app/utils/load_utils.r") # shared dependencies and helpers
 source("app/ui/ui_elements.r") # common UI elements
-
+source("app/ui/ui_slides.r") 
 # Load modules
 purrr::walk(
   list.files("app/modules", full.names = TRUE, pattern = "\\.r$"),
