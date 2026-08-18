@@ -1,0 +1,79 @@
+.overview-page {
+  --overview-ink: #142e2c;
+  --overview-green: #164b45;
+  --overview-mint: #d8e5df;
+  --overview-sand: #f4f0e8;
+  background: #fbfaf7;
+  color: var(--overview-ink);
+  min-height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.overview-hero {
+  align-items: flex-end;
+  background-image: linear-gradient(90deg, rgba(8, 29, 29, 0.83) 0%, rgba(8, 29, 29, 0.48) 52%, rgba(8, 29, 29, 0.12) 100%),
+    url("https://images.squarespace-cdn.com/content/v1/68b1048a124d6a2d1847e242/8627946e-09b3-4514-b78b-5fd81f50907f/734029-milford-sound-scenic-flight-true-south-flights-web-1920px.jpg");
+  background-position: center 48%;
+  background-size: cover;
+  display: flex;
+  min-height: clamp(440px, 67vh, 720px);
+  padding: clamp(3rem, 8vw, 7rem);
+  position: relative;
+}
+
+.overview-hero-content { color: white; max-width: 760px; }
+.overview-eyebrow, .overview-kicker { font-size: 0.76rem; font-weight: 750; letter-spacing: 0.17em; margin-bottom: 1rem; }
+.overview-eyebrow { color: #d7ece3; }
+.overview-kicker { color: #38726b; }
+.overview-hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 6vw, 5.9rem); letter-spacing: -0.04em; line-height: 0.98; margin: 0 0 1.4rem; max-width: 900px; }
+.overview-intro { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.65; margin-bottom: 2rem; max-width: 680px; }
+.overview-hero-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.overview-button { background: #f5f0e5; border-radius: 2px; color: #173b38 !important; font-size: 0.87rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.9rem 1.35rem; text-decoration: none !important; text-transform: uppercase; }
+.overview-button:hover { background: white; transform: translateY(-1px); }
+.overview-scroll-note { color: rgba(255,255,255,.82); font-size: .9rem; }
+.overview-photo-credit { bottom: 1rem; color: rgba(255,255,255,.78) !important; font-size: .7rem; position: absolute; right: 1.25rem; text-decoration: none; }
+.overview-photo-credit:hover { color: white !important; text-decoration: underline; }
+
+.overview-content { margin: 0 auto; max-width: 1440px; padding: clamp(3rem, 6vw, 6rem) clamp(1.25rem, 6vw, 6rem); }
+.overview-welcome { align-items: center; display: grid; gap: clamp(2rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr); padding-bottom: clamp(4rem, 8vw, 7rem); }
+.overview-welcome h2, .overview-guide > h2, .overview-data-note h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 3.8vw, 3.5rem); letter-spacing: -0.035em; line-height: 1.1; margin: 0 0 1.25rem; }
+.overview-welcome > div > p:last-child, .overview-section-intro { color: #48605e; font-size: 1.08rem; line-height: 1.75; max-width: 740px; }
+.overview-callout { align-items: flex-start; background: var(--overview-mint); border-left: 4px solid var(--overview-green); display: flex; gap: 1rem; padding: 1.5rem; }
+.overview-callout > svg { flex: 0 0 auto; margin-top: .2rem; }
+.overview-callout strong { display: block; margin-bottom: .35rem; }
+.overview-callout p { line-height: 1.55; margin: 0; }
+.overview-guide { scroll-margin-top: 4rem; }
+.overview-section-intro { margin-bottom: 3rem; }
+.overview-group-title { border-bottom: 1px solid #cbd6d1; font-size: .86rem; letter-spacing: .13em; margin: 3.5rem 0 1.25rem; padding-bottom: .85rem; text-transform: uppercase; }
+.overview-dataset-grid { display: grid; gap: 1px; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #d9dfdc; border: 1px solid #d9dfdc; }
+.overview-dataset-card { align-items: flex-start; background: #fbfaf7; display: flex; gap: 1rem; min-height: 210px; padding: 1.6rem; transition: background .18s ease, transform .18s ease; }
+.overview-dataset-card:hover { background: white; box-shadow: 0 12px 28px rgba(20,46,44,.09); position: relative; transform: translateY(-2px); z-index: 1; }
+.overview-dataset-icon { align-items: center; background: var(--overview-mint); border-radius: 50%; color: var(--overview-green); display: flex; flex: 0 0 42px; height: 42px; justify-content: center; }
+.overview-dataset-icon svg { height: 19px; width: 19px; }
+.overview-dataset-card h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.28rem; margin: 0 0 .3rem; }
+.overview-dataset-card p { color: #526663; font-size: .9rem; line-height: 1.55; margin: 0; }
+.overview-dataset-card .overview-dataset-source { color: #367069; font-size: .68rem; font-weight: 750; letter-spacing: .06em; margin-bottom: .75rem; text-transform: uppercase; }
+.overview-data-note { background: var(--overview-green); color: white; display: grid; gap: 1.5rem; grid-template-columns: auto 1fr; margin-top: clamp(4rem, 8vw, 7rem); padding: clamp(2rem, 5vw, 4rem); }
+.overview-data-note > div:first-child { color: #b9d5cb; }
+.overview-data-note h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: .8rem; }
+.overview-data-note p { color: #d7e4e0; line-height: 1.7; margin: 0; max-width: 920px; }
+
+@media (max-width: 950px) {
+  .overview-dataset-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-welcome { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .overview-hero { min-height: 520px; padding: 3rem 1.35rem; }
+  .overview-photo-credit { left: 1.35rem; right: auto; }
+  .overview-content { padding-left: 1rem; padding-right: 1rem; }
+  .overview-dataset-grid { grid-template-columns: 1fr; }
+  .overview-dataset-card { min-height: 0; padding: 1.35rem; }
+  .overview-data-note { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overview-page { scroll-behavior: auto; }
+  .overview-button, .overview-dataset-card { transition: none; }
+}
