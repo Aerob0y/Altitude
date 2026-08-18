@@ -1,6 +1,3 @@
-
-
-
 checks <- list(
   load_data = FALSE,
   filter_series = FALSE,

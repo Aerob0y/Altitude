@@ -1,0 +1,11 @@
+suppressPackageStartupMessages({
+  library(memoise)
+  library(jsonlite)
+  library(shiny)
+  library(scales)
+  library(tidyverse)
+  library(bslib)
+  library(bsicons)
+  library(plotly)
+  library(readxl)
+})

@@ -5,11 +5,8 @@ source("update/update_utilities/update_etag.r")
 source("update/update_utilities/export_plotly_spec.r")
 
 
-# Load data utils + update modules (so functions exist)
-purrr::walk(
-  list.files("app/r/utils", full.names = TRUE, pattern = "utils_data"),
-  ~ source(.x, local = FALSE, echo = FALSE)
-)
+# Load data utilities + update modules (so functions exist)
+source("app/utils/data/data.r", local = FALSE, echo = FALSE)
 purrr::walk(
   list.files("update/update_modules", full.names = TRUE, pattern = "\\.r$"),
   ~ source(.x, local = FALSE, echo = FALSE)
