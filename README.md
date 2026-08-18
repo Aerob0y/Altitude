@@ -25,8 +25,13 @@ Altitude/
 │  │  ├─ update_libraries.r       # required librarires
 │  │  ├─ update_etag.r            #      
 │  │  └─ export_plotly_spec.r/    #
-│  ├─ update_modules              # each updates a dataset
-│  │  └─ *         
+│  └─ update_modules              # each updates a dataset
+│     ├─ update_adp.r             # gets the accomidation data
+│     ├─ update_bond              # gets bond data
+│     ├─ update_border            # gets border data
+│     ├─ update_ect               # gets ect data
+│     ├─ update_fuel              # gets fuel data
+│     └─ update_rbnz              # gets rbnz data
 │               
 ├─ .lintr                         # you already have this — keep it
 ├─ .Rbuildignore                  # ignore inst/app/www dev bits, etc.

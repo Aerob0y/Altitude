@@ -1,4 +1,4 @@
-﻿Date,Region,PropertyType,Number of establishments,Daily Capacity (stay-units available),Available monthly stay unit 0apa0ity,Occupancy rate (%),Total guest nights,Guest arrivals,Stay unit nights occupied,Domestic guest nights,International guest nights 
+﻿Date,Region,PropertyType,Number of establishments,Daily Capacity (stay-units available),Available monthly stay unit capacity,Occupancy rate (%),Total guest nights,Guest arrivals,Stay unit nights occupied,Domestic guest nights,International guest nights 
 1/06/2003,Clutha,Total,23.00,402.00,12060.00,10.77,2087.00,1378.00,1299.00,1621.00,467.00
 1/08/2004,Clutha,Total,24.00,409.00,12679.00,11.29,2218.00,1364.00,1432.00,1694.00,524.00
 1/07/2004,Clutha,Total,23.00,382.00,11842.00,11.86,2273.00,1501.00,1404.00,1761.00,512.00

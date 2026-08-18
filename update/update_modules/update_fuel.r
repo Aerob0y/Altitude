@@ -1,4 +1,9 @@
-update_fuel_data <- function(location = "app/data/Fuel/fuel_data.csv", n = 12, run = FALSE) {
+
+
+library(dplyr)
+library(rvest)
+
+update_fuel_data <- function(location = here::here("app/data/Fuel/fuel_data.csv"), n = 12, run = FALSE) {
 
   # Only proceed if file is missing OR last modified > 3 days ago
   should_run <- !file.exists(location) ||
@@ -43,9 +48,7 @@ update_fuel_data <- function(location = "app/data/Fuel/fuel_data.csv", n = 12, r
     filter(!is.na(USD_NZD)) %>%
     mutate(`NZD per Barrel` = (`USD per Barrel` / USD_NZD))
 
-  saveRDS(result, file = "app/data/Fuel/fuel.rds", compress = FALSE)
+  saveRDS(result, file = here::here("app/data/Fuel/fuel.rds"), compress = FALSE)
 
   invisible(result)
 }
-
-

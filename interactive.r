@@ -8,9 +8,3 @@ load_data("border_all", refresh_cache = TRUE)
 
 # This file is used to run the interactive app. It is not intended to be sourced by other scripts, but rather to be run directly.
 source("app/app.R", local = FALSE, echo = TRUE)
-
-updates(what = "adp", manual = TRUE) # do not fie unless we want to force an update
-
-update_adp_data()
-
-update_border_all()

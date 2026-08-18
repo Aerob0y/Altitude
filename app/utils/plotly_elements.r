@@ -308,6 +308,7 @@ assign_series_colours <- function(series) {
 
 ### Standard Plot ----------------------------
 add_series <- function(p, data, s, axis_side, split = NULL) {
+  stack_id <- "Test"
   if (!is.null(split)) {
     data <- dplyr::filter(data, .data[[split]] == s$Split)
     if (s$Style %in% c("Line")){
@@ -328,6 +329,7 @@ add_series <- function(p, data, s, axis_side, split = NULL) {
     )
   } else if (s$Style == "Line" || s$Style == "Dashed") {
 
+    print(stack_id)
     p <- p |> plotly::add_trace(
       data = data,
       y = ~.data[[s$ID]],

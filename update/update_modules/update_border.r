@@ -6,6 +6,7 @@ library(tidyr)
 library(stringr)
 library(fs)
 library(digest)
+library(here)
 
 #### Lookups ----
 port_lookup_input <- list(
@@ -572,7 +573,6 @@ historic_inputs_input <- list(
   destination_lookup = destination_lookup_input
 )
 
-build_border_historic()
 
 update_border_all <- function(
     current_input_dir = "C:/Users/MichaelHawley/OneDrive - Queenstown Airport Corporation/Aeronautical/Dataset/StatsNZ/",
