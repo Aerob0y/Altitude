@@ -1,17 +1,25 @@
 mod_bond_ui <- function(id) {
   if (checks$ui_module) print("bond_ui loaded")
   ns <- NS(id)
+
+  # Get Metrics
   name <- filter_series(
     guide_rbnz,
     column = "Name",
     apply_filters = list(Data = c("bond"))
-  ) %>% as.vector() %>% unlist() %>% unname()
+  ) %>%
+    as.vector() %>%
+    unlist() %>%
+    unname()
+
+  #Other data
   bond_locations <- load_data("bond_locations") %>% unique()
 
-
+  # Get Inputs
   insert_inputs <- tagList(
     selectInput(ns("bond_metric"), "Metric",  choices = name, selected = name[1], multiple = FALSE),
-    selectInput(ns("bond_location"), "Unit", choices = bond_locations, selected = bond_locations[1], multiple = TRUE)
+    selectInput(ns("bond_location"), "Unit", choices = bond_locations, selected = bond_locations[1], multiple = TRUE),
+    tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
   )
   ui_single(insert_inputs, p = ns("plot"), h = "600px")
 }

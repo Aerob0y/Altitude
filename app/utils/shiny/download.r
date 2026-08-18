@@ -23,7 +23,7 @@ mod_download_ui <- function(id) {
   )
 }
 
-mod_download_server <- function(id,defaults = list(format = "png", width = 1920, height = 1080, scale = 2, clean = FALSE)) {
+mod_download_server <- function(id, defaults = list(format = "png", width = 1920, height = 1080, scale = 2, clean = FALSE)) {
   moduleServer(id, function(input, output, session) {
 
     # set defaults once
@@ -90,6 +90,26 @@ download_button <- function(p) {
   });
 }"
         )
+      )
+    )
+  )
+}
+
+
+download_settings_ui <- function(ns) {
+  tags$div(
+    class = "dl-wrap",
+    actionLink(
+      ns("dl_toggle"),
+      label = "Download Settings",
+      icon = icon("camera"),
+      class = "dl-gear"
+    ),
+    shiny::conditionalPanel(
+      condition = sprintf("input['%s'] %% 2 == 1", ns("dl_toggle")),
+      tags$div(
+        class = "dl-panel",
+        mod_download_ui(ns("dl"))
       )
     )
   )

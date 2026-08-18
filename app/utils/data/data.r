@@ -42,6 +42,14 @@ filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fall
   t
 }
 
+filter_series_unlist <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
+  t <- filter_series(guide, column, apply_filters, apply_fallbacks)
+  t <- t |>
+    as.vector() |>
+    unlist() |>
+    unname()
+  t
+}
 
 
 
