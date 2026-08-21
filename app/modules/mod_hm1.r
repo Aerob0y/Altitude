@@ -46,7 +46,7 @@ mod_hm1_ui <- function(id) {
     )
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm1")
 }
 
 

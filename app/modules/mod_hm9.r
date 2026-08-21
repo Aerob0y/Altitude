@@ -24,7 +24,7 @@ mod_hm9_ui <- function(id) {
     )
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm9")
 }
 
 mod_hm9_server <- function(id, selected_tab, activate_on) {

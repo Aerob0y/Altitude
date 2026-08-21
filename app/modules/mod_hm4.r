@@ -33,7 +33,7 @@ mod_hm4_ui <- function(id) {
     )
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm4")
 }
 
 mod_hm4_server <- function(id, selected_tab, activate_on) {

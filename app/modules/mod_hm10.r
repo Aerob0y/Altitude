@@ -14,7 +14,7 @@ mod_hm10_ui <- function(id) {
     selectInput(ns("hm10_class_2_2"), NULL, choices = c("-", hm10_class_2), selected = hm10_class_2[2], multiple = FALSE)
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm10")
 }
 
 mod_hm10_server <- function(id, selected_tab, activate_on) {

@@ -28,7 +28,7 @@ mod_hm3_ui <- function(id) {
     )
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm3")
 }
 
 mod_hm3_server <- function(id, selected_tab, activate_on) {

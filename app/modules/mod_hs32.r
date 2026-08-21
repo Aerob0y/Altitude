@@ -19,7 +19,7 @@ mod_hs32_ui <- function(id) {
     )
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hs32")
 }
 
 mod_hs32_server <- function(id, selected_tab, activate_on) {

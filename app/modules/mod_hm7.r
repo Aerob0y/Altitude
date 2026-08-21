@@ -13,7 +13,7 @@ mod_hm7_ui <- function(id) {
     selectInput(ns("hm7_group"), "Balance Group", choices = hm7_group, selected = hm7_group[1], multiple = FALSE)
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm7")
 }
 
 mod_hm7_server <- function(id, selected_tab, activate_on) {
