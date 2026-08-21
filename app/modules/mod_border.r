@@ -45,7 +45,7 @@ mod_border_ui <- function(id) {
       )
     )
   )
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "border")
 }
 
 mod_border_server <- function(id, selected_tab, activate_on) {

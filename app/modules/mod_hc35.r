@@ -21,7 +21,7 @@ mod_hc35_ui <- function(id) {
     checkboxGroupInput(ns("hc35_split"), "Lending", choices = hc35_split, selected = hc35_split[c(1, 3, 4)])
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
 }
 
 mod_hc35_server <- function(id, selected_tab, activate_on) {

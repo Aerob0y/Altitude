@@ -1,10 +1,3 @@
-# ==============================================================================
-# README ui.r -----------------------------------------------------------------------
-# set NS
-# get metrics
-# get any other data
-# create ui with inputs and plot
-# ==============================================================================
 mod_hb1_ui <- function(id) {
   ns <- NS(id)
   class_1 <- filter_series_unlist(guide_rbnz, column = "Class_1", apply_filters = list(Data = c("hb1")))
@@ -15,27 +8,12 @@ mod_hb1_ui <- function(id) {
       tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
     ),
     p = ns("plot"),
-    h = "600px"
+    h = "600px",
+    module = "hb1"
   )
 }
 
-# ==============================================================================
-# README mod__server -----------------------------------------------------------------------
-# moduleServer takes three arguments: id, selected_tab, activate_on
-#   id: is used to namespace the inputs and outputs of the module, so that they don't conflict with other modules or the main app.
-#   selected_tab: a reactive expression telling you which tab is currently selected
-#   activate_on: the tab name/value that should activate this module
-#   enabled: will return true if the module is active, false otherwise. Use this to control when to load data and render plots.
-#   req(enabled()) => Blocks all code after until the module is active.
-#
-# data: req // load data
-# dl: download settings module
-# plot: req // create plot
-#  valid_inputs: get the selected inputs, remove duplicates and remove any "-" values
-#  x_plotly: create the plotly plot, passing in the data, titles, series, k, years, download settings and clean_ui settings
-# output$plot: render the plotly plot
 
-# ==============================================================================
 mod_hb1_server <- function(id, selected_tab, activate_on) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))

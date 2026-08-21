@@ -21,7 +21,7 @@ mod_bond_ui <- function(id) {
     selectInput(ns("bond_location"), "Unit", choices = bond_locations, selected = bond_locations[1], multiple = TRUE),
     tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
   )
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "bond")
 }
 
 mod_bond_server <- function(id, selected_tab, activate_on) {

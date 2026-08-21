@@ -13,7 +13,7 @@ mod_hm6_ui <- function(id) {
     selectInput(ns("hm6_name"), "Saving Types", choices = hm6_name, selected = hm6_name, multiple = TRUE)
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm6")
 }
 
 mod_hm6_server <- function(id, selected_tab, activate_on) {

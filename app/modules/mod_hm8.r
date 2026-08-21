@@ -21,7 +21,7 @@ mod_hm8_ui <- function(id) {
     checkboxGroupInput(ns("hm8_split"), "Trade Type", choices = hm8_split, selected = hm8_split)
   )
 
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm8")
 }
 
 mod_hm8_server <- function(id, selected_tab, activate_on) {

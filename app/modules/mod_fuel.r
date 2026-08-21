@@ -5,7 +5,7 @@ mod_fuel_ui <- function(id) {
   insert_inputs <- tagList(
     selectInput(ns("fuel_unit"), "Fuel Unit",  choices = c("USD per Barrel", "NZD per Barrel"), selected = "USD per Barrel", multiple = FALSE)
   )
-  ui_single(insert_inputs, p = ns("plot"), h = "600px")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "fuel")
 }
 
 mod_fuel_server <- function(id, selected_tab, activate_on) {

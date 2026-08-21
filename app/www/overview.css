@@ -77,3 +77,84 @@
   .overview-page { scroll-behavior: auto; }
   .overview-button, .overview-dataset-card { transition: none; }
 }
+
+/* Dataset modules share the overview's editorial typography and palette. */
+.module-page {
+  --overview-ink: #142e2c;
+  --overview-green: #164b45;
+  --overview-mint: #d8e5df;
+  background: #fbfaf7;
+  color: var(--overview-ink);
+  height: 100%;
+  overflow-y: auto;
+  padding: clamp(1.25rem, 3vw, 2.75rem);
+}
+
+.module-header {
+  align-items: end;
+  border-bottom: 1px solid #cbd6d1;
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 4rem);
+  grid-template-columns: minmax(220px, .7fr) minmax(320px, 1.3fr);
+  margin: 0 auto 1.5rem;
+  max-width: 1440px;
+  padding-bottom: 1.5rem;
+}
+
+.module-kicker,
+.module-source {
+  color: #38726b;
+  font-size: .7rem;
+  font-weight: 750;
+  letter-spacing: .14em;
+  margin: 0 0 .6rem;
+  text-transform: uppercase;
+}
+
+.module-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.5vw, 3.35rem);
+  letter-spacing: -.035em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.module-note > p:last-child {
+  color: #48605e;
+  font-size: .98rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 760px;
+}
+
+.module-page > .bslib-page-sidebar {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 620px;
+}
+
+.module-page .csv-sidebar {
+  background: var(--overview-mint) !important;
+  border-color: #c4d3cd !important;
+}
+
+.module-page .module-chart-card {
+  background: white;
+  border: 1px solid #d9dfdc;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.module-page .form-label,
+.module-page .control-label {
+  color: var(--overview-ink);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+
+@media (max-width: 700px) {
+  .module-page { padding: 1rem; }
+  .module-header { align-items: start; grid-template-columns: 1fr; }
+  .module-page > .bslib-page-sidebar { min-height: 560px; }
+}
