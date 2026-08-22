@@ -1,14 +1,27 @@
-overview_dataset_card <- function(icon, title, source, description) {
-  tags$article(
-    class = "overview-dataset-card",
-    tags$div(class = "overview-dataset-icon", bsicons::bs_icon(icon)),
-    tags$div(
-      tags$h3(title),
-      tags$p(class = "overview-dataset-source", source),
-      tags$p(description)
+overview_dataset_card <- function(module, icon, title, source, description) {
+
+  actionLink(
+    inputId = paste0("nav_", module),
+    class = "overview-dataset-link",
+
+    tags$article(
+      class = "overview-dataset-card",
+
+      tags$div(
+        class = "overview-dataset-icon",
+        bsicons::bs_icon(icon)
+      ),
+
+      tags$div(
+        tags$h3(title),
+        tags$p(class = "overview-dataset-source", source),
+        tags$p(description)
+      )
     )
   )
 }
+
+
 
 ui_overview <- tags$div(
   class = "overview-page",
@@ -63,27 +76,27 @@ ui_overview <- tags$div(
       tags$h3(class = "overview-group-title", "Economic indicators"),
       tags$div(
         class = "overview-dataset-grid",
-        overview_dataset_card("currency-exchange", "Exchange rates", "Reserve Bank of New Zealand (RBNZ)", "Shows how much foreign currency the New Zealand dollar buys. Useful for understanding the cost of imports, overseas travel and export competitiveness."),
-        overview_dataset_card("percent", "Interest rates", "RBNZ", "Tracks wholesale and retail borrowing rates. These rates influence mortgage payments, business finance and returns to savers."),
-        overview_dataset_card("house", "Residential mortgages", "RBNZ", "Shows mortgage lending and advertised rates across different loan terms, giving context on household borrowing conditions."),
-        overview_dataset_card("graph-up-arrow", "Inflation", "RBNZ and Stats NZ series", "Measures how prices change over time. Headline and component series help show where cost-of-living pressure is coming from."),
-        overview_dataset_card("cart3", "Consumption", "RBNZ and Stats NZ series", "Describes household spending on goods and services—an important signal of demand and confidence in the economy."),
-        overview_dataset_card("building", "Investment", "RBNZ and Stats NZ series", "Covers spending that builds future capacity, including construction, machinery and other capital. Two dashboard views provide complementary investment series."),
-        overview_dataset_card("bar-chart-line", "GDP", "RBNZ and Stats NZ series", "Gross domestic product is the broadest measure of economic activity. Compare total, industry and per-person measures with care."),
-        overview_dataset_card("piggy-bank", "National savings", "RBNZ and Stats NZ series", "Shows the share of income retained rather than spent by households, businesses and government, and the resources available to fund investment."),
-        overview_dataset_card("arrow-left-right", "Balance of payments", "RBNZ and Stats NZ series", "Records New Zealand’s economic transactions with the rest of the world, including trade, investment income and international financing."),
-        overview_dataset_card("box-seam", "Overseas trade", "RBNZ and Stats NZ series", "Tracks the value and volume of goods and services bought from and sold to other countries."),
-        overview_dataset_card("people", "Labour market", "RBNZ and Stats NZ series", "Brings together employment, unemployment, participation, hours and wages to show how work and earnings are changing."),
-        overview_dataset_card("houses", "CoreLogic", "CoreLogic series via RBNZ", "Provides housing-market measures such as property values. Movements vary by place and do not represent the value of every home."),
-        overview_dataset_card("chat-square-text", "Survey of expectations", "RBNZ", "Summarises what surveyed businesses and forecasters expect for inflation and other economic measures. Expectations are opinions, not forecasts guaranteed to occur."),
-        overview_dataset_card("bank", "Banks: loans by product", "RBNZ", "Breaks registered-bank lending into products and borrower groups, helping show where credit is growing or contracting."),
-        overview_dataset_card("graph-up", "Bond", "New Zealand government bond data", "Shows yields and related measures for government debt. Bond yields reflect market expectations, term and risk, and can move quickly.")
+        overview_dataset_card("x", "currency-exchange", "Exchange rates", "Reserve Bank of New Zealand (RBNZ)", "Shows how much foreign currency the New Zealand dollar buys. Useful for understanding the cost of imports, overseas travel and export competitiveness."),
+        overview_dataset_card("hb2", "percent", "Interest rates", "RBNZ", "Tracks wholesale and retail borrowing rates. These rates influence mortgage payments, business finance and returns to savers."),
+        overview_dataset_card("hm1", "house", "Residential mortgages", "RBNZ", "Shows mortgage lending and advertised rates across different loan terms, giving context on household borrowing conditions."),
+        overview_dataset_card("hm2", "graph-up-arrow", "Inflation", "RBNZ and Stats NZ series", "Measures how prices change over time. Headline and component series help show where cost-of-living pressure is coming from."),
+        overview_dataset_card("hm3", "cart3", "Consumption", "RBNZ and Stats NZ series", "Describes household spending on goods and services—an important signal of demand and confidence in the economy."),
+        overview_dataset_card("hm4", "building", "Investment", "RBNZ and Stats NZ series", "Covers spending that builds future capacity, including construction, machinery and other capital. Two dashboard views provide complementary investment series."),
+        overview_dataset_card("hm5", "bar-chart-line", "GDP", "RBNZ and Stats NZ series", "Gross domestic product is the broadest measure of economic activity. Compare total, industry and per-person measures with care."),
+        overview_dataset_card("hm6", "piggy-bank", "National savings", "RBNZ and Stats NZ series", "Shows the share of income retained rather than spent by households, businesses and government, and the resources available to fund investment."),
+        overview_dataset_card("hm7", "arrow-left-right", "Balance of payments", "RBNZ and Stats NZ series", "Records New Zealand’s economic transactions with the rest of the world, including trade, investment income and international financing."),
+        overview_dataset_card("hm8", "box-seam", "Overseas trade", "RBNZ and Stats NZ series", "Tracks the value and volume of goods and services bought from and sold to other countries."),
+        overview_dataset_card("hm9", "people", "Labour market", "RBNZ and Stats NZ series", "Brings together employment, unemployment, participation, hours and wages to show how work and earnings are changing."),
+        overview_dataset_card("hm10", "houses", "CoreLogic", "CoreLogic series via RBNZ", "Provides housing-market measures such as property values. Movements vary by place and do not represent the value of every home."),
+        overview_dataset_card("hm14", "chat-square-text", "Survey of expectations", "RBNZ", "Summarises what surveyed businesses and forecasters expect for inflation and other economic measures. Expectations are opinions, not forecasts guaranteed to occur."),
+        overview_dataset_card("hb1", "bank", "Banks: loans by product", "RBNZ", "Breaks registered-bank lending into products and borrower groups, helping show where credit is growing or contracting."),
+        overview_dataset_card("hb1", "graph-up", "Bond", "New Zealand government bond data", "Shows yields and related measures for government debt. Bond yields reflect market expectations, term and risk, and can move quickly.")
       ),
       tags$h3(class = "overview-group-title", "Tourism & migration"),
       tags$div(
         class = "overview-dataset-grid",
-        overview_dataset_card("airplane", "Border", "Stats NZ border movements", "Counts people crossing New Zealand’s border and helps distinguish visitor arrivals, resident travel and migration patterns. Counts are movements, not unique people."),
-        overview_dataset_card("fuel-pump", "Fuel", "Public fuel-price series", "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.")
+        overview_dataset_card("hb1", "airplane", "Border", "Stats NZ border movements", "Counts people crossing New Zealand’s border and helps distinguish visitor arrivals, resident travel and migration patterns. Counts are movements, not unique people."),
+        overview_dataset_card("hb1", "fuel-pump", "Fuel", "Public fuel-price series", "Tracks fuel prices over time, a practical indicator of transport costs for households, visitors and tourism operators.")
       )
     ),
     tags$section(

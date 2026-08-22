@@ -1,0 +1,745 @@
+STATISTIC,Statistic Label,TLIST(M1),Year,C02342V02816,Dwelling Type,UNIT,VALUE
+NDM01C01,Monthly New Dwelling Completions,201101,2011 January,-,All house types,Number,506
+NDM01C01,Monthly New Dwelling Completions,201101,2011 January,06,Single house,Number,332
+NDM01C01,Monthly New Dwelling Completions,201101,2011 January,07,Scheme house,Number,128
+NDM01C01,Monthly New Dwelling Completions,201101,2011 January,08,Apartment,Number,46
+NDM01C01,Monthly New Dwelling Completions,201102,2011 February,-,All house types,Number,637
+NDM01C01,Monthly New Dwelling Completions,201102,2011 February,06,Single house,Number,399
+NDM01C01,Monthly New Dwelling Completions,201102,2011 February,07,Scheme house,Number,157
+NDM01C01,Monthly New Dwelling Completions,201102,2011 February,08,Apartment,Number,81
+NDM01C01,Monthly New Dwelling Completions,201103,2011 March,-,All house types,Number,732
+NDM01C01,Monthly New Dwelling Completions,201103,2011 March,06,Single house,Number,425
+NDM01C01,Monthly New Dwelling Completions,201103,2011 March,07,Scheme house,Number,162
+NDM01C01,Monthly New Dwelling Completions,201103,2011 March,08,Apartment,Number,145
+NDM01C01,Monthly New Dwelling Completions,201104,2011 April,-,All house types,Number,628
+NDM01C01,Monthly New Dwelling Completions,201104,2011 April,06,Single house,Number,370
+NDM01C01,Monthly New Dwelling Completions,201104,2011 April,07,Scheme house,Number,178
+NDM01C01,Monthly New Dwelling Completions,201104,2011 April,08,Apartment,Number,80
+NDM01C01,Monthly New Dwelling Completions,201105,2011 May,-,All house types,Number,540
+NDM01C01,Monthly New Dwelling Completions,201105,2011 May,06,Single house,Number,384
+NDM01C01,Monthly New Dwelling Completions,201105,2011 May,07,Scheme house,Number,73
+NDM01C01,Monthly New Dwelling Completions,201105,2011 May,08,Apartment,Number,83
+NDM01C01,Monthly New Dwelling Completions,201106,2011 June,-,All house types,Number,623
+NDM01C01,Monthly New Dwelling Completions,201106,2011 June,06,Single house,Number,440
+NDM01C01,Monthly New Dwelling Completions,201106,2011 June,07,Scheme house,Number,129
+NDM01C01,Monthly New Dwelling Completions,201106,2011 June,08,Apartment,Number,54
+NDM01C01,Monthly New Dwelling Completions,201107,2011 July,-,All house types,Number,557
+NDM01C01,Monthly New Dwelling Completions,201107,2011 July,06,Single house,Number,396
+NDM01C01,Monthly New Dwelling Completions,201107,2011 July,07,Scheme house,Number,135
+NDM01C01,Monthly New Dwelling Completions,201107,2011 July,08,Apartment,Number,26
+NDM01C01,Monthly New Dwelling Completions,201108,2011 August,-,All house types,Number,513
+NDM01C01,Monthly New Dwelling Completions,201108,2011 August,06,Single house,Number,390
+NDM01C01,Monthly New Dwelling Completions,201108,2011 August,07,Scheme house,Number,73
+NDM01C01,Monthly New Dwelling Completions,201108,2011 August,08,Apartment,Number,50
+NDM01C01,Monthly New Dwelling Completions,201109,2011 September,-,All house types,Number,617
+NDM01C01,Monthly New Dwelling Completions,201109,2011 September,06,Single house,Number,411
+NDM01C01,Monthly New Dwelling Completions,201109,2011 September,07,Scheme house,Number,97
+NDM01C01,Monthly New Dwelling Completions,201109,2011 September,08,Apartment,Number,109
+NDM01C01,Monthly New Dwelling Completions,201110,2011 October,-,All house types,Number,483
+NDM01C01,Monthly New Dwelling Completions,201110,2011 October,06,Single house,Number,388
+NDM01C01,Monthly New Dwelling Completions,201110,2011 October,07,Scheme house,Number,55
+NDM01C01,Monthly New Dwelling Completions,201110,2011 October,08,Apartment,Number,40
+NDM01C01,Monthly New Dwelling Completions,201111,2011 November,-,All house types,Number,616
+NDM01C01,Monthly New Dwelling Completions,201111,2011 November,06,Single house,Number,468
+NDM01C01,Monthly New Dwelling Completions,201111,2011 November,07,Scheme house,Number,103
+NDM01C01,Monthly New Dwelling Completions,201111,2011 November,08,Apartment,Number,45
+NDM01C01,Monthly New Dwelling Completions,201112,2011 December,-,All house types,Number,542
+NDM01C01,Monthly New Dwelling Completions,201112,2011 December,06,Single house,Number,411
+NDM01C01,Monthly New Dwelling Completions,201112,2011 December,07,Scheme house,Number,68
+NDM01C01,Monthly New Dwelling Completions,201112,2011 December,08,Apartment,Number,63
+NDM01C01,Monthly New Dwelling Completions,201201,2012 January,-,All house types,Number,352
+NDM01C01,Monthly New Dwelling Completions,201201,2012 January,06,Single house,Number,230
+NDM01C01,Monthly New Dwelling Completions,201201,2012 January,07,Scheme house,Number,63
+NDM01C01,Monthly New Dwelling Completions,201201,2012 January,08,Apartment,Number,59
+NDM01C01,Monthly New Dwelling Completions,201202,2012 February,-,All house types,Number,388
+NDM01C01,Monthly New Dwelling Completions,201202,2012 February,06,Single house,Number,280
+NDM01C01,Monthly New Dwelling Completions,201202,2012 February,07,Scheme house,Number,76
+NDM01C01,Monthly New Dwelling Completions,201202,2012 February,08,Apartment,Number,32
+NDM01C01,Monthly New Dwelling Completions,201203,2012 March,-,All house types,Number,391
+NDM01C01,Monthly New Dwelling Completions,201203,2012 March,06,Single house,Number,287
+NDM01C01,Monthly New Dwelling Completions,201203,2012 March,07,Scheme house,Number,72
+NDM01C01,Monthly New Dwelling Completions,201203,2012 March,08,Apartment,Number,32
+NDM01C01,Monthly New Dwelling Completions,201204,2012 April,-,All house types,Number,347
+NDM01C01,Monthly New Dwelling Completions,201204,2012 April,06,Single house,Number,276
+NDM01C01,Monthly New Dwelling Completions,201204,2012 April,07,Scheme house,Number,55
+NDM01C01,Monthly New Dwelling Completions,201204,2012 April,08,Apartment,Number,16
+NDM01C01,Monthly New Dwelling Completions,201205,2012 May,-,All house types,Number,390
+NDM01C01,Monthly New Dwelling Completions,201205,2012 May,06,Single house,Number,294
+NDM01C01,Monthly New Dwelling Completions,201205,2012 May,07,Scheme house,Number,65
+NDM01C01,Monthly New Dwelling Completions,201205,2012 May,08,Apartment,Number,31
+NDM01C01,Monthly New Dwelling Completions,201206,2012 June,-,All house types,Number,380
+NDM01C01,Monthly New Dwelling Completions,201206,2012 June,06,Single house,Number,277
+NDM01C01,Monthly New Dwelling Completions,201206,2012 June,07,Scheme house,Number,74
+NDM01C01,Monthly New Dwelling Completions,201206,2012 June,08,Apartment,Number,29
+NDM01C01,Monthly New Dwelling Completions,201207,2012 July,-,All house types,Number,365
+NDM01C01,Monthly New Dwelling Completions,201207,2012 July,06,Single house,Number,293
+NDM01C01,Monthly New Dwelling Completions,201207,2012 July,07,Scheme house,Number,48
+NDM01C01,Monthly New Dwelling Completions,201207,2012 July,08,Apartment,Number,24
+NDM01C01,Monthly New Dwelling Completions,201208,2012 August,-,All house types,Number,463
+NDM01C01,Monthly New Dwelling Completions,201208,2012 August,06,Single house,Number,300
+NDM01C01,Monthly New Dwelling Completions,201208,2012 August,07,Scheme house,Number,109
+NDM01C01,Monthly New Dwelling Completions,201208,2012 August,08,Apartment,Number,54
+NDM01C01,Monthly New Dwelling Completions,201209,2012 September,-,All house types,Number,377
+NDM01C01,Monthly New Dwelling Completions,201209,2012 September,06,Single house,Number,275
+NDM01C01,Monthly New Dwelling Completions,201209,2012 September,07,Scheme house,Number,87
+NDM01C01,Monthly New Dwelling Completions,201209,2012 September,08,Apartment,Number,15
+NDM01C01,Monthly New Dwelling Completions,201210,2012 October,-,All house types,Number,498
+NDM01C01,Monthly New Dwelling Completions,201210,2012 October,06,Single house,Number,334
+NDM01C01,Monthly New Dwelling Completions,201210,2012 October,07,Scheme house,Number,110
+NDM01C01,Monthly New Dwelling Completions,201210,2012 October,08,Apartment,Number,54
+NDM01C01,Monthly New Dwelling Completions,201211,2012 November,-,All house types,Number,481
+NDM01C01,Monthly New Dwelling Completions,201211,2012 November,06,Single house,Number,335
+NDM01C01,Monthly New Dwelling Completions,201211,2012 November,07,Scheme house,Number,106
+NDM01C01,Monthly New Dwelling Completions,201211,2012 November,08,Apartment,Number,40
+NDM01C01,Monthly New Dwelling Completions,201212,2012 December,-,All house types,Number,479
+NDM01C01,Monthly New Dwelling Completions,201212,2012 December,06,Single house,Number,320
+NDM01C01,Monthly New Dwelling Completions,201212,2012 December,07,Scheme house,Number,99
+NDM01C01,Monthly New Dwelling Completions,201212,2012 December,08,Apartment,Number,60
+NDM01C01,Monthly New Dwelling Completions,201301,2013 January,-,All house types,Number,266
+NDM01C01,Monthly New Dwelling Completions,201301,2013 January,06,Single house,Number,184
+NDM01C01,Monthly New Dwelling Completions,201301,2013 January,07,Scheme house,Number,52
+NDM01C01,Monthly New Dwelling Completions,201301,2013 January,08,Apartment,Number,30
+NDM01C01,Monthly New Dwelling Completions,201302,2013 February,-,All house types,Number,289
+NDM01C01,Monthly New Dwelling Completions,201302,2013 February,06,Single house,Number,208
+NDM01C01,Monthly New Dwelling Completions,201302,2013 February,07,Scheme house,Number,53
+NDM01C01,Monthly New Dwelling Completions,201302,2013 February,08,Apartment,Number,28
+NDM01C01,Monthly New Dwelling Completions,201303,2013 March,-,All house types,Number,334
+NDM01C01,Monthly New Dwelling Completions,201303,2013 March,06,Single house,Number,246
+NDM01C01,Monthly New Dwelling Completions,201303,2013 March,07,Scheme house,Number,69
+NDM01C01,Monthly New Dwelling Completions,201303,2013 March,08,Apartment,Number,19
+NDM01C01,Monthly New Dwelling Completions,201304,2013 April,-,All house types,Number,341
+NDM01C01,Monthly New Dwelling Completions,201304,2013 April,06,Single house,Number,246
+NDM01C01,Monthly New Dwelling Completions,201304,2013 April,07,Scheme house,Number,80
+NDM01C01,Monthly New Dwelling Completions,201304,2013 April,08,Apartment,Number,15
+NDM01C01,Monthly New Dwelling Completions,201305,2013 May,-,All house types,Number,375
+NDM01C01,Monthly New Dwelling Completions,201305,2013 May,06,Single house,Number,262
+NDM01C01,Monthly New Dwelling Completions,201305,2013 May,07,Scheme house,Number,77
+NDM01C01,Monthly New Dwelling Completions,201305,2013 May,08,Apartment,Number,36
+NDM01C01,Monthly New Dwelling Completions,201306,2013 June,-,All house types,Number,430
+NDM01C01,Monthly New Dwelling Completions,201306,2013 June,06,Single house,Number,213
+NDM01C01,Monthly New Dwelling Completions,201306,2013 June,07,Scheme house,Number,124
+NDM01C01,Monthly New Dwelling Completions,201306,2013 June,08,Apartment,Number,93
+NDM01C01,Monthly New Dwelling Completions,201307,2013 July,-,All house types,Number,345
+NDM01C01,Monthly New Dwelling Completions,201307,2013 July,06,Single house,Number,235
+NDM01C01,Monthly New Dwelling Completions,201307,2013 July,07,Scheme house,Number,98
+NDM01C01,Monthly New Dwelling Completions,201307,2013 July,08,Apartment,Number,12
+NDM01C01,Monthly New Dwelling Completions,201308,2013 August,-,All house types,Number,319
+NDM01C01,Monthly New Dwelling Completions,201308,2013 August,06,Single house,Number,245
+NDM01C01,Monthly New Dwelling Completions,201308,2013 August,07,Scheme house,Number,67
+NDM01C01,Monthly New Dwelling Completions,201308,2013 August,08,Apartment,Number,7
+NDM01C01,Monthly New Dwelling Completions,201309,2013 September,-,All house types,Number,369
+NDM01C01,Monthly New Dwelling Completions,201309,2013 September,06,Single house,Number,247
+NDM01C01,Monthly New Dwelling Completions,201309,2013 September,07,Scheme house,Number,102
+NDM01C01,Monthly New Dwelling Completions,201309,2013 September,08,Apartment,Number,20
+NDM01C01,Monthly New Dwelling Completions,201310,2013 October,-,All house types,Number,465
+NDM01C01,Monthly New Dwelling Completions,201310,2013 October,06,Single house,Number,278
+NDM01C01,Monthly New Dwelling Completions,201310,2013 October,07,Scheme house,Number,163
+NDM01C01,Monthly New Dwelling Completions,201310,2013 October,08,Apartment,Number,24
+NDM01C01,Monthly New Dwelling Completions,201311,2013 November,-,All house types,Number,552
+NDM01C01,Monthly New Dwelling Completions,201311,2013 November,06,Single house,Number,304
+NDM01C01,Monthly New Dwelling Completions,201311,2013 November,07,Scheme house,Number,158
+NDM01C01,Monthly New Dwelling Completions,201311,2013 November,08,Apartment,Number,90
+NDM01C01,Monthly New Dwelling Completions,201312,2013 December,-,All house types,Number,490
+NDM01C01,Monthly New Dwelling Completions,201312,2013 December,06,Single house,Number,279
+NDM01C01,Monthly New Dwelling Completions,201312,2013 December,07,Scheme house,Number,112
+NDM01C01,Monthly New Dwelling Completions,201312,2013 December,08,Apartment,Number,99
+NDM01C01,Monthly New Dwelling Completions,201401,2014 January,-,All house types,Number,351
+NDM01C01,Monthly New Dwelling Completions,201401,2014 January,06,Single house,Number,204
+NDM01C01,Monthly New Dwelling Completions,201401,2014 January,07,Scheme house,Number,76
+NDM01C01,Monthly New Dwelling Completions,201401,2014 January,08,Apartment,Number,71
+NDM01C01,Monthly New Dwelling Completions,201402,2014 February,-,All house types,Number,357
+NDM01C01,Monthly New Dwelling Completions,201402,2014 February,06,Single house,Number,166
+NDM01C01,Monthly New Dwelling Completions,201402,2014 February,07,Scheme house,Number,114
+NDM01C01,Monthly New Dwelling Completions,201402,2014 February,08,Apartment,Number,77
+NDM01C01,Monthly New Dwelling Completions,201403,2014 March,-,All house types,Number,386
+NDM01C01,Monthly New Dwelling Completions,201403,2014 March,06,Single house,Number,255
+NDM01C01,Monthly New Dwelling Completions,201403,2014 March,07,Scheme house,Number,119
+NDM01C01,Monthly New Dwelling Completions,201403,2014 March,08,Apartment,Number,12
+NDM01C01,Monthly New Dwelling Completions,201404,2014 April,-,All house types,Number,414
+NDM01C01,Monthly New Dwelling Completions,201404,2014 April,06,Single house,Number,215
+NDM01C01,Monthly New Dwelling Completions,201404,2014 April,07,Scheme house,Number,106
+NDM01C01,Monthly New Dwelling Completions,201404,2014 April,08,Apartment,Number,93
+NDM01C01,Monthly New Dwelling Completions,201405,2014 May,-,All house types,Number,486
+NDM01C01,Monthly New Dwelling Completions,201405,2014 May,06,Single house,Number,267
+NDM01C01,Monthly New Dwelling Completions,201405,2014 May,07,Scheme house,Number,123
+NDM01C01,Monthly New Dwelling Completions,201405,2014 May,08,Apartment,Number,96
+NDM01C01,Monthly New Dwelling Completions,201406,2014 June,-,All house types,Number,418
+NDM01C01,Monthly New Dwelling Completions,201406,2014 June,06,Single house,Number,230
+NDM01C01,Monthly New Dwelling Completions,201406,2014 June,07,Scheme house,Number,136
+NDM01C01,Monthly New Dwelling Completions,201406,2014 June,08,Apartment,Number,52
+NDM01C01,Monthly New Dwelling Completions,201407,2014 July,-,All house types,Number,451
+NDM01C01,Monthly New Dwelling Completions,201407,2014 July,06,Single house,Number,267
+NDM01C01,Monthly New Dwelling Completions,201407,2014 July,07,Scheme house,Number,157
+NDM01C01,Monthly New Dwelling Completions,201407,2014 July,08,Apartment,Number,27
+NDM01C01,Monthly New Dwelling Completions,201408,2014 August,-,All house types,Number,400
+NDM01C01,Monthly New Dwelling Completions,201408,2014 August,06,Single house,Number,216
+NDM01C01,Monthly New Dwelling Completions,201408,2014 August,07,Scheme house,Number,159
+NDM01C01,Monthly New Dwelling Completions,201408,2014 August,08,Apartment,Number,25
+NDM01C01,Monthly New Dwelling Completions,201409,2014 September,-,All house types,Number,553
+NDM01C01,Monthly New Dwelling Completions,201409,2014 September,06,Single house,Number,245
+NDM01C01,Monthly New Dwelling Completions,201409,2014 September,07,Scheme house,Number,190
+NDM01C01,Monthly New Dwelling Completions,201409,2014 September,08,Apartment,Number,118
+NDM01C01,Monthly New Dwelling Completions,201410,2014 October,-,All house types,Number,506
+NDM01C01,Monthly New Dwelling Completions,201410,2014 October,06,Single house,Number,282
+NDM01C01,Monthly New Dwelling Completions,201410,2014 October,07,Scheme house,Number,185
+NDM01C01,Monthly New Dwelling Completions,201410,2014 October,08,Apartment,Number,39
+NDM01C01,Monthly New Dwelling Completions,201411,2014 November,-,All house types,Number,569
+NDM01C01,Monthly New Dwelling Completions,201411,2014 November,06,Single house,Number,319
+NDM01C01,Monthly New Dwelling Completions,201411,2014 November,07,Scheme house,Number,232
+NDM01C01,Monthly New Dwelling Completions,201411,2014 November,08,Apartment,Number,18
+NDM01C01,Monthly New Dwelling Completions,201412,2014 December,-,All house types,Number,627
+NDM01C01,Monthly New Dwelling Completions,201412,2014 December,06,Single house,Number,309
+NDM01C01,Monthly New Dwelling Completions,201412,2014 December,07,Scheme house,Number,198
+NDM01C01,Monthly New Dwelling Completions,201412,2014 December,08,Apartment,Number,120
+NDM01C01,Monthly New Dwelling Completions,201501,2015 January,-,All house types,Number,314
+NDM01C01,Monthly New Dwelling Completions,201501,2015 January,06,Single house,Number,185
+NDM01C01,Monthly New Dwelling Completions,201501,2015 January,07,Scheme house,Number,115
+NDM01C01,Monthly New Dwelling Completions,201501,2015 January,08,Apartment,Number,14
+NDM01C01,Monthly New Dwelling Completions,201502,2015 February,-,All house types,Number,454
+NDM01C01,Monthly New Dwelling Completions,201502,2015 February,06,Single house,Number,222
+NDM01C01,Monthly New Dwelling Completions,201502,2015 February,07,Scheme house,Number,196
+NDM01C01,Monthly New Dwelling Completions,201502,2015 February,08,Apartment,Number,36
+NDM01C01,Monthly New Dwelling Completions,201503,2015 March,-,All house types,Number,603
+NDM01C01,Monthly New Dwelling Completions,201503,2015 March,06,Single house,Number,252
+NDM01C01,Monthly New Dwelling Completions,201503,2015 March,07,Scheme house,Number,295
+NDM01C01,Monthly New Dwelling Completions,201503,2015 March,08,Apartment,Number,56
+NDM01C01,Monthly New Dwelling Completions,201504,2015 April,-,All house types,Number,494
+NDM01C01,Monthly New Dwelling Completions,201504,2015 April,06,Single house,Number,228
+NDM01C01,Monthly New Dwelling Completions,201504,2015 April,07,Scheme house,Number,227
+NDM01C01,Monthly New Dwelling Completions,201504,2015 April,08,Apartment,Number,39
+NDM01C01,Monthly New Dwelling Completions,201505,2015 May,-,All house types,Number,510
+NDM01C01,Monthly New Dwelling Completions,201505,2015 May,06,Single house,Number,234
+NDM01C01,Monthly New Dwelling Completions,201505,2015 May,07,Scheme house,Number,206
+NDM01C01,Monthly New Dwelling Completions,201505,2015 May,08,Apartment,Number,70
+NDM01C01,Monthly New Dwelling Completions,201506,2015 June,-,All house types,Number,566
+NDM01C01,Monthly New Dwelling Completions,201506,2015 June,06,Single house,Number,273
+NDM01C01,Monthly New Dwelling Completions,201506,2015 June,07,Scheme house,Number,241
+NDM01C01,Monthly New Dwelling Completions,201506,2015 June,08,Apartment,Number,52
+NDM01C01,Monthly New Dwelling Completions,201507,2015 July,-,All house types,Number,683
+NDM01C01,Monthly New Dwelling Completions,201507,2015 July,06,Single house,Number,316
+NDM01C01,Monthly New Dwelling Completions,201507,2015 July,07,Scheme house,Number,315
+NDM01C01,Monthly New Dwelling Completions,201507,2015 July,08,Apartment,Number,52
+NDM01C01,Monthly New Dwelling Completions,201508,2015 August,-,All house types,Number,590
+NDM01C01,Monthly New Dwelling Completions,201508,2015 August,06,Single house,Number,244
+NDM01C01,Monthly New Dwelling Completions,201508,2015 August,07,Scheme house,Number,269
+NDM01C01,Monthly New Dwelling Completions,201508,2015 August,08,Apartment,Number,77
+NDM01C01,Monthly New Dwelling Completions,201509,2015 September,-,All house types,Number,760
+NDM01C01,Monthly New Dwelling Completions,201509,2015 September,06,Single house,Number,319
+NDM01C01,Monthly New Dwelling Completions,201509,2015 September,07,Scheme house,Number,315
+NDM01C01,Monthly New Dwelling Completions,201509,2015 September,08,Apartment,Number,126
+NDM01C01,Monthly New Dwelling Completions,201510,2015 October,-,All house types,Number,682
+NDM01C01,Monthly New Dwelling Completions,201510,2015 October,06,Single house,Number,291
+NDM01C01,Monthly New Dwelling Completions,201510,2015 October,07,Scheme house,Number,332
+NDM01C01,Monthly New Dwelling Completions,201510,2015 October,08,Apartment,Number,59
+NDM01C01,Monthly New Dwelling Completions,201511,2015 November,-,All house types,Number,750
+NDM01C01,Monthly New Dwelling Completions,201511,2015 November,06,Single house,Number,343
+NDM01C01,Monthly New Dwelling Completions,201511,2015 November,07,Scheme house,Number,355
+NDM01C01,Monthly New Dwelling Completions,201511,2015 November,08,Apartment,Number,52
+NDM01C01,Monthly New Dwelling Completions,201512,2015 December,-,All house types,Number,813
+NDM01C01,Monthly New Dwelling Completions,201512,2015 December,06,Single house,Number,345
+NDM01C01,Monthly New Dwelling Completions,201512,2015 December,07,Scheme house,Number,428
+NDM01C01,Monthly New Dwelling Completions,201512,2015 December,08,Apartment,Number,40
+NDM01C01,Monthly New Dwelling Completions,201601,2016 January,-,All house types,Number,567
+NDM01C01,Monthly New Dwelling Completions,201601,2016 January,06,Single house,Number,186
+NDM01C01,Monthly New Dwelling Completions,201601,2016 January,07,Scheme house,Number,293
+NDM01C01,Monthly New Dwelling Completions,201601,2016 January,08,Apartment,Number,88
+NDM01C01,Monthly New Dwelling Completions,201602,2016 February,-,All house types,Number,718
+NDM01C01,Monthly New Dwelling Completions,201602,2016 February,06,Single house,Number,239
+NDM01C01,Monthly New Dwelling Completions,201602,2016 February,07,Scheme house,Number,309
+NDM01C01,Monthly New Dwelling Completions,201602,2016 February,08,Apartment,Number,170
+NDM01C01,Monthly New Dwelling Completions,201603,2016 March,-,All house types,Number,651
+NDM01C01,Monthly New Dwelling Completions,201603,2016 March,06,Single house,Number,261
+NDM01C01,Monthly New Dwelling Completions,201603,2016 March,07,Scheme house,Number,324
+NDM01C01,Monthly New Dwelling Completions,201603,2016 March,08,Apartment,Number,66
+NDM01C01,Monthly New Dwelling Completions,201604,2016 April,-,All house types,Number,792
+NDM01C01,Monthly New Dwelling Completions,201604,2016 April,06,Single house,Number,275
+NDM01C01,Monthly New Dwelling Completions,201604,2016 April,07,Scheme house,Number,449
+NDM01C01,Monthly New Dwelling Completions,201604,2016 April,08,Apartment,Number,68
+NDM01C01,Monthly New Dwelling Completions,201605,2016 May,-,All house types,Number,877
+NDM01C01,Monthly New Dwelling Completions,201605,2016 May,06,Single house,Number,309
+NDM01C01,Monthly New Dwelling Completions,201605,2016 May,07,Scheme house,Number,429
+NDM01C01,Monthly New Dwelling Completions,201605,2016 May,08,Apartment,Number,139
+NDM01C01,Monthly New Dwelling Completions,201606,2016 June,-,All house types,Number,701
+NDM01C01,Monthly New Dwelling Completions,201606,2016 June,06,Single house,Number,288
+NDM01C01,Monthly New Dwelling Completions,201606,2016 June,07,Scheme house,Number,371
+NDM01C01,Monthly New Dwelling Completions,201606,2016 June,08,Apartment,Number,42
+NDM01C01,Monthly New Dwelling Completions,201607,2016 July,-,All house types,Number,702
+NDM01C01,Monthly New Dwelling Completions,201607,2016 July,06,Single house,Number,306
+NDM01C01,Monthly New Dwelling Completions,201607,2016 July,07,Scheme house,Number,328
+NDM01C01,Monthly New Dwelling Completions,201607,2016 July,08,Apartment,Number,68
+NDM01C01,Monthly New Dwelling Completions,201608,2016 August,-,All house types,Number,835
+NDM01C01,Monthly New Dwelling Completions,201608,2016 August,06,Single house,Number,339
+NDM01C01,Monthly New Dwelling Completions,201608,2016 August,07,Scheme house,Number,416
+NDM01C01,Monthly New Dwelling Completions,201608,2016 August,08,Apartment,Number,80
+NDM01C01,Monthly New Dwelling Completions,201609,2016 September,-,All house types,Number,914
+NDM01C01,Monthly New Dwelling Completions,201609,2016 September,06,Single house,Number,325
+NDM01C01,Monthly New Dwelling Completions,201609,2016 September,07,Scheme house,Number,473
+NDM01C01,Monthly New Dwelling Completions,201609,2016 September,08,Apartment,Number,116
+NDM01C01,Monthly New Dwelling Completions,201610,2016 October,-,All house types,Number,847
+NDM01C01,Monthly New Dwelling Completions,201610,2016 October,06,Single house,Number,290
+NDM01C01,Monthly New Dwelling Completions,201610,2016 October,07,Scheme house,Number,516
+NDM01C01,Monthly New Dwelling Completions,201610,2016 October,08,Apartment,Number,41
+NDM01C01,Monthly New Dwelling Completions,201611,2016 November,-,All house types,Number,1065
+NDM01C01,Monthly New Dwelling Completions,201611,2016 November,06,Single house,Number,409
+NDM01C01,Monthly New Dwelling Completions,201611,2016 November,07,Scheme house,Number,543
+NDM01C01,Monthly New Dwelling Completions,201611,2016 November,08,Apartment,Number,113
+NDM01C01,Monthly New Dwelling Completions,201612,2016 December,-,All house types,Number,1057
+NDM01C01,Monthly New Dwelling Completions,201612,2016 December,06,Single house,Number,363
+NDM01C01,Monthly New Dwelling Completions,201612,2016 December,07,Scheme house,Number,579
+NDM01C01,Monthly New Dwelling Completions,201612,2016 December,08,Apartment,Number,115
+NDM01C01,Monthly New Dwelling Completions,201701,2017 January,-,All house types,Number,804
+NDM01C01,Monthly New Dwelling Completions,201701,2017 January,06,Single house,Number,230
+NDM01C01,Monthly New Dwelling Completions,201701,2017 January,07,Scheme house,Number,431
+NDM01C01,Monthly New Dwelling Completions,201701,2017 January,08,Apartment,Number,143
+NDM01C01,Monthly New Dwelling Completions,201702,2017 February,-,All house types,Number,944
+NDM01C01,Monthly New Dwelling Completions,201702,2017 February,06,Single house,Number,288
+NDM01C01,Monthly New Dwelling Completions,201702,2017 February,07,Scheme house,Number,484
+NDM01C01,Monthly New Dwelling Completions,201702,2017 February,08,Apartment,Number,172
+NDM01C01,Monthly New Dwelling Completions,201703,2017 March,-,All house types,Number,993
+NDM01C01,Monthly New Dwelling Completions,201703,2017 March,06,Single house,Number,348
+NDM01C01,Monthly New Dwelling Completions,201703,2017 March,07,Scheme house,Number,494
+NDM01C01,Monthly New Dwelling Completions,201703,2017 March,08,Apartment,Number,151
+NDM01C01,Monthly New Dwelling Completions,201704,2017 April,-,All house types,Number,993
+NDM01C01,Monthly New Dwelling Completions,201704,2017 April,06,Single house,Number,305
+NDM01C01,Monthly New Dwelling Completions,201704,2017 April,07,Scheme house,Number,533
+NDM01C01,Monthly New Dwelling Completions,201704,2017 April,08,Apartment,Number,155
+NDM01C01,Monthly New Dwelling Completions,201705,2017 May,-,All house types,Number,1210
+NDM01C01,Monthly New Dwelling Completions,201705,2017 May,06,Single house,Number,391
+NDM01C01,Monthly New Dwelling Completions,201705,2017 May,07,Scheme house,Number,662
+NDM01C01,Monthly New Dwelling Completions,201705,2017 May,08,Apartment,Number,157
+NDM01C01,Monthly New Dwelling Completions,201706,2017 June,-,All house types,Number,1031
+NDM01C01,Monthly New Dwelling Completions,201706,2017 June,06,Single house,Number,328
+NDM01C01,Monthly New Dwelling Completions,201706,2017 June,07,Scheme house,Number,571
+NDM01C01,Monthly New Dwelling Completions,201706,2017 June,08,Apartment,Number,132
+NDM01C01,Monthly New Dwelling Completions,201707,2017 July,-,All house types,Number,1307
+NDM01C01,Monthly New Dwelling Completions,201707,2017 July,06,Single house,Number,402
+NDM01C01,Monthly New Dwelling Completions,201707,2017 July,07,Scheme house,Number,729
+NDM01C01,Monthly New Dwelling Completions,201707,2017 July,08,Apartment,Number,176
+NDM01C01,Monthly New Dwelling Completions,201708,2017 August,-,All house types,Number,1166
+NDM01C01,Monthly New Dwelling Completions,201708,2017 August,06,Single house,Number,344
+NDM01C01,Monthly New Dwelling Completions,201708,2017 August,07,Scheme house,Number,578
+NDM01C01,Monthly New Dwelling Completions,201708,2017 August,08,Apartment,Number,244
+NDM01C01,Monthly New Dwelling Completions,201709,2017 September,-,All house types,Number,1244
+NDM01C01,Monthly New Dwelling Completions,201709,2017 September,06,Single house,Number,363
+NDM01C01,Monthly New Dwelling Completions,201709,2017 September,07,Scheme house,Number,690
+NDM01C01,Monthly New Dwelling Completions,201709,2017 September,08,Apartment,Number,191
+NDM01C01,Monthly New Dwelling Completions,201710,2017 October,-,All house types,Number,1198
+NDM01C01,Monthly New Dwelling Completions,201710,2017 October,06,Single house,Number,318
+NDM01C01,Monthly New Dwelling Completions,201710,2017 October,07,Scheme house,Number,740
+NDM01C01,Monthly New Dwelling Completions,201710,2017 October,08,Apartment,Number,140
+NDM01C01,Monthly New Dwelling Completions,201711,2017 November,-,All house types,Number,1835
+NDM01C01,Monthly New Dwelling Completions,201711,2017 November,06,Single house,Number,520
+NDM01C01,Monthly New Dwelling Completions,201711,2017 November,07,Scheme house,Number,1063
+NDM01C01,Monthly New Dwelling Completions,201711,2017 November,08,Apartment,Number,252
+NDM01C01,Monthly New Dwelling Completions,201712,2017 December,-,All house types,Number,1498
+NDM01C01,Monthly New Dwelling Completions,201712,2017 December,06,Single house,Number,378
+NDM01C01,Monthly New Dwelling Completions,201712,2017 December,07,Scheme house,Number,881
+NDM01C01,Monthly New Dwelling Completions,201712,2017 December,08,Apartment,Number,239
+NDM01C01,Monthly New Dwelling Completions,201801,2018 January,-,All house types,Number,1074
+NDM01C01,Monthly New Dwelling Completions,201801,2018 January,06,Single house,Number,291
+NDM01C01,Monthly New Dwelling Completions,201801,2018 January,07,Scheme house,Number,627
+NDM01C01,Monthly New Dwelling Completions,201801,2018 January,08,Apartment,Number,156
+NDM01C01,Monthly New Dwelling Completions,201802,2018 February,-,All house types,Number,1348
+NDM01C01,Monthly New Dwelling Completions,201802,2018 February,06,Single house,Number,368
+NDM01C01,Monthly New Dwelling Completions,201802,2018 February,07,Scheme house,Number,768
+NDM01C01,Monthly New Dwelling Completions,201802,2018 February,08,Apartment,Number,212
+NDM01C01,Monthly New Dwelling Completions,201803,2018 March,-,All house types,Number,1009
+NDM01C01,Monthly New Dwelling Completions,201803,2018 March,06,Single house,Number,300
+NDM01C01,Monthly New Dwelling Completions,201803,2018 March,07,Scheme house,Number,610
+NDM01C01,Monthly New Dwelling Completions,201803,2018 March,08,Apartment,Number,99
+NDM01C01,Monthly New Dwelling Completions,201804,2018 April,-,All house types,Number,1491
+NDM01C01,Monthly New Dwelling Completions,201804,2018 April,06,Single house,Number,351
+NDM01C01,Monthly New Dwelling Completions,201804,2018 April,07,Scheme house,Number,936
+NDM01C01,Monthly New Dwelling Completions,201804,2018 April,08,Apartment,Number,204
+NDM01C01,Monthly New Dwelling Completions,201805,2018 May,-,All house types,Number,1498
+NDM01C01,Monthly New Dwelling Completions,201805,2018 May,06,Single house,Number,443
+NDM01C01,Monthly New Dwelling Completions,201805,2018 May,07,Scheme house,Number,911
+NDM01C01,Monthly New Dwelling Completions,201805,2018 May,08,Apartment,Number,144
+NDM01C01,Monthly New Dwelling Completions,201806,2018 June,-,All house types,Number,1363
+NDM01C01,Monthly New Dwelling Completions,201806,2018 June,06,Single house,Number,348
+NDM01C01,Monthly New Dwelling Completions,201806,2018 June,07,Scheme house,Number,903
+NDM01C01,Monthly New Dwelling Completions,201806,2018 June,08,Apartment,Number,112
+NDM01C01,Monthly New Dwelling Completions,201807,2018 July,-,All house types,Number,1537
+NDM01C01,Monthly New Dwelling Completions,201807,2018 July,06,Single house,Number,403
+NDM01C01,Monthly New Dwelling Completions,201807,2018 July,07,Scheme house,Number,996
+NDM01C01,Monthly New Dwelling Completions,201807,2018 July,08,Apartment,Number,138
+NDM01C01,Monthly New Dwelling Completions,201808,2018 August,-,All house types,Number,1432
+NDM01C01,Monthly New Dwelling Completions,201808,2018 August,06,Single house,Number,439
+NDM01C01,Monthly New Dwelling Completions,201808,2018 August,07,Scheme house,Number,869
+NDM01C01,Monthly New Dwelling Completions,201808,2018 August,08,Apartment,Number,124
+NDM01C01,Monthly New Dwelling Completions,201809,2018 September,-,All house types,Number,1626
+NDM01C01,Monthly New Dwelling Completions,201809,2018 September,06,Single house,Number,357
+NDM01C01,Monthly New Dwelling Completions,201809,2018 September,07,Scheme house,Number,962
+NDM01C01,Monthly New Dwelling Completions,201809,2018 September,08,Apartment,Number,307
+NDM01C01,Monthly New Dwelling Completions,201810,2018 October,-,All house types,Number,1704
+NDM01C01,Monthly New Dwelling Completions,201810,2018 October,06,Single house,Number,440
+NDM01C01,Monthly New Dwelling Completions,201810,2018 October,07,Scheme house,Number,1053
+NDM01C01,Monthly New Dwelling Completions,201810,2018 October,08,Apartment,Number,211
+NDM01C01,Monthly New Dwelling Completions,201811,2018 November,-,All house types,Number,2109
+NDM01C01,Monthly New Dwelling Completions,201811,2018 November,06,Single house,Number,490
+NDM01C01,Monthly New Dwelling Completions,201811,2018 November,07,Scheme house,Number,1291
+NDM01C01,Monthly New Dwelling Completions,201811,2018 November,08,Apartment,Number,328
+NDM01C01,Monthly New Dwelling Completions,201812,2018 December,-,All house types,Number,1591
+NDM01C01,Monthly New Dwelling Completions,201812,2018 December,06,Single house,Number,408
+NDM01C01,Monthly New Dwelling Completions,201812,2018 December,07,Scheme house,Number,1018
+NDM01C01,Monthly New Dwelling Completions,201812,2018 December,08,Apartment,Number,165
+NDM01C01,Monthly New Dwelling Completions,201901,2019 January,-,All house types,Number,1297
+NDM01C01,Monthly New Dwelling Completions,201901,2019 January,06,Single house,Number,307
+NDM01C01,Monthly New Dwelling Completions,201901,2019 January,07,Scheme house,Number,800
+NDM01C01,Monthly New Dwelling Completions,201901,2019 January,08,Apartment,Number,190
+NDM01C01,Monthly New Dwelling Completions,201902,2019 February,-,All house types,Number,1367
+NDM01C01,Monthly New Dwelling Completions,201902,2019 February,06,Single house,Number,374
+NDM01C01,Monthly New Dwelling Completions,201902,2019 February,07,Scheme house,Number,830
+NDM01C01,Monthly New Dwelling Completions,201902,2019 February,08,Apartment,Number,163
+NDM01C01,Monthly New Dwelling Completions,201903,2019 March,-,All house types,Number,1557
+NDM01C01,Monthly New Dwelling Completions,201903,2019 March,06,Single house,Number,409
+NDM01C01,Monthly New Dwelling Completions,201903,2019 March,07,Scheme house,Number,933
+NDM01C01,Monthly New Dwelling Completions,201903,2019 March,08,Apartment,Number,215
+NDM01C01,Monthly New Dwelling Completions,201904,2019 April,-,All house types,Number,1458
+NDM01C01,Monthly New Dwelling Completions,201904,2019 April,06,Single house,Number,404
+NDM01C01,Monthly New Dwelling Completions,201904,2019 April,07,Scheme house,Number,889
+NDM01C01,Monthly New Dwelling Completions,201904,2019 April,08,Apartment,Number,165
+NDM01C01,Monthly New Dwelling Completions,201905,2019 May,-,All house types,Number,1584
+NDM01C01,Monthly New Dwelling Completions,201905,2019 May,06,Single house,Number,470
+NDM01C01,Monthly New Dwelling Completions,201905,2019 May,07,Scheme house,Number,948
+NDM01C01,Monthly New Dwelling Completions,201905,2019 May,08,Apartment,Number,166
+NDM01C01,Monthly New Dwelling Completions,201906,2019 June,-,All house types,Number,1750
+NDM01C01,Monthly New Dwelling Completions,201906,2019 June,06,Single house,Number,448
+NDM01C01,Monthly New Dwelling Completions,201906,2019 June,07,Scheme house,Number,994
+NDM01C01,Monthly New Dwelling Completions,201906,2019 June,08,Apartment,Number,308
+NDM01C01,Monthly New Dwelling Completions,201907,2019 July,-,All house types,Number,1995
+NDM01C01,Monthly New Dwelling Completions,201907,2019 July,06,Single house,Number,433
+NDM01C01,Monthly New Dwelling Completions,201907,2019 July,07,Scheme house,Number,1172
+NDM01C01,Monthly New Dwelling Completions,201907,2019 July,08,Apartment,Number,390
+NDM01C01,Monthly New Dwelling Completions,201908,2019 August,-,All house types,Number,1785
+NDM01C01,Monthly New Dwelling Completions,201908,2019 August,06,Single house,Number,399
+NDM01C01,Monthly New Dwelling Completions,201908,2019 August,07,Scheme house,Number,1075
+NDM01C01,Monthly New Dwelling Completions,201908,2019 August,08,Apartment,Number,311
+NDM01C01,Monthly New Dwelling Completions,201909,2019 September,-,All house types,Number,1824
+NDM01C01,Monthly New Dwelling Completions,201909,2019 September,06,Single house,Number,422
+NDM01C01,Monthly New Dwelling Completions,201909,2019 September,07,Scheme house,Number,1064
+NDM01C01,Monthly New Dwelling Completions,201909,2019 September,08,Apartment,Number,338
+NDM01C01,Monthly New Dwelling Completions,201910,2019 October,-,All house types,Number,2430
+NDM01C01,Monthly New Dwelling Completions,201910,2019 October,06,Single house,Number,515
+NDM01C01,Monthly New Dwelling Completions,201910,2019 October,07,Scheme house,Number,1371
+NDM01C01,Monthly New Dwelling Completions,201910,2019 October,08,Apartment,Number,544
+NDM01C01,Monthly New Dwelling Completions,201911,2019 November,-,All house types,Number,2170
+NDM01C01,Monthly New Dwelling Completions,201911,2019 November,06,Single house,Number,444
+NDM01C01,Monthly New Dwelling Completions,201911,2019 November,07,Scheme house,Number,1404
+NDM01C01,Monthly New Dwelling Completions,201911,2019 November,08,Apartment,Number,322
+NDM01C01,Monthly New Dwelling Completions,201912,2019 December,-,All house types,Number,1806
+NDM01C01,Monthly New Dwelling Completions,201912,2019 December,06,Single house,Number,453
+NDM01C01,Monthly New Dwelling Completions,201912,2019 December,07,Scheme house,Number,1047
+NDM01C01,Monthly New Dwelling Completions,201912,2019 December,08,Apartment,Number,306
+NDM01C01,Monthly New Dwelling Completions,202001,2020 January,-,All house types,Number,1596
+NDM01C01,Monthly New Dwelling Completions,202001,2020 January,06,Single house,Number,285
+NDM01C01,Monthly New Dwelling Completions,202001,2020 January,07,Scheme house,Number,844
+NDM01C01,Monthly New Dwelling Completions,202001,2020 January,08,Apartment,Number,467
+NDM01C01,Monthly New Dwelling Completions,202002,2020 February,-,All house types,Number,1569
+NDM01C01,Monthly New Dwelling Completions,202002,2020 February,06,Single house,Number,357
+NDM01C01,Monthly New Dwelling Completions,202002,2020 February,07,Scheme house,Number,934
+NDM01C01,Monthly New Dwelling Completions,202002,2020 February,08,Apartment,Number,278
+NDM01C01,Monthly New Dwelling Completions,202003,2020 March,-,All house types,Number,1763
+NDM01C01,Monthly New Dwelling Completions,202003,2020 March,06,Single house,Number,463
+NDM01C01,Monthly New Dwelling Completions,202003,2020 March,07,Scheme house,Number,1060
+NDM01C01,Monthly New Dwelling Completions,202003,2020 March,08,Apartment,Number,240
+NDM01C01,Monthly New Dwelling Completions,202004,2020 April,-,All house types,Number,388
+NDM01C01,Monthly New Dwelling Completions,202004,2020 April,06,Single house,Number,181
+NDM01C01,Monthly New Dwelling Completions,202004,2020 April,07,Scheme house,Number,180
+NDM01C01,Monthly New Dwelling Completions,202004,2020 April,08,Apartment,Number,27
+NDM01C01,Monthly New Dwelling Completions,202005,2020 May,-,All house types,Number,1220
+NDM01C01,Monthly New Dwelling Completions,202005,2020 May,06,Single house,Number,262
+NDM01C01,Monthly New Dwelling Completions,202005,2020 May,07,Scheme house,Number,731
+NDM01C01,Monthly New Dwelling Completions,202005,2020 May,08,Apartment,Number,227
+NDM01C01,Monthly New Dwelling Completions,202006,2020 June,-,All house types,Number,1614
+NDM01C01,Monthly New Dwelling Completions,202006,2020 June,06,Single house,Number,428
+NDM01C01,Monthly New Dwelling Completions,202006,2020 June,07,Scheme house,Number,924
+NDM01C01,Monthly New Dwelling Completions,202006,2020 June,08,Apartment,Number,262
+NDM01C01,Monthly New Dwelling Completions,202007,2020 July,-,All house types,Number,1772
+NDM01C01,Monthly New Dwelling Completions,202007,2020 July,06,Single house,Number,539
+NDM01C01,Monthly New Dwelling Completions,202007,2020 July,07,Scheme house,Number,1014
+NDM01C01,Monthly New Dwelling Completions,202007,2020 July,08,Apartment,Number,219
+NDM01C01,Monthly New Dwelling Completions,202008,2020 August,-,All house types,Number,1360
+NDM01C01,Monthly New Dwelling Completions,202008,2020 August,06,Single house,Number,429
+NDM01C01,Monthly New Dwelling Completions,202008,2020 August,07,Scheme house,Number,755
+NDM01C01,Monthly New Dwelling Completions,202008,2020 August,08,Apartment,Number,176
+NDM01C01,Monthly New Dwelling Completions,202009,2020 September,-,All house types,Number,1894
+NDM01C01,Monthly New Dwelling Completions,202009,2020 September,06,Single house,Number,486
+NDM01C01,Monthly New Dwelling Completions,202009,2020 September,07,Scheme house,Number,1100
+NDM01C01,Monthly New Dwelling Completions,202009,2020 September,08,Apartment,Number,308
+NDM01C01,Monthly New Dwelling Completions,202010,2020 October,-,All house types,Number,2422
+NDM01C01,Monthly New Dwelling Completions,202010,2020 October,06,Single house,Number,545
+NDM01C01,Monthly New Dwelling Completions,202010,2020 October,07,Scheme house,Number,1166
+NDM01C01,Monthly New Dwelling Completions,202010,2020 October,08,Apartment,Number,711
+NDM01C01,Monthly New Dwelling Completions,202011,2020 November,-,All house types,Number,2818
+NDM01C01,Monthly New Dwelling Completions,202011,2020 November,06,Single house,Number,480
+NDM01C01,Monthly New Dwelling Completions,202011,2020 November,07,Scheme house,Number,1851
+NDM01C01,Monthly New Dwelling Completions,202011,2020 November,08,Apartment,Number,487
+NDM01C01,Monthly New Dwelling Completions,202012,2020 December,-,All house types,Number,2067
+NDM01C01,Monthly New Dwelling Completions,202012,2020 December,06,Single house,Number,493
+NDM01C01,Monthly New Dwelling Completions,202012,2020 December,07,Scheme house,Number,1110
+NDM01C01,Monthly New Dwelling Completions,202012,2020 December,08,Apartment,Number,464
+NDM01C01,Monthly New Dwelling Completions,202101,2021 January,-,All house types,Number,1195
+NDM01C01,Monthly New Dwelling Completions,202101,2021 January,06,Single house,Number,323
+NDM01C01,Monthly New Dwelling Completions,202101,2021 January,07,Scheme house,Number,735
+NDM01C01,Monthly New Dwelling Completions,202101,2021 January,08,Apartment,Number,137
+NDM01C01,Monthly New Dwelling Completions,202102,2021 February,-,All house types,Number,1396
+NDM01C01,Monthly New Dwelling Completions,202102,2021 February,06,Single house,Number,306
+NDM01C01,Monthly New Dwelling Completions,202102,2021 February,07,Scheme house,Number,829
+NDM01C01,Monthly New Dwelling Completions,202102,2021 February,08,Apartment,Number,261
+NDM01C01,Monthly New Dwelling Completions,202103,2021 March,-,All house types,Number,1365
+NDM01C01,Monthly New Dwelling Completions,202103,2021 March,06,Single house,Number,348
+NDM01C01,Monthly New Dwelling Completions,202103,2021 March,07,Scheme house,Number,695
+NDM01C01,Monthly New Dwelling Completions,202103,2021 March,08,Apartment,Number,322
+NDM01C01,Monthly New Dwelling Completions,202104,2021 April,-,All house types,Number,1446
+NDM01C01,Monthly New Dwelling Completions,202104,2021 April,06,Single house,Number,373
+NDM01C01,Monthly New Dwelling Completions,202104,2021 April,07,Scheme house,Number,769
+NDM01C01,Monthly New Dwelling Completions,202104,2021 April,08,Apartment,Number,304
+NDM01C01,Monthly New Dwelling Completions,202105,2021 May,-,All house types,Number,1545
+NDM01C01,Monthly New Dwelling Completions,202105,2021 May,06,Single house,Number,388
+NDM01C01,Monthly New Dwelling Completions,202105,2021 May,07,Scheme house,Number,822
+NDM01C01,Monthly New Dwelling Completions,202105,2021 May,08,Apartment,Number,335
+NDM01C01,Monthly New Dwelling Completions,202106,2021 June,-,All house types,Number,1966
+NDM01C01,Monthly New Dwelling Completions,202106,2021 June,06,Single house,Number,394
+NDM01C01,Monthly New Dwelling Completions,202106,2021 June,07,Scheme house,Number,939
+NDM01C01,Monthly New Dwelling Completions,202106,2021 June,08,Apartment,Number,633
+NDM01C01,Monthly New Dwelling Completions,202107,2021 July,-,All house types,Number,1480
+NDM01C01,Monthly New Dwelling Completions,202107,2021 July,06,Single house,Number,393
+NDM01C01,Monthly New Dwelling Completions,202107,2021 July,07,Scheme house,Number,730
+NDM01C01,Monthly New Dwelling Completions,202107,2021 July,08,Apartment,Number,357
+NDM01C01,Monthly New Dwelling Completions,202108,2021 August,-,All house types,Number,1432
+NDM01C01,Monthly New Dwelling Completions,202108,2021 August,06,Single house,Number,400
+NDM01C01,Monthly New Dwelling Completions,202108,2021 August,07,Scheme house,Number,907
+NDM01C01,Monthly New Dwelling Completions,202108,2021 August,08,Apartment,Number,125
+NDM01C01,Monthly New Dwelling Completions,202109,2021 September,-,All house types,Number,1710
+NDM01C01,Monthly New Dwelling Completions,202109,2021 September,06,Single house,Number,400
+NDM01C01,Monthly New Dwelling Completions,202109,2021 September,07,Scheme house,Number,839
+NDM01C01,Monthly New Dwelling Completions,202109,2021 September,08,Apartment,Number,471
+NDM01C01,Monthly New Dwelling Completions,202110,2021 October,-,All house types,Number,2296
+NDM01C01,Monthly New Dwelling Completions,202110,2021 October,06,Single house,Number,448
+NDM01C01,Monthly New Dwelling Completions,202110,2021 October,07,Scheme house,Number,1120
+NDM01C01,Monthly New Dwelling Completions,202110,2021 October,08,Apartment,Number,728
+NDM01C01,Monthly New Dwelling Completions,202111,2021 November,-,All house types,Number,2635
+NDM01C01,Monthly New Dwelling Completions,202111,2021 November,06,Single house,Number,485
+NDM01C01,Monthly New Dwelling Completions,202111,2021 November,07,Scheme house,Number,1379
+NDM01C01,Monthly New Dwelling Completions,202111,2021 November,08,Apartment,Number,771
+NDM01C01,Monthly New Dwelling Completions,202112,2021 December,-,All house types,Number,1977
+NDM01C01,Monthly New Dwelling Completions,202112,2021 December,06,Single house,Number,444
+NDM01C01,Monthly New Dwelling Completions,202112,2021 December,07,Scheme house,Number,907
+NDM01C01,Monthly New Dwelling Completions,202112,2021 December,08,Apartment,Number,626
+NDM01C01,Monthly New Dwelling Completions,202201,2022 January,-,All house types,Number,1783
+NDM01C01,Monthly New Dwelling Completions,202201,2022 January,06,Single house,Number,328
+NDM01C01,Monthly New Dwelling Completions,202201,2022 January,07,Scheme house,Number,911
+NDM01C01,Monthly New Dwelling Completions,202201,2022 January,08,Apartment,Number,544
+NDM01C01,Monthly New Dwelling Completions,202202,2022 February,-,All house types,Number,1604
+NDM01C01,Monthly New Dwelling Completions,202202,2022 February,06,Single house,Number,362
+NDM01C01,Monthly New Dwelling Completions,202202,2022 February,07,Scheme house,Number,804
+NDM01C01,Monthly New Dwelling Completions,202202,2022 February,08,Apartment,Number,438
+NDM01C01,Monthly New Dwelling Completions,202203,2022 March,-,All house types,Number,2206
+NDM01C01,Monthly New Dwelling Completions,202203,2022 March,06,Single house,Number,415
+NDM01C01,Monthly New Dwelling Completions,202203,2022 March,07,Scheme house,Number,1084
+NDM01C01,Monthly New Dwelling Completions,202203,2022 March,08,Apartment,Number,707
+NDM01C01,Monthly New Dwelling Completions,202204,2022 April,-,All house types,Number,1986
+NDM01C01,Monthly New Dwelling Completions,202204,2022 April,06,Single house,Number,408
+NDM01C01,Monthly New Dwelling Completions,202204,2022 April,07,Scheme house,Number,1147
+NDM01C01,Monthly New Dwelling Completions,202204,2022 April,08,Apartment,Number,431
+NDM01C01,Monthly New Dwelling Completions,202205,2022 May,-,All house types,Number,3117
+NDM01C01,Monthly New Dwelling Completions,202205,2022 May,06,Single house,Number,475
+NDM01C01,Monthly New Dwelling Completions,202205,2022 May,07,Scheme house,Number,1515
+NDM01C01,Monthly New Dwelling Completions,202205,2022 May,08,Apartment,Number,1127
+NDM01C01,Monthly New Dwelling Completions,202206,2022 June,-,All house types,Number,2475
+NDM01C01,Monthly New Dwelling Completions,202206,2022 June,06,Single house,Number,444
+NDM01C01,Monthly New Dwelling Completions,202206,2022 June,07,Scheme house,Number,1272
+NDM01C01,Monthly New Dwelling Completions,202206,2022 June,08,Apartment,Number,759
+NDM01C01,Monthly New Dwelling Completions,202207,2022 July,-,All house types,Number,2676
+NDM01C01,Monthly New Dwelling Completions,202207,2022 July,06,Single house,Number,493
+NDM01C01,Monthly New Dwelling Completions,202207,2022 July,07,Scheme house,Number,1315
+NDM01C01,Monthly New Dwelling Completions,202207,2022 July,08,Apartment,Number,868
+NDM01C01,Monthly New Dwelling Completions,202208,2022 August,-,All house types,Number,2538
+NDM01C01,Monthly New Dwelling Completions,202208,2022 August,06,Single house,Number,506
+NDM01C01,Monthly New Dwelling Completions,202208,2022 August,07,Scheme house,Number,1065
+NDM01C01,Monthly New Dwelling Completions,202208,2022 August,08,Apartment,Number,967
+NDM01C01,Monthly New Dwelling Completions,202209,2022 September,-,All house types,Number,2148
+NDM01C01,Monthly New Dwelling Completions,202209,2022 September,06,Single house,Number,512
+NDM01C01,Monthly New Dwelling Completions,202209,2022 September,07,Scheme house,Number,1195
+NDM01C01,Monthly New Dwelling Completions,202209,2022 September,08,Apartment,Number,441
+NDM01C01,Monthly New Dwelling Completions,202210,2022 October,-,All house types,Number,2953
+NDM01C01,Monthly New Dwelling Completions,202210,2022 October,06,Single house,Number,498
+NDM01C01,Monthly New Dwelling Completions,202210,2022 October,07,Scheme house,Number,1494
+NDM01C01,Monthly New Dwelling Completions,202210,2022 October,08,Apartment,Number,961
+NDM01C01,Monthly New Dwelling Completions,202211,2022 November,-,All house types,Number,3599
+NDM01C01,Monthly New Dwelling Completions,202211,2022 November,06,Single house,Number,510
+NDM01C01,Monthly New Dwelling Completions,202211,2022 November,07,Scheme house,Number,2020
+NDM01C01,Monthly New Dwelling Completions,202211,2022 November,08,Apartment,Number,1069
+NDM01C01,Monthly New Dwelling Completions,202212,2022 December,-,All house types,Number,2524
+NDM01C01,Monthly New Dwelling Completions,202212,2022 December,06,Single house,Number,507
+NDM01C01,Monthly New Dwelling Completions,202212,2022 December,07,Scheme house,Number,1308
+NDM01C01,Monthly New Dwelling Completions,202212,2022 December,08,Apartment,Number,709
+NDM01C01,Monthly New Dwelling Completions,202301,2023 January,-,All house types,Number,1870
+NDM01C01,Monthly New Dwelling Completions,202301,2023 January,06,Single house,Number,333
+NDM01C01,Monthly New Dwelling Completions,202301,2023 January,07,Scheme house,Number,804
+NDM01C01,Monthly New Dwelling Completions,202301,2023 January,08,Apartment,Number,733
+NDM01C01,Monthly New Dwelling Completions,202302,2023 February,-,All house types,Number,2127
+NDM01C01,Monthly New Dwelling Completions,202302,2023 February,06,Single house,Number,393
+NDM01C01,Monthly New Dwelling Completions,202302,2023 February,07,Scheme house,Number,1097
+NDM01C01,Monthly New Dwelling Completions,202302,2023 February,08,Apartment,Number,637
+NDM01C01,Monthly New Dwelling Completions,202303,2023 March,-,All house types,Number,2627
+NDM01C01,Monthly New Dwelling Completions,202303,2023 March,06,Single house,Number,446
+NDM01C01,Monthly New Dwelling Completions,202303,2023 March,07,Scheme house,Number,1179
+NDM01C01,Monthly New Dwelling Completions,202303,2023 March,08,Apartment,Number,1002
+NDM01C01,Monthly New Dwelling Completions,202304,2023 April,-,All house types,Number,2096
+NDM01C01,Monthly New Dwelling Completions,202304,2023 April,06,Single house,Number,421
+NDM01C01,Monthly New Dwelling Completions,202304,2023 April,07,Scheme house,Number,1174
+NDM01C01,Monthly New Dwelling Completions,202304,2023 April,08,Apartment,Number,501
+NDM01C01,Monthly New Dwelling Completions,202305,2023 May,-,All house types,Number,2669
+NDM01C01,Monthly New Dwelling Completions,202305,2023 May,06,Single house,Number,526
+NDM01C01,Monthly New Dwelling Completions,202305,2023 May,07,Scheme house,Number,1590
+NDM01C01,Monthly New Dwelling Completions,202305,2023 May,08,Apartment,Number,553
+NDM01C01,Monthly New Dwelling Completions,202306,2023 June,-,All house types,Number,2487
+NDM01C01,Monthly New Dwelling Completions,202306,2023 June,06,Single house,Number,451
+NDM01C01,Monthly New Dwelling Completions,202306,2023 June,07,Scheme house,Number,1254
+NDM01C01,Monthly New Dwelling Completions,202306,2023 June,08,Apartment,Number,782
+NDM01C01,Monthly New Dwelling Completions,202307,2023 July,-,All house types,Number,2546
+NDM01C01,Monthly New Dwelling Completions,202307,2023 July,06,Single house,Number,460
+NDM01C01,Monthly New Dwelling Completions,202307,2023 July,07,Scheme house,Number,1110
+NDM01C01,Monthly New Dwelling Completions,202307,2023 July,08,Apartment,Number,976
+NDM01C01,Monthly New Dwelling Completions,202308,2023 August,-,All house types,Number,3040
+NDM01C01,Monthly New Dwelling Completions,202308,2023 August,06,Single house,Number,513
+NDM01C01,Monthly New Dwelling Completions,202308,2023 August,07,Scheme house,Number,1207
+NDM01C01,Monthly New Dwelling Completions,202308,2023 August,08,Apartment,Number,1320
+NDM01C01,Monthly New Dwelling Completions,202309,2023 September,-,All house types,Number,2801
+NDM01C01,Monthly New Dwelling Completions,202309,2023 September,06,Single house,Number,443
+NDM01C01,Monthly New Dwelling Completions,202309,2023 September,07,Scheme house,Number,1325
+NDM01C01,Monthly New Dwelling Completions,202309,2023 September,08,Apartment,Number,1033
+NDM01C01,Monthly New Dwelling Completions,202310,2023 October,-,All house types,Number,3003
+NDM01C01,Monthly New Dwelling Completions,202310,2023 October,06,Single house,Number,473
+NDM01C01,Monthly New Dwelling Completions,202310,2023 October,07,Scheme house,Number,1537
+NDM01C01,Monthly New Dwelling Completions,202310,2023 October,08,Apartment,Number,993
+NDM01C01,Monthly New Dwelling Completions,202311,2023 November,-,All house types,Number,4457
+NDM01C01,Monthly New Dwelling Completions,202311,2023 November,06,Single house,Number,510
+NDM01C01,Monthly New Dwelling Completions,202311,2023 November,07,Scheme house,Number,1931
+NDM01C01,Monthly New Dwelling Completions,202311,2023 November,08,Apartment,Number,2016
+NDM01C01,Monthly New Dwelling Completions,202312,2023 December,-,All house types,Number,2740
+NDM01C01,Monthly New Dwelling Completions,202312,2023 December,06,Single house,Number,482
+NDM01C01,Monthly New Dwelling Completions,202312,2023 December,07,Scheme house,Number,1282
+NDM01C01,Monthly New Dwelling Completions,202312,2023 December,08,Apartment,Number,976
+NDM01C01,Monthly New Dwelling Completions,202401,2024 January,-,All house types,Number,1814
+NDM01C01,Monthly New Dwelling Completions,202401,2024 January,06,Single house,Number,344
+NDM01C01,Monthly New Dwelling Completions,202401,2024 January,07,Scheme house,Number,849
+NDM01C01,Monthly New Dwelling Completions,202401,2024 January,08,Apartment,Number,621
+NDM01C01,Monthly New Dwelling Completions,202402,2024 February,-,All house types,Number,2109
+NDM01C01,Monthly New Dwelling Completions,202402,2024 February,06,Single house,Number,422
+NDM01C01,Monthly New Dwelling Completions,202402,2024 February,07,Scheme house,Number,1093
+NDM01C01,Monthly New Dwelling Completions,202402,2024 February,08,Apartment,Number,594
+NDM01C01,Monthly New Dwelling Completions,202403,2024 March,-,All house types,Number,1868
+NDM01C01,Monthly New Dwelling Completions,202403,2024 March,06,Single house,Number,395
+NDM01C01,Monthly New Dwelling Completions,202403,2024 March,07,Scheme house,Number,1129
+NDM01C01,Monthly New Dwelling Completions,202403,2024 March,08,Apartment,Number,344
+NDM01C01,Monthly New Dwelling Completions,202404,2024 April,-,All house types,Number,2280
+NDM01C01,Monthly New Dwelling Completions,202404,2024 April,06,Single house,Number,469
+NDM01C01,Monthly New Dwelling Completions,202404,2024 April,07,Scheme house,Number,1251
+NDM01C01,Monthly New Dwelling Completions,202404,2024 April,08,Apartment,Number,560
+NDM01C01,Monthly New Dwelling Completions,202405,2024 May,-,All house types,Number,2356
+NDM01C01,Monthly New Dwelling Completions,202405,2024 May,06,Single house,Number,479
+NDM01C01,Monthly New Dwelling Completions,202405,2024 May,07,Scheme house,Number,1381
+NDM01C01,Monthly New Dwelling Completions,202405,2024 May,08,Apartment,Number,496
+NDM01C01,Monthly New Dwelling Completions,202406,2024 June,-,All house types,Number,2172
+NDM01C01,Monthly New Dwelling Completions,202406,2024 June,06,Single house,Number,385
+NDM01C01,Monthly New Dwelling Completions,202406,2024 June,07,Scheme house,Number,1322
+NDM01C01,Monthly New Dwelling Completions,202406,2024 June,08,Apartment,Number,465
+NDM01C01,Monthly New Dwelling Completions,202407,2024 July,-,All house types,Number,3002
+NDM01C01,Monthly New Dwelling Completions,202407,2024 July,06,Single house,Number,466
+NDM01C01,Monthly New Dwelling Completions,202407,2024 July,07,Scheme house,Number,1358
+NDM01C01,Monthly New Dwelling Completions,202407,2024 July,08,Apartment,Number,1178
+NDM01C01,Monthly New Dwelling Completions,202408,2024 August,-,All house types,Number,2500
+NDM01C01,Monthly New Dwelling Completions,202408,2024 August,06,Single house,Number,398
+NDM01C01,Monthly New Dwelling Completions,202408,2024 August,07,Scheme house,Number,1423
+NDM01C01,Monthly New Dwelling Completions,202408,2024 August,08,Apartment,Number,679
+NDM01C01,Monthly New Dwelling Completions,202409,2024 September,-,All house types,Number,3372
+NDM01C01,Monthly New Dwelling Completions,202409,2024 September,06,Single house,Number,454
+NDM01C01,Monthly New Dwelling Completions,202409,2024 September,07,Scheme house,Number,1717
+NDM01C01,Monthly New Dwelling Completions,202409,2024 September,08,Apartment,Number,1201
+NDM01C01,Monthly New Dwelling Completions,202410,2024 October,-,All house types,Number,3199
+NDM01C01,Monthly New Dwelling Completions,202410,2024 October,06,Single house,Number,557
+NDM01C01,Monthly New Dwelling Completions,202410,2024 October,07,Scheme house,Number,1642
+NDM01C01,Monthly New Dwelling Completions,202410,2024 October,08,Apartment,Number,1000
+NDM01C01,Monthly New Dwelling Completions,202411,2024 November,-,All house types,Number,3007
+NDM01C01,Monthly New Dwelling Completions,202411,2024 November,06,Single house,Number,482
+NDM01C01,Monthly New Dwelling Completions,202411,2024 November,07,Scheme house,Number,1947
+NDM01C01,Monthly New Dwelling Completions,202411,2024 November,08,Apartment,Number,578
+NDM01C01,Monthly New Dwelling Completions,202412,2024 December,-,All house types,Number,2445
+NDM01C01,Monthly New Dwelling Completions,202412,2024 December,06,Single house,Number,396
+NDM01C01,Monthly New Dwelling Completions,202412,2024 December,07,Scheme house,Number,1080
+NDM01C01,Monthly New Dwelling Completions,202412,2024 December,08,Apartment,Number,969
+NDM01C01,Monthly New Dwelling Completions,202501,2025 January,-,All house types,Number,1531
+NDM01C01,Monthly New Dwelling Completions,202501,2025 January,06,Single house,Number,303
+NDM01C01,Monthly New Dwelling Completions,202501,2025 January,07,Scheme house,Number,760
+NDM01C01,Monthly New Dwelling Completions,202501,2025 January,08,Apartment,Number,468
+NDM01C01,Monthly New Dwelling Completions,202502,2025 February,-,All house types,Number,1619
+NDM01C01,Monthly New Dwelling Completions,202502,2025 February,06,Single house,Number,310
+NDM01C01,Monthly New Dwelling Completions,202502,2025 February,07,Scheme house,Number,778
+NDM01C01,Monthly New Dwelling Completions,202502,2025 February,08,Apartment,Number,531
+NDM01C01,Monthly New Dwelling Completions,202503,2025 March,-,All house types,Number,2757
+NDM01C01,Monthly New Dwelling Completions,202503,2025 March,06,Single house,Number,493
+NDM01C01,Monthly New Dwelling Completions,202503,2025 March,07,Scheme house,Number,1496
+NDM01C01,Monthly New Dwelling Completions,202503,2025 March,08,Apartment,Number,768
+NDM01C01,Monthly New Dwelling Completions,202504,2025 April,-,All house types,Number,2862
+NDM01C01,Monthly New Dwelling Completions,202504,2025 April,06,Single house,Number,526
+NDM01C01,Monthly New Dwelling Completions,202504,2025 April,07,Scheme house,Number,1510
+NDM01C01,Monthly New Dwelling Completions,202504,2025 April,08,Apartment,Number,826
+NDM01C01,Monthly New Dwelling Completions,202505,2025 May,-,All house types,Number,3262
+NDM01C01,Monthly New Dwelling Completions,202505,2025 May,06,Single house,Number,505
+NDM01C01,Monthly New Dwelling Completions,202505,2025 May,07,Scheme house,Number,1684
+NDM01C01,Monthly New Dwelling Completions,202505,2025 May,08,Apartment,Number,1073
+NDM01C01,Monthly New Dwelling Completions,202506,2025 June,-,All house types,Number,3028
+NDM01C01,Monthly New Dwelling Completions,202506,2025 June,06,Single house,Number,451
+NDM01C01,Monthly New Dwelling Completions,202506,2025 June,07,Scheme house,Number,1449
+NDM01C01,Monthly New Dwelling Completions,202506,2025 June,08,Apartment,Number,1128
+NDM01C01,Monthly New Dwelling Completions,202507,2025 July,-,All house types,Number,3029
+NDM01C01,Monthly New Dwelling Completions,202507,2025 July,06,Single house,Number,530
+NDM01C01,Monthly New Dwelling Completions,202507,2025 July,07,Scheme house,Number,1478
+NDM01C01,Monthly New Dwelling Completions,202507,2025 July,08,Apartment,Number,1021
+NDM01C01,Monthly New Dwelling Completions,202508,2025 August,-,All house types,Number,2837
+NDM01C01,Monthly New Dwelling Completions,202508,2025 August,06,Single house,Number,442
+NDM01C01,Monthly New Dwelling Completions,202508,2025 August,07,Scheme house,Number,1456
+NDM01C01,Monthly New Dwelling Completions,202508,2025 August,08,Apartment,Number,939
+NDM01C01,Monthly New Dwelling Completions,202509,2025 September,-,All house types,Number,3331
+NDM01C01,Monthly New Dwelling Completions,202509,2025 September,06,Single house,Number,524
+NDM01C01,Monthly New Dwelling Completions,202509,2025 September,07,Scheme house,Number,1613
+NDM01C01,Monthly New Dwelling Completions,202509,2025 September,08,Apartment,Number,1194
+NDM01C01,Monthly New Dwelling Completions,202510,2025 October,-,All house types,Number,3670
+NDM01C01,Monthly New Dwelling Completions,202510,2025 October,06,Single house,Number,604
+NDM01C01,Monthly New Dwelling Completions,202510,2025 October,07,Scheme house,Number,2062
+NDM01C01,Monthly New Dwelling Completions,202510,2025 October,08,Apartment,Number,1004
+NDM01C01,Monthly New Dwelling Completions,202511,2025 November,-,All house types,Number,5120
+NDM01C01,Monthly New Dwelling Completions,202511,2025 November,06,Single house,Number,623
+NDM01C01,Monthly New Dwelling Completions,202511,2025 November,07,Scheme house,Number,2389
+NDM01C01,Monthly New Dwelling Completions,202511,2025 November,08,Apartment,Number,2108
+NDM01C01,Monthly New Dwelling Completions,202512,2025 December,-,All house types,Number,3169
+NDM01C01,Monthly New Dwelling Completions,202512,2025 December,06,Single house,Number,563
+NDM01C01,Monthly New Dwelling Completions,202512,2025 December,07,Scheme house,Number,1627
+NDM01C01,Monthly New Dwelling Completions,202512,2025 December,08,Apartment,Number,979
+NDM01C01,Monthly New Dwelling Completions,202601,2026 January,-,All house types,Number,2187
+NDM01C01,Monthly New Dwelling Completions,202601,2026 January,06,Single house,Number,439
+NDM01C01,Monthly New Dwelling Completions,202601,2026 January,07,Scheme house,Number,1220
+NDM01C01,Monthly New Dwelling Completions,202601,2026 January,08,Apartment,Number,528
+NDM01C01,Monthly New Dwelling Completions,202602,2026 February,-,All house types,Number,2805
+NDM01C01,Monthly New Dwelling Completions,202602,2026 February,06,Single house,Number,492
+NDM01C01,Monthly New Dwelling Completions,202602,2026 February,07,Scheme house,Number,1396
+NDM01C01,Monthly New Dwelling Completions,202602,2026 February,08,Apartment,Number,917
+NDM01C01,Monthly New Dwelling Completions,202603,2026 March,-,All house types,Number,2864
+NDM01C01,Monthly New Dwelling Completions,202603,2026 March,06,Single house,Number,480
+NDM01C01,Monthly New Dwelling Completions,202603,2026 March,07,Scheme house,Number,1476
+NDM01C01,Monthly New Dwelling Completions,202603,2026 March,08,Apartment,Number,908
+NDM01C01,Monthly New Dwelling Completions,202604,2026 April,-,All house types,Number,3116
+NDM01C01,Monthly New Dwelling Completions,202604,2026 April,06,Single house,Number,493
+NDM01C01,Monthly New Dwelling Completions,202604,2026 April,07,Scheme house,Number,1796
+NDM01C01,Monthly New Dwelling Completions,202604,2026 April,08,Apartment,Number,827
+NDM01C01,Monthly New Dwelling Completions,202605,2026 May,-,All house types,Number,2686
+NDM01C01,Monthly New Dwelling Completions,202605,2026 May,06,Single house,Number,438
+NDM01C01,Monthly New Dwelling Completions,202605,2026 May,07,Scheme house,Number,1476
+NDM01C01,Monthly New Dwelling Completions,202605,2026 May,08,Apartment,Number,772
+NDM01C01,Monthly New Dwelling Completions,202606,2026 June,-,All house types,Number,3021
+NDM01C01,Monthly New Dwelling Completions,202606,2026 June,06,Single house,Number,496
+NDM01C01,Monthly New Dwelling Completions,202606,2026 June,07,Scheme house,Number,1466
+NDM01C01,Monthly New Dwelling Completions,202606,2026 June,08,Apartment,Number,1059

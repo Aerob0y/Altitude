@@ -2,6 +2,7 @@ mod_hb1_ui <- function(id) {
   ns <- NS(id)
   class_1 <- filter_series_unlist(guide_rbnz, column = "Class_1", apply_filters = list(Data = c("hb1")))
   ui_single(
+    id = ns("hb1"),
     tagList(
       selectInput(ns("Currency1_main"), "Currency", choices = class_1, selected = "NZD/USD"),
       selectInput(ns("Currency2_main"), "Secondary", choices = c("-", class_1), selected = "-"),

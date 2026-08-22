@@ -86,7 +86,7 @@ add_series <- function(p, data, s, axis_side, split = NULL) {
       name = nm,
       type = "scatter",
       mode = "none",
-      stackgroup = stack_id,
+      stackgroup = paste(stack_id,"Fill", sep = "_"),
       fill = "tonexty",
       fillcolor = to_rgba(s$colour, 0.7),
       yaxis = axis_side
@@ -143,6 +143,7 @@ x_plotly <- function(
   download = list(format="png", width=2000, height=1200, scale=2)
 ) {
   # 1) Colour assignment ----------------------------------------------------
+
   series <- series |>
     dplyr::arrange(Style)
   ord <- order(factor(series$Style, levels = c("Fill", "Bar", "Line"), ordered = TRUE))
@@ -155,14 +156,23 @@ x_plotly <- function(
   } else {
     series <- assign_series_colours(series)
   }
-
+  print(series)
   unique_dims <- series %>% group_by(Dim, Tick, Prefix, Style) %>% summarise(colour  = first(colour), .groups = "keep")
+  print(unique_dims)
   ord <- order(factor(unique_dims$Style, levels = c("Fill", "Bar", "Line"), ordered = TRUE))
   unique_dims <- unique_dims[ord, ]
 
   if (nrow(unique_dims) == 1) {unique_dims$colour <- c("black")}
 
   # 2) Base plot (one-liner split handling) --------------------------------
+  print(head(data, 5))
+  print(k)
+  print(get(k))
+  print(split)
+  print(years)
+  print(titles)
+  print(unique_dims)
+  print(yaxis_titles)
   p <- plotly::plot_ly(data, x  = ~ get(k), split = if (!is.null(split)) ~ get(split) else NULL)
   p <- p |> standard_layout(years = years, titles = titles, clean_ui = clean_ui) |> x_yaxis(unique_dims, yaxis_titles)
 
@@ -173,6 +183,7 @@ x_plotly <- function(
 
     p <- p %>% add_series(data, s, axis_side, split)
   }
+    print("C")
 
   # Assuming each trace has $name that matches guide_rbnz$Names (or similar)
   trace_names <- vapply(p$x$data, function(tr) tr$name %||% NA_character_, character(1))
@@ -181,14 +192,14 @@ x_plotly <- function(
   trace_style[is.na(trace_style)] <- "Line"
   ord <- order(factor(trace_style, levels = c("Fill", "Bar", "Line"), ordered = TRUE))
   p$x$data <- p$x$data[ord]
-
+    print("A")
   dl <- list(
     format = as.character(download$format),
     width  = as.numeric(download$width),
     height = as.numeric(download$height),
     scale  = as.numeric(download$scale)
   )
-
+  print("A")
   p <- plotly::config(
     p,
     displayModeBar = TRUE,

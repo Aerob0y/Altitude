@@ -2,6 +2,51 @@ server <- function(input, output, session) {
   # keep track of active tab
   tab <- reactive(input$main_nav)
 
+  #observeEvent(input$nav_hb1, {
+  #  bslib::nav_select(
+  #    id = "main_nav",
+  #    selected = "hb1"
+  #  )
+  #})
+
+  modules <- c(
+    "hb2",
+    "hb1",
+    "hc35",
+    "hm1",
+    "hm2",
+    "hm3",
+    "hm4",
+    "hm5",
+    "hm6",
+    "hm7",
+    "hm8",
+    "hm9",
+    "hm10",
+    "hm14",
+    "hs32",
+    "fuel_main",
+    "bond_main",
+    "border_main",
+    "ndm01"
+  )
+
+  purrr::walk(
+    modules,
+    \(module) {
+      observeEvent(
+        input[[paste0("nav_", module)]],
+        {
+          print(paste("Navigating to module:", paste0("nav_", module)))
+          bslib::nav_select(
+            id = "main_nav",
+            selected = module
+          )
+        }
+      )
+    }
+  )
+
   # fire servers only when active
   mod_hb1_server("hb1_main",  selected_tab = tab, activate_on = "hb1")
   mod_hb1_server("hb1_main2", selected_tab = tab, activate_on = "hb1b")
@@ -23,7 +68,7 @@ server <- function(input, output, session) {
   #mod_adp_server("adp_main",  selected_tab = tab, activate_on = "adp")
   mod_bond_server("bond_main",  selected_tab = tab, activate_on = "bond")
   mod_border_server("border_main",  selected_tab = tab, activate_on = "border")
-
+  mod_ndm01_server("ndm01",  selected_tab = tab, activate_on = "ndm01")
 
   # generate ui when needed
   output$hb1_ui <- renderUI({mod_hb1_ui("hb1_main")})
@@ -46,4 +91,8 @@ server <- function(input, output, session) {
   #output$adp_ui <- renderUI({mod_adp_ui("adp_main")})
   output$bond_ui <- renderUI({mod_bond_ui("bond_main")})
   output$border_ui <- renderUI({mod_border_ui("border_main")})
+  output$ndm01_ui <- renderUI({mod_ndm01_ui("ndm01")})
+
+
+
 }

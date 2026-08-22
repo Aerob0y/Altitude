@@ -28,7 +28,10 @@ module_note <- function(module) {
     tags$div(
       class = "module-header-title",
       tags$p(class = "module-kicker", "DATASET NOTES"),
-      tags$h1(note[[1]])
+      actionLink(
+        inputId = paste0("nav_", module),
+        label = tags$h1(note[[1]])
+      )
     ),
     tags$div(
       class = "module-note",
@@ -62,3 +65,4 @@ ui_single <- function(insert_inputs, h = "600px", p, module = NULL) {
     )
   )
 }
+

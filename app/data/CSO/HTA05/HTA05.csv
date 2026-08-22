@@ -1,0 +1,1249 @@
+STATISTIC,Statistic Label,TLIST(A1),Year,C02164V02610,Type of Accommodation Used,C02276V02746,Domestic,UNIT,VALUE
+HTA05C1,Number of Trips by Irish Residents,2000,2000,-,All types of accommodation,01,Domestic,Thousand,5478
+HTA05C1,Number of Trips by Irish Residents,2000,2000,-,All types of accommodation,02,Outbound,Thousand,3768
+HTA05C1,Number of Trips by Irish Residents,2000,2000,134,Caravan/camping,01,Domestic,Thousand,295
+HTA05C1,Number of Trips by Irish Residents,2000,2000,134,Caravan/camping,02,Outbound,Thousand,105
+HTA05C1,Number of Trips by Irish Residents,2000,2000,222,Friends/relatives,01,Domestic,Thousand,1935
+HTA05C1,Number of Trips by Irish Residents,2000,2000,222,Friends/relatives,02,Outbound,Thousand,919
+HTA05C1,Number of Trips by Irish Residents,2000,2000,224,Own holiday home,01,Domestic,Thousand,185
+HTA05C1,Number of Trips by Irish Residents,2000,2000,224,Own holiday home,02,Outbound,Thousand,29
+HTA05C1,Number of Trips by Irish Residents,2000,2000,92,Guest house/bed &breakfast,01,Domestic,Thousand,724
+HTA05C1,Number of Trips by Irish Residents,2000,2000,92,Guest house/bed &breakfast,02,Outbound,Thousand,203
+HTA05C1,Number of Trips by Irish Residents,2000,2000,93,Hotel/conference centre,01,Domestic,Thousand,1669
+HTA05C1,Number of Trips by Irish Residents,2000,2000,93,Hotel/conference centre,02,Outbound,Thousand,1567
+HTA05C1,Number of Trips by Irish Residents,2000,2000,94,Self catering/rented house,01,Domestic,Thousand,456
+HTA05C1,Number of Trips by Irish Residents,2000,2000,94,Self catering/rented house,02,Outbound,Thousand,789
+HTA05C1,Number of Trips by Irish Residents,2000,2000,999,Other,01,Domestic,Thousand,214
+HTA05C1,Number of Trips by Irish Residents,2000,2000,999,Other,02,Outbound,Thousand,155
+HTA05C2,Number of Nights by Irish Residents,2000,2000,-,All types of accommodation,01,Domestic,Thousand,20703
+HTA05C2,Number of Nights by Irish Residents,2000,2000,-,All types of accommodation,02,Outbound,Thousand,35544
+HTA05C2,Number of Nights by Irish Residents,2000,2000,134,Caravan/camping,01,Domestic,Thousand,1808
+HTA05C2,Number of Nights by Irish Residents,2000,2000,134,Caravan/camping,02,Outbound,Thousand,1546
+HTA05C2,Number of Nights by Irish Residents,2000,2000,222,Friends/relatives,01,Domestic,Thousand,6594
+HTA05C2,Number of Nights by Irish Residents,2000,2000,222,Friends/relatives,02,Outbound,Thousand,8421
+HTA05C2,Number of Nights by Irish Residents,2000,2000,224,Own holiday home,01,Domestic,Thousand,1082
+HTA05C2,Number of Nights by Irish Residents,2000,2000,224,Own holiday home,02,Outbound,Thousand,500
+HTA05C2,Number of Nights by Irish Residents,2000,2000,92,Guest house/bed &breakfast,01,Domestic,Thousand,2275
+HTA05C2,Number of Nights by Irish Residents,2000,2000,92,Guest house/bed &breakfast,02,Outbound,Thousand,1418
+HTA05C2,Number of Nights by Irish Residents,2000,2000,93,Hotel/conference centre,01,Domestic,Thousand,4689
+HTA05C2,Number of Nights by Irish Residents,2000,2000,93,Hotel/conference centre,02,Outbound,Thousand,11090
+HTA05C2,Number of Nights by Irish Residents,2000,2000,94,Self catering/rented house,01,Domestic,Thousand,3090
+HTA05C2,Number of Nights by Irish Residents,2000,2000,94,Self catering/rented house,02,Outbound,Thousand,10298
+HTA05C2,Number of Nights by Irish Residents,2000,2000,999,Other,01,Domestic,Thousand,1165
+HTA05C2,Number of Nights by Irish Residents,2000,2000,999,Other,02,Outbound,Thousand,2271
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,-,All types of accommodation,01,Domestic,Nights per Trip,3.8
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,-,All types of accommodation,02,Outbound,Nights per Trip,9.4
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,134,Caravan/camping,01,Domestic,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,134,Caravan/camping,02,Outbound,Nights per Trip,14.7
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,222,Friends/relatives,01,Domestic,Nights per Trip,3.4
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,222,Friends/relatives,02,Outbound,Nights per Trip,9.2
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,224,Own holiday home,01,Domestic,Nights per Trip,5.8
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,224,Own holiday home,02,Outbound,Nights per Trip,17.2
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,93,Hotel/conference centre,02,Outbound,Nights per Trip,7.1
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,94,Self catering/rented house,01,Domestic,Nights per Trip,6.8
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,94,Self catering/rented house,02,Outbound,Nights per Trip,13.1
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,999,Other,01,Domestic,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2000,2000,999,Other,02,Outbound,Nights per Trip,14.7
+HTA05C1,Number of Trips by Irish Residents,2001,2001,-,All types of accommodation,01,Domestic,Thousand,6307
+HTA05C1,Number of Trips by Irish Residents,2001,2001,-,All types of accommodation,02,Outbound,Thousand,4162
+HTA05C1,Number of Trips by Irish Residents,2001,2001,134,Caravan/camping,01,Domestic,Thousand,323
+HTA05C1,Number of Trips by Irish Residents,2001,2001,134,Caravan/camping,02,Outbound,Thousand,166
+HTA05C1,Number of Trips by Irish Residents,2001,2001,222,Friends/relatives,01,Domestic,Thousand,2241
+HTA05C1,Number of Trips by Irish Residents,2001,2001,222,Friends/relatives,02,Outbound,Thousand,936
+HTA05C1,Number of Trips by Irish Residents,2001,2001,224,Own holiday home,01,Domestic,Thousand,211
+HTA05C1,Number of Trips by Irish Residents,2001,2001,224,Own holiday home,02,Outbound,Thousand,47
+HTA05C1,Number of Trips by Irish Residents,2001,2001,92,Guest house/bed &breakfast,01,Domestic,Thousand,675
+HTA05C1,Number of Trips by Irish Residents,2001,2001,92,Guest house/bed &breakfast,02,Outbound,Thousand,208
+HTA05C1,Number of Trips by Irish Residents,2001,2001,93,Hotel/conference centre,01,Domestic,Thousand,2042
+HTA05C1,Number of Trips by Irish Residents,2001,2001,93,Hotel/conference centre,02,Outbound,Thousand,1716
+HTA05C1,Number of Trips by Irish Residents,2001,2001,94,Self catering/rented house,01,Domestic,Thousand,550
+HTA05C1,Number of Trips by Irish Residents,2001,2001,94,Self catering/rented house,02,Outbound,Thousand,926
+HTA05C1,Number of Trips by Irish Residents,2001,2001,999,Other,01,Domestic,Thousand,264
+HTA05C1,Number of Trips by Irish Residents,2001,2001,999,Other,02,Outbound,Thousand,162
+HTA05C2,Number of Nights by Irish Residents,2001,2001,-,All types of accommodation,01,Domestic,Thousand,23207
+HTA05C2,Number of Nights by Irish Residents,2001,2001,-,All types of accommodation,02,Outbound,Thousand,37953
+HTA05C2,Number of Nights by Irish Residents,2001,2001,134,Caravan/camping,01,Domestic,Thousand,2177
+HTA05C2,Number of Nights by Irish Residents,2001,2001,134,Caravan/camping,02,Outbound,Thousand,2547
+HTA05C2,Number of Nights by Irish Residents,2001,2001,222,Friends/relatives,01,Domestic,Thousand,7023
+HTA05C2,Number of Nights by Irish Residents,2001,2001,222,Friends/relatives,02,Outbound,Thousand,7858
+HTA05C2,Number of Nights by Irish Residents,2001,2001,224,Own holiday home,01,Domestic,Thousand,1405
+HTA05C2,Number of Nights by Irish Residents,2001,2001,224,Own holiday home,02,Outbound,Thousand,639
+HTA05C2,Number of Nights by Irish Residents,2001,2001,92,Guest house/bed &breakfast,01,Domestic,Thousand,2217
+HTA05C2,Number of Nights by Irish Residents,2001,2001,92,Guest house/bed &breakfast,02,Outbound,Thousand,1469
+HTA05C2,Number of Nights by Irish Residents,2001,2001,93,Hotel/conference centre,01,Domestic,Thousand,5316
+HTA05C2,Number of Nights by Irish Residents,2001,2001,93,Hotel/conference centre,02,Outbound,Thousand,11367
+HTA05C2,Number of Nights by Irish Residents,2001,2001,94,Self catering/rented house,01,Domestic,Thousand,3749
+HTA05C2,Number of Nights by Irish Residents,2001,2001,94,Self catering/rented house,02,Outbound,Thousand,11538
+HTA05C2,Number of Nights by Irish Residents,2001,2001,999,Other,01,Domestic,Thousand,1320
+HTA05C2,Number of Nights by Irish Residents,2001,2001,999,Other,02,Outbound,Thousand,2535
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,-,All types of accommodation,01,Domestic,Nights per Trip,3.7
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,-,All types of accommodation,02,Outbound,Nights per Trip,9.1
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,134,Caravan/camping,01,Domestic,Nights per Trip,6.7
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,134,Caravan/camping,02,Outbound,Nights per Trip,15.3
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,222,Friends/relatives,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,222,Friends/relatives,02,Outbound,Nights per Trip,8.4
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,224,Own holiday home,01,Domestic,Nights per Trip,6.7
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,224,Own holiday home,02,Outbound,Nights per Trip,13.6
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.1
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.6
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,94,Self catering/rented house,01,Domestic,Nights per Trip,6.8
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,94,Self catering/rented house,02,Outbound,Nights per Trip,12.5
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,999,Other,01,Domestic,Nights per Trip,5
+HTA05C3,Average Length of Stay by Irish Residents,2001,2001,999,Other,02,Outbound,Nights per Trip,15.6
+HTA05C1,Number of Trips by Irish Residents,2002,2002,-,All types of accommodation,01,Domestic,Thousand,6452
+HTA05C1,Number of Trips by Irish Residents,2002,2002,-,All types of accommodation,02,Outbound,Thousand,4597
+HTA05C1,Number of Trips by Irish Residents,2002,2002,134,Caravan/camping,01,Domestic,Thousand,293
+HTA05C1,Number of Trips by Irish Residents,2002,2002,134,Caravan/camping,02,Outbound,Thousand,161
+HTA05C1,Number of Trips by Irish Residents,2002,2002,222,Friends/relatives,01,Domestic,Thousand,2359
+HTA05C1,Number of Trips by Irish Residents,2002,2002,222,Friends/relatives,02,Outbound,Thousand,1095
+HTA05C1,Number of Trips by Irish Residents,2002,2002,224,Own holiday home,01,Domestic,Thousand,289
+HTA05C1,Number of Trips by Irish Residents,2002,2002,224,Own holiday home,02,Outbound,Thousand,80
+HTA05C1,Number of Trips by Irish Residents,2002,2002,92,Guest house/bed &breakfast,01,Domestic,Thousand,729
+HTA05C1,Number of Trips by Irish Residents,2002,2002,92,Guest house/bed &breakfast,02,Outbound,Thousand,254
+HTA05C1,Number of Trips by Irish Residents,2002,2002,93,Hotel/conference centre,01,Domestic,Thousand,2041
+HTA05C1,Number of Trips by Irish Residents,2002,2002,93,Hotel/conference centre,02,Outbound,Thousand,1868
+HTA05C1,Number of Trips by Irish Residents,2002,2002,94,Self catering/rented house,01,Domestic,Thousand,494
+HTA05C1,Number of Trips by Irish Residents,2002,2002,94,Self catering/rented house,02,Outbound,Thousand,934
+HTA05C1,Number of Trips by Irish Residents,2002,2002,999,Other,01,Domestic,Thousand,246
+HTA05C1,Number of Trips by Irish Residents,2002,2002,999,Other,02,Outbound,Thousand,206
+HTA05C2,Number of Nights by Irish Residents,2002,2002,-,All types of accommodation,01,Domestic,Thousand,22222
+HTA05C2,Number of Nights by Irish Residents,2002,2002,-,All types of accommodation,02,Outbound,Thousand,40660
+HTA05C2,Number of Nights by Irish Residents,2002,2002,134,Caravan/camping,01,Domestic,Thousand,1706
+HTA05C2,Number of Nights by Irish Residents,2002,2002,134,Caravan/camping,02,Outbound,Thousand,2231
+HTA05C2,Number of Nights by Irish Residents,2002,2002,222,Friends/relatives,01,Domestic,Thousand,6912
+HTA05C2,Number of Nights by Irish Residents,2002,2002,222,Friends/relatives,02,Outbound,Thousand,8996
+HTA05C2,Number of Nights by Irish Residents,2002,2002,224,Own holiday home,01,Domestic,Thousand,1742
+HTA05C2,Number of Nights by Irish Residents,2002,2002,224,Own holiday home,02,Outbound,Thousand,969
+HTA05C2,Number of Nights by Irish Residents,2002,2002,92,Guest house/bed &breakfast,01,Domestic,Thousand,2038
+HTA05C2,Number of Nights by Irish Residents,2002,2002,92,Guest house/bed &breakfast,02,Outbound,Thousand,1873
+HTA05C2,Number of Nights by Irish Residents,2002,2002,93,Hotel/conference centre,01,Domestic,Thousand,5357
+HTA05C2,Number of Nights by Irish Residents,2002,2002,93,Hotel/conference centre,02,Outbound,Thousand,12570
+HTA05C2,Number of Nights by Irish Residents,2002,2002,94,Self catering/rented house,01,Domestic,Thousand,3168
+HTA05C2,Number of Nights by Irish Residents,2002,2002,94,Self catering/rented house,02,Outbound,Thousand,11276
+HTA05C2,Number of Nights by Irish Residents,2002,2002,999,Other,01,Domestic,Thousand,1298
+HTA05C2,Number of Nights by Irish Residents,2002,2002,999,Other,02,Outbound,Thousand,2745
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,-,All types of accommodation,01,Domestic,Nights per Trip,3.4
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,-,All types of accommodation,02,Outbound,Nights per Trip,8.8
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,134,Caravan/camping,01,Domestic,Nights per Trip,5.8
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,134,Caravan/camping,02,Outbound,Nights per Trip,13.9
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,222,Friends/relatives,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,222,Friends/relatives,02,Outbound,Nights per Trip,8.2
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,224,Own holiday home,01,Domestic,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,224,Own holiday home,02,Outbound,Nights per Trip,12.1
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.4
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.7
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,94,Self catering/rented house,01,Domestic,Nights per Trip,6.4
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,94,Self catering/rented house,02,Outbound,Nights per Trip,12.1
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,999,Other,01,Domestic,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2002,2002,999,Other,02,Outbound,Nights per Trip,13.3
+HTA05C1,Number of Trips by Irish Residents,2003,2003,-,All types of accommodation,01,Domestic,Thousand,6657
+HTA05C1,Number of Trips by Irish Residents,2003,2003,-,All types of accommodation,02,Outbound,Thousand,4974
+HTA05C1,Number of Trips by Irish Residents,2003,2003,134,Caravan/camping,01,Domestic,Thousand,282
+HTA05C1,Number of Trips by Irish Residents,2003,2003,134,Caravan/camping,02,Outbound,Thousand,168
+HTA05C1,Number of Trips by Irish Residents,2003,2003,222,Friends/relatives,01,Domestic,Thousand,2363
+HTA05C1,Number of Trips by Irish Residents,2003,2003,222,Friends/relatives,02,Outbound,Thousand,1123
+HTA05C1,Number of Trips by Irish Residents,2003,2003,224,Own holiday home,01,Domestic,Thousand,259
+HTA05C1,Number of Trips by Irish Residents,2003,2003,224,Own holiday home,02,Outbound,Thousand,99
+HTA05C1,Number of Trips by Irish Residents,2003,2003,92,Guest house/bed &breakfast,01,Domestic,Thousand,720
+HTA05C1,Number of Trips by Irish Residents,2003,2003,92,Guest house/bed &breakfast,02,Outbound,Thousand,289
+HTA05C1,Number of Trips by Irish Residents,2003,2003,93,Hotel/conference centre,01,Domestic,Thousand,2160
+HTA05C1,Number of Trips by Irish Residents,2003,2003,93,Hotel/conference centre,02,Outbound,Thousand,1949
+HTA05C1,Number of Trips by Irish Residents,2003,2003,94,Self catering/rented house,01,Domestic,Thousand,576
+HTA05C1,Number of Trips by Irish Residents,2003,2003,94,Self catering/rented house,02,Outbound,Thousand,1098
+HTA05C1,Number of Trips by Irish Residents,2003,2003,999,Other,01,Domestic,Thousand,298
+HTA05C1,Number of Trips by Irish Residents,2003,2003,999,Other,02,Outbound,Thousand,248
+HTA05C2,Number of Nights by Irish Residents,2003,2003,-,All types of accommodation,01,Domestic,Thousand,23616
+HTA05C2,Number of Nights by Irish Residents,2003,2003,-,All types of accommodation,02,Outbound,Thousand,43702
+HTA05C2,Number of Nights by Irish Residents,2003,2003,134,Caravan/camping,01,Domestic,Thousand,1879
+HTA05C2,Number of Nights by Irish Residents,2003,2003,134,Caravan/camping,02,Outbound,Thousand,2285
+HTA05C2,Number of Nights by Irish Residents,2003,2003,222,Friends/relatives,01,Domestic,Thousand,7175
+HTA05C2,Number of Nights by Irish Residents,2003,2003,222,Friends/relatives,02,Outbound,Thousand,9055
+HTA05C2,Number of Nights by Irish Residents,2003,2003,224,Own holiday home,01,Domestic,Thousand,1572
+HTA05C2,Number of Nights by Irish Residents,2003,2003,224,Own holiday home,02,Outbound,Thousand,1410
+HTA05C2,Number of Nights by Irish Residents,2003,2003,92,Guest house/bed &breakfast,01,Domestic,Thousand,2067
+HTA05C2,Number of Nights by Irish Residents,2003,2003,92,Guest house/bed &breakfast,02,Outbound,Thousand,2112
+HTA05C2,Number of Nights by Irish Residents,2003,2003,93,Hotel/conference centre,01,Domestic,Thousand,5762
+HTA05C2,Number of Nights by Irish Residents,2003,2003,93,Hotel/conference centre,02,Outbound,Thousand,12260
+HTA05C2,Number of Nights by Irish Residents,2003,2003,94,Self catering/rented house,01,Domestic,Thousand,3754
+HTA05C2,Number of Nights by Irish Residents,2003,2003,94,Self catering/rented house,02,Outbound,Thousand,13494
+HTA05C2,Number of Nights by Irish Residents,2003,2003,999,Other,01,Domestic,Thousand,1407
+HTA05C2,Number of Nights by Irish Residents,2003,2003,999,Other,02,Outbound,Thousand,3087
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,-,All types of accommodation,01,Domestic,Nights per Trip,3.5
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,-,All types of accommodation,02,Outbound,Nights per Trip,8.8
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,134,Caravan/camping,01,Domestic,Nights per Trip,6.7
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,134,Caravan/camping,02,Outbound,Nights per Trip,13.6
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,222,Friends/relatives,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,222,Friends/relatives,02,Outbound,Nights per Trip,8.1
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,224,Own holiday home,01,Domestic,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,224,Own holiday home,02,Outbound,Nights per Trip,14.2
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.3
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,94,Self catering/rented house,01,Domestic,Nights per Trip,6.5
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,94,Self catering/rented house,02,Outbound,Nights per Trip,12.3
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,999,Other,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2003,2003,999,Other,02,Outbound,Nights per Trip,12.4
+HTA05C1,Number of Trips by Irish Residents,2004,2004,-,All types of accommodation,01,Domestic,Thousand,7001
+HTA05C1,Number of Trips by Irish Residents,2004,2004,-,All types of accommodation,02,Outbound,Thousand,5465
+HTA05C1,Number of Trips by Irish Residents,2004,2004,134,Caravan/camping,01,Domestic,Thousand,277
+HTA05C1,Number of Trips by Irish Residents,2004,2004,134,Caravan/camping,02,Outbound,Thousand,206
+HTA05C1,Number of Trips by Irish Residents,2004,2004,222,Friends/relatives,01,Domestic,Thousand,2512
+HTA05C1,Number of Trips by Irish Residents,2004,2004,222,Friends/relatives,02,Outbound,Thousand,1245
+HTA05C1,Number of Trips by Irish Residents,2004,2004,224,Own holiday home,01,Domestic,Thousand,294
+HTA05C1,Number of Trips by Irish Residents,2004,2004,224,Own holiday home,02,Outbound,Thousand,98
+HTA05C1,Number of Trips by Irish Residents,2004,2004,92,Guest house/bed &breakfast,01,Domestic,Thousand,699
+HTA05C1,Number of Trips by Irish Residents,2004,2004,92,Guest house/bed &breakfast,02,Outbound,Thousand,278
+HTA05C1,Number of Trips by Irish Residents,2004,2004,93,Hotel/conference centre,01,Domestic,Thousand,2355
+HTA05C1,Number of Trips by Irish Residents,2004,2004,93,Hotel/conference centre,02,Outbound,Thousand,2311
+HTA05C1,Number of Trips by Irish Residents,2004,2004,94,Self catering/rented house,01,Domestic,Thousand,583
+HTA05C1,Number of Trips by Irish Residents,2004,2004,94,Self catering/rented house,02,Outbound,Thousand,1090
+HTA05C1,Number of Trips by Irish Residents,2004,2004,999,Other,01,Domestic,Thousand,282
+HTA05C1,Number of Trips by Irish Residents,2004,2004,999,Other,02,Outbound,Thousand,237
+HTA05C2,Number of Nights by Irish Residents,2004,2004,-,All types of accommodation,01,Domestic,Thousand,24189
+HTA05C2,Number of Nights by Irish Residents,2004,2004,-,All types of accommodation,02,Outbound,Thousand,46302
+HTA05C2,Number of Nights by Irish Residents,2004,2004,134,Caravan/camping,01,Domestic,Thousand,1635
+HTA05C2,Number of Nights by Irish Residents,2004,2004,134,Caravan/camping,02,Outbound,Thousand,2776
+HTA05C2,Number of Nights by Irish Residents,2004,2004,222,Friends/relatives,01,Domestic,Thousand,7736
+HTA05C2,Number of Nights by Irish Residents,2004,2004,222,Friends/relatives,02,Outbound,Thousand,10206
+HTA05C2,Number of Nights by Irish Residents,2004,2004,224,Own holiday home,01,Domestic,Thousand,2014
+HTA05C2,Number of Nights by Irish Residents,2004,2004,224,Own holiday home,02,Outbound,Thousand,1392
+HTA05C2,Number of Nights by Irish Residents,2004,2004,92,Guest house/bed &breakfast,01,Domestic,Thousand,1963
+HTA05C2,Number of Nights by Irish Residents,2004,2004,92,Guest house/bed &breakfast,02,Outbound,Thousand,2065
+HTA05C2,Number of Nights by Irish Residents,2004,2004,93,Hotel/conference centre,01,Domestic,Thousand,5836
+HTA05C2,Number of Nights by Irish Residents,2004,2004,93,Hotel/conference centre,02,Outbound,Thousand,14351
+HTA05C2,Number of Nights by Irish Residents,2004,2004,94,Self catering/rented house,01,Domestic,Thousand,3701
+HTA05C2,Number of Nights by Irish Residents,2004,2004,94,Self catering/rented house,02,Outbound,Thousand,12503
+HTA05C2,Number of Nights by Irish Residents,2004,2004,999,Other,01,Domestic,Thousand,1303
+HTA05C2,Number of Nights by Irish Residents,2004,2004,999,Other,02,Outbound,Thousand,3009
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,-,All types of accommodation,01,Domestic,Nights per Trip,3.5
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,-,All types of accommodation,02,Outbound,Nights per Trip,8.5
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,134,Caravan/camping,01,Domestic,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,134,Caravan/camping,02,Outbound,Nights per Trip,13.5
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,222,Friends/relatives,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,222,Friends/relatives,02,Outbound,Nights per Trip,8.2
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,224,Own holiday home,01,Domestic,Nights per Trip,6.9
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,224,Own holiday home,02,Outbound,Nights per Trip,14.2
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.4
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.2
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,94,Self catering/rented house,01,Domestic,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,94,Self catering/rented house,02,Outbound,Nights per Trip,11.5
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,999,Other,01,Domestic,Nights per Trip,4.6
+HTA05C3,Average Length of Stay by Irish Residents,2004,2004,999,Other,02,Outbound,Nights per Trip,12.7
+HTA05C1,Number of Trips by Irish Residents,2005,2005,-,All types of accommodation,01,Domestic,Thousand,7173
+HTA05C1,Number of Trips by Irish Residents,2005,2005,-,All types of accommodation,02,Outbound,Thousand,6189
+HTA05C1,Number of Trips by Irish Residents,2005,2005,134,Caravan/camping,01,Domestic,Thousand,298
+HTA05C1,Number of Trips by Irish Residents,2005,2005,134,Caravan/camping,02,Outbound,Thousand,208
+HTA05C1,Number of Trips by Irish Residents,2005,2005,222,Friends/relatives,01,Domestic,Thousand,2430
+HTA05C1,Number of Trips by Irish Residents,2005,2005,222,Friends/relatives,02,Outbound,Thousand,1401
+HTA05C1,Number of Trips by Irish Residents,2005,2005,224,Own holiday home,01,Domestic,Thousand,365
+HTA05C1,Number of Trips by Irish Residents,2005,2005,224,Own holiday home,02,Outbound,Thousand,175
+HTA05C1,Number of Trips by Irish Residents,2005,2005,92,Guest house/bed &breakfast,01,Domestic,Thousand,661
+HTA05C1,Number of Trips by Irish Residents,2005,2005,92,Guest house/bed &breakfast,02,Outbound,Thousand,261
+HTA05C1,Number of Trips by Irish Residents,2005,2005,93,Hotel/conference centre,01,Domestic,Thousand,2597
+HTA05C1,Number of Trips by Irish Residents,2005,2005,93,Hotel/conference centre,02,Outbound,Thousand,2800
+HTA05C1,Number of Trips by Irish Residents,2005,2005,94,Self catering/rented house,01,Domestic,Thousand,547
+HTA05C1,Number of Trips by Irish Residents,2005,2005,94,Self catering/rented house,02,Outbound,Thousand,1099
+HTA05C1,Number of Trips by Irish Residents,2005,2005,999,Other,01,Domestic,Thousand,278
+HTA05C1,Number of Trips by Irish Residents,2005,2005,999,Other,02,Outbound,Thousand,245
+HTA05C2,Number of Nights by Irish Residents,2005,2005,-,All types of accommodation,01,Domestic,Thousand,24607
+HTA05C2,Number of Nights by Irish Residents,2005,2005,-,All types of accommodation,02,Outbound,Thousand,51503
+HTA05C2,Number of Nights by Irish Residents,2005,2005,134,Caravan/camping,01,Domestic,Thousand,1595
+HTA05C2,Number of Nights by Irish Residents,2005,2005,134,Caravan/camping,02,Outbound,Thousand,2609
+HTA05C2,Number of Nights by Irish Residents,2005,2005,222,Friends/relatives,01,Domestic,Thousand,7562
+HTA05C2,Number of Nights by Irish Residents,2005,2005,222,Friends/relatives,02,Outbound,Thousand,11617
+HTA05C2,Number of Nights by Irish Residents,2005,2005,224,Own holiday home,01,Domestic,Thousand,2174
+HTA05C2,Number of Nights by Irish Residents,2005,2005,224,Own holiday home,02,Outbound,Thousand,2369
+HTA05C2,Number of Nights by Irish Residents,2005,2005,92,Guest house/bed &breakfast,01,Domestic,Thousand,1816
+HTA05C2,Number of Nights by Irish Residents,2005,2005,92,Guest house/bed &breakfast,02,Outbound,Thousand,1766
+HTA05C2,Number of Nights by Irish Residents,2005,2005,93,Hotel/conference centre,01,Domestic,Thousand,6358
+HTA05C2,Number of Nights by Irish Residents,2005,2005,93,Hotel/conference centre,02,Outbound,Thousand,16965
+HTA05C2,Number of Nights by Irish Residents,2005,2005,94,Self catering/rented house,01,Domestic,Thousand,3582
+HTA05C2,Number of Nights by Irish Residents,2005,2005,94,Self catering/rented house,02,Outbound,Thousand,12601
+HTA05C2,Number of Nights by Irish Residents,2005,2005,999,Other,01,Domestic,Thousand,1520
+HTA05C2,Number of Nights by Irish Residents,2005,2005,999,Other,02,Outbound,Thousand,3579
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,-,All types of accommodation,01,Domestic,Nights per Trip,3.4
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,-,All types of accommodation,02,Outbound,Nights per Trip,8.3
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,134,Caravan/camping,01,Domestic,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,134,Caravan/camping,02,Outbound,Nights per Trip,12.5
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,222,Friends/relatives,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,222,Friends/relatives,02,Outbound,Nights per Trip,8.3
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,224,Own holiday home,01,Domestic,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,224,Own holiday home,02,Outbound,Nights per Trip,13.5
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.8
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,94,Self catering/rented house,01,Domestic,Nights per Trip,6.5
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,94,Self catering/rented house,02,Outbound,Nights per Trip,11.5
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,999,Other,01,Domestic,Nights per Trip,5.5
+HTA05C3,Average Length of Stay by Irish Residents,2005,2005,999,Other,02,Outbound,Nights per Trip,14.6
+HTA05C1,Number of Trips by Irish Residents,2006,2006,-,All types of accommodation,01,Domestic,Thousand,7310
+HTA05C1,Number of Trips by Irish Residents,2006,2006,-,All types of accommodation,02,Outbound,Thousand,6981
+HTA05C1,Number of Trips by Irish Residents,2006,2006,134,Caravan/camping,01,Domestic,Thousand,279
+HTA05C1,Number of Trips by Irish Residents,2006,2006,134,Caravan/camping,02,Outbound,Thousand,187
+HTA05C1,Number of Trips by Irish Residents,2006,2006,222,Friends/relatives,01,Domestic,Thousand,2529
+HTA05C1,Number of Trips by Irish Residents,2006,2006,222,Friends/relatives,02,Outbound,Thousand,1636
+HTA05C1,Number of Trips by Irish Residents,2006,2006,224,Own holiday home,01,Domestic,Thousand,419
+HTA05C1,Number of Trips by Irish Residents,2006,2006,224,Own holiday home,02,Outbound,Thousand,282
+HTA05C1,Number of Trips by Irish Residents,2006,2006,92,Guest house/bed &breakfast,01,Domestic,Thousand,531
+HTA05C1,Number of Trips by Irish Residents,2006,2006,92,Guest house/bed &breakfast,02,Outbound,Thousand,231
+HTA05C1,Number of Trips by Irish Residents,2006,2006,93,Hotel/conference centre,01,Domestic,Thousand,2847
+HTA05C1,Number of Trips by Irish Residents,2006,2006,93,Hotel/conference centre,02,Outbound,Thousand,3179
+HTA05C1,Number of Trips by Irish Residents,2006,2006,94,Self catering/rented house,01,Domestic,Thousand,480
+HTA05C1,Number of Trips by Irish Residents,2006,2006,94,Self catering/rented house,02,Outbound,Thousand,1212
+HTA05C1,Number of Trips by Irish Residents,2006,2006,999,Other,01,Domestic,Thousand,224
+HTA05C1,Number of Trips by Irish Residents,2006,2006,999,Other,02,Outbound,Thousand,253
+HTA05C2,Number of Nights by Irish Residents,2006,2006,-,All types of accommodation,01,Domestic,Thousand,24203
+HTA05C2,Number of Nights by Irish Residents,2006,2006,-,All types of accommodation,02,Outbound,Thousand,54266
+HTA05C2,Number of Nights by Irish Residents,2006,2006,134,Caravan/camping,01,Domestic,Thousand,1693
+HTA05C2,Number of Nights by Irish Residents,2006,2006,134,Caravan/camping,02,Outbound,Thousand,2349
+HTA05C2,Number of Nights by Irish Residents,2006,2006,222,Friends/relatives,01,Domestic,Thousand,7653
+HTA05C2,Number of Nights by Irish Residents,2006,2006,222,Friends/relatives,02,Outbound,Thousand,12716
+HTA05C2,Number of Nights by Irish Residents,2006,2006,224,Own holiday home,01,Domestic,Thousand,2459
+HTA05C2,Number of Nights by Irish Residents,2006,2006,224,Own holiday home,02,Outbound,Thousand,3578
+HTA05C2,Number of Nights by Irish Residents,2006,2006,92,Guest house/bed &breakfast,01,Domestic,Thousand,1542
+HTA05C2,Number of Nights by Irish Residents,2006,2006,92,Guest house/bed &breakfast,02,Outbound,Thousand,1653
+HTA05C2,Number of Nights by Irish Residents,2006,2006,93,Hotel/conference centre,01,Domestic,Thousand,6436
+HTA05C2,Number of Nights by Irish Residents,2006,2006,93,Hotel/conference centre,02,Outbound,Thousand,18289
+HTA05C2,Number of Nights by Irish Residents,2006,2006,94,Self catering/rented house,01,Domestic,Thousand,3298
+HTA05C2,Number of Nights by Irish Residents,2006,2006,94,Self catering/rented house,02,Outbound,Thousand,12675
+HTA05C2,Number of Nights by Irish Residents,2006,2006,999,Other,01,Domestic,Thousand,1122
+HTA05C2,Number of Nights by Irish Residents,2006,2006,999,Other,02,Outbound,Thousand,3006
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,-,All types of accommodation,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,-,All types of accommodation,02,Outbound,Nights per Trip,7.8
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,134,Caravan/camping,01,Domestic,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,134,Caravan/camping,02,Outbound,Nights per Trip,12.6
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,222,Friends/relatives,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,222,Friends/relatives,02,Outbound,Nights per Trip,7.8
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,224,Own holiday home,01,Domestic,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,224,Own holiday home,02,Outbound,Nights per Trip,12.7
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.2
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.8
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,94,Self catering/rented house,01,Domestic,Nights per Trip,6.9
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,94,Self catering/rented house,02,Outbound,Nights per Trip,10.5
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,999,Other,01,Domestic,Nights per Trip,5
+HTA05C3,Average Length of Stay by Irish Residents,2006,2006,999,Other,02,Outbound,Nights per Trip,11.9
+HTA05C1,Number of Trips by Irish Residents,2007,2007,-,All types of accommodation,01,Domestic,Thousand,7942
+HTA05C1,Number of Trips by Irish Residents,2007,2007,-,All types of accommodation,02,Outbound,Thousand,7830
+HTA05C1,Number of Trips by Irish Residents,2007,2007,134,Caravan/camping,01,Domestic,Thousand,305
+HTA05C1,Number of Trips by Irish Residents,2007,2007,134,Caravan/camping,02,Outbound,Thousand,215
+HTA05C1,Number of Trips by Irish Residents,2007,2007,222,Friends/relatives,01,Domestic,Thousand,2653
+HTA05C1,Number of Trips by Irish Residents,2007,2007,222,Friends/relatives,02,Outbound,Thousand,1721
+HTA05C1,Number of Trips by Irish Residents,2007,2007,224,Own holiday home,01,Domestic,Thousand,489
+HTA05C1,Number of Trips by Irish Residents,2007,2007,224,Own holiday home,02,Outbound,Thousand,313
+HTA05C1,Number of Trips by Irish Residents,2007,2007,92,Guest house/bed &breakfast,01,Domestic,Thousand,521
+HTA05C1,Number of Trips by Irish Residents,2007,2007,92,Guest house/bed &breakfast,02,Outbound,Thousand,267
+HTA05C1,Number of Trips by Irish Residents,2007,2007,93,Hotel/conference centre,01,Domestic,Thousand,3201
+HTA05C1,Number of Trips by Irish Residents,2007,2007,93,Hotel/conference centre,02,Outbound,Thousand,3670
+HTA05C1,Number of Trips by Irish Residents,2007,2007,94,Self catering/rented house,01,Domestic,Thousand,556
+HTA05C1,Number of Trips by Irish Residents,2007,2007,94,Self catering/rented house,02,Outbound,Thousand,1385
+HTA05C1,Number of Trips by Irish Residents,2007,2007,999,Other,01,Domestic,Thousand,217
+HTA05C1,Number of Trips by Irish Residents,2007,2007,999,Other,02,Outbound,Thousand,259
+HTA05C2,Number of Nights by Irish Residents,2007,2007,-,All types of accommodation,01,Domestic,Thousand,26328
+HTA05C2,Number of Nights by Irish Residents,2007,2007,-,All types of accommodation,02,Outbound,Thousand,62236
+HTA05C2,Number of Nights by Irish Residents,2007,2007,134,Caravan/camping,01,Domestic,Thousand,2077
+HTA05C2,Number of Nights by Irish Residents,2007,2007,134,Caravan/camping,02,Outbound,Thousand,2647
+HTA05C2,Number of Nights by Irish Residents,2007,2007,222,Friends/relatives,01,Domestic,Thousand,7812
+HTA05C2,Number of Nights by Irish Residents,2007,2007,222,Friends/relatives,02,Outbound,Thousand,13509
+HTA05C2,Number of Nights by Irish Residents,2007,2007,224,Own holiday home,01,Domestic,Thousand,2772
+HTA05C2,Number of Nights by Irish Residents,2007,2007,224,Own holiday home,02,Outbound,Thousand,4031
+HTA05C2,Number of Nights by Irish Residents,2007,2007,92,Guest house/bed &breakfast,01,Domestic,Thousand,1432
+HTA05C2,Number of Nights by Irish Residents,2007,2007,92,Guest house/bed &breakfast,02,Outbound,Thousand,1836
+HTA05C2,Number of Nights by Irish Residents,2007,2007,93,Hotel/conference centre,01,Domestic,Thousand,7359
+HTA05C2,Number of Nights by Irish Residents,2007,2007,93,Hotel/conference centre,02,Outbound,Thousand,22623
+HTA05C2,Number of Nights by Irish Residents,2007,2007,94,Self catering/rented house,01,Domestic,Thousand,3500
+HTA05C2,Number of Nights by Irish Residents,2007,2007,94,Self catering/rented house,02,Outbound,Thousand,14272
+HTA05C2,Number of Nights by Irish Residents,2007,2007,999,Other,01,Domestic,Thousand,1376
+HTA05C2,Number of Nights by Irish Residents,2007,2007,999,Other,02,Outbound,Thousand,3319
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,-,All types of accommodation,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,-,All types of accommodation,02,Outbound,Nights per Trip,7.9
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,134,Caravan/camping,01,Domestic,Nights per Trip,6.8
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,134,Caravan/camping,02,Outbound,Nights per Trip,12.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,222,Friends/relatives,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,222,Friends/relatives,02,Outbound,Nights per Trip,7.8
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,224,Own holiday home,01,Domestic,Nights per Trip,5.7
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,224,Own holiday home,02,Outbound,Nights per Trip,12.9
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.9
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.2
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,94,Self catering/rented house,01,Domestic,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,94,Self catering/rented house,02,Outbound,Nights per Trip,10.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,999,Other,01,Domestic,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2007,2007,999,Other,02,Outbound,Nights per Trip,12.8
+HTA05C1,Number of Trips by Irish Residents,2008,2008,-,All types of accommodation,01,Domestic,Thousand,8339
+HTA05C1,Number of Trips by Irish Residents,2008,2008,-,All types of accommodation,02,Outbound,Thousand,8042
+HTA05C1,Number of Trips by Irish Residents,2008,2008,134,Caravan/camping,01,Domestic,Thousand,323
+HTA05C1,Number of Trips by Irish Residents,2008,2008,134,Caravan/camping,02,Outbound,Thousand,246
+HTA05C1,Number of Trips by Irish Residents,2008,2008,222,Friends/relatives,01,Domestic,Thousand,2818
+HTA05C1,Number of Trips by Irish Residents,2008,2008,222,Friends/relatives,02,Outbound,Thousand,1923
+HTA05C1,Number of Trips by Irish Residents,2008,2008,224,Own holiday home,01,Domestic,Thousand,521
+HTA05C1,Number of Trips by Irish Residents,2008,2008,224,Own holiday home,02,Outbound,Thousand,318
+HTA05C1,Number of Trips by Irish Residents,2008,2008,92,Guest house/bed &breakfast,01,Domestic,Thousand,479
+HTA05C1,Number of Trips by Irish Residents,2008,2008,92,Guest house/bed &breakfast,02,Outbound,Thousand,280
+HTA05C1,Number of Trips by Irish Residents,2008,2008,93,Hotel/conference centre,01,Domestic,Thousand,3430
+HTA05C1,Number of Trips by Irish Residents,2008,2008,93,Hotel/conference centre,02,Outbound,Thousand,3680
+HTA05C1,Number of Trips by Irish Residents,2008,2008,94,Self catering/rented house,01,Domestic,Thousand,541
+HTA05C1,Number of Trips by Irish Residents,2008,2008,94,Self catering/rented house,02,Outbound,Thousand,1326
+HTA05C1,Number of Trips by Irish Residents,2008,2008,999,Other,01,Domestic,Thousand,228
+HTA05C1,Number of Trips by Irish Residents,2008,2008,999,Other,02,Outbound,Thousand,267
+HTA05C2,Number of Nights by Irish Residents,2008,2008,-,All types of accommodation,01,Domestic,Thousand,26195
+HTA05C2,Number of Nights by Irish Residents,2008,2008,-,All types of accommodation,02,Outbound,Thousand,63498
+HTA05C2,Number of Nights by Irish Residents,2008,2008,134,Caravan/camping,01,Domestic,Thousand,1930
+HTA05C2,Number of Nights by Irish Residents,2008,2008,134,Caravan/camping,02,Outbound,Thousand,2833
+HTA05C2,Number of Nights by Irish Residents,2008,2008,222,Friends/relatives,01,Domestic,Thousand,7986
+HTA05C2,Number of Nights by Irish Residents,2008,2008,222,Friends/relatives,02,Outbound,Thousand,14996
+HTA05C2,Number of Nights by Irish Residents,2008,2008,224,Own holiday home,01,Domestic,Thousand,3048
+HTA05C2,Number of Nights by Irish Residents,2008,2008,224,Own holiday home,02,Outbound,Thousand,4035
+HTA05C2,Number of Nights by Irish Residents,2008,2008,92,Guest house/bed &breakfast,01,Domestic,Thousand,1178
+HTA05C2,Number of Nights by Irish Residents,2008,2008,92,Guest house/bed &breakfast,02,Outbound,Thousand,1768
+HTA05C2,Number of Nights by Irish Residents,2008,2008,93,Hotel/conference centre,01,Domestic,Thousand,7616
+HTA05C2,Number of Nights by Irish Residents,2008,2008,93,Hotel/conference centre,02,Outbound,Thousand,21634
+HTA05C2,Number of Nights by Irish Residents,2008,2008,94,Self catering/rented house,01,Domestic,Thousand,3238
+HTA05C2,Number of Nights by Irish Residents,2008,2008,94,Self catering/rented house,02,Outbound,Thousand,14528
+HTA05C2,Number of Nights by Irish Residents,2008,2008,999,Other,01,Domestic,Thousand,1198
+HTA05C2,Number of Nights by Irish Residents,2008,2008,999,Other,02,Outbound,Thousand,3706
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,-,All types of accommodation,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,-,All types of accommodation,02,Outbound,Nights per Trip,7.9
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,134,Caravan/camping,01,Domestic,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,134,Caravan/camping,02,Outbound,Nights per Trip,11.5
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,222,Friends/relatives,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,222,Friends/relatives,02,Outbound,Nights per Trip,7.8
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,224,Own holiday home,01,Domestic,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,224,Own holiday home,02,Outbound,Nights per Trip,12.7
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,94,Self catering/rented house,01,Domestic,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,94,Self catering/rented house,02,Outbound,Nights per Trip,11
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,999,Other,01,Domestic,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2008,2008,999,Other,02,Outbound,Nights per Trip,13.9
+HTA05C1,Number of Trips by Irish Residents,2009,2009,-,All types of accommodation,01,Domestic,Thousand,8340
+HTA05C1,Number of Trips by Irish Residents,2009,2009,-,All types of accommodation,02,Outbound,Thousand,7292
+HTA05C1,Number of Trips by Irish Residents,2009,2009,134,Caravan/camping,01,Domestic,Thousand,309
+HTA05C1,Number of Trips by Irish Residents,2009,2009,134,Caravan/camping,02,Outbound,Thousand,235
+HTA05C1,Number of Trips by Irish Residents,2009,2009,222,Friends/relatives,01,Domestic,Thousand,2936
+HTA05C1,Number of Trips by Irish Residents,2009,2009,222,Friends/relatives,02,Outbound,Thousand,1953
+HTA05C1,Number of Trips by Irish Residents,2009,2009,224,Own holiday home,01,Domestic,Thousand,498
+HTA05C1,Number of Trips by Irish Residents,2009,2009,224,Own holiday home,02,Outbound,Thousand,304
+HTA05C1,Number of Trips by Irish Residents,2009,2009,92,Guest house/bed &breakfast,01,Domestic,Thousand,384
+HTA05C1,Number of Trips by Irish Residents,2009,2009,92,Guest house/bed &breakfast,02,Outbound,Thousand,228
+HTA05C1,Number of Trips by Irish Residents,2009,2009,93,Hotel/conference centre,01,Domestic,Thousand,3443
+HTA05C1,Number of Trips by Irish Residents,2009,2009,93,Hotel/conference centre,02,Outbound,Thousand,3139
+HTA05C1,Number of Trips by Irish Residents,2009,2009,94,Self catering/rented house,01,Domestic,Thousand,502
+HTA05C1,Number of Trips by Irish Residents,2009,2009,94,Self catering/rented house,02,Outbound,Thousand,1172
+HTA05C1,Number of Trips by Irish Residents,2009,2009,999,Other,01,Domestic,Thousand,268
+HTA05C1,Number of Trips by Irish Residents,2009,2009,999,Other,02,Outbound,Thousand,261
+HTA05C2,Number of Nights by Irish Residents,2009,2009,-,All types of accommodation,01,Domestic,Thousand,26027
+HTA05C2,Number of Nights by Irish Residents,2009,2009,-,All types of accommodation,02,Outbound,Thousand,55667
+HTA05C2,Number of Nights by Irish Residents,2009,2009,134,Caravan/camping,01,Domestic,Thousand,1512
+HTA05C2,Number of Nights by Irish Residents,2009,2009,134,Caravan/camping,02,Outbound,Thousand,2899
+HTA05C2,Number of Nights by Irish Residents,2009,2009,222,Friends/relatives,01,Domestic,Thousand,8187
+HTA05C2,Number of Nights by Irish Residents,2009,2009,222,Friends/relatives,02,Outbound,Thousand,14809
+HTA05C2,Number of Nights by Irish Residents,2009,2009,224,Own holiday home,01,Domestic,Thousand,3074
+HTA05C2,Number of Nights by Irish Residents,2009,2009,224,Own holiday home,02,Outbound,Thousand,3629
+HTA05C2,Number of Nights by Irish Residents,2009,2009,92,Guest house/bed &breakfast,01,Domestic,Thousand,1013
+HTA05C2,Number of Nights by Irish Residents,2009,2009,92,Guest house/bed &breakfast,02,Outbound,Thousand,1570
+HTA05C2,Number of Nights by Irish Residents,2009,2009,93,Hotel/conference centre,01,Domestic,Thousand,7438
+HTA05C2,Number of Nights by Irish Residents,2009,2009,93,Hotel/conference centre,02,Outbound,Thousand,16893
+HTA05C2,Number of Nights by Irish Residents,2009,2009,94,Self catering/rented house,01,Domestic,Thousand,3171
+HTA05C2,Number of Nights by Irish Residents,2009,2009,94,Self catering/rented house,02,Outbound,Thousand,12396
+HTA05C2,Number of Nights by Irish Residents,2009,2009,999,Other,01,Domestic,Thousand,1631
+HTA05C2,Number of Nights by Irish Residents,2009,2009,999,Other,02,Outbound,Thousand,3471
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,-,All types of accommodation,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,-,All types of accommodation,02,Outbound,Nights per Trip,7.6
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,134,Caravan/camping,01,Domestic,Nights per Trip,4.9
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,134,Caravan/camping,02,Outbound,Nights per Trip,12.3
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,222,Friends/relatives,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,222,Friends/relatives,02,Outbound,Nights per Trip,7.6
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,224,Own holiday home,01,Domestic,Nights per Trip,6.2
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,224,Own holiday home,02,Outbound,Nights per Trip,11.9
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.9
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,94,Self catering/rented house,01,Domestic,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,94,Self catering/rented house,02,Outbound,Nights per Trip,10.6
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,999,Other,01,Domestic,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2009,2009,999,Other,02,Outbound,Nights per Trip,13.3
+HTA05C1,Number of Trips by Irish Residents,2010,2010,-,All types of accommodation,01,Domestic,Thousand,7300
+HTA05C1,Number of Trips by Irish Residents,2010,2010,-,All types of accommodation,02,Outbound,Thousand,6917
+HTA05C1,Number of Trips by Irish Residents,2010,2010,134,Caravan/camping,01,Domestic,Thousand,560
+HTA05C1,Number of Trips by Irish Residents,2010,2010,134,Caravan/camping,02,Outbound,Thousand,262
+HTA05C1,Number of Trips by Irish Residents,2010,2010,222,Friends/relatives,01,Domestic,Thousand,2044
+HTA05C1,Number of Trips by Irish Residents,2010,2010,222,Friends/relatives,02,Outbound,Thousand,1713
+HTA05C1,Number of Trips by Irish Residents,2010,2010,224,Own holiday home,01,Domestic,Thousand,596
+HTA05C1,Number of Trips by Irish Residents,2010,2010,224,Own holiday home,02,Outbound,Thousand,206
+HTA05C1,Number of Trips by Irish Residents,2010,2010,92,Guest house/bed &breakfast,01,Domestic,Thousand,311
+HTA05C1,Number of Trips by Irish Residents,2010,2010,92,Guest house/bed &breakfast,02,Outbound,Thousand,222
+HTA05C1,Number of Trips by Irish Residents,2010,2010,93,Hotel/conference centre,01,Domestic,Thousand,3040
+HTA05C1,Number of Trips by Irish Residents,2010,2010,93,Hotel/conference centre,02,Outbound,Thousand,3011
+HTA05C1,Number of Trips by Irish Residents,2010,2010,94,Self catering/rented house,01,Domestic,Thousand,561
+HTA05C1,Number of Trips by Irish Residents,2010,2010,94,Self catering/rented house,02,Outbound,Thousand,1238
+HTA05C1,Number of Trips by Irish Residents,2010,2010,999,Other,01,Domestic,Thousand,187
+HTA05C1,Number of Trips by Irish Residents,2010,2010,999,Other,02,Outbound,Thousand,264
+HTA05C2,Number of Nights by Irish Residents,2010,2010,-,All types of accommodation,01,Domestic,Thousand,22540
+HTA05C2,Number of Nights by Irish Residents,2010,2010,-,All types of accommodation,02,Outbound,Thousand,57473
+HTA05C2,Number of Nights by Irish Residents,2010,2010,134,Caravan/camping,01,Domestic,Thousand,2618
+HTA05C2,Number of Nights by Irish Residents,2010,2010,134,Caravan/camping,02,Outbound,Thousand,3779
+HTA05C2,Number of Nights by Irish Residents,2010,2010,222,Friends/relatives,01,Domestic,Thousand,6036
+HTA05C2,Number of Nights by Irish Residents,2010,2010,222,Friends/relatives,02,Outbound,Thousand,14532
+HTA05C2,Number of Nights by Irish Residents,2010,2010,224,Own holiday home,01,Domestic,Thousand,2886
+HTA05C2,Number of Nights by Irish Residents,2010,2010,224,Own holiday home,02,Outbound,Thousand,2558
+HTA05C2,Number of Nights by Irish Residents,2010,2010,92,Guest house/bed &breakfast,01,Domestic,Thousand,735
+HTA05C2,Number of Nights by Irish Residents,2010,2010,92,Guest house/bed &breakfast,02,Outbound,Thousand,1364
+HTA05C2,Number of Nights by Irish Residents,2010,2010,93,Hotel/conference centre,01,Domestic,Thousand,6590
+HTA05C2,Number of Nights by Irish Residents,2010,2010,93,Hotel/conference centre,02,Outbound,Thousand,18389
+HTA05C2,Number of Nights by Irish Residents,2010,2010,94,Self catering/rented house,01,Domestic,Thousand,2891
+HTA05C2,Number of Nights by Irish Residents,2010,2010,94,Self catering/rented house,02,Outbound,Thousand,13982
+HTA05C2,Number of Nights by Irish Residents,2010,2010,999,Other,01,Domestic,Thousand,783
+HTA05C2,Number of Nights by Irish Residents,2010,2010,999,Other,02,Outbound,Thousand,2870
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,-,All types of accommodation,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,-,All types of accommodation,02,Outbound,Nights per Trip,8.3
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,134,Caravan/camping,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,134,Caravan/camping,02,Outbound,Nights per Trip,14.4
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,222,Friends/relatives,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,222,Friends/relatives,02,Outbound,Nights per Trip,8.5
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,224,Own holiday home,01,Domestic,Nights per Trip,4.8
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,224,Own holiday home,02,Outbound,Nights per Trip,12.4
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,93,Hotel/conference centre,02,Outbound,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,94,Self catering/rented house,01,Domestic,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,94,Self catering/rented house,02,Outbound,Nights per Trip,11.3
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,999,Other,01,Domestic,Nights per Trip,4.2
+HTA05C3,Average Length of Stay by Irish Residents,2010,2010,999,Other,02,Outbound,Nights per Trip,10.9
+HTA05C1,Number of Trips by Irish Residents,2011,2011,-,All types of accommodation,01,Domestic,Thousand,7169
+HTA05C1,Number of Trips by Irish Residents,2011,2011,-,All types of accommodation,02,Outbound,Thousand,6514
+HTA05C1,Number of Trips by Irish Residents,2011,2011,134,Caravan/camping,01,Domestic,Thousand,412
+HTA05C1,Number of Trips by Irish Residents,2011,2011,134,Caravan/camping,02,Outbound,Thousand,160
+HTA05C1,Number of Trips by Irish Residents,2011,2011,222,Friends/relatives,01,Domestic,Thousand,2259
+HTA05C1,Number of Trips by Irish Residents,2011,2011,222,Friends/relatives,02,Outbound,Thousand,1771
+HTA05C1,Number of Trips by Irish Residents,2011,2011,224,Own holiday home,01,Domestic,Thousand,573
+HTA05C1,Number of Trips by Irish Residents,2011,2011,224,Own holiday home,02,Outbound,Thousand,188
+HTA05C1,Number of Trips by Irish Residents,2011,2011,92,Guest house/bed &breakfast,01,Domestic,Thousand,317
+HTA05C1,Number of Trips by Irish Residents,2011,2011,92,Guest house/bed &breakfast,02,Outbound,Thousand,206
+HTA05C1,Number of Trips by Irish Residents,2011,2011,93,Hotel/conference centre,01,Domestic,Thousand,2845
+HTA05C1,Number of Trips by Irish Residents,2011,2011,93,Hotel/conference centre,02,Outbound,Thousand,2725
+HTA05C1,Number of Trips by Irish Residents,2011,2011,94,Self catering/rented house,01,Domestic,Thousand,570
+HTA05C1,Number of Trips by Irish Residents,2011,2011,94,Self catering/rented house,02,Outbound,Thousand,1215
+HTA05C1,Number of Trips by Irish Residents,2011,2011,999,Other,01,Domestic,Thousand,192
+HTA05C1,Number of Trips by Irish Residents,2011,2011,999,Other,02,Outbound,Thousand,249
+HTA05C2,Number of Nights by Irish Residents,2011,2011,-,All types of accommodation,01,Domestic,Thousand,21628
+HTA05C2,Number of Nights by Irish Residents,2011,2011,-,All types of accommodation,02,Outbound,Thousand,54014
+HTA05C2,Number of Nights by Irish Residents,2011,2011,134,Caravan/camping,01,Domestic,Thousand,1815
+HTA05C2,Number of Nights by Irish Residents,2011,2011,134,Caravan/camping,02,Outbound,Thousand,1867
+HTA05C2,Number of Nights by Irish Residents,2011,2011,222,Friends/relatives,01,Domestic,Thousand,6579
+HTA05C2,Number of Nights by Irish Residents,2011,2011,222,Friends/relatives,02,Outbound,Thousand,15318
+HTA05C2,Number of Nights by Irish Residents,2011,2011,224,Own holiday home,01,Domestic,Thousand,2785
+HTA05C2,Number of Nights by Irish Residents,2011,2011,224,Own holiday home,02,Outbound,Thousand,3012
+HTA05C2,Number of Nights by Irish Residents,2011,2011,92,Guest house/bed &breakfast,01,Domestic,Thousand,718
+HTA05C2,Number of Nights by Irish Residents,2011,2011,92,Guest house/bed &breakfast,02,Outbound,Thousand,1488
+HTA05C2,Number of Nights by Irish Residents,2011,2011,93,Hotel/conference centre,01,Domestic,Thousand,5959
+HTA05C2,Number of Nights by Irish Residents,2011,2011,93,Hotel/conference centre,02,Outbound,Thousand,16170
+HTA05C2,Number of Nights by Irish Residents,2011,2011,94,Self catering/rented house,01,Domestic,Thousand,3040
+HTA05C2,Number of Nights by Irish Residents,2011,2011,94,Self catering/rented house,02,Outbound,Thousand,13595
+HTA05C2,Number of Nights by Irish Residents,2011,2011,999,Other,01,Domestic,Thousand,731
+HTA05C2,Number of Nights by Irish Residents,2011,2011,999,Other,02,Outbound,Thousand,2562
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,-,All types of accommodation,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,-,All types of accommodation,02,Outbound,Nights per Trip,8.3
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,134,Caravan/camping,01,Domestic,Nights per Trip,4.4
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,134,Caravan/camping,02,Outbound,Nights per Trip,11.7
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,222,Friends/relatives,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,222,Friends/relatives,02,Outbound,Nights per Trip,8.6
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,224,Own holiday home,01,Domestic,Nights per Trip,4.9
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,224,Own holiday home,02,Outbound,Nights per Trip,16
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7.2
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.1
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,94,Self catering/rented house,01,Domestic,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,94,Self catering/rented house,02,Outbound,Nights per Trip,11.2
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,999,Other,01,Domestic,Nights per Trip,3.8
+HTA05C3,Average Length of Stay by Irish Residents,2011,2011,999,Other,02,Outbound,Nights per Trip,10.3
+HTA05C1,Number of Trips by Irish Residents,2012,2012,-,All types of accommodation,01,Domestic,Thousand,8291
+HTA05C1,Number of Trips by Irish Residents,2012,2012,-,All types of accommodation,02,Outbound,Thousand,6623
+HTA05C1,Number of Trips by Irish Residents,2012,2012,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2012,2012,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2012,2012,222,Friends/relatives,01,Domestic,Thousand,2896
+HTA05C1,Number of Trips by Irish Residents,2012,2012,222,Friends/relatives,02,Outbound,Thousand,1661
+HTA05C1,Number of Trips by Irish Residents,2012,2012,224,Own holiday home,01,Domestic,Thousand,477
+HTA05C1,Number of Trips by Irish Residents,2012,2012,224,Own holiday home,02,Outbound,Thousand,148
+HTA05C1,Number of Trips by Irish Residents,2012,2012,92,Guest house/bed &breakfast,01,Domestic,Thousand,367
+HTA05C1,Number of Trips by Irish Residents,2012,2012,92,Guest house/bed &breakfast,02,Outbound,Thousand,234
+HTA05C1,Number of Trips by Irish Residents,2012,2012,93,Hotel/conference centre,01,Domestic,Thousand,3313
+HTA05C1,Number of Trips by Irish Residents,2012,2012,93,Hotel/conference centre,02,Outbound,Thousand,2690
+HTA05C1,Number of Trips by Irish Residents,2012,2012,94,Self catering/rented house,01,Domestic,Thousand,644
+HTA05C1,Number of Trips by Irish Residents,2012,2012,94,Self catering/rented house,02,Outbound,Thousand,1364
+HTA05C1,Number of Trips by Irish Residents,2012,2012,999,Other,01,Domestic,Thousand,594
+HTA05C1,Number of Trips by Irish Residents,2012,2012,999,Other,02,Outbound,Thousand,525
+HTA05C2,Number of Nights by Irish Residents,2012,2012,-,All types of accommodation,01,Domestic,Thousand,23703
+HTA05C2,Number of Nights by Irish Residents,2012,2012,-,All types of accommodation,02,Outbound,Thousand,53112
+HTA05C2,Number of Nights by Irish Residents,2012,2012,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2012,2012,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2012,2012,222,Friends/relatives,01,Domestic,Thousand,7935
+HTA05C2,Number of Nights by Irish Residents,2012,2012,222,Friends/relatives,02,Outbound,Thousand,14344
+HTA05C2,Number of Nights by Irish Residents,2012,2012,224,Own holiday home,01,Domestic,Thousand,1787
+HTA05C2,Number of Nights by Irish Residents,2012,2012,224,Own holiday home,02,Outbound,Thousand,2571
+HTA05C2,Number of Nights by Irish Residents,2012,2012,92,Guest house/bed &breakfast,01,Domestic,Thousand,934
+HTA05C2,Number of Nights by Irish Residents,2012,2012,92,Guest house/bed &breakfast,02,Outbound,Thousand,1931
+HTA05C2,Number of Nights by Irish Residents,2012,2012,93,Hotel/conference centre,01,Domestic,Thousand,6977
+HTA05C2,Number of Nights by Irish Residents,2012,2012,93,Hotel/conference centre,02,Outbound,Thousand,14492
+HTA05C2,Number of Nights by Irish Residents,2012,2012,94,Self catering/rented house,01,Domestic,Thousand,3237
+HTA05C2,Number of Nights by Irish Residents,2012,2012,94,Self catering/rented house,02,Outbound,Thousand,14081
+HTA05C2,Number of Nights by Irish Residents,2012,2012,999,Other,01,Domestic,Thousand,2833
+HTA05C2,Number of Nights by Irish Residents,2012,2012,999,Other,02,Outbound,Thousand,5692
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,-,All types of accommodation,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,-,All types of accommodation,02,Outbound,Nights per Trip,8
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,222,Friends/relatives,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,222,Friends/relatives,02,Outbound,Nights per Trip,8.6
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,224,Own holiday home,01,Domestic,Nights per Trip,3.8
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,224,Own holiday home,02,Outbound,Nights per Trip,17.3
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,8.2
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.1
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,94,Self catering/rented house,01,Domestic,Nights per Trip,5
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,94,Self catering/rented house,02,Outbound,Nights per Trip,10.3
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,999,Other,01,Domestic,Nights per Trip,4.8
+HTA05C3,Average Length of Stay by Irish Residents,2012,2012,999,Other,02,Outbound,Nights per Trip,10.8
+HTA05C1,Number of Trips by Irish Residents,2013,2013,-,All types of accommodation,01,Domestic,Thousand,8413
+HTA05C1,Number of Trips by Irish Residents,2013,2013,-,All types of accommodation,02,Outbound,Thousand,6575
+HTA05C1,Number of Trips by Irish Residents,2013,2013,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2013,2013,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2013,2013,222,Friends/relatives,01,Domestic,Thousand,2956
+HTA05C1,Number of Trips by Irish Residents,2013,2013,222,Friends/relatives,02,Outbound,Thousand,1717
+HTA05C1,Number of Trips by Irish Residents,2013,2013,224,Own holiday home,01,Domestic,Thousand,407
+HTA05C1,Number of Trips by Irish Residents,2013,2013,224,Own holiday home,02,Outbound,Thousand,181
+HTA05C1,Number of Trips by Irish Residents,2013,2013,92,Guest house/bed &breakfast,01,Domestic,Thousand,330
+HTA05C1,Number of Trips by Irish Residents,2013,2013,92,Guest house/bed &breakfast,02,Outbound,Thousand,171
+HTA05C1,Number of Trips by Irish Residents,2013,2013,93,Hotel/conference centre,01,Domestic,Thousand,3382
+HTA05C1,Number of Trips by Irish Residents,2013,2013,93,Hotel/conference centre,02,Outbound,Thousand,2873
+HTA05C1,Number of Trips by Irish Residents,2013,2013,94,Self catering/rented house,01,Domestic,Thousand,724
+HTA05C1,Number of Trips by Irish Residents,2013,2013,94,Self catering/rented house,02,Outbound,Thousand,1182
+HTA05C1,Number of Trips by Irish Residents,2013,2013,999,Other,01,Domestic,Thousand,615
+HTA05C1,Number of Trips by Irish Residents,2013,2013,999,Other,02,Outbound,Thousand,451
+HTA05C2,Number of Nights by Irish Residents,2013,2013,-,All types of accommodation,01,Domestic,Thousand,24195
+HTA05C2,Number of Nights by Irish Residents,2013,2013,-,All types of accommodation,02,Outbound,Thousand,51985
+HTA05C2,Number of Nights by Irish Residents,2013,2013,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2013,2013,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2013,2013,222,Friends/relatives,01,Domestic,Thousand,7695
+HTA05C2,Number of Nights by Irish Residents,2013,2013,222,Friends/relatives,02,Outbound,Thousand,13875
+HTA05C2,Number of Nights by Irish Residents,2013,2013,224,Own holiday home,01,Domestic,Thousand,2246
+HTA05C2,Number of Nights by Irish Residents,2013,2013,224,Own holiday home,02,Outbound,Thousand,2722
+HTA05C2,Number of Nights by Irish Residents,2013,2013,92,Guest house/bed &breakfast,01,Domestic,Thousand,845
+HTA05C2,Number of Nights by Irish Residents,2013,2013,92,Guest house/bed &breakfast,02,Outbound,Thousand,1022
+HTA05C2,Number of Nights by Irish Residents,2013,2013,93,Hotel/conference centre,01,Domestic,Thousand,6781
+HTA05C2,Number of Nights by Irish Residents,2013,2013,93,Hotel/conference centre,02,Outbound,Thousand,15416
+HTA05C2,Number of Nights by Irish Residents,2013,2013,94,Self catering/rented house,01,Domestic,Thousand,3714
+HTA05C2,Number of Nights by Irish Residents,2013,2013,94,Self catering/rented house,02,Outbound,Thousand,13705
+HTA05C2,Number of Nights by Irish Residents,2013,2013,999,Other,01,Domestic,Thousand,2913
+HTA05C2,Number of Nights by Irish Residents,2013,2013,999,Other,02,Outbound,Thousand,5245
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,-,All types of accommodation,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,-,All types of accommodation,02,Outbound,Nights per Trip,7.9
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,222,Friends/relatives,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,222,Friends/relatives,02,Outbound,Nights per Trip,8.1
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,224,Own holiday home,01,Domestic,Nights per Trip,5.5
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,224,Own holiday home,02,Outbound,Nights per Trip,15
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,93,Hotel/conference centre,01,Domestic,Nights per Trip,2
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,94,Self catering/rented house,01,Domestic,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,94,Self catering/rented house,02,Outbound,Nights per Trip,11.6
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,999,Other,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2013,2013,999,Other,02,Outbound,Nights per Trip,11.6
+HTA05C1,Number of Trips by Irish Residents,2014,2014,-,All types of accommodation,01,Domestic,Thousand,8991
+HTA05C1,Number of Trips by Irish Residents,2014,2014,-,All types of accommodation,02,Outbound,Thousand,6677
+HTA05C1,Number of Trips by Irish Residents,2014,2014,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2014,2014,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2014,2014,222,Friends/relatives,01,Domestic,Thousand,2996
+HTA05C1,Number of Trips by Irish Residents,2014,2014,222,Friends/relatives,02,Outbound,Thousand,1650
+HTA05C1,Number of Trips by Irish Residents,2014,2014,224,Own holiday home,01,Domestic,Thousand,444
+HTA05C1,Number of Trips by Irish Residents,2014,2014,224,Own holiday home,02,Outbound,Thousand,123
+HTA05C1,Number of Trips by Irish Residents,2014,2014,92,Guest house/bed &breakfast,01,Domestic,Thousand,425
+HTA05C1,Number of Trips by Irish Residents,2014,2014,92,Guest house/bed &breakfast,02,Outbound,Thousand,213
+HTA05C1,Number of Trips by Irish Residents,2014,2014,93,Hotel/conference centre,01,Domestic,Thousand,3630
+HTA05C1,Number of Trips by Irish Residents,2014,2014,93,Hotel/conference centre,02,Outbound,Thousand,3095
+HTA05C1,Number of Trips by Irish Residents,2014,2014,94,Self catering/rented house,01,Domestic,Thousand,830
+HTA05C1,Number of Trips by Irish Residents,2014,2014,94,Self catering/rented house,02,Outbound,Thousand,1051
+HTA05C1,Number of Trips by Irish Residents,2014,2014,999,Other,01,Domestic,Thousand,666
+HTA05C1,Number of Trips by Irish Residents,2014,2014,999,Other,02,Outbound,Thousand,545
+HTA05C2,Number of Nights by Irish Residents,2014,2014,-,All types of accommodation,01,Domestic,Thousand,26086
+HTA05C2,Number of Nights by Irish Residents,2014,2014,-,All types of accommodation,02,Outbound,Thousand,53652
+HTA05C2,Number of Nights by Irish Residents,2014,2014,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2014,2014,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2014,2014,222,Friends/relatives,01,Domestic,Thousand,8157
+HTA05C2,Number of Nights by Irish Residents,2014,2014,222,Friends/relatives,02,Outbound,Thousand,14160
+HTA05C2,Number of Nights by Irish Residents,2014,2014,224,Own holiday home,01,Domestic,Thousand,2018
+HTA05C2,Number of Nights by Irish Residents,2014,2014,224,Own holiday home,02,Outbound,Thousand,1698
+HTA05C2,Number of Nights by Irish Residents,2014,2014,92,Guest house/bed &breakfast,01,Domestic,Thousand,1100
+HTA05C2,Number of Nights by Irish Residents,2014,2014,92,Guest house/bed &breakfast,02,Outbound,Thousand,1376
+HTA05C2,Number of Nights by Irish Residents,2014,2014,93,Hotel/conference centre,01,Domestic,Thousand,7207
+HTA05C2,Number of Nights by Irish Residents,2014,2014,93,Hotel/conference centre,02,Outbound,Thousand,18078
+HTA05C2,Number of Nights by Irish Residents,2014,2014,94,Self catering/rented house,01,Domestic,Thousand,4240
+HTA05C2,Number of Nights by Irish Residents,2014,2014,94,Self catering/rented house,02,Outbound,Thousand,11720
+HTA05C2,Number of Nights by Irish Residents,2014,2014,999,Other,01,Domestic,Thousand,3364
+HTA05C2,Number of Nights by Irish Residents,2014,2014,999,Other,02,Outbound,Thousand,6621
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,-,All types of accommodation,01,Domestic,Nights per Trip,2.9
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,-,All types of accommodation,02,Outbound,Nights per Trip,8
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,222,Friends/relatives,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,222,Friends/relatives,02,Outbound,Nights per Trip,8.6
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,224,Own holiday home,01,Domestic,Nights per Trip,4.5
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,224,Own holiday home,02,Outbound,Nights per Trip,13.8
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.4
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,93,Hotel/conference centre,01,Domestic,Nights per Trip,2
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.8
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,94,Self catering/rented house,01,Domestic,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,94,Self catering/rented house,02,Outbound,Nights per Trip,11.1
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,999,Other,01,Domestic,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2014,2014,999,Other,02,Outbound,Nights per Trip,12.1
+HTA05C1,Number of Trips by Irish Residents,2015,2015,-,All types of accommodation,01,Domestic,Thousand,9125
+HTA05C1,Number of Trips by Irish Residents,2015,2015,-,All types of accommodation,02,Outbound,Thousand,7094
+HTA05C1,Number of Trips by Irish Residents,2015,2015,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2015,2015,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2015,2015,222,Friends/relatives,01,Domestic,Thousand,3011
+HTA05C1,Number of Trips by Irish Residents,2015,2015,222,Friends/relatives,02,Outbound,Thousand,1680
+HTA05C1,Number of Trips by Irish Residents,2015,2015,224,Own holiday home,01,Domestic,Thousand,544
+HTA05C1,Number of Trips by Irish Residents,2015,2015,224,Own holiday home,02,Outbound,Thousand,109
+HTA05C1,Number of Trips by Irish Residents,2015,2015,92,Guest house/bed &breakfast,01,Domestic,Thousand,475
+HTA05C1,Number of Trips by Irish Residents,2015,2015,92,Guest house/bed &breakfast,02,Outbound,Thousand,144
+HTA05C1,Number of Trips by Irish Residents,2015,2015,93,Hotel/conference centre,01,Domestic,Thousand,3704
+HTA05C1,Number of Trips by Irish Residents,2015,2015,93,Hotel/conference centre,02,Outbound,Thousand,3367
+HTA05C1,Number of Trips by Irish Residents,2015,2015,94,Self catering/rented house,01,Domestic,Thousand,827
+HTA05C1,Number of Trips by Irish Residents,2015,2015,94,Self catering/rented house,02,Outbound,Thousand,1211
+HTA05C1,Number of Trips by Irish Residents,2015,2015,999,Other,01,Domestic,Thousand,564
+HTA05C1,Number of Trips by Irish Residents,2015,2015,999,Other,02,Outbound,Thousand,583
+HTA05C2,Number of Nights by Irish Residents,2015,2015,-,All types of accommodation,01,Domestic,Thousand,25267
+HTA05C2,Number of Nights by Irish Residents,2015,2015,-,All types of accommodation,02,Outbound,Thousand,53515
+HTA05C2,Number of Nights by Irish Residents,2015,2015,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2015,2015,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2015,2015,222,Friends/relatives,01,Domestic,Thousand,7917
+HTA05C2,Number of Nights by Irish Residents,2015,2015,222,Friends/relatives,02,Outbound,Thousand,14341
+HTA05C2,Number of Nights by Irish Residents,2015,2015,224,Own holiday home,01,Domestic,Thousand,2942
+HTA05C2,Number of Nights by Irish Residents,2015,2015,224,Own holiday home,02,Outbound,Thousand,1390
+HTA05C2,Number of Nights by Irish Residents,2015,2015,92,Guest house/bed &breakfast,01,Domestic,Thousand,1007
+HTA05C2,Number of Nights by Irish Residents,2015,2015,92,Guest house/bed &breakfast,02,Outbound,Thousand,955
+HTA05C2,Number of Nights by Irish Residents,2015,2015,93,Hotel/conference centre,01,Domestic,Thousand,7133
+HTA05C2,Number of Nights by Irish Residents,2015,2015,93,Hotel/conference centre,02,Outbound,Thousand,18192
+HTA05C2,Number of Nights by Irish Residents,2015,2015,94,Self catering/rented house,01,Domestic,Thousand,3896
+HTA05C2,Number of Nights by Irish Residents,2015,2015,94,Self catering/rented house,02,Outbound,Thousand,12151
+HTA05C2,Number of Nights by Irish Residents,2015,2015,999,Other,01,Domestic,Thousand,2372
+HTA05C2,Number of Nights by Irish Residents,2015,2015,999,Other,02,Outbound,Thousand,6486
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,-,All types of accommodation,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,-,All types of accommodation,02,Outbound,Nights per Trip,7.5
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,222,Friends/relatives,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,222,Friends/relatives,02,Outbound,Nights per Trip,8.5
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,224,Own holiday home,01,Domestic,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,224,Own holiday home,02,Outbound,Nights per Trip,12.7
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.1
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.6
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,94,Self catering/rented house,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,94,Self catering/rented house,02,Outbound,Nights per Trip,10
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,999,Other,01,Domestic,Nights per Trip,4.2
+HTA05C3,Average Length of Stay by Irish Residents,2015,2015,999,Other,02,Outbound,Nights per Trip,11.1
+HTA05C1,Number of Trips by Irish Residents,2016,2016,-,All types of accommodation,01,Domestic,Thousand,9359
+HTA05C1,Number of Trips by Irish Residents,2016,2016,-,All types of accommodation,02,Outbound,Thousand,7644
+HTA05C1,Number of Trips by Irish Residents,2016,2016,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2016,2016,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2016,2016,222,Friends/relatives,01,Domestic,Thousand,3256
+HTA05C1,Number of Trips by Irish Residents,2016,2016,222,Friends/relatives,02,Outbound,Thousand,1841
+HTA05C1,Number of Trips by Irish Residents,2016,2016,224,Own holiday home,01,Domestic,Thousand,486
+HTA05C1,Number of Trips by Irish Residents,2016,2016,224,Own holiday home,02,Outbound,Thousand,150
+HTA05C1,Number of Trips by Irish Residents,2016,2016,92,Guest house/bed &breakfast,01,Domestic,Thousand,416
+HTA05C1,Number of Trips by Irish Residents,2016,2016,92,Guest house/bed &breakfast,02,Outbound,Thousand,195
+HTA05C1,Number of Trips by Irish Residents,2016,2016,93,Hotel/conference centre,01,Domestic,Thousand,3666
+HTA05C1,Number of Trips by Irish Residents,2016,2016,93,Hotel/conference centre,02,Outbound,Thousand,3457
+HTA05C1,Number of Trips by Irish Residents,2016,2016,94,Self catering/rented house,01,Domestic,Thousand,864
+HTA05C1,Number of Trips by Irish Residents,2016,2016,94,Self catering/rented house,02,Outbound,Thousand,1525
+HTA05C1,Number of Trips by Irish Residents,2016,2016,999,Other,01,Domestic,Thousand,671
+HTA05C1,Number of Trips by Irish Residents,2016,2016,999,Other,02,Outbound,Thousand,476
+HTA05C2,Number of Nights by Irish Residents,2016,2016,-,All types of accommodation,01,Domestic,Thousand,25589
+HTA05C2,Number of Nights by Irish Residents,2016,2016,-,All types of accommodation,02,Outbound,Thousand,56748
+HTA05C2,Number of Nights by Irish Residents,2016,2016,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2016,2016,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2016,2016,222,Friends/relatives,01,Domestic,Thousand,8543
+HTA05C2,Number of Nights by Irish Residents,2016,2016,222,Friends/relatives,02,Outbound,Thousand,13841
+HTA05C2,Number of Nights by Irish Residents,2016,2016,224,Own holiday home,01,Domestic,Thousand,2196
+HTA05C2,Number of Nights by Irish Residents,2016,2016,224,Own holiday home,02,Outbound,Thousand,2290
+HTA05C2,Number of Nights by Irish Residents,2016,2016,92,Guest house/bed &breakfast,01,Domestic,Thousand,983
+HTA05C2,Number of Nights by Irish Residents,2016,2016,92,Guest house/bed &breakfast,02,Outbound,Thousand,1361
+HTA05C2,Number of Nights by Irish Residents,2016,2016,93,Hotel/conference centre,01,Domestic,Thousand,7143
+HTA05C2,Number of Nights by Irish Residents,2016,2016,93,Hotel/conference centre,02,Outbound,Thousand,18936
+HTA05C2,Number of Nights by Irish Residents,2016,2016,94,Self catering/rented house,01,Domestic,Thousand,3822
+HTA05C2,Number of Nights by Irish Residents,2016,2016,94,Self catering/rented house,02,Outbound,Thousand,14858
+HTA05C2,Number of Nights by Irish Residents,2016,2016,999,Other,01,Domestic,Thousand,2903
+HTA05C2,Number of Nights by Irish Residents,2016,2016,999,Other,02,Outbound,Thousand,5462
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,-,All types of accommodation,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,-,All types of accommodation,02,Outbound,Nights per Trip,7.4
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,222,Friends/relatives,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,222,Friends/relatives,02,Outbound,Nights per Trip,7.5
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,224,Own holiday home,01,Domestic,Nights per Trip,4.5
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,224,Own holiday home,02,Outbound,Nights per Trip,15.3
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,7
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.5
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,94,Self catering/rented house,01,Domestic,Nights per Trip,4.4
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,94,Self catering/rented house,02,Outbound,Nights per Trip,9.7
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,999,Other,01,Domestic,Nights per Trip,4.3
+HTA05C3,Average Length of Stay by Irish Residents,2016,2016,999,Other,02,Outbound,Nights per Trip,11.5
+HTA05C1,Number of Trips by Irish Residents,2017,2017,-,All types of accommodation,01,Domestic,Thousand,9626
+HTA05C1,Number of Trips by Irish Residents,2017,2017,-,All types of accommodation,02,Outbound,Thousand,8171
+HTA05C1,Number of Trips by Irish Residents,2017,2017,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2017,2017,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2017,2017,222,Friends/relatives,01,Domestic,Thousand,3096
+HTA05C1,Number of Trips by Irish Residents,2017,2017,222,Friends/relatives,02,Outbound,Thousand,1747
+HTA05C1,Number of Trips by Irish Residents,2017,2017,224,Own holiday home,01,Domestic,Thousand,462
+HTA05C1,Number of Trips by Irish Residents,2017,2017,224,Own holiday home,02,Outbound,Thousand,165
+HTA05C1,Number of Trips by Irish Residents,2017,2017,92,Guest house/bed &breakfast,01,Domestic,Thousand,511
+HTA05C1,Number of Trips by Irish Residents,2017,2017,92,Guest house/bed &breakfast,02,Outbound,Thousand,258
+HTA05C1,Number of Trips by Irish Residents,2017,2017,93,Hotel/conference centre,01,Domestic,Thousand,3894
+HTA05C1,Number of Trips by Irish Residents,2017,2017,93,Hotel/conference centre,02,Outbound,Thousand,3706
+HTA05C1,Number of Trips by Irish Residents,2017,2017,94,Self catering/rented house,01,Domestic,Thousand,895
+HTA05C1,Number of Trips by Irish Residents,2017,2017,94,Self catering/rented house,02,Outbound,Thousand,1598
+HTA05C1,Number of Trips by Irish Residents,2017,2017,999,Other,01,Domestic,Thousand,768
+HTA05C1,Number of Trips by Irish Residents,2017,2017,999,Other,02,Outbound,Thousand,697
+HTA05C2,Number of Nights by Irish Residents,2017,2017,-,All types of accommodation,01,Domestic,Thousand,25539
+HTA05C2,Number of Nights by Irish Residents,2017,2017,-,All types of accommodation,02,Outbound,Thousand,57698
+HTA05C2,Number of Nights by Irish Residents,2017,2017,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2017,2017,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2017,2017,222,Friends/relatives,01,Domestic,Thousand,8305
+HTA05C2,Number of Nights by Irish Residents,2017,2017,222,Friends/relatives,02,Outbound,Thousand,12558
+HTA05C2,Number of Nights by Irish Residents,2017,2017,224,Own holiday home,01,Domestic,Thousand,1716
+HTA05C2,Number of Nights by Irish Residents,2017,2017,224,Own holiday home,02,Outbound,Thousand,1525
+HTA05C2,Number of Nights by Irish Residents,2017,2017,92,Guest house/bed &breakfast,01,Domestic,Thousand,1139
+HTA05C2,Number of Nights by Irish Residents,2017,2017,92,Guest house/bed &breakfast,02,Outbound,Thousand,1598
+HTA05C2,Number of Nights by Irish Residents,2017,2017,93,Hotel/conference centre,01,Domestic,Thousand,7228
+HTA05C2,Number of Nights by Irish Residents,2017,2017,93,Hotel/conference centre,02,Outbound,Thousand,19439
+HTA05C2,Number of Nights by Irish Residents,2017,2017,94,Self catering/rented house,01,Domestic,Thousand,3952
+HTA05C2,Number of Nights by Irish Residents,2017,2017,94,Self catering/rented house,02,Outbound,Thousand,15324
+HTA05C2,Number of Nights by Irish Residents,2017,2017,999,Other,01,Domestic,Thousand,3198
+HTA05C2,Number of Nights by Irish Residents,2017,2017,999,Other,02,Outbound,Thousand,7252
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,-,All types of accommodation,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,-,All types of accommodation,02,Outbound,Nights per Trip,7.1
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,222,Friends/relatives,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,222,Friends/relatives,02,Outbound,Nights per Trip,7.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,224,Own holiday home,01,Domestic,Nights per Trip,3.7
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,224,Own holiday home,02,Outbound,Nights per Trip,9.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,94,Self catering/rented house,01,Domestic,Nights per Trip,4.4
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,94,Self catering/rented house,02,Outbound,Nights per Trip,9.6
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,999,Other,01,Domestic,Nights per Trip,4.2
+HTA05C3,Average Length of Stay by Irish Residents,2017,2017,999,Other,02,Outbound,Nights per Trip,10.4
+HTA05C1,Number of Trips by Irish Residents,2018,2018,-,All types of accommodation,01,Domestic,Thousand,10919
+HTA05C1,Number of Trips by Irish Residents,2018,2018,-,All types of accommodation,02,Outbound,Thousand,8643
+HTA05C1,Number of Trips by Irish Residents,2018,2018,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2018,2018,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2018,2018,222,Friends/relatives,01,Domestic,Thousand,3825
+HTA05C1,Number of Trips by Irish Residents,2018,2018,222,Friends/relatives,02,Outbound,Thousand,1931
+HTA05C1,Number of Trips by Irish Residents,2018,2018,224,Own holiday home,01,Domestic,Thousand,704
+HTA05C1,Number of Trips by Irish Residents,2018,2018,224,Own holiday home,02,Outbound,Thousand,167
+HTA05C1,Number of Trips by Irish Residents,2018,2018,92,Guest house/bed &breakfast,01,Domestic,Thousand,465
+HTA05C1,Number of Trips by Irish Residents,2018,2018,92,Guest house/bed &breakfast,02,Outbound,Thousand,254
+HTA05C1,Number of Trips by Irish Residents,2018,2018,93,Hotel/conference centre,01,Domestic,Thousand,4226
+HTA05C1,Number of Trips by Irish Residents,2018,2018,93,Hotel/conference centre,02,Outbound,Thousand,4201
+HTA05C1,Number of Trips by Irish Residents,2018,2018,94,Self catering/rented house,01,Domestic,Thousand,853
+HTA05C1,Number of Trips by Irish Residents,2018,2018,94,Self catering/rented house,02,Outbound,Thousand,1426
+HTA05C1,Number of Trips by Irish Residents,2018,2018,999,Other,01,Domestic,Thousand,845
+HTA05C1,Number of Trips by Irish Residents,2018,2018,999,Other,02,Outbound,Thousand,663
+HTA05C2,Number of Nights by Irish Residents,2018,2018,-,All types of accommodation,01,Domestic,Thousand,28393
+HTA05C2,Number of Nights by Irish Residents,2018,2018,-,All types of accommodation,02,Outbound,Thousand,60623
+HTA05C2,Number of Nights by Irish Residents,2018,2018,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2018,2018,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2018,2018,222,Friends/relatives,01,Domestic,Thousand,9459
+HTA05C2,Number of Nights by Irish Residents,2018,2018,222,Friends/relatives,02,Outbound,Thousand,14695
+HTA05C2,Number of Nights by Irish Residents,2018,2018,224,Own holiday home,01,Domestic,Thousand,3741
+HTA05C2,Number of Nights by Irish Residents,2018,2018,224,Own holiday home,02,Outbound,Thousand,2332
+HTA05C2,Number of Nights by Irish Residents,2018,2018,92,Guest house/bed &breakfast,01,Domestic,Thousand,983
+HTA05C2,Number of Nights by Irish Residents,2018,2018,92,Guest house/bed &breakfast,02,Outbound,Thousand,1487
+HTA05C2,Number of Nights by Irish Residents,2018,2018,93,Hotel/conference centre,01,Domestic,Thousand,7837
+HTA05C2,Number of Nights by Irish Residents,2018,2018,93,Hotel/conference centre,02,Outbound,Thousand,22257
+HTA05C2,Number of Nights by Irish Residents,2018,2018,94,Self catering/rented house,01,Domestic,Thousand,3537
+HTA05C2,Number of Nights by Irish Residents,2018,2018,94,Self catering/rented house,02,Outbound,Thousand,13046
+HTA05C2,Number of Nights by Irish Residents,2018,2018,999,Other,01,Domestic,Thousand,2835
+HTA05C2,Number of Nights by Irish Residents,2018,2018,999,Other,02,Outbound,Thousand,6806
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,-,All types of accommodation,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,-,All types of accommodation,02,Outbound,Nights per Trip,7
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,222,Friends/relatives,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,222,Friends/relatives,02,Outbound,Nights per Trip,7.6
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,224,Own holiday home,01,Domestic,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,224,Own holiday home,02,Outbound,Nights per Trip,14
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.1
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,94,Self catering/rented house,01,Domestic,Nights per Trip,4.1
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,94,Self catering/rented house,02,Outbound,Nights per Trip,9.1
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,999,Other,01,Domestic,Nights per Trip,3.4
+HTA05C3,Average Length of Stay by Irish Residents,2018,2018,999,Other,02,Outbound,Nights per Trip,10.3
+HTA05C1,Number of Trips by Irish Residents,2019,2019,-,All types of accommodation,01,Domestic,Thousand,11621
+HTA05C1,Number of Trips by Irish Residents,2019,2019,-,All types of accommodation,02,Outbound,Thousand,9350
+HTA05C1,Number of Trips by Irish Residents,2019,2019,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2019,2019,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2019,2019,222,Friends/relatives,01,Domestic,Thousand,4074
+HTA05C1,Number of Trips by Irish Residents,2019,2019,222,Friends/relatives,02,Outbound,Thousand,1895
+HTA05C1,Number of Trips by Irish Residents,2019,2019,224,Own holiday home,01,Domestic,Thousand,618
+HTA05C1,Number of Trips by Irish Residents,2019,2019,224,Own holiday home,02,Outbound,Thousand,167
+HTA05C1,Number of Trips by Irish Residents,2019,2019,92,Guest house/bed &breakfast,01,Domestic,Thousand,560
+HTA05C1,Number of Trips by Irish Residents,2019,2019,92,Guest house/bed &breakfast,02,Outbound,Thousand,252
+HTA05C1,Number of Trips by Irish Residents,2019,2019,93,Hotel/conference centre,01,Domestic,Thousand,4553
+HTA05C1,Number of Trips by Irish Residents,2019,2019,93,Hotel/conference centre,02,Outbound,Thousand,4387
+HTA05C1,Number of Trips by Irish Residents,2019,2019,94,Self catering/rented house,01,Domestic,Thousand,900
+HTA05C1,Number of Trips by Irish Residents,2019,2019,94,Self catering/rented house,02,Outbound,Thousand,1926
+HTA05C1,Number of Trips by Irish Residents,2019,2019,999,Other,01,Domestic,Thousand,916
+HTA05C1,Number of Trips by Irish Residents,2019,2019,999,Other,02,Outbound,Thousand,724
+HTA05C2,Number of Nights by Irish Residents,2019,2019,-,All types of accommodation,01,Domestic,Thousand,29469
+HTA05C2,Number of Nights by Irish Residents,2019,2019,-,All types of accommodation,02,Outbound,Thousand,66927
+HTA05C2,Number of Nights by Irish Residents,2019,2019,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2019,2019,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2019,2019,222,Friends/relatives,01,Domestic,Thousand,10156
+HTA05C2,Number of Nights by Irish Residents,2019,2019,222,Friends/relatives,02,Outbound,Thousand,14634
+HTA05C2,Number of Nights by Irish Residents,2019,2019,224,Own holiday home,01,Domestic,Thousand,2882
+HTA05C2,Number of Nights by Irish Residents,2019,2019,224,Own holiday home,02,Outbound,Thousand,2089
+HTA05C2,Number of Nights by Irish Residents,2019,2019,92,Guest house/bed &breakfast,01,Domestic,Thousand,1265
+HTA05C2,Number of Nights by Irish Residents,2019,2019,92,Guest house/bed &breakfast,02,Outbound,Thousand,1501
+HTA05C2,Number of Nights by Irish Residents,2019,2019,93,Hotel/conference centre,01,Domestic,Thousand,8297
+HTA05C2,Number of Nights by Irish Residents,2019,2019,93,Hotel/conference centre,02,Outbound,Thousand,23295
+HTA05C2,Number of Nights by Irish Residents,2019,2019,94,Self catering/rented house,01,Domestic,Thousand,3503
+HTA05C2,Number of Nights by Irish Residents,2019,2019,94,Self catering/rented house,02,Outbound,Thousand,16616
+HTA05C2,Number of Nights by Irish Residents,2019,2019,999,Other,01,Domestic,Thousand,3366
+HTA05C2,Number of Nights by Irish Residents,2019,2019,999,Other,02,Outbound,Thousand,8791
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,-,All types of accommodation,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,-,All types of accommodation,02,Outbound,Nights per Trip,7.2
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,222,Friends/relatives,01,Domestic,Nights per Trip,2.5
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,222,Friends/relatives,02,Outbound,Nights per Trip,7.7
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,224,Own holiday home,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,224,Own holiday home,02,Outbound,Nights per Trip,12.5
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.8
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.3
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,94,Self catering/rented house,01,Domestic,Nights per Trip,3.9
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,94,Self catering/rented house,02,Outbound,Nights per Trip,8.6
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,999,Other,01,Domestic,Nights per Trip,3.7
+HTA05C3,Average Length of Stay by Irish Residents,2019,2019,999,Other,02,Outbound,Nights per Trip,12.1
+HTA05C1,Number of Trips by Irish Residents,2020,2020,-,All types of accommodation,01,Domestic,Thousand,7721
+HTA05C1,Number of Trips by Irish Residents,2020,2020,-,All types of accommodation,02,Outbound,Thousand,2365
+HTA05C1,Number of Trips by Irish Residents,2020,2020,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,222,Friends/relatives,01,Domestic,Thousand,2841
+HTA05C1,Number of Trips by Irish Residents,2020,2020,222,Friends/relatives,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,224,Own holiday home,01,Domestic,Thousand,475
+HTA05C1,Number of Trips by Irish Residents,2020,2020,224,Own holiday home,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,92,Guest house/bed &breakfast,01,Domestic,Thousand,341
+HTA05C1,Number of Trips by Irish Residents,2020,2020,92,Guest house/bed &breakfast,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,93,Hotel/conference centre,01,Domestic,Thousand,2623
+HTA05C1,Number of Trips by Irish Residents,2020,2020,93,Hotel/conference centre,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,94,Self catering/rented house,01,Domestic,Thousand,949
+HTA05C1,Number of Trips by Irish Residents,2020,2020,94,Self catering/rented house,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2020,2020,999,Other,01,Domestic,Thousand,493
+HTA05C1,Number of Trips by Irish Residents,2020,2020,999,Other,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,-,All types of accommodation,01,Domestic,Thousand,23518
+HTA05C2,Number of Nights by Irish Residents,2020,2020,-,All types of accommodation,02,Outbound,Thousand,15597
+HTA05C2,Number of Nights by Irish Residents,2020,2020,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,222,Friends/relatives,01,Domestic,Thousand,8769
+HTA05C2,Number of Nights by Irish Residents,2020,2020,222,Friends/relatives,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,224,Own holiday home,01,Domestic,Thousand,2212
+HTA05C2,Number of Nights by Irish Residents,2020,2020,224,Own holiday home,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,92,Guest house/bed &breakfast,01,Domestic,Thousand,935
+HTA05C2,Number of Nights by Irish Residents,2020,2020,92,Guest house/bed &breakfast,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,93,Hotel/conference centre,01,Domestic,Thousand,5427
+HTA05C2,Number of Nights by Irish Residents,2020,2020,93,Hotel/conference centre,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,94,Self catering/rented house,01,Domestic,Thousand,4531
+HTA05C2,Number of Nights by Irish Residents,2020,2020,94,Self catering/rented house,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2020,2020,999,Other,01,Domestic,Thousand,1643
+HTA05C2,Number of Nights by Irish Residents,2020,2020,999,Other,02,Outbound,Thousand,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,-,All types of accommodation,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,-,All types of accommodation,02,Outbound,Nights per Trip,6.6
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,222,Friends/relatives,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,222,Friends/relatives,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,224,Own holiday home,01,Domestic,Nights per Trip,4.7
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,224,Own holiday home,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.7
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.1
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,93,Hotel/conference centre,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,94,Self catering/rented house,01,Domestic,Nights per Trip,4.8
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,94,Self catering/rented house,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,999,Other,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2020,2020,999,Other,02,Outbound,Nights per Trip,NA
+HTA05C1,Number of Trips by Irish Residents,2021,2021,-,All types of accommodation,01,Domestic,Thousand,5663
+HTA05C1,Number of Trips by Irish Residents,2021,2021,-,All types of accommodation,02,Outbound,Thousand,2276
+HTA05C1,Number of Trips by Irish Residents,2021,2021,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2021,2021,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2021,2021,222,Friends/relatives,01,Domestic,Thousand,2101
+HTA05C1,Number of Trips by Irish Residents,2021,2021,222,Friends/relatives,02,Outbound,Thousand,800
+HTA05C1,Number of Trips by Irish Residents,2021,2021,224,Own holiday home,01,Domestic,Thousand,324
+HTA05C1,Number of Trips by Irish Residents,2021,2021,224,Own holiday home,02,Outbound,Thousand,73
+HTA05C1,Number of Trips by Irish Residents,2021,2021,92,Guest house/bed &breakfast,01,Domestic,Thousand,213
+HTA05C1,Number of Trips by Irish Residents,2021,2021,92,Guest house/bed &breakfast,02,Outbound,Thousand,72
+HTA05C1,Number of Trips by Irish Residents,2021,2021,93,Hotel/conference centre,01,Domestic,Thousand,1824
+HTA05C1,Number of Trips by Irish Residents,2021,2021,93,Hotel/conference centre,02,Outbound,Thousand,940
+HTA05C1,Number of Trips by Irish Residents,2021,2021,94,Self catering/rented house,01,Domestic,Thousand,660
+HTA05C1,Number of Trips by Irish Residents,2021,2021,94,Self catering/rented house,02,Outbound,Thousand,276
+HTA05C1,Number of Trips by Irish Residents,2021,2021,999,Other,01,Domestic,Thousand,541
+HTA05C1,Number of Trips by Irish Residents,2021,2021,999,Other,02,Outbound,Thousand,116
+HTA05C2,Number of Nights by Irish Residents,2021,2021,-,All types of accommodation,01,Domestic,Thousand,17886
+HTA05C2,Number of Nights by Irish Residents,2021,2021,-,All types of accommodation,02,Outbound,Thousand,17443
+HTA05C2,Number of Nights by Irish Residents,2021,2021,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2021,2021,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2021,2021,222,Friends/relatives,01,Domestic,Thousand,6464
+HTA05C2,Number of Nights by Irish Residents,2021,2021,222,Friends/relatives,02,Outbound,Thousand,7694
+HTA05C2,Number of Nights by Irish Residents,2021,2021,224,Own holiday home,01,Domestic,Thousand,1259
+HTA05C2,Number of Nights by Irish Residents,2021,2021,224,Own holiday home,02,Outbound,Thousand,1019
+HTA05C2,Number of Nights by Irish Residents,2021,2021,92,Guest house/bed &breakfast,01,Domestic,Thousand,641
+HTA05C2,Number of Nights by Irish Residents,2021,2021,92,Guest house/bed &breakfast,02,Outbound,Thousand,468
+HTA05C2,Number of Nights by Irish Residents,2021,2021,93,Hotel/conference centre,01,Domestic,Thousand,4094
+HTA05C2,Number of Nights by Irish Residents,2021,2021,93,Hotel/conference centre,02,Outbound,Thousand,4836
+HTA05C2,Number of Nights by Irish Residents,2021,2021,94,Self catering/rented house,01,Domestic,Thousand,3667
+HTA05C2,Number of Nights by Irish Residents,2021,2021,94,Self catering/rented house,02,Outbound,Thousand,2566
+HTA05C2,Number of Nights by Irish Residents,2021,2021,999,Other,01,Domestic,Thousand,1761
+HTA05C2,Number of Nights by Irish Residents,2021,2021,999,Other,02,Outbound,Thousand,860
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,-,All types of accommodation,01,Domestic,Nights per Trip,3.2
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,-,All types of accommodation,02,Outbound,Nights per Trip,7.7
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,222,Friends/relatives,01,Domestic,Nights per Trip,3.1
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,222,Friends/relatives,02,Outbound,Nights per Trip,9.6
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,224,Own holiday home,01,Domestic,Nights per Trip,3.9
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,224,Own holiday home,02,Outbound,Nights per Trip,13.9
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.5
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,93,Hotel/conference centre,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,94,Self catering/rented house,01,Domestic,Nights per Trip,5.6
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,94,Self catering/rented house,02,Outbound,Nights per Trip,9.3
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,999,Other,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2021,2021,999,Other,02,Outbound,Nights per Trip,7.4
+HTA05C1,Number of Trips by Irish Residents,2022,2022,-,All types of accommodation,01,Domestic,Thousand,13274
+HTA05C1,Number of Trips by Irish Residents,2022,2022,-,All types of accommodation,02,Outbound,Thousand,8546
+HTA05C1,Number of Trips by Irish Residents,2022,2022,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2022,2022,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2022,2022,222,Friends/relatives,01,Domestic,Thousand,4856
+HTA05C1,Number of Trips by Irish Residents,2022,2022,222,Friends/relatives,02,Outbound,Thousand,2085
+HTA05C1,Number of Trips by Irish Residents,2022,2022,224,Own holiday home,01,Domestic,Thousand,799
+HTA05C1,Number of Trips by Irish Residents,2022,2022,224,Own holiday home,02,Outbound,Thousand,241
+HTA05C1,Number of Trips by Irish Residents,2022,2022,92,Guest house/bed &breakfast,01,Domestic,Thousand,697
+HTA05C1,Number of Trips by Irish Residents,2022,2022,92,Guest house/bed &breakfast,02,Outbound,Thousand,391
+HTA05C1,Number of Trips by Irish Residents,2022,2022,93,Hotel/conference centre,01,Domestic,Thousand,4490
+HTA05C1,Number of Trips by Irish Residents,2022,2022,93,Hotel/conference centre,02,Outbound,Thousand,3831
+HTA05C1,Number of Trips by Irish Residents,2022,2022,94,Self catering/rented house,01,Domestic,Thousand,1354
+HTA05C1,Number of Trips by Irish Residents,2022,2022,94,Self catering/rented house,02,Outbound,Thousand,1502
+HTA05C1,Number of Trips by Irish Residents,2022,2022,999,Other,01,Domestic,Thousand,1078
+HTA05C1,Number of Trips by Irish Residents,2022,2022,999,Other,02,Outbound,Thousand,496
+HTA05C2,Number of Nights by Irish Residents,2022,2022,-,All types of accommodation,01,Domestic,Thousand,34236
+HTA05C2,Number of Nights by Irish Residents,2022,2022,-,All types of accommodation,02,Outbound,Thousand,61205
+HTA05C2,Number of Nights by Irish Residents,2022,2022,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2022,2022,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2022,2022,222,Friends/relatives,01,Domestic,Thousand,11600
+HTA05C2,Number of Nights by Irish Residents,2022,2022,222,Friends/relatives,02,Outbound,Thousand,16194
+HTA05C2,Number of Nights by Irish Residents,2022,2022,224,Own holiday home,01,Domestic,Thousand,3203
+HTA05C2,Number of Nights by Irish Residents,2022,2022,224,Own holiday home,02,Outbound,Thousand,4954
+HTA05C2,Number of Nights by Irish Residents,2022,2022,92,Guest house/bed &breakfast,01,Domestic,Thousand,1680
+HTA05C2,Number of Nights by Irish Residents,2022,2022,92,Guest house/bed &breakfast,02,Outbound,Thousand,2352
+HTA05C2,Number of Nights by Irish Residents,2022,2022,93,Hotel/conference centre,01,Domestic,Thousand,8313
+HTA05C2,Number of Nights by Irish Residents,2022,2022,93,Hotel/conference centre,02,Outbound,Thousand,20717
+HTA05C2,Number of Nights by Irish Residents,2022,2022,94,Self catering/rented house,01,Domestic,Thousand,6234
+HTA05C2,Number of Nights by Irish Residents,2022,2022,94,Self catering/rented house,02,Outbound,Thousand,11870
+HTA05C2,Number of Nights by Irish Residents,2022,2022,999,Other,01,Domestic,Thousand,3205
+HTA05C2,Number of Nights by Irish Residents,2022,2022,999,Other,02,Outbound,Thousand,5118
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,-,All types of accommodation,01,Domestic,Nights per Trip,2.6
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,-,All types of accommodation,02,Outbound,Nights per Trip,7.2
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,222,Friends/relatives,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,222,Friends/relatives,02,Outbound,Nights per Trip,7.8
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,224,Own holiday home,01,Domestic,Nights per Trip,4
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,224,Own holiday home,02,Outbound,Nights per Trip,20.5
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,93,Hotel/conference centre,02,Outbound,Nights per Trip,5.4
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,94,Self catering/rented house,01,Domestic,Nights per Trip,4.6
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,94,Self catering/rented house,02,Outbound,Nights per Trip,7.9
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,999,Other,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2022,2022,999,Other,02,Outbound,Nights per Trip,10.3
+HTA05C1,Number of Trips by Irish Residents,2023,2023,-,All types of accommodation,01,Domestic,Thousand,14309
+HTA05C1,Number of Trips by Irish Residents,2023,2023,-,All types of accommodation,02,Outbound,Thousand,12633
+HTA05C1,Number of Trips by Irish Residents,2023,2023,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2023,2023,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2023,2023,222,Friends/relatives,01,Domestic,Thousand,5912
+HTA05C1,Number of Trips by Irish Residents,2023,2023,222,Friends/relatives,02,Outbound,Thousand,3110
+HTA05C1,Number of Trips by Irish Residents,2023,2023,224,Own holiday home,01,Domestic,Thousand,722
+HTA05C1,Number of Trips by Irish Residents,2023,2023,224,Own holiday home,02,Outbound,Thousand,281
+HTA05C1,Number of Trips by Irish Residents,2023,2023,92,Guest house/bed &breakfast,01,Domestic,Thousand,685
+HTA05C1,Number of Trips by Irish Residents,2023,2023,92,Guest house/bed &breakfast,02,Outbound,Thousand,549
+HTA05C1,Number of Trips by Irish Residents,2023,2023,93,Hotel/conference centre,01,Domestic,Thousand,5115
+HTA05C1,Number of Trips by Irish Residents,2023,2023,93,Hotel/conference centre,02,Outbound,Thousand,6109
+HTA05C1,Number of Trips by Irish Residents,2023,2023,94,Self catering/rented house,01,Domestic,Thousand,1194
+HTA05C1,Number of Trips by Irish Residents,2023,2023,94,Self catering/rented house,02,Outbound,Thousand,2037
+HTA05C1,Number of Trips by Irish Residents,2023,2023,999,Other,01,Domestic,Thousand,681
+HTA05C1,Number of Trips by Irish Residents,2023,2023,999,Other,02,Outbound,Thousand,549
+HTA05C2,Number of Nights by Irish Residents,2023,2023,-,All types of accommodation,01,Domestic,Thousand,33966
+HTA05C2,Number of Nights by Irish Residents,2023,2023,-,All types of accommodation,02,Outbound,Thousand,79923
+HTA05C2,Number of Nights by Irish Residents,2023,2023,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2023,2023,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2023,2023,222,Friends/relatives,01,Domestic,Thousand,14415
+HTA05C2,Number of Nights by Irish Residents,2023,2023,222,Friends/relatives,02,Outbound,Thousand,22565
+HTA05C2,Number of Nights by Irish Residents,2023,2023,224,Own holiday home,01,Domestic,Thousand,2351
+HTA05C2,Number of Nights by Irish Residents,2023,2023,224,Own holiday home,02,Outbound,Thousand,2623
+HTA05C2,Number of Nights by Irish Residents,2023,2023,92,Guest house/bed &breakfast,01,Domestic,Thousand,1349
+HTA05C2,Number of Nights by Irish Residents,2023,2023,92,Guest house/bed &breakfast,02,Outbound,Thousand,3367
+HTA05C2,Number of Nights by Irish Residents,2023,2023,93,Hotel/conference centre,01,Domestic,Thousand,8872
+HTA05C2,Number of Nights by Irish Residents,2023,2023,93,Hotel/conference centre,02,Outbound,Thousand,29918
+HTA05C2,Number of Nights by Irish Residents,2023,2023,94,Self catering/rented house,01,Domestic,Thousand,4775
+HTA05C2,Number of Nights by Irish Residents,2023,2023,94,Self catering/rented house,02,Outbound,Thousand,17020
+HTA05C2,Number of Nights by Irish Residents,2023,2023,999,Other,01,Domestic,Thousand,2203
+HTA05C2,Number of Nights by Irish Residents,2023,2023,999,Other,02,Outbound,Thousand,4429
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,-,All types of accommodation,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,-,All types of accommodation,02,Outbound,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,222,Friends/relatives,01,Domestic,Nights per Trip,2.4
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,222,Friends/relatives,02,Outbound,Nights per Trip,7.3
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,224,Own holiday home,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,224,Own holiday home,02,Outbound,Nights per Trip,9.3
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,6.1
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.7
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,93,Hotel/conference centre,02,Outbound,Nights per Trip,4.9
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,94,Self catering/rented house,01,Domestic,Nights per Trip,4
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,94,Self catering/rented house,02,Outbound,Nights per Trip,8.4
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,999,Other,01,Domestic,Nights per Trip,3.2
+HTA05C3,Average Length of Stay by Irish Residents,2023,2023,999,Other,02,Outbound,Nights per Trip,8.1
+HTA05C1,Number of Trips by Irish Residents,2024,2024,-,All types of accommodation,01,Domestic,Thousand,16571
+HTA05C1,Number of Trips by Irish Residents,2024,2024,-,All types of accommodation,02,Outbound,Thousand,13680
+HTA05C1,Number of Trips by Irish Residents,2024,2024,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2024,2024,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2024,2024,222,Friends/relatives,01,Domestic,Thousand,6870
+HTA05C1,Number of Trips by Irish Residents,2024,2024,222,Friends/relatives,02,Outbound,Thousand,3304
+HTA05C1,Number of Trips by Irish Residents,2024,2024,224,Own holiday home,01,Domestic,Thousand,817
+HTA05C1,Number of Trips by Irish Residents,2024,2024,224,Own holiday home,02,Outbound,Thousand,312
+HTA05C1,Number of Trips by Irish Residents,2024,2024,92,Guest house/bed &breakfast,01,Domestic,Thousand,749
+HTA05C1,Number of Trips by Irish Residents,2024,2024,92,Guest house/bed &breakfast,02,Outbound,Thousand,347
+HTA05C1,Number of Trips by Irish Residents,2024,2024,93,Hotel/conference centre,01,Domestic,Thousand,5905
+HTA05C1,Number of Trips by Irish Residents,2024,2024,93,Hotel/conference centre,02,Outbound,Thousand,6221
+HTA05C1,Number of Trips by Irish Residents,2024,2024,94,Self catering/rented house,01,Domestic,Thousand,1275
+HTA05C1,Number of Trips by Irish Residents,2024,2024,94,Self catering/rented house,02,Outbound,Thousand,2645
+HTA05C1,Number of Trips by Irish Residents,2024,2024,999,Other,01,Domestic,Thousand,955
+HTA05C1,Number of Trips by Irish Residents,2024,2024,999,Other,02,Outbound,Thousand,851
+HTA05C2,Number of Nights by Irish Residents,2024,2024,-,All types of accommodation,01,Domestic,Thousand,36747
+HTA05C2,Number of Nights by Irish Residents,2024,2024,-,All types of accommodation,02,Outbound,Thousand,81204
+HTA05C2,Number of Nights by Irish Residents,2024,2024,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2024,2024,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2024,2024,222,Friends/relatives,01,Domestic,Thousand,15764
+HTA05C2,Number of Nights by Irish Residents,2024,2024,222,Friends/relatives,02,Outbound,Thousand,20571
+HTA05C2,Number of Nights by Irish Residents,2024,2024,224,Own holiday home,01,Domestic,Thousand,2468
+HTA05C2,Number of Nights by Irish Residents,2024,2024,224,Own holiday home,02,Outbound,Thousand,2646
+HTA05C2,Number of Nights by Irish Residents,2024,2024,92,Guest house/bed &breakfast,01,Domestic,Thousand,1453
+HTA05C2,Number of Nights by Irish Residents,2024,2024,92,Guest house/bed &breakfast,02,Outbound,Thousand,1564
+HTA05C2,Number of Nights by Irish Residents,2024,2024,93,Hotel/conference centre,01,Domestic,Thousand,9728
+HTA05C2,Number of Nights by Irish Residents,2024,2024,93,Hotel/conference centre,02,Outbound,Thousand,29790
+HTA05C2,Number of Nights by Irish Residents,2024,2024,94,Self catering/rented house,01,Domestic,Thousand,4185
+HTA05C2,Number of Nights by Irish Residents,2024,2024,94,Self catering/rented house,02,Outbound,Thousand,19436
+HTA05C2,Number of Nights by Irish Residents,2024,2024,999,Other,01,Domestic,Thousand,3149
+HTA05C2,Number of Nights by Irish Residents,2024,2024,999,Other,02,Outbound,Thousand,7198
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,-,All types of accommodation,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,-,All types of accommodation,02,Outbound,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,222,Friends/relatives,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,222,Friends/relatives,02,Outbound,Nights per Trip,6.2
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,224,Own holiday home,01,Domestic,Nights per Trip,3
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,224,Own holiday home,02,Outbound,Nights per Trip,8.5
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,1.9
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,4.5
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.6
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,93,Hotel/conference centre,02,Outbound,Nights per Trip,4.8
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,94,Self catering/rented house,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,94,Self catering/rented house,02,Outbound,Nights per Trip,7.3
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,999,Other,01,Domestic,Nights per Trip,3.3
+HTA05C3,Average Length of Stay by Irish Residents,2024,2024,999,Other,02,Outbound,Nights per Trip,8.5
+HTA05C1,Number of Trips by Irish Residents,2025,2025,-,All types of accommodation,01,Domestic,Thousand,15283
+HTA05C1,Number of Trips by Irish Residents,2025,2025,-,All types of accommodation,02,Outbound,Thousand,15140
+HTA05C1,Number of Trips by Irish Residents,2025,2025,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2025,2025,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C1,Number of Trips by Irish Residents,2025,2025,222,Friends/relatives,01,Domestic,Thousand,5769
+HTA05C1,Number of Trips by Irish Residents,2025,2025,222,Friends/relatives,02,Outbound,Thousand,3640
+HTA05C1,Number of Trips by Irish Residents,2025,2025,224,Own holiday home,01,Domestic,Thousand,687
+HTA05C1,Number of Trips by Irish Residents,2025,2025,224,Own holiday home,02,Outbound,Thousand,266
+HTA05C1,Number of Trips by Irish Residents,2025,2025,92,Guest house/bed &breakfast,01,Domestic,Thousand,833
+HTA05C1,Number of Trips by Irish Residents,2025,2025,92,Guest house/bed &breakfast,02,Outbound,Thousand,519
+HTA05C1,Number of Trips by Irish Residents,2025,2025,93,Hotel/conference centre,01,Domestic,Thousand,5574
+HTA05C1,Number of Trips by Irish Residents,2025,2025,93,Hotel/conference centre,02,Outbound,Thousand,7232
+HTA05C1,Number of Trips by Irish Residents,2025,2025,94,Self catering/rented house,01,Domestic,Thousand,1404
+HTA05C1,Number of Trips by Irish Residents,2025,2025,94,Self catering/rented house,02,Outbound,Thousand,2646
+HTA05C1,Number of Trips by Irish Residents,2025,2025,999,Other,01,Domestic,Thousand,1016
+HTA05C1,Number of Trips by Irish Residents,2025,2025,999,Other,02,Outbound,Thousand,837
+HTA05C2,Number of Nights by Irish Residents,2025,2025,-,All types of accommodation,01,Domestic,Thousand,33435
+HTA05C2,Number of Nights by Irish Residents,2025,2025,-,All types of accommodation,02,Outbound,Thousand,82850
+HTA05C2,Number of Nights by Irish Residents,2025,2025,134,Caravan/camping,01,Domestic,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2025,2025,134,Caravan/camping,02,Outbound,Thousand,NA
+HTA05C2,Number of Nights by Irish Residents,2025,2025,222,Friends/relatives,01,Domestic,Thousand,12435
+HTA05C2,Number of Nights by Irish Residents,2025,2025,222,Friends/relatives,02,Outbound,Thousand,21405
+HTA05C2,Number of Nights by Irish Residents,2025,2025,224,Own holiday home,01,Domestic,Thousand,2625
+HTA05C2,Number of Nights by Irish Residents,2025,2025,224,Own holiday home,02,Outbound,Thousand,2363
+HTA05C2,Number of Nights by Irish Residents,2025,2025,92,Guest house/bed &breakfast,01,Domestic,Thousand,1913
+HTA05C2,Number of Nights by Irish Residents,2025,2025,92,Guest house/bed &breakfast,02,Outbound,Thousand,2641
+HTA05C2,Number of Nights by Irish Residents,2025,2025,93,Hotel/conference centre,01,Domestic,Thousand,8872
+HTA05C2,Number of Nights by Irish Residents,2025,2025,93,Hotel/conference centre,02,Outbound,Thousand,32889
+HTA05C2,Number of Nights by Irish Residents,2025,2025,94,Self catering/rented house,01,Domestic,Thousand,4791
+HTA05C2,Number of Nights by Irish Residents,2025,2025,94,Self catering/rented house,02,Outbound,Thousand,16803
+HTA05C2,Number of Nights by Irish Residents,2025,2025,999,Other,01,Domestic,Thousand,2800
+HTA05C2,Number of Nights by Irish Residents,2025,2025,999,Other,02,Outbound,Thousand,6748
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,-,All types of accommodation,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,-,All types of accommodation,02,Outbound,Nights per Trip,5.5
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,134,Caravan/camping,01,Domestic,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,134,Caravan/camping,02,Outbound,Nights per Trip,NA
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,222,Friends/relatives,01,Domestic,Nights per Trip,2.2
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,222,Friends/relatives,02,Outbound,Nights per Trip,5.9
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,224,Own holiday home,01,Domestic,Nights per Trip,3.8
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,224,Own holiday home,02,Outbound,Nights per Trip,8.9
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,92,Guest house/bed &breakfast,01,Domestic,Nights per Trip,2.3
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,92,Guest house/bed &breakfast,02,Outbound,Nights per Trip,5.1
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,93,Hotel/conference centre,01,Domestic,Nights per Trip,1.6
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,93,Hotel/conference centre,02,Outbound,Nights per Trip,4.5
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,94,Self catering/rented house,01,Domestic,Nights per Trip,3.4
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,94,Self catering/rented house,02,Outbound,Nights per Trip,6.3
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,999,Other,01,Domestic,Nights per Trip,2.8
+HTA05C3,Average Length of Stay by Irish Residents,2025,2025,999,Other,02,Outbound,Nights per Trip,8.1
