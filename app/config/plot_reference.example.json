@@ -1,0 +1,33 @@
+{
+  "charts": {
+    "wide_example": {
+      "title": "Balances",
+      "subtitle": "Wide data; bars are stacked",
+      "format": "wide",
+      "x": "Date",
+      "stack": true,
+      "y_title": "$ million",
+      "tickformat": ",.0f",
+      "prefix": "$",
+      "traces": [
+        { "y": "Deposits", "name": "Deposits", "style": "bar" },
+        { "y": "Loans", "name": "Loans", "style": "bar", "colour": "#0D173F" },
+        { "y": "Rate", "name": "Rate", "style": "line", "axis": "y2" }
+      ],
+      "y2_title": "Percent"
+    },
+    "long_example": {
+      "title": "Population",
+      "subtitle": "Long data; one line per category",
+      "format": "long",
+      "x": "Date",
+      "value": "Value",
+      "series": "Category",
+      "include": ["Total", "Working age"],
+      "style": "line",
+      "stack": false,
+      "y_title": "People",
+      "tickformat": ",.0f"
+    }
+  }
+}
