@@ -16,6 +16,7 @@ server <- function(input, output, session) {
     "hm1",
     "hm2",
     "hm3",
+    "hb3_test",
     "hm4",
     "hm5",
     "hm6",
@@ -55,6 +56,7 @@ server <- function(input, output, session) {
   mod_hm1_server("hm1_main",  selected_tab = tab, activate_on = "hm1")
   mod_hm2_server("hm2_main",  selected_tab = tab, activate_on = "hm2")
   mod_hm3_server("hm3_main",  selected_tab = tab, activate_on = "hm3")
+  mod_hb3_test_server("hb3_test_main", selected_tab = tab, activate_on = "hb3_test")
   mod_hm4_server("hm4_main",  selected_tab = tab, activate_on = "hm4")
   mod_hm5_server("hm5_main",  selected_tab = tab, activate_on = "hm5")
   mod_hm6_server("hm6_main",  selected_tab = tab, activate_on = "hm6")
@@ -78,6 +80,7 @@ server <- function(input, output, session) {
   output$hm1_ui <- renderUI({mod_hm1_ui("hm1_main")})
   output$hm2_ui <- renderUI({mod_hm2_ui("hm2_main")})
   output$hm3_ui <- renderUI({mod_hm3_ui("hm3_main")})
+  output$hb3_test_ui <- renderUI({mod_hb3_test_ui("hb3_test_main")})
   output$hm4_ui <- renderUI({mod_hm4_ui("hm4_main")})
   output$hm5_ui <- renderUI({mod_hm5_ui("hm5_main")})
   output$hm6_ui <- renderUI({mod_hm6_ui("hm6_main")})

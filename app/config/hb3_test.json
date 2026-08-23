@@ -1,0 +1,24 @@
+{
+  "title": "Investment - HM3",
+  "subtitle": "RBNZ: reference-driven plotting test",
+  "format": "wide",
+  "x": "Date",
+  "years": 10,
+  "stack": false,
+  "y_title": "Level",
+  "y2_title": "Percent change",
+  "traces": [
+    { "y": "QBLD.Q.B11N1BZR1.ns", "name": "Residential Building Consents (s.a.)", "style": "line", "axis": "y" },
+    { "y": "QBLD.Q.B11N1BZR1.nsq", "name": "Residential Building Consents (q/q% s.a.)", "style": "line", "axis": "y2" },
+    { "y": "GDE.Q.EI24.RA", "name": "Residential buildings (GDP) (Real $m)", "style": "line", "axis": "y" },
+    { "y": "GDE.Q.EI24.RS", "name": "Residential buildings (GDP) (Real $m s.a.)", "style": "line", "axis": "y" },
+    { "y": "GDE.Q.EI24.rsq", "name": "Residential buildings (GDP) (Real q/q% s.a)", "style": "line", "axis": "y2" },
+    { "y": "GDE.Q.EI24.ray", "name": "Residential buildings (GDP) (Real y/y%)", "style": "line", "axis": "y2" },
+    { "y": "GDE.Q.EI25.RA", "name": "Other fixed assets (GDP) (Real $m)", "style": "line", "axis": "y" },
+    { "y": "GDE.Q.EI25.RS", "name": "Other fixed assets (GDP) (Real $m s.a.)", "style": "line", "axis": "y" },
+    { "y": "GDE.Q.EI25.rsq", "name": "Other fixed assets (GDP) (Real q/q% s.a.)", "style": "line", "axis": "y2" },
+    { "y": "GDE.Q.EI25.ray", "name": "Other fixed assets (GDP) (Real y/y%)", "style": "line", "axis": "y2" },
+    { "y": "GDE.Q.EI23.RA", "name": "Change in inventories (GDP) (Real $m)", "style": "line", "axis": "y" },
+    { "y": "GDE.Q.EI23.RS", "name": "Change in inventories (GDP) (Real $m s.a.)", "style": "line", "axis": "y" }
+  ]
+}

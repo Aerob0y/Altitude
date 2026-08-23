@@ -194,6 +194,7 @@ ui <- fluidPage(
       nav_panel("Inflation", value = "hm1", uiOutput("hm1_ui")),
       nav_panel("Consumption", value = "hm2", uiOutput("hm2_ui")),
       nav_panel("Investment", value = "hm3", uiOutput("hm3_ui")),
+      nav_panel("Investment (reference test)", value = "hb3_test", uiOutput("hb3_test_ui")),
       nav_panel("Investment", value = "hm4", uiOutput("hm4_ui")),
       nav_panel("GDP", value = "hm5", uiOutput("hm5_ui")),
       nav_panel("National Savings", value = "hm6", uiOutput("hm6_ui")),

@@ -8,7 +8,8 @@ utility_files <- c(
   "app/utils/plotting/standards.r",
   "app/utils/shiny/download.r",
   "app/utils/data/data.r",
-  "app/utils/plotting/plotly.r"
+  "app/utils/plotting/plotly.r",
+  "app/utils/plotting/reference_plot.r"
 )
 
 invisible(lapply(
