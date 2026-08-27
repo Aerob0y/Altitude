@@ -1,16 +1,16 @@
-mod_hm8_ui <- function(id) {
+mod_hm8_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hm8_ui loaded")
   ns <- NS(id)
 
   hm8_split <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_2",
     apply_filters = list(Data = c("hm8"))
   )$Class_2
   hm8_split <- hm8_split[!is.na(hm8_split)]
 
   hm8_grouping <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_1",
     apply_filters = list(Data = c("hm8"))
   )$Class_1
@@ -24,7 +24,7 @@ mod_hm8_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm8")
 }
 
-mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -42,7 +42,7 @@ mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = hm8_data(),
         titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_grouping, valid_inputs))))),
         series = filter_series(
-          guide_rbnz,
+          series_guide,
           apply_filters = list(Data = c("hm8"), Class_2 = valid_inputs, Class_1 = input$hm8_grouping)
         ),
         k = "Date"

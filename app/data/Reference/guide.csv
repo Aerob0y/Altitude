@@ -1,34 +1,393 @@
-﻿Data,ID,Name,Group,Class_2,Class_3,Dim,Full Dim,Tick,Prefix
-bond,Lodged Bonds,Lodged Bonds,Bonds,,,n,,",d",
-bond,Active Bonds,Active Bonds,Bonds,,,n,,",d",
-bond,Closed Bonds,Closed Bonds,Bonds,,,n,,",d",
-bond,Median Rent,Median Rent,Rent,,,$,,",d",
-bond,Geometric Mean Rent,Geometric Mean Rent,Rent,,,$,,",d",
-bond,Upper Quartile Rent,Upper Quartile Rent,Rent,,,$,,",d",
-bond,Lower Quartile Rent,Lower Quartile Rent,Rent,,,$,,",d",
-bond,Log Std Dev Weekly Rent,Log Std Dev Weekly Rent,Rent,,,$,,",d",
-hm14,SOE.Q.E100.na,Perception of monetary conditions (net) - End of current quarter,Perception of monetary conditions (net),,,%,Total %,.2f,
-hm14,SOE.Q.E101.na,Perception of monetary conditions (net) - Next quarter,Perception of monetary conditions (net),,,%,Total %,.2f,
-hm14,SOE.Q.E102.na,Perception of monetary conditions (net) - 1 year out,Perception of monetary conditions (net),,,%,Total %,.2f,
-hm14,SOE.Q.E210.na,Annual CPI growth - 1 year out,Annual CPI growth,,,%,%,.2f,
-hm14,SOE.Q.E215.na,Annual CPI growth - 2 years out,Annual CPI growth,,,%,%,.2f,
-hm14,SOE.Q.E220.na,Annual CPI growth - 5 years out,Annual CPI growth,,,%,%,.2f,
-hm14,SOE.Q.E230.na,Annual CPI growth - 10 years out,Annual CPI growth,,,%,%,.2f,
-hm14,SOE.Q.E350.na,Official Cash Rate (OCR) - End of current quarter,Official Cash Rate (OCR),,,%pa,%,.2f,
-hm14,SOE.Q.E351.na,Official Cash Rate (OCR) - 1 year out,Official Cash Rate (OCR),,,%pa,%,.2f,
-hm14,SOE.Q.E353.na,Official Cash Rate (OCR) - 10 years out,Official Cash Rate (OCR),,,%pa,%,.2f,
-hm14,SOE.Q.E356.na,Official Cash Rate (OCR) - 10 year average,Official Cash Rate (OCR),,,%pa,%,.2f,
-hm14,SOE.Q.E310.na,10 year government bond yields - End of current quarter,10 year government bond yields,,,%pa,%,.2f,
-hm14,SOE.Q.E311.na,10 year government bond yields - 1 year out,10 year government bond yields,,,%pa,%,.2f,
-hm14,SOE.Q.E402.ra,Annual GDP growth - 1 year out,Annual GDP growth,,,%,%,.2f,
-hm14,SOE.Q.E403.ra,Annual GDP growth - 2 years out,Annual GDP growth,,,%,%,.2f,
-hm14,SOE.Q.E460.na,Annual hourly wage growth - 1 year out,Annual hourly wage growth,,,%,%,.2f,
-hm14,SOE.Q.E461.na,Annual hourly wage growth - 2 years out,Annual hourly wage growth,,,%,%,.2f,
-hm14,SOE.Q.E470.na,Unemployment rate - 1 year out,Unemployment rate,,,%,Total %,.2f,
-hm14,SOE.Q.E471.na,Unemployment rate - 2 years out,Unemployment rate,,,%,Total %,.2f,
-hm14,SOE.Q.E320.na,US dollar exchange rate - Next quarter,US dollar exchange rate,,,NZD/USD,NZD/USD,.2f,
-hm14,SOE.Q.E321.na,US dollar exchange rate - 1 year out,US dollar exchange rate,,,NZD/USD,NZD/USD,.2f,
-hm14,SOE.Q.E330.na,Australian dollar exchange rate - Next quarter,Australian dollar exchange rate,,,NZD/AUD,NZD/AUD,.2f,
-hm14,SOE.Q.E331.na,Australian dollar exchange rate - 1 year out,Australian dollar exchange rate,,,NZD/AUD,NZD/AUD,.2f,
-hm14,SOE.Q.E480.na,House price index - 1 year out,House price index,,,%,%,.2f,
-hm14,SOE.Q.E481.na,House price index - 2 years out,House price index,,,%,%,.2f,
+Dataset,DatasetColumn,ColumnName,Category_1,Category_2,Level_1_Order,Level_1,Level_2,Series_1,Series_2,Rollup,Dim_Group,Dim_Label,Tick,Prefix,Row,Stack
+bond,Lodged Bonds,Lodged Bonds,Bonds,,1,,,Lodged Bonds,,Sum,n,n,",d",,2,4
+bond,Active Bonds,Active Bonds,Bonds,,2,,,Active Bonds,,Sum,n,n,",d",,3,4
+bond,Closed Bonds,Closed Bonds,Bonds,,3,,,Closed Bonds,,Sum,n,n,",d",,4,4
+bond,Median Rent,Median Rent,Rent,,1,,,Median Rent,,Sum,$,$,",d",,5,9
+bond,Geometric Mean Rent,Geometric Mean Rent,Rent,,2,,,Geometric Mean Rent,,Sum,$,$,",d",,6,9
+bond,Upper Quartile Rent,Upper Quartile Rent,Rent,,3,,,Upper Quartile Rent,,Sum,$,$,",d",,7,9
+bond,Lower Quartile Rent,Lower Quartile Rent,Rent,,4,,,Lower Quartile Rent,,Sum,$,$,",d",,8,9
+bond,Log Std Dev Weekly Rent,Log Std Dev Weekly Rent,Rent,,5,,,Log Std Dev Weekly Rent,,Sum,$,$,",d",,9,9
+hb1,EXRT.DS41.NZB17,17 currency basket,Index,TWI,1,17 currency basket,Index,17 currency basket,,Sum,TWI,Index,.0f,,10,10
+hb1,EXR.DS11.D06,United States dollar,NZD/USD,Exchange rates (quoted per NZ$),1,United States dollar,NZD/USD,United States dollar,,Sum,NZD to $USD,NZD/USD,.2f,$,11,11
+hb1,EXR.DS11.D04,UK pound sterling,NZD/GBP,Exchange rates (quoted per NZ$),1,UK pound sterling,NZD/GBP,UK pound sterling,,Sum,NZD to £GBP,NZD/GBP,.2f,£,12,12
+hb1,EXR.DS11.D01,Australian dollar,NZD/AUD,Exchange rates (quoted per NZ$),1,Australian dollar,NZD/AUD,Australian dollar,,Sum,NZD to $AUD,NZD/AUD,.2f,$,13,13
+hb1,EXR.DS11.D05,Japanese yen,NZD/JPY,Exchange rates (quoted per NZ$),1,Japanese yen,NZD/JPY,Japanese yen,,Sum,NZD to ¥JPY,NZD/JPY,.0f,¥,14,14
+hb1,EXR.DS11.D03,European euro,NZD/EUR,Exchange rates (quoted per NZ$),1,European euro,NZD/EUR,European euro,,Sum,NZD to €EUR,NZD/EUR,.2f,€,15,15
+hb1,EXR.DS11.D02,Canadian dollar,NZD/CAD,Exchange rates (quoted per NZ$),1,Canadian dollar,NZD/CAD,Canadian dollar,,Sum,NZD to $CAD,NZD/CAD,.2f,$,16,16
+hb1,EXR.DS11.D12,South Korean won,NZD/KRW,Exchange rates (quoted per NZ$),1,South Korean won,NZD/KRW,South Korean won,,Sum,NZD to ₩KRW,NZD/KRW,.0f,₩,17,17
+hb1,EXR.DS11.D11,Chinese renminbi,NZD/CNY,Exchange rates (quoted per NZ$),1,Chinese renminbi,NZD/CNY,Chinese renminbi,,Sum,NZD to ¥CNY,NZD/CNY,.2f,¥,18,18
+hb1,EXR.DS11.D14,Malaysian ringgit,NZD/MYR,Exchange rates (quoted per NZ$),1,Malaysian ringgit,NZD/MYR,Malaysian ringgit,,Sum,NZD to RM,NZD/MYR,.2f,RM,19,19
+hb1,EXR.DS11.D08,Hong Kong dollar,NZD/HKD,Exchange rates (quoted per NZ$),1,Hong Kong dollar,NZD/HKD,Hong Kong dollar,,Sum,NZD to $HK,NZD/HKD,.2f,$,20,20
+hb1,EXR.DS11.D13,Indonesian rupiah,NZD/IDR,Exchange rates (quoted per NZ$),1,Indonesian rupiah,NZD/IDR,Indonesian rupiah,,Sum,NZD to p (IDR),NZD/IDR,.0f,p,21,21
+hb1,EXR.DS11.D15,Thai baht,NZD/THB,Exchange rates (quoted per NZ$),1,Thai baht,NZD/THB,Thai baht,,Sum,NZD to B (THB),NZD/THB,.0f,B,22,22
+hb1,EXR.DS11.D09,Singapore dollar,NZD/SGD,Exchange rates (quoted per NZ$),1,Singapore dollar,NZD/SGD,Singapore dollar,,Sum,NZD to $SGD,NZD/SGD,.2f,$,23,23
+hb1,EXR.DS11.D16,New Taiwan dollar,NZD/TWD,Exchange rates (quoted per NZ$),1,New Taiwan dollar,NZD/TWD,New Taiwan dollar,,Sum,NZD to $NT,NZD/TWD,.0f,$,24,24
+hb1,EXR.DS11.D31,Indian rupee,NZD/INR,Exchange rates (quoted per NZ$),1,Indian rupee,NZD/INR,Indian rupee,,Sum,NZD to ₹INR,NZD/INR,.0f,₹,25,25
+hb1,EXR.DS11.D32,Philippine peso,NZD/PHP,Exchange rates (quoted per NZ$),1,Philippine peso,NZD/PHP,Philippine peso,,Sum,NZD to ₱PHP,NZD/PHP,.0f,₱,26,26
+hb1,EXR.DS11.D33,Vietnamese dong,NZD/VND,Exchange rates (quoted per NZ$),1,Vietnamese dong,NZD/VND,Vietnamese dong,,Sum,NZD to ₫VND,NZD/VND,.0f,₫,27,27
+hb1,EXRT.DS41.N,Base June 1979=100,Index Historic,Historical TWI,1,Base June 1979=100,Index,Base June 1979=100,,Sum,TWI (H),Index,.0f,,28,28
+hb2,INM.DP1.N,Official Cash Rate (OCR),OCR,Official Cash Rate (OCR),1,NA,%pa,Official Cash Rate (OCR),,Sum,%,%pa,.1f,,29,29
+hb2,INM.DG101.NZZCF,1 year (bond),Secondary market government bond closing yields,1 year,1,NA,%pa,1 year (bond),,Sum,%,%pa,.1f,,30,30
+hb2,INM.DG102.NZZCF,2 year (bond),Secondary market government bond closing yields,2 year,1,NA,%pa,2 year (bond),,Sum,%,%pa,.1f,,31,31
+hb2,INM.DG105.NZZCF,5 year (bond),Secondary market government bond closing yields,5 year,1,NA,%pa,5 year (bond),,Sum,%,%pa,.1f,,32,32
+hb2,INM.DG110.NZZCF,10 year (bond),Secondary market government bond closing yields,10 year,1,NA,%pa,10 year (bond),,Sum,%,%pa,.1f,,33,33
+hb2,INM.DS01.NZZC,1 year (swap),Swap rates close,1 year,1,NA,%pa,1 year (swap),,Sum,%,%pa,.1f,,34,34
+hb2,INM.DS02.NZZC,2 year (swap),Swap rates close,2 year,1,NA,%pa,2 year (swap),,Sum,%,%pa,.1f,,35,35
+hb2,INM.DS05.NZZC,5 year (swap),Swap rates close,5 year,1,NA,%pa,5 year (swap),,Sum,%,%pa,.1f,,36,36
+hb2,INM.DS10.NZZC,10 year (swap),Swap rates close,10 year,1,NA,%pa,10 year (swap),,Sum,%,%pa,.1f,,37,37
+hb2,INM.DS61.NZZC,Spread 2-10 year,Swap rates close,Spread 2-10 year,1,NA,bps,Spread 2-10 year,,Sum,bps,bps,.1f,,38,38
+hc35,LVRP.QME1.A,Opening position,Total,Opening position,1,Total,NZDm,Opening position,,Sum,NZDm,NZDm,",d",,39,39
+hc35,LVRP.QME31.A,Drawdowns,Total,Drawdowns,1,Total,NZDm,Drawdowns,,Sum,NZDm,NZDm,",d",,40,40
+hc35,LVRP.QME32.A,Interest charged,Total,Interest charged,1,Total,NZDm,Interest charged,,Sum,NZDm,NZDm,",d",,41,41
+hc35,LVRP.QME33.A,Scheduled repayments,Total,Scheduled repayments,1,Total,NZDm,Scheduled repayments,,Sum,NZDm,NZDm,",d",,42,42
+hc35,LVRP.QME34.A,Repayment of loan in full,Total,Repayment of loan in full,1,Total,NZDm,Repayment of loan in full,,Sum,NZDm,NZDm,",d",,43,43
+hc35,LVRP.QME35.A,Other excess repayments,Total,Other excess repayments,1,Total,NZDm,Other excess repayments,,Sum,NZDm,NZDm,",d",,44,44
+hc35,LVRP.QME36.A,Repayment deficiencies,Total,Repayment deficiencies,1,Total,NZDm,Repayment deficiencies,,Sum,NZDm,NZDm,",d",,45,45
+hc35,LVRP.QME37.A,Net write-offs,Total,Net write-offs,1,Total,NZDm,Net write-offs,,Sum,NZDm,NZDm,",d",,46,46
+hc35,LVRP.QME38.A,Other adjustments,Total,Other adjustments,1,Total,NZDm,Other adjustments,,Sum,NZDm,NZDm,",d",,47,47
+hc35,LVRP.QME1.B,Opening position,>80% LVR,Opening position,1,Breakdown,NZDm,Opening position,,Sum,NZDm,NZDm,",d",,48,48
+hc35,LVRP.QME31.B,Drawdowns,>80% LVR,Drawdowns,1,Breakdown,NZDm,Drawdowns,,Sum,NZDm,NZDm,",d",,49,49
+hc35,LVRP.QME32.B,Interest charged,>80% LVR,Interest charged,1,Breakdown,NZDm,Interest charged,,Sum,NZDm,NZDm,",d",,50,50
+hc35,LVRP.QME33.B,Scheduled repayments,>80% LVR,Scheduled repayments,1,Breakdown,NZDm,Scheduled repayments,,Sum,NZDm,NZDm,",d",,51,51
+hc35,LVRP.QME34.B,Repayment of loan in full,>80% LVR,Repayment of loan in full,1,Breakdown,NZDm,Repayment of loan in full,,Sum,NZDm,NZDm,",d",,52,52
+hc35,LVRP.QME35.B,Other excess repayment,>80% LVR,Other excess repayment,1,Breakdown,NZDm,Other excess repayment,,Sum,NZDm,NZDm,",d",,53,53
+hc35,LVRP.QME36.B,Repayment deficiencies,>80% LVR,Repayment deficiencies,1,Breakdown,NZDm,Repayment deficiencies,,Sum,NZDm,NZDm,",d",,54,54
+hc35,LVRP.QME37.B,Net write-offs,>80% LVR,Net write-offs,1,Breakdown,NZDm,Net write-offs,,Sum,NZDm,NZDm,",d",,55,55
+hc35,LVRP.QME38.B,Other adjustments,>80% LVR,Other adjustments,1,Breakdown,NZDm,Other adjustments,,Sum,NZDm,NZDm,",d",,56,56
+hc35,LVRP.QME1.C,Opening position,<=80% LVR,Opening position,1,Breakdown,NZDm,Opening position,,Sum,NZDm,NZDm,",d",,57,57
+hc35,LVRP.QME31.C,Drawdowns,<=80% LVR,Drawdowns,1,Breakdown,NZDm,Drawdowns,,Sum,NZDm,NZDm,",d",,58,58
+hc35,LVRP.QME32.C,Interest charged,<=80% LVR,Interest charged,1,Breakdown,NZDm,Interest charged,,Sum,NZDm,NZDm,",d",,59,59
+hc35,LVRP.QME33.C,Scheduled repayments,<=80% LVR,Scheduled repayments,1,Breakdown,NZDm,Scheduled repayments,,Sum,NZDm,NZDm,",d",,60,60
+hc35,LVRP.QME34.C,Repayment of loan in full,<=80% LVR,Repayment of loan in full,1,Breakdown,NZDm,Repayment of loan in full,,Sum,NZDm,NZDm,",d",,61,61
+hc35,LVRP.QME35.C,Other excess repayments,<=80% LVR,Other excess repayments,1,Breakdown,NZDm,Other excess repayments,,Sum,NZDm,NZDm,",d",,62,62
+hc35,LVRP.QME36.C,Repayment deficiencies,<=80% LVR,Repayment deficiencies,1,Breakdown,NZDm,Repayment deficiencies,,Sum,NZDm,NZDm,",d",,63,63
+hc35,LVRP.QME37.C,Net write-offs,<=80% LVR,Net write-offs,1,Breakdown,NZDm,Net write-offs,,Sum,NZDm,NZDm,",d",,64,64
+hc35,LVRP.QME38.C,Other adjustments,<=80% LVR,Other adjustments,1,Breakdown,NZDm,Other adjustments,,Sum,NZDm,NZDm,",d",,65,65
+hm1,CPI.Q.C.ia,Consumers price index (CPI),NA,Consumers price index (CPI),1,NA,Index,Consumers price index (CPI),,Sum,Index,Index,.0f,,66,66
+hm1,CPI.Q.C.iaq,Consumers price index (CPI),NA,Consumers price index (CPI),1,NA,%,Consumers price index (CPI),,Sum,q/q%,%,.2f,,67,67
+hm1,CPI.Q.C.iay,Consumers price index (CPI),NA,Consumers price index (CPI),1,NA,%,Consumers price index (CPI),,Sum,y/y%,%,.2f,,68,68
+hm1,CPIT.Q.C.ia,Tradable inflation,NA,Tradable inflation,1,NA,Index,Tradable inflation,,Sum,Index,Index,.0f,,69,69
+hm1,CPIT.Q.C.iaq,Tradable inflation,NA,Tradable inflation,1,NA,%,Tradable inflation,,Sum,q/q%,%,.2f,,70,70
+hm1,CPIT.Q.C.iay,Tradable inflation,NA,Tradable inflation,1,NA,%,Tradable inflation,,Sum,y/y%,%,.2f,,71,71
+hm1,CPIN.Q.C.ia,Non-tradable inflation,NA,Non-tradable inflation,1,NA,Index,Non-tradable inflation,,Sum,Index,Index,.0f,,72,72
+hm1,CPIN.Q.C.iaq,Non-tradable inflation,NA,Non-tradable inflation,1,NA,%,Non-tradable inflation,,Sum,q/q%,%,.2f,,73,73
+hm1,CPIN.Q.C.iay,Non-tradable inflation,NA,Non-tradable inflation,1,NA,%,Non-tradable inflation,,Sum,y/y%,%,.2f,,74,74
+hm1,CPI.Q.C01.ia,Food,NA,Food,1,NA,Index,Food,,Sum,Index,Index,.0f,,75,75
+hm1,CPI.Q.C01.iaq,Food,NA,Food,1,NA,%,Food,,Sum,q/q%,%,.2f,,76,76
+hm1,CPI.Q.C01.iay,Food,NA,Food,1,NA,%,Food,,Sum,y/y%,%,.2f,,77,77
+hm1,CPI.Q.C04.ia,Housing and household utilities,NA,Housing and household utilities,1,NA,Index,Housing and household utilities,,Sum,Index,Index,.0f,,78,78
+hm1,CPI.Q.C04.iaq,Housing and household utilities,NA,Housing and household utilities,1,NA,%,Housing and household utilities,,Sum,q/q%,%,.2f,,79,79
+hm1,CPI.Q.C04.iay,Housing and household utilities,NA,Housing and household utilities,1,NA,%,Housing and household utilities,,Sum,y/y%,%,.2f,,80,80
+hm1,CPI.Q.C07.ia,Transportation,NA,Transportation,1,NA,Index,Transportation,,Sum,Index,Index,.0f,,81,81
+hm1,CPI.Q.C07.iaq,Transportation,NA,Transportation,1,NA,%,Transportation,,Sum,q/q%,%,.2f,,82,82
+hm1,CPI.Q.C07.iay,Transportation,NA,Transportation,1,NA,%,Transportation,,Sum,y/y%,%,.2f,,83,83
+hm1,CPI.Q.C07202.ia,Petrol,NA,Petrol,1,NA,Index,Petrol,,Sum,Index,Index,.0f,,84,84
+hm1,CPI.Q.C07202.iaq,Petrol,NA,Petrol,1,NA,%,Petrol,,Sum,q/q%,%,.2f,,85,85
+hm1,CPI.Q.C07202.iay,Petrol,NA,Petrol,1,NA,%,Petrol,,Sum,y/y%,%,.2f,,86,86
+hm1,CPI.Q.ZC21.ia,CPI excluding petrol,NA,CPI excluding petrol,1,NA,Index,CPI excluding petrol,,Sum,Index,Index,.0f,,87,87
+hm1,CPI.Q.ZC21.iaq,CPI excluding petrol,NA,CPI excluding petrol,1,NA,%,CPI excluding petrol,,Sum,q/q%,%,.2f,,88,88
+hm1,CPI.Q.ZC21.iay,CPI excluding petrol,NA,CPI excluding petrol,1,NA,%,CPI excluding petrol,,Sum,y/y%,%,.2f,,89,89
+hm1,CPI.Q.ZC40.iaq,Trimmed mean,NA,Trimmed mean,1,NA,%,Trimmed mean,,Sum,q/q%,%,.2f,,90,90
+hm1,CPIM.Q.C40T10B17.iay,Trimmed mean,NA,Trimmed mean,1,NA,%,Trimmed mean,,Sum,y/y%,%,.2f,,91,91
+hm1,CPI.Q.ZC41.iaq,Weighted median,NA,Weighted median,1,NA,%,Weighted median,,Sum,q/q%,%,.2f,,92,92
+hm1,CPIW.Q.C41P50B17.iay,Weighted median,NA,Weighted median,1,NA,%,Weighted median,,Sum,y/y%,%,.2f,,93,93
+hm1,CPI.Q.ZC42.iay,Factor model,NA,Factor model,1,NA,%,Factor model,,Sum,y/y%,%,.2f,,94,94
+hm1,CPI.Q.ZC43.iay,Sectoral factor model,NA,Sectoral factor model,1,NA,%,Sectoral factor model,,Sum,y/y%,%,.2f,,95,95
+hm1,CPI.Q.ZC431.iay,Sectoral factor model - tradable core,NA,Sectoral factor model - tradable core,1,NA,NA,Sectoral factor model - tradable core,,Sum,y/y%,NA,.2f,,96,96
+hm1,CPI.Q.ZC432.iay,Sectoral factor model - non-tradable core,NA,Sectoral factor model - non-tradable core,1,NA,NA,Sectoral factor model - non-tradable core,,Sum,y/y%,NA,.2f,,97,97
+hm1,HPI.Q.H01T0.ia,PropertyIQ House price index (HPI),NA,PropertyIQ House price index (HPI),1,NA,Index,PropertyIQ House price index (HPI),,Sum,Index,Index,.0f,,98,98
+hm1,HPI.Q.H01T0.iaq,PropertyIQ House price index (HPI),NA,PropertyIQ House price index (HPI),1,NA,%,PropertyIQ House price index (HPI),,Sum,q/q%,%,.2f,,99,99
+hm1,HPI.Q.H01T0.iay,PropertyIQ House price index (HPI),NA,PropertyIQ House price index (HPI),1,NA,%,PropertyIQ House price index (HPI),,Sum,y/y%,%,.2f,,100,100
+hm1,GDE.Q.DY.RS,GDP deflator,NA,GDP deflator,1,NA,Index,GDP deflator,,Sum,Index,Index,.0f,,101,101
+hm1,GDE.Q.DY.rsq,GDP deflator,NA,GDP deflator,1,NA,NA,GDP deflator,,Sum,q/q%,NA,.2f,,102,102
+hm1,GDE.Q.DY.rsy,GDP deflator,NA,GDP deflator,1,NA,%,GDP deflator,,Sum,y/y%,%,.2f,,103,103
+hm1,PPI06.Q.T0I1.ia,Producers price index (PPI) inputs,NA,Producers price index (PPI) inputs,1,NA,NA,Producers price index (PPI) inputs,,Sum,Index,NA,.0f,,104,104
+hm1,PPI06.Q.T0I1.iaq,Producers price index (PPI) inputs,NA,Producers price index (PPI) inputs,1,NA,%,Producers price index (PPI) inputs,,Sum,q/q%,%,.2f,,105,105
+hm1,PPI06.Q.T0I1.iay,Producers price index (PPI) inputs,NA,Producers price index (PPI) inputs,1,NA,%,Producers price index (PPI) inputs,,Sum,y/y%,%,.2f,,106,106
+hm1,PPI06.Q.T0I2.ia,Producers price index (PPI) outputs,NA,Producers price index (PPI) outputs,1,NA,NA,Producers price index (PPI) outputs,,Sum,Index,NA,.0f,,107,107
+hm1,PPI06.Q.T0I2.iaq,Producers price index (PPI) outputs,NA,Producers price index (PPI) outputs,1,NA,%,Producers price index (PPI) outputs,,Sum,q/q%,%,.2f,,108,108
+hm1,PPI06.Q.T0I2.iay,Producers price index (PPI) outputs,NA,Producers price index (PPI) outputs,1,NA,%,Producers price index (PPI) outputs,,Sum,y/y%,%,.2f,,109,109
+hm2,RTS06.Q.S1G.na,Retail trade sales,NA,Retail trade sales NZDm,1,NA,NZDm,Retail trade sales,,Sum,NZDm,NZDm,",d",,110,110
+hm2,RTS06.Q.S1G.ns,Retail trade sales,NA,Retail trade sales NZDm s.a.,1,NA,NZDm s.a.,Retail trade sales,,Sum,NZDm,NZDm s.a.,",d",,111,111
+hm2,RTS06.Q.S1G.nsq,Retail trade sales,NA,Retail trade % s.a.,1,NA,% s.a.,Retail trade sales,,Sum,%,% s.a.,.0f,,112,112
+hm2,RTS06.Q.S1G.nay,Retail trade sales,NA,Retail trade %,1,NA,%,Retail trade sales,,Sum,%,%,.0f,,113,113
+hm2,RTS06.Q.S1G.ra,Retail trade volumes,NA,Retail trade volumes NZDm(r),1,NA,NZDm(r),Retail trade volumes,,Sum,NZDm,NZDm(r),",d",,114,114
+hm2,RTS06.Q.S1G.rs,Retail trade volumes,NA,Retail trade volumes NZDm(r) s.a.,1,NA,NZDm(r) s.a.,Retail trade volumes,,Sum,NZDm,NZDm(r) s.a.,",d",,115,115
+hm2,RTS06.Q.S1G.rsq,Retail trade volumes,NA,Retail trade volumes %(r) s.a.,1,NA,%(r) s.a.,Retail trade volumes,,Sum,%,%(r) s.a.,.0f,,116,116
+hm2,RTS06.Q.S1G.ray,Retail trade volumes,NA,Retail trade %(r),1,NA,%(r),Retail trade volumes,,Sum,%,%(r),.0f,,117,117
+hm2,GDE.Q.EC1.RA,Private consumption expenditure (GDP),NA,Private consumption expenditure (GDP) NZDm(r),1,NA,NZDm(r),Private consumption expenditure (GDP),,Sum,NZDm,NZDm(r),",d",,118,118
+hm2,GDE.Q.EC1.RS,Private consumption expenditure (GDP),NA,Private consumption expenditure (GDP) NZDm(r) s.a.,1,NA,NZDm(r) s.a.,Private consumption expenditure (GDP),,Sum,NZDm,NZDm(r) s.a.,",d",,119,119
+hm2,GDE.Q.EC1.rsq,Private consumption expenditure (GDP),NA,Private consumption expenditure (GDP) %(r) s.a.,1,NA,%(r) s.a.,Private consumption expenditure (GDP),,Sum,%,%(r) s.a.,.0f,,120,120
+hm2,GDE.Q.EC1.ray,Private consumption expenditure (GDP),NA,Private consumption expenditure (GDP) %(r),1,NA,%(r),Private consumption expenditure (GDP),,Sum,%,%(r),.0f,,121,121
+hm2,GDE.Q.EG13.RA,General government consumption expenditure (GDP),NA,General government consumption expenditure (GDP) NZDm(r),1,NA,NZDm(r),General government consumption expenditure (GDP),,Sum,NZDm,NZDm(r),",d",,122,122
+hm2,GDE.Q.EG13.RS,General government consumption expenditure (GDP),NA,General government consumption expenditure (GDP) NZDm(r) s.a.,1,NA,NZDm(r) s.a.,General government consumption expenditure (GDP),,Sum,NZDm,NZDm(r) s.a.,",d",,123,123
+hm2,GDE.Q.EG13.rsq,General government consumption expenditure (GDP),NA,General government consumption expenditure (GDP) %(r) s.a.,1,NA,%(r) s.a.,General government consumption expenditure (GDP),,Sum,%,%(r) s.a.,.0f,,124,124
+hm2,GDE.Q.EG13.ray,General government consumption expenditure (GDP),NA,General government consumption expenditure (GDP) %(r),1,NA,%(r),General government consumption expenditure (GDP),,Sum,%,%(r),.0f,,125,125
+hm3,QBLD.Q.B11N1BZR1.ns,Residential Building Consents (s.a.),Residential consents,Building consents - residential dwellings (Number s.a.),1,NA,no s.a.,Residential Building Consents (s.a.),,Sum,Number,no s.a.,",d",,126,126
+hm3,QBLD.Q.B11N1BZR1.nsq,Residential Building Consents (q/q% s.a.),Residential consents,Building consents - residential dwellings (q/q% s.a.),1,NA,% s.a.,Residential Building Consents (q/q% s.a.),,Sum,q/q%,% s.a.,.0f,,127,127
+hm3,GDE.Q.EI24.RA,Residential buildings (GDP) (Real $m),Gross fixed capital formation,Gross fixed capital formation - residential buildings (GDP) (Real $m),1,NA,NZDm(r),Residential buildings (GDP) (Real $m),,Sum,Real $m,NZDm(r),",d",,128,128
+hm3,GDE.Q.EI24.RS,Residential buildings (GDP) (Real $m s.a.),Gross fixed capital formation,Gross fixed capital formation - residential buildings (GDP) (Real $m s.a.),1,NA,NZDm(r) s.a.,Residential buildings (GDP) (Real $m s.a.),,Sum,Real $m,NZDm(r) s.a.,",d",,129,129
+hm3,GDE.Q.EI24.rsq,Residential buildings (GDP) (Real q/q% s.a),Gross fixed capital formation,Gross fixed capital formation - residential buildings (GDP) (Real q/q% s.a),1,NA,%(r) s.a.,Residential buildings (GDP) (Real q/q% s.a),,Sum,Real q/q,%(r) s.a.,.0f,,130,130
+hm3,GDE.Q.EI24.ray,Residential buildings (GDP) (Real y/y%),Gross fixed capital formation,Gross fixed capital formation - residential buildings (GDP) (Real y/y%),1,NA,%(r),Residential buildings (GDP) (Real y/y%),,Sum,Real y/y,%(r),.0f,,131,131
+hm3,GDE.Q.EI25.RA,Other fixed assets (GDP) (Real $m),Gross fixed capital formation,Gross fixed capital formation - other fixed assets (GDP) (Real $m),1,NA,NZDm(r),Other fixed assets (GDP) (Real $m),,Sum,Real $m,NZDm(r),",d",,132,132
+hm3,GDE.Q.EI25.RS,Other fixed assets (GDP) (Real $m s.a.),Gross fixed capital formation,Gross fixed capital formation - other fixed assets (GDP) (Real $m s.a.),1,NA,NZDm(r) s.a.,Other fixed assets (GDP) (Real $m s.a.),,Sum,Real $m,NZDm(r) s.a.,",d",,133,133
+hm3,GDE.Q.EI25.rsq,Other fixed assets (GDP) (Real q/q% s.a.),Gross fixed capital formation,Gross fixed capital formation - other fixed assets (GDP) (Real q/q% s.a.),1,NA,%(r) s.a.,Other fixed assets (GDP) (Real q/q% s.a.),,Sum,Real q/q,%(r) s.a.,.0f,,134,134
+hm3,GDE.Q.EI25.ray,Other fixed assets (GDP) (Real y/y%),Gross fixed capital formation,Gross fixed capital formation - other fixed assets (GDP) (Real y/y%),1,NA,%(r),Other fixed assets (GDP) (Real y/y%),,Sum,Real y/y,%(r),.0f,,135,135
+hm3,GDE.Q.EI23.RA,Change in inventories (GDP) (Real $m),Change in inventories,Change in inventories (GDP) (Real $m),1,NA,NZDm(r),Change in inventories (GDP) (Real $m),,Sum,Real $m,NZDm(r),",d",,136,136
+hm3,GDE.Q.EI23.RS,Change in inventories (GDP) (Real $m s.a.),Change in inventories,Change in inventories (GDP) (Real $m s.a.),1,NA,NZDm(r) s.a.,Change in inventories (GDP) (Real $m s.a.),,Sum,Real $m,NZDm(r) s.a.,",d",,137,137
+hm4,MAN06.Q.S1C0.ns,Manufacturing operating income,Operating income $m s.a.,Manufacturing,1,NA,m,Manufacturing operating income,,Sum,$m s.a.,m,",d",,138,138
+hm4,MAN06.Q.S1C0.na,Manufacturing operating income,Operating income $m,Manufacturing,1,NA,m,Manufacturing operating income,,Sum,$m,m,",d",,139,139
+hm4,MAN06.Q.S1C0.nsq,Manufacturing operating income,Operating income q/q% s.a.,Manufacturing,1,NA,NA,Manufacturing operating income,,Sum,q/q% s.a.,NA,.0f,,140,140
+hm4,MAN06.Q.S1C0.nay,Manufacturing operating income,Operating income y/y%,Manufacturing,1,NA,NA,Manufacturing operating income,,Sum,y/y%,NA,.0f,,141,141
+hm4,MAN06.Q.VC0.na,Manufacturing stocks,Stocks $m,Manufacturing,1,NA,m,Manufacturing stocks,,Sum,$m,m,",d",,142,142
+hm4,MAN06.Q.VC0.nay,Manufacturing stocks,Stocks y/y%,Manufacturing,1,NA,%,Manufacturing stocks,,Sum,y/y%,%,.0f,,143,143
+hm4,MAN06.Q.S1C111.ns,Meat and dairy manufacturing operating income,Operating income $m s.a.,Meat and dairy,1,NA,m,Meat and dairy manufacturing operating income,,Sum,$m s.a.,m,",d",,144,144
+hm4,MAN06.Q.S1C111.na,Meat and dairy manufacturing operating income,Operating income $m,Meat and dairy,1,NA,m,Meat and dairy manufacturing operating income,,Sum,$m,m,",d",,145,145
+hm4,MAN06.Q.S1C111.nsq,Meat and dairy manufacturing operating income,Operating income q/q% s.a.,Meat and dairy,1,NA,NA,Meat and dairy manufacturing operating income,,Sum,q/q% s.a.,NA,.0f,,146,146
+hm4,MAN06.Q.S1C111.nay,Meat and dairy manufacturing operating income,Operating income y/y%,Meat and dairy,1,NA,NA,Meat and dairy manufacturing operating income,,Sum,y/y%,NA,.0f,,147,147
+hm4,RTS06.Q.S1G.ns,Retail trade sales,Sales $m s.a.,Retail trade,1,NA,NZDm s.a.,Retail trade sales,,Sum,$m s.a.,NZDm s.a.,",d",,148,148
+hm4,RTS06.Q.S1G.na,Retail trade sales,Sales $m,Retail trade,1,NA,NZDm,Retail trade sales,,Sum,$m,NZDm,",d",,149,152
+hm4,RTS06.Q.S1G.nsq,Retail trade sales,Sales q/q% s.a.,Retail trade,1,NA,% s.a.,Retail trade sales,,Sum,q/q% s.a.,% s.a.,.0f,,150,150
+hm4,RTS06.Q.S1G.nay,Retail trade sales,Sales y/y%,Retail trade,1,NA,%,Retail trade sales,,Sum,y/y%,%,.0f,,151,153
+hm4,RTS06.Q.VG.na,Retail trade stocks,Sales $m,Retail trade,2,NA,NZDm,Retail trade stocks,,Sum,$m,NZDm,",d",,152,152
+hm4,RTS06.Q.VG.nay,Retail trade stocks,Sales y/y%,Retail trade,2,NA,%,Retail trade stocks,,Sum,y/y%,%,.0f,,153,153
+hm4,WTS06.Q.S1F0.ns,Wholesale trade sales,Sales $m s.a.,Wholesale trade,1,NA,NZDm s.a.,Wholesale trade sales,,Sum,$m s.a.,NZDm s.a.,",d",,154,154
+hm4,WTS06.Q.S1F0.na,Wholesale trade sales,Sales $m,Wholesale trade,1,NA,NZDm,Wholesale trade sales,,Sum,$m,NZDm,",d",,155,155
+hm4,WTS06.Q.S1F0.nsq,Wholesale trade sales,Sales q/q% s.a.,Wholesale trade,1,NA,% s.a.,Wholesale trade sales,,Sum,q/q% s.a.,% s.a.,.0f,,156,156
+hm4,WTS06.Q.S1F0.nay,Wholesale trade sales,Sales y/y%,Wholesale trade,1,NA,%,Wholesale trade sales,,Sum,y/y%,%,.0f,,157,157
+hm4,WTS06.Q.VF0.na,Wholesale trade stocks,Stocks $m,Wholesale trade,1,NA,NZDm,Wholesale trade stocks,,Sum,$m,NZDm,",d",,158,158
+hm4,WTS06.Q.VF0.nay,Wholesale trade stocks,Stocks y/y%,Wholesale trade,1,NA,%,Wholesale trade stocks,,Sum,y/y%,%,.0f,,159,159
+hm5,GDP06.Q.QT0.ra,GDP - Production (Real $m),GDPReal $m,GDP,1,GDP-Production (Real $m),NZDm(r),GDP - Production (Real $m),,Sum,$m,NZDm(r),",d",,160,168
+hm5,GDP06.Q.QT0.rs,GDP - Production (Real $m s.a.),GDPReal $m s.a.,GDP,1,GDP-Production (Real $m s.a.),NZDm(r) s.a.,GDP - Production (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,161,169
+hm5,GDP06.Q.QT0.rsq,GDP - Production (Real q/q% s.a.),GDPReal q/q% s.a.,GDP,1,GDP-Production (Real q/q% s.a.),%(r) s.a.,GDP - Production (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,162,170
+hm5,GDP06.Q.QT0.ray,GDP - Production (Real y/y%),GDPReal y/y%,GDP,1,GDP-Production (Real y/y%),%(r),GDP - Production (Real y/y%),,Sum,y/y%,%(r),.2f,,163,171
+hm5,GDE.Q.EY.NA,GDP - Expenditure (Nominal $m),GDPNominal $m,GDP,1,GDP-Expenditure (Nominal $m),NZDm,GDP - Expenditure (Nominal $m),,Sum,$m,NZDm,",d",,164,164
+hm5,GDE.Q.EY.NS,GDP - Expenditure (Nominal $m s.a.),GDPNominal $m s.a.,GDP,1,GDP-Expenditure (Nominal $m s.a.),NZDm s.a.,GDP - Expenditure (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,165,165
+hm5,GDE.Q.EY.nsq,GDP - Expenditure (Nominal q/q% s.a.),GDPNominal q/q% s.a.,GDP,1,GDP-Expenditure (Nominal q/q% s.a.),% s.a.,GDP - Expenditure (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,166,166
+hm5,GDE.Q.EY.nay,GDP - Expenditure (Nominal y/y%),GDPNominal y/y%,GDP,1,GDP-Expenditure (Nominal y/y%),%,GDP - Expenditure (Nominal y/y%),,Sum,y/y%,%,.2f,,167,167
+hm5,GDE.Q.EY.RA,GDP - Expenditure (Real $m),GDPReal $m,GDP,2,GDP-Expenditure (Real $m),NZDm(r),GDP - Expenditure (Real $m),,Sum,$m,NZDm(r),",d",,168,168
+hm5,GDE.Q.EY.RS,GDP - Expenditure (Real $m s.a.),GDPReal $m s.a.,GDP,2,GDP-Expenditure (Real $m s.a.),NZDm(r) s.a.,GDP - Expenditure (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,169,169
+hm5,GDE.Q.EY.rsq,GDP - Expenditure (Real q/q% s.a.),GDPReal q/q% s.a.,GDP,2,GDP-Expenditure (Real q/q% s.a.),%(r) s.a.,GDP - Expenditure (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,170,170
+hm5,GDE.Q.EY.ray,GDP - Expenditure (Real y/y%),GDPReal y/y%,GDP,2,GDP-Expenditure (Real y/y%),%(r),GDP - Expenditure (Real y/y%),,Sum,y/y%,%(r),.2f,,171,171
+hm5,GDE.Q.EC1.NA,Private Consumption (Nominal $m)),Consumption expenditureNominal $m),Consumption expenditure,1,Private Consumption (Nominal $m),NZDm,Private Consumption (Nominal $m)),,Sum,$m,NZDm,",d",,172,172
+hm5,GDE.Q.EC1.NS,Private Consumption (Nominal $m s.a.),Consumption expenditureNominal $m s.a.,Consumption expenditure,1,Private Consumption (Nominal $m s.a.),NZDm s.a.,Private Consumption (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,173,209
+hm5,GDE.Q.EC1.nsq,Private Consumption (Nominal q/q% s.a.),Consumption expenditureNominal q/q% s.a.,Consumption expenditure,1,Private Consumption (Nominal q/q% s.a.),% s.a.,Private Consumption (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,174,210
+hm5,GDE.Q.EC1.nay,Private Consumption (Nominal y/y%),Consumption expenditureNominal y/y%,Consumption expenditure,1,Private Consumption (Nominal y/y%),%,Private Consumption (Nominal y/y%),,Sum,y/y%,%,.2f,,175,211
+hm5,GDE.Q.EC1.RA,Private Consumption (Real $m),Consumption expenditureReal $m,Consumption expenditure,1,Private Consumption (Real $m),NZDm(r),Private Consumption (Real $m),,Sum,$m,NZDm(r),",d",,176,212
+hm5,GDE.Q.EC1.RS,Private Consumption (Real $m s.a.),Consumption expenditureReal $m s.a.,Consumption expenditure,1,Private Consumption (Real $m s.a.),NZDm(r) s.a.,Private Consumption (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,177,213
+hm5,GDE.Q.EC1.rsq,Private Consumption (Real q/q% s.a.),Consumption expenditureReal q/q% s.a.,Consumption expenditure,1,Private Consumption (Real q/q% s.a.),%(r) s.a.,Private Consumption (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,178,214
+hm5,GDE.Q.EC1.ray,Private Consumption (Real y/y%),Consumption expenditureReal y/y%,Consumption expenditure,1,Private Consumption (Real y/y%),%(r),Private Consumption (Real y/y%),,Sum,y/y%,%(r),.2f,,179,215
+hm5,GDE.Q.EG13.NA,Government Consumption (Nominal $m),Consumption expenditureNominal $m,Consumption expenditure,1,Government Consumption (Nominal $m),NZDm,Government Consumption (Nominal $m),,Sum,$m,NZDm,",d",,180,208
+hm5,GDE.Q.EG13.NS,Government Consumption (Nominal $m s.a.),Consumption expenditureNominal $m s.a.,Consumption expenditure,2,Government Consumption (Nominal $m s.a.),NZDm s.a.,Government Consumption (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,181,209
+hm5,GDE.Q.EG13.nsq,Government Consumption (Nominal q/q% s.a.),Consumption expenditureNominal q/q% s.a.,Consumption expenditure,2,Government Consumption (Nominal q/q% s.a.),% s.a.,Government Consumption (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,182,210
+hm5,GDE.Q.EG13.nay,Government Consumption (Nominal y/y%),Consumption expenditureNominal y/y%,Consumption expenditure,2,Government Consumption (Nominal y/y%),%,Government Consumption (Nominal y/y%),,Sum,y/y%,%,.2f,,183,211
+hm5,GDE.Q.EG13.RA,Government Consumption (Real $m),Consumption expenditureReal $m,Consumption expenditure,2,Government Consumption (Real $m),NZDm(r),Government Consumption (Real $m),,Sum,$m,NZDm(r),",d",,184,212
+hm5,GDE.Q.EG13.RS,Government Consumption (Real $m s.a.),Consumption expenditureReal $m s.a.,Consumption expenditure,2,Government Consumption (Real $m s.a.),NZDm(r) s.a.,Government Consumption (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,185,213
+hm5,GDE.Q.EG13.rsq,Government Consumption (Real q/q% s.a.),Consumption expenditureReal q/q% s.a.,Consumption expenditure,2,Government Consumption (Real q/q% s.a.),%(r) s.a.,Government Consumption (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,186,214
+hm5,GDE.Q.EG13.ray,Government Consumption (Real y/y%),Consumption expenditureReal y/y%,Consumption expenditure,2,Government Consumption (Real y/y%),%(r),Government Consumption (Real y/y%),,Sum,y/y%,%(r),.2f,,187,215
+hm5,GDE.Q.EI23.NA,Change in inventories (Nominal $m),Change in inventoriesNominal $m,Change in inventories,1,Change in inventories (Nominal $m),NZDm,Change in inventories (Nominal $m),,Sum,$m,NZDm,",d",,188,188
+hm5,GDE.Q.EI23.NS,Change in inventories (Nominal $m s.a.),Change in inventoriesNominal $m s.a.,Change in inventories,1,Change in inventories (Nominal $m s.a.),NZDm s.a.,Change in inventories (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,189,189
+hm5,GDE.Q.EI23.RA,Change in inventories (Real $m),Change in inventoriesReal $m,Change in inventories,1,Change in inventories (Real $m),NZDm(r),Change in inventories (Real $m),,Sum,$m,NZDm(r),",d",,190,190
+hm5,GDE.Q.EI23.RS,Change in inventories (Real $m s.a.),Change in inventoriesReal $m s.a.,Change in inventories,1,Change in inventories (Real $m s.a.),NZDm(r) s.a.,Change in inventories (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,191,191
+hm5,GDE.Q.EI24.NA,GFCF - Residential (Nominal $m),Gross fixed capital formationNominal $m,Gross fixed capital formation,1,GFCF - Residential (Nominal $m),NZDm,GFCF - Residential (Nominal $m),,Sum,$m,NZDm,",d",,192,200
+hm5,GDE.Q.EI24.NS,GFCF - Residential (Nominal $m s.a.),Gross fixed capital formationNominal $m s.a.,Gross fixed capital formation,1,GFCF - Residential (Nominal $m s.a.),NZDm s.a.,GFCF - Residential (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,193,201
+hm5,GDE.Q.EI24.nsq,GFCF - Residential (Nominal q/q% s.a.),Gross fixed capital formationNominal q/q% s.a.,Gross fixed capital formation,1,GFCF - Residential (Nominal q/q% s.a.),% s.a.,GFCF - Residential (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,194,202
+hm5,GDE.Q.EI24.nay,GFCF - Residential (Nominal y/y%),Gross fixed capital formationNominal y/y%,Gross fixed capital formation,1,GFCF - Residential (Nominal y/y%),%,GFCF - Residential (Nominal y/y%),,Sum,y/y%,%,.2f,,195,203
+hm5,GDE.Q.EI24.RA,GFCF - Residential (Real $m),Gross fixed capital formationReal $m,Gross fixed capital formation,1,GFCF - Residential (Real $m),NZDm(r),GFCF - Residential (Real $m),,Sum,$m,NZDm(r),",d",,196,204
+hm5,GDE.Q.EI24.RS,GFCF - Residential (Real $m s.a.),Gross fixed capital formationReal $m s.a.,Gross fixed capital formation,1,GFCF - Residential (Real $m s.a.),NZDm(r) s.a.,GFCF - Residential (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,197,205
+hm5,GDE.Q.EI24.rsq,GFCF - Residential (Real q/q% s.a.),Gross fixed capital formationReal q/q% s.a.,Gross fixed capital formation,1,GFCF - Residential (Real q/q% s.a.),%(r) s.a.,GFCF - Residential (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,198,206
+hm5,GDE.Q.EI24.ray,GFCF - Residential (Real y/y%),Gross fixed capital formationReal y/y%,Gross fixed capital formation,1,GFCF - Residential (Real y/y%),%(r),GFCF - Residential (Real y/y%),,Sum,y/y%,%(r),.2f,,199,207
+hm5,GDE.Q.EI25.NA,GFCF - Other Fixed Assets (Nominal $m),Gross fixed capital formationNominal $m,Gross fixed capital formation,2,GFCF - Other (Nominal $m),NZDm,GFCF - Other Fixed Assets (Nominal $m),,Sum,$m,NZDm,",d",,200,200
+hm5,GDE.Q.EI25.NS,GFCF - Other Fixed Assets (Nominal $m s.a.),Gross fixed capital formationNominal $m s.a.,Gross fixed capital formation,2,GFCF - Other (Nominal $m s.a.),NZDm s.a.,GFCF - Other Fixed Assets (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,201,201
+hm5,GDE.Q.EI25.nsq,GFCF - Other Fixed Assets (Nominal q/q% s.a.),Gross fixed capital formationNominal q/q% s.a.,Gross fixed capital formation,2,GFCF - Other (Nominal q/q% s.a.),% s.a.,GFCF - Other Fixed Assets (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,202,202
+hm5,GDE.Q.EI25.nay,GFCF - Other Fixed Assets (Nominal y/y%),Gross fixed capital formationNominal y/y%,Gross fixed capital formation,2,GFCF - Other (Nominal y/y%),%,GFCF - Other Fixed Assets (Nominal y/y%),,Sum,y/y%,%,.2f,,203,203
+hm5,GDE.Q.EI25.RA,GFCF - Other Fixed Assets (Real $m),Gross fixed capital formationReal $m,Gross fixed capital formation,2,GFCF - Other (Real $m),NZDm(r),GFCF - Other Fixed Assets (Real $m),,Sum,$m,NZDm(r),",d",,204,204
+hm5,GDE.Q.EI25.RS,GFCF - Other Fixed Assets (Real $m s.a.),Gross fixed capital formationReal $m s.a.,Gross fixed capital formation,2,GFCF - Other (Real $m s.a.),NZDm(r) s.a.,GFCF - Other Fixed Assets (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,205,205
+hm5,GDE.Q.EI25.rsq,GFCF - Other Fixed Assets (Real q/q% s.a.),Gross fixed capital formationReal q/q% s.a.,Gross fixed capital formation,2,GFCF - Other (Real q/q% s.a.),%(r) s.a.,GFCF - Other Fixed Assets (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,206,206
+hm5,GDE.Q.EI25.ray,GFCF - Other Fixed Assets (Real y/y%),Gross fixed capital formationReal y/y%,Gross fixed capital formation,2,GFCF - Other (Real y/y%),%(r),GFCF - Other Fixed Assets (Real y/y%),,Sum,y/y%,%(r),.2f,,207,207
+hm5,GDE.Q.EY1.NA,GNE (Nominal $m),Consumption expenditureNominal $m,Consumption expenditure,2,GNE  (Nominal $m),NZDm,GNE (Nominal $m),,Sum,$m,NZDm,",d",,208,208
+hm5,GDE.Q.EY1.NS,GNE (Nominal $m s.a.),Consumption expenditureNominal $m s.a.,Consumption expenditure,3,GNE  (Nominal $m s.a.),NZDm s.a.,GNE (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,209,209
+hm5,GDE.Q.EY1.nsq,GNE (Nominal q/q% s.a.),Consumption expenditureNominal q/q% s.a.,Consumption expenditure,3,GNE  (Nominal q/q% s.a.),% s.a.,GNE (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,210,210
+hm5,GDE.Q.EY1.nay,GNE (Nominal y/y%),Consumption expenditureNominal y/y%,Consumption expenditure,3,GNE  (Nominal y/y%),%,GNE (Nominal y/y%),,Sum,y/y%,%,.2f,,211,211
+hm5,GDE.Q.EY1.RA,GNE (Real $m),Consumption expenditureReal $m,Consumption expenditure,3,GNE  (Real $m),NZDm(r),GNE (Real $m),,Sum,$m,NZDm(r),",d",,212,212
+hm5,GDE.Q.EY1.RS,GNE (Real $m s.a.),Consumption expenditureReal $m s.a.,Consumption expenditure,3,GNE  (Real $m s.a.),NZDm(r) s.a.,GNE (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,213,213
+hm5,GDE.Q.EY1.rsq,GNE (Real q/q% s.a.),Consumption expenditureReal q/q% s.a.,Consumption expenditure,3,GNE  (Real q/q% s.a.),%(r) s.a.,GNE (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,214,214
+hm5,GDE.Q.EY1.ray,GNE (Real y/y%),Consumption expenditureReal y/y%,Consumption expenditure,3,GNE  (Real y/y%),%(r),GNE (Real y/y%),,Sum,y/y%,%(r),.2f,,215,215
+hm5,GDE.Q.EX.NA,Export of G&S (Nominal $m),Import/Export of G&SNominal $m,Import/Export of G&S,1,Exports G&S (Nominal $m),NZDm,Export of G&S (Nominal $m),,Sum,$m,NZDm,",d",,216,224
+hm5,GDE.Q.EX.NS,Export of G&S (Nominal $m s.a.),Import/Export of G&SNominal $m s.a.,Import/Export of G&S,1,Exports G&S (Nominal $m s.a.),NZDm s.a.,Export of G&S (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,217,225
+hm5,GDE.Q.EX.nsq,Export of G&S (Nominal q/q% s.a.),Import/Export of G&SNominal q/q% s.a.,Import/Export of G&S,1,Exports G&S (Nominal q/q% s.a.),% s.a.,Export of G&S (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,218,226
+hm5,GDE.Q.EX.nay,Export of G&S (Nominal y/y%),Import/Export of G&SNominal y/y%,Import/Export of G&S,1,Exports G&S (Nominal y/y%),%,Export of G&S (Nominal y/y%),,Sum,y/y%,%,.2f,,219,227
+hm5,GDE.Q.EX.RA,Export of G&S (Real $m),Import/Export of G&SReal $m,Import/Export of G&S,1,Exports G&S (Real $m),NZDm(r),Export of G&S (Real $m),,Sum,$m,NZDm(r),",d",,220,228
+hm5,GDE.Q.EX.RS,Export of G&S (Real $m s.a.),Import/Export of G&SReal $m s.a.,Import/Export of G&S,1,Exports G&S (Real $m s.a.),NZDm(r) s.a.,Export of G&S (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,221,229
+hm5,GDE.Q.EX.rsq,Export of G&S (Real q/q% s.a.),Import/Export of G&SReal q/q% s.a.,Import/Export of G&S,1,Exports G&S (Real q/q% s.a.),%(r) s.a.,Export of G&S (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,222,230
+hm5,GDE.Q.EX.ray,Export of G&S (Real y/y%),Import/Export of G&SReal y/y%,Import/Export of G&S,1,Exports G&S (Real y/y%),%(r),Export of G&S (Real y/y%),,Sum,y/y%,%(r),.2f,,223,231
+hm5,GDE.Q.EM.NA,Import of G&S (Nominal $m),Import/Export of G&SNominal $m,Import/Export of G&S,2,Import G&S (Nominal $m),NZDm,Import of G&S (Nominal $m),,Sum,$m,NZDm,",d",,224,224
+hm5,GDE.Q.EM.NS,Import of G&S (Nominal $m s.a.),Import/Export of G&SNominal $m s.a.,Import/Export of G&S,2,Import G&S (Nominal $m s.a.),NZDm s.a.,Import of G&S (Nominal $m s.a.),,Sum,$m,NZDm s.a.,",d",,225,225
+hm5,GDE.Q.EM.nsq,Import of G&S (Nominal q/q% s.a.),Import/Export of G&SNominal q/q% s.a.,Import/Export of G&S,2,Import G&S (Nominal q/q% s.a.),% s.a.,Import of G&S (Nominal q/q% s.a.),,Sum,q/q%,% s.a.,.2f,,226,226
+hm5,GDE.Q.EM.nay,Import of G&S (Nominal y/y%),Import/Export of G&SNominal y/y%,Import/Export of G&S,2,Import G&S (Nominal y/y%),%,Import of G&S (Nominal y/y%),,Sum,y/y%,%,.2f,,227,227
+hm5,GDE.Q.EM.RA,Import of G&S (Real $m),Import/Export of G&SReal $m,Import/Export of G&S,2,Import G&S (Real $m),NZDm(r),Import of G&S (Real $m),,Sum,$m,NZDm(r),",d",,228,228
+hm5,GDE.Q.EM.RS,Import of G&S (Real $m s.a.),Import/Export of G&SReal $m s.a.,Import/Export of G&S,2,Import G&S (Real $m s.a.),NZDm(r) s.a.,Import of G&S (Real $m s.a.),,Sum,$m,NZDm(r) s.a.,",d",,229,229
+hm5,GDE.Q.EM.rsq,Import of G&S (Real q/q% s.a.),Import/Export of G&SReal q/q% s.a.,Import/Export of G&S,2,Import G&S (Real q/q% s.a.),%(r) s.a.,Import of G&S (Real q/q% s.a.),,Sum,q/q%,%(r) s.a.,.2f,,230,230
+hm5,GDE.Q.EM.ray,Import of G&S (Real y/y%),Import/Export of G&SReal y/y%,Import/Export of G&S,2,Import G&S (Real y/y%),%(r),Import of G&S (Real y/y%),,Sum,y/y%,%(r),.2f,,231,231
+hm6,NATF.Y.D04.na,National,NA,National,1,NA,m,National,,Sum,Saving ($m),m,",d",,232,232
+hm6,ISAA.Y.I12.na,Businesses,NA,Businesses,1,NA,m,Businesses,,Sum,Saving ($m),m,",d",,233,233
+hm6,ISAF.Y.I13.na,Financial intermediaries,NA,Financial intermediaries,1,NA,m,Financial intermediaries,,Sum,Saving ($m),m,",d",,234,234
+hm6,ISAG.Y.I13.na,General government,NA,General government,1,NA,m,General government,,Sum,Saving ($m),m,",d",,235,235
+hm6,ISAJ.Y.I12.na,Non-profit institutions serving households,NA,Non-profit institutions serving households,1,NA,m,Non-profit institutions serving households,,Sum,Saving ($m),m,",d",,236,236
+hm6,ISAK.Y.I10.na,Households,NA,Households,1,NA,m,Households,,Sum,Saving ($m),m,",d",,237,237
+hm6,ISAK.Y.I18.na,Household saving rate (%),NA,Households,1,NA,%,Household saving rate (%),,Sum,Household saving rate (%),%,.2f,,238,238
+hm7,OTIT.Q.U1T.iaq,Terms of Trade,Terms of Trade (q/q%),(q/q%),1,NA,%,Terms of Trade,,Sum,%,%,.1f,,239,239
+hm7,OTIT.Q.U1T.iay,Terms of Trade,Terms of Trade (y/y%),(y/y%),1,NA,%,Terms of Trade,,Sum,%,%,.1f,,240,240
+hm7,BOPR.Q.TJ101.na,Current account balance to GDP ratio (%),Current account balance to GDP ratio (%),Current account balance to GDP ratio (%),1,NA,%,Current account balance to GDP ratio (%),,Sum,%,%,.1f,,241,241
+hm7,BOPR.Q.TJ102.na,Net international investment position to GDP ratio (%),Net international investment position to GDP ratio (%),International Investment Position (NZD millions),1,NA,%,Net international investment position to GDP ratio (%),,Sum,%,%,.1f,,242,242
+hm7,BOP.Q.TB2.na,Balance on goods,Balance of Payments,Balance on goods,1,NA,NZDm,Balance on goods,,Sum,NZDm,NZDm,",d",,243,243
+hm7,BOP.Q.TB3.na,Balance on services,Balance of Payments,Balance on services,1,NA,NZDm,Balance on services,,Sum,NZDm,NZDm,",d",,244,244
+hm7,BOP.Q.TB5.na,Balance on primary income,Balance of Payments,Balance on primary income,1,NA,NZDm,Balance on primary income,,Sum,NZDm,NZDm,",d",,245,245
+hm7,BOP.Q.TB6.na,Balance on secondary income,Balance of Payments,Balance on secondary income,1,NA,NZDm,Balance on secondary income,,Sum,NZDm,NZDm,",d",,246,246
+hm7,BOP.Q.TB1.na,Current account balance,Balance of Payments (Total),Current account balance,1,NA,NZDm,Current account balance,,Sum,NZDm,NZDm,",d",,247,247
+hm7,IIPA.Q.AP1.na,International assets,International Investment Position,International assets,1,NA,NZDm,International assets,,Sum,NZDm,NZDm,",d",,248,248
+hm7,IIPA.Q.LP2.na,International liabilities,International Investment Position,International liabilities,1,NA,NZDm,International liabilities,,Sum,NZDm,NZDm,",d",,249,249
+hm7,IIP.Q.TA.NA,Net international investment position (IIP),Net international investment position (IIP),NA,1,NA,NZDm,Net international investment position (IIP),,Sum,NZDm,NZDm,",d",,250,250
+hm7,OTIT.Q.U1T.ia,Terms of Trade,Terms of Trade (Index),(Index),1,NA,NA,Terms of Trade,,Sum,Index,NA,",d",,251,251
+hm8,OTIX.Q.UA.ns,Export values $m s.a.,Values ($m s.a.),Export,1,$m s.a.,m,Export values $m s.a.,,Sum,$m,m,",d",,252,252
+hm8,OTIM.Q.UA.ns,Import values $m s.a.,Values ($m s.a.),Import,1,$m s.a.,m,Import values $m s.a.,,Sum,$m,m,",d",,253,253
+hm8,OTIX.Q.UA.na,Export values $m,Values ($m),Export,1,$m,m,Export values $m,,Sum,$m,m,",d",,254,254
+hm8,OTIM.Q.UA.na,Import values $m,Values ($m),Import,1,$m,m,Import values $m,,Sum,$m,m,",d",,255,255
+hm8,OTIX.Q.UA.nsq,Export values q/q% s.a.,Values (q/q% s.a.),Export,1,q/q% s.a.,%,Export values q/q% s.a.,,Sum,%,%,.1f,,256,256
+hm8,OTIM.Q.UA.nsq,Import values q/q% s.a.,Values (q/q% s.a.),Import,1,q/q% s.a.,%,Import values q/q% s.a.,,Sum,%,%,.1f,,257,257
+hm8,OTIX.Q.UA.nay,Export values y/y%,Values (y/y%),Export,1,y/y%,%,Export values y/y%,,Sum,%,%,.1f,,258,258
+hm8,OTIM.Q.UA.nay,Import values y/y%,Values (y/y%),Import,1,y/y%,%,Import values y/y%,,Sum,%,%,.1f,,259,259
+hm8,OTIX.Q.U1A.ia,Export prices Index,Prices (Index),Export,1,Index,NA,Export prices Index,,Sum,Index,NA,",d",,260,260
+hm8,OTIM.Q.U1A.ia,Import prices Index,Prices (Index),Import,1,Index,NA,Import prices Index,,Sum,Index,NA,",d",,261,261
+hm8,OTIX.Q.U1A.iaq,Export prices q/q%,Prices (q/q%),Export,1,q/q%,%,Export prices q/q%,,Sum,%,%,.1f,,262,262
+hm8,OTIM.Q.U1A.iaq,Import prices q/q%,Prices (q/q%),Import,1,q/q%,%,Import prices q/q%,,Sum,%,%,.1f,,263,263
+hm8,OTIX.Q.U1A.iay,Export prices y/y%,Prices (y/y%),Export,1,y/y%,%,Export prices y/y%,,Sum,%,%,.1f,,264,264
+hm8,OTIM.Q.U1A.iay,Import prices y/y%,Prices (y/y%),Import,1,y/y%,%,Import prices y/y%,,Sum,%,%,.1f,,265,265
+hm8,OTIX.Q.U2A.ia,Export volumes Index,Volumes (Index),Export,1,Index,NA,Export volumes Index,,Sum,Index,NA,",d",,266,266
+hm8,OTIM.Q.U2A.ia,Import volumes Index,Volumes (Index),Import,1,Index,NA,Import volumes Index,,Sum,Index,NA,",d",,267,267
+hm8,OTIX.Q.U2A.isq,Export volumes q/q% s.a.,Volumes (q/q% s.a.),Export,1,q/q% s.a.,%,Export volumes q/q% s.a.,,Sum,%,%,.1f,,268,268
+hm8,OTIM.Q.U2A.isq,Import volumes q/q% s.a.,Volumes (q/q% s.a.),Import,1,q/q% s.a.,%,Import volumes q/q% s.a.,,Sum,%,%,.1f,,269,269
+hm8,OTIX.Q.U2A.iay,Export volumes y/y%,Volumes (y/y%),Export,1,y/y%,%,Export volumes y/y%,,Sum,%,%,.1f,,270,270
+hm8,OTIM.Q.U2A.iay,Import volumes y/y%,Volumes (y/y%),Import,1,y/y%,%,Import volumes y/y%,,Sum,%,%,.1f,,271,271
+hm8,OTIX.Q.U2A.is,Export volumes Index s.a.,Volumes (Index s.a.),Export,1,Index s.a.,NA,Export volumes Index s.a.,,Sum,Index,NA,",d",,272,272
+hm8,OTIM.Q.U2A.is,Import volumes Index s.a.,Volumes (Index s.a.),Import,1,Index s.a.,NA,Import volumes Index s.a.,,Sum,Index,NA,",d",,273,273
+hm9,HLFS.Q.L05G001.ns,Labour force participation rate	 - % s.a.,Labour Force % s.a.,Labour force participation rate,1,% s.a.,%,Labour force participation rate	 - % s.a.,,Sum,Total %,%,.1f,,274,274
+hm9,HLFS.Q.L06G001.ns,Unemployment rate	 - % s.a.,Unemployment % s.a.,Unemployment rate,1,% s.a.,%,Unemployment rate	 - % s.a.,,Sum,Total %,%,.1f,,275,275
+hm9,HLFS.Q.L04G001.ns,Not in labour force - 000s s.a.,Not in labour force,Not in labour force,1,000s s.a.,000s,Not in labour force - 000s s.a.,,Sum,000's,000s,",d",,276,276
+hm9,HLFS.Q.L07G001.ns,Working-age population - 000s s.a.,Working-age population,Working-age population,1,000s s.a.,000s,Working-age population - 000s s.a.,,Sum,000's,000s,",d",,277,277
+hm9,LCI.Q.W1S0T0.ia,Labour cost index (LCI) - Index,LCI Index,Labour cost index (LCI),1,Index,Index,Labour cost index (LCI) - Index,,Sum,Index,Index,",d",,278,278
+hm9,LCI.Q.W1S0T0.iay,Labour cost index (LCI) - y/y%,LCI y/y%,Labour cost index (LCI),1,y/y%,%,Labour cost index (LCI) - y/y%,,Sum,%,%,.1f,,279,279
+hm9,HLFS.Q.L04G001.nay,Not in labour force - y/y%,Not in Labour Force y/y%,Not in labour force,1,y/y%,%,Not in labour force - y/y%,,Sum,%,%,.1f,,280,280
+hm9,HLFS.Q.L07G001.nay,Working-age population - y/y%,Working-age population %,Working-age population,1,y/y%,%,Working-age population - y/y%,,Sum,Total %,%,.1f,,281,281
+hm9,HLFS.Q.L01G001.nay,Labour force - Employed (y/y%),Employed (y/y%),Labour force,1,Employed (y/y%),%,Labour force - Employed (y/y%),,Sum,Total %,%,.1f,,282,282
+hm9,HLFS.Q.L02G001.nay,Labour force - Unemployed (y/y%),Unemployed (y/y%),Labour force,1,Unemployed (y/y%),%,Labour force - Unemployed (y/y%),,Sum,Total %,%,.1f,,283,283
+hm9,HLFS.Q.L03G001.nay,Labour force - Total (y/y%),Total (y/y%),Labour force,1,Total (y/y%),%,Labour force - Total (y/y%),,Sum,Total %,%,.1f,,284,284
+hm9,HLFS.Q.L01G001.ns,Labour force - Employed (000s s.a.),Employed (000s s.a.),Labour force,1,Employed (000s s.a.),000s,Labour force - Employed (000s s.a.),,Sum,000's,000s,",d",,285,285
+hm9,HLFS.Q.L02G001.ns,Labour force - Unemployed (000s s.a.),Unemployed (000s s.a.),Labour force,1,Unemployed (000s s.a.),000s,Labour force - Unemployed (000s s.a.),,Sum,000's,000s,",d",,286,286
+hm9,HLFS.Q.L03G001.ns,Labour force - Total (000s s.a.),Labour Force (000s s.a.),Labour force,1,Total (000s s.a.),000s,Labour force - Total (000s s.a.),,Sum,000's,000s,",d",,287,287
+hm9,QESS21.Q.E03S2.na,Private sector wages - $,Private sector wages $,Private sector wages,1,$,NA,Private sector wages - $,,Sum,$,NA,",d",,288,288
+hm9,QESS21.Q.E03S2.naq,Private sector wages - q/q%,Private sector wages - q/q%,Private sector wages,1,q/q%,%,Private sector wages - q/q%,,Sum,%,%,.1f,,289,289
+hm9,QESS21.Q.E03S2.nay,Private sector wages - y/y%,Private sector wages - y/y%,Private sector wages,1,y/y%,%,Private sector wages - y/y%,,Sum,%,%,.1f,,290,290
+hm9,QESS21.Q.E03S1.na,Public sector wages - $,Public sector wages - $,Public sector wages,1,$,NA,Public sector wages - $,,Sum,$,NA,",d",,291,291
+hm9,QESS21.Q.E03S1.naq,Public sector wages - q/q%,Public sector wages - q/q%,Public sector wages,1,q/q%,%,Public sector wages - q/q%,,Sum,%,%,.1f,,292,292
+hm9,QESS21.Q.E03S1.nay,Public sector wages - y/y%,Public sector wages - y/y%,Public sector wages,1,y/y%,%,Public sector wages - y/y%,,Sum,%,%,.1f,,293,293
+hm9,QESS21.Q.E03S0.na,Average hourly earnings (ordinary time and overtime)	 - $,Hourly Earnings $,Average hourly earnings (ordinary time and overtime),1,$,NA,Average hourly earnings (ordinary time and overtime)	 - $,,Sum,$,NA,",d",,294,294
+hm9,QESS21.Q.E03S0.naq,Average hourly earnings (ordinary time and overtime)	 - q/q%,Hourly Earnings q/q%,Average hourly earnings (ordinary time and overtime),1,q/q%,%,Average hourly earnings (ordinary time and overtime)	 - q/q%,,Sum,%,%,.1f,,295,295
+hm9,QESS21.Q.E03S0.nay,Average hourly earnings (ordinary time and overtime)	 - y/y%,Hourly Earnings y/y%,Average hourly earnings (ordinary time and overtime),1,y/y%,%,Average hourly earnings (ordinary time and overtime)	 - y/y%,,Sum,%,%,.1f,,296,296
+hm10,QVB.Q.MR0H01.na,House sales,NA,House sales,1,NA,no,House sales,,Sum,no,no,",d",,297,297
+hm10,HPI.Q.H01T0.ia,House price index (HPI),NA,House price index (HPI),1,NA,Index,House price index (HPI),,Sum,Index,Index,",d",,298,298
+hm10,HHAL.QC1,Total value of housing stock,NA,Total value of housing stock,1,NA,NZDm,Total value of housing stock,,Sum,NZDm,NZDm,",d",,299,299
+hm10,GDE.Q.EI24.RA,Residential investment (GDP),NA,Residential investment (GDP),1,NA,NZDm(r),Residential investment (GDP),,Sum,NZDm (r.),NZDm(r),",d",,300,300
+hm14,SOE.Q.E100.na,Perception of monetary conditions (net) - End of current quarter,Perception of monetary conditions (net) - End of current quarter,Perception of monetary conditions (net),1,NA,%,Perception of monetary conditions (net) - End of current quarter,,Sum,Total %,%,.2f,,301,301
+hm14,SOE.Q.E101.na,Perception of monetary conditions (net) - Next quarter,Perception of monetary conditions (net) - Next quarter,Perception of monetary conditions (net),1,NA,%,Perception of monetary conditions (net) - Next quarter,,Sum,Total %,%,.2f,,302,302
+hm14,SOE.Q.E102.na,Perception of monetary conditions (net) - 1 year out,Perception of monetary conditions (net) - 1 year out,Perception of monetary conditions (net),1,NA,%,Perception of monetary conditions (net) - 1 year out,,Sum,Total %,%,.2f,,303,303
+hm14,SOE.Q.E210.na,Annual CPI growth - 1 year out,Annual CPI growth - 1 year out,Annual CPI growth,1,NA,%,Annual CPI growth - 1 year out,,Sum,%,%,.2f,,304,304
+hm14,SOE.Q.E215.na,Annual CPI growth - 2 years out,Annual CPI growth - 2 years out,Annual CPI growth,1,NA,%,Annual CPI growth - 2 years out,,Sum,%,%,.2f,,305,305
+hm14,SOE.Q.E220.na,Annual CPI growth - 5 years out,Annual CPI growth - 5 years out,Annual CPI growth,1,NA,%,Annual CPI growth - 5 years out,,Sum,%,%,.2f,,306,306
+hm14,SOE.Q.E230.na,Annual CPI growth - 10 years out,Annual CPI growth - 10 years out,Annual CPI growth,1,NA,%,Annual CPI growth - 10 years out,,Sum,%,%,.2f,,307,307
+hm14,SOE.Q.E350.na,Official Cash Rate (OCR) - End of current quarter,Official Cash Rate (OCR) - End of current quarter,Official Cash Rate (OCR),1,NA,%pa,Official Cash Rate (OCR) - End of current quarter,,Sum,%,%pa,.2f,,308,308
+hm14,SOE.Q.E351.na,Official Cash Rate (OCR) - 1 year out,Official Cash Rate (OCR) - 1 year out,Official Cash Rate (OCR),1,NA,%pa,Official Cash Rate (OCR) - 1 year out,,Sum,%,%pa,.2f,,309,309
+hm14,SOE.Q.E353.na,Official Cash Rate (OCR) - 10 years out,Official Cash Rate (OCR) - 10 years out,Official Cash Rate (OCR),1,NA,%pa,Official Cash Rate (OCR) - 10 years out,,Sum,%,%pa,.2f,,310,310
+hm14,SOE.Q.E356.na,Official Cash Rate (OCR) - 10 year average,Official Cash Rate (OCR) - 10 year average,Official Cash Rate (OCR),1,NA,%pa,Official Cash Rate (OCR) - 10 year average,,Sum,%,%pa,.2f,,311,311
+hm14,SOE.Q.E310.na,10 year government bond yields - End of current quarter,10 year government bond yields - End of current quarter,10 year government bond yields,1,NA,%pa,10 year government bond yields - End of current quarter,,Sum,%,%pa,.2f,,312,312
+hm14,SOE.Q.E311.na,10 year government bond yields - 1 year out,10 year government bond yields - 1 year out,10 year government bond yields,1,NA,%pa,10 year government bond yields - 1 year out,,Sum,%,%pa,.2f,,313,313
+hm14,SOE.Q.E402.ra,Annual GDP growth - 1 year out,Annual GDP growth - 1 year out,Annual GDP growth,1,NA,%,Annual GDP growth - 1 year out,,Sum,%,%,.2f,,314,314
+hm14,SOE.Q.E403.ra,Annual GDP growth - 2 years out,Annual GDP growth - 2 years out,Annual GDP growth,1,NA,%,Annual GDP growth - 2 years out,,Sum,%,%,.2f,,315,315
+hm14,SOE.Q.E460.na,Annual hourly wage growth - 1 year out,Annual hourly wage growth - 1 year out,Annual hourly wage growth,1,NA,%,Annual hourly wage growth - 1 year out,,Sum,%,%,.2f,,316,316
+hm14,SOE.Q.E461.na,Annual hourly wage growth - 2 years out,Annual hourly wage growth - 2 years out,Annual hourly wage growth,1,NA,%,Annual hourly wage growth - 2 years out,,Sum,%,%,.2f,,317,317
+hm14,SOE.Q.E470.na,Unemployment rate - 1 year out,Unemployment rate - 1 year out,Unemployment rate,1,NA,%,Unemployment rate - 1 year out,,Sum,Total %,%,.2f,,318,318
+hm14,SOE.Q.E471.na,Unemployment rate - 2 years out,Unemployment rate - 2 years out,Unemployment rate,1,NA,%,Unemployment rate - 2 years out,,Sum,Total %,%,.2f,,319,319
+hm14,SOE.Q.E320.na,US dollar exchange rate - Next quarter,US dollar exchange rate - Next quarter,US dollar exchange rate,1,NA,NZD/USD,US dollar exchange rate - Next quarter,,Sum,NZD/USD,NZD/USD,.2f,,320,320
+hm14,SOE.Q.E321.na,US dollar exchange rate - 1 year out,US dollar exchange rate - 1 year out,US dollar exchange rate,1,NA,NZD/USD,US dollar exchange rate - 1 year out,,Sum,NZD/USD,NZD/USD,.2f,,321,321
+hm14,SOE.Q.E330.na,Australian dollar exchange rate - Next quarter,Australian dollar exchange rate - Next quarter,Australian dollar exchange rate,1,NA,NZD/AUD,Australian dollar exchange rate - Next quarter,,Sum,NZD/AUD,NZD/AUD,.2f,,322,322
+hm14,SOE.Q.E331.na,Australian dollar exchange rate - 1 year out,Australian dollar exchange rate - 1 year out,Australian dollar exchange rate,1,NA,NZD/AUD,Australian dollar exchange rate - 1 year out,,Sum,NZD/AUD,NZD/AUD,.2f,,323,323
+hm14,SOE.Q.E480.na,House price index - 1 year out,House price index - 1 year out,House price index,1,NA,%,House price index - 1 year out,,Sum,%,%,.2f,,324,324
+hm14,SOE.Q.E481.na,House price index - 2 years out,House price index - 2 years out,House price index,1,NA,%,House price index - 2 years out,,Sum,%,%,.2f,,325,325
+hs32,BSPA.MAM2A4.P1,Owner occupier property use,Owner occupier property use,Total,1,Use,NZDm,Owner occupier property use,,Sum,NZDm,NZDm,",d",,326,326
+hs32,BSPA.MAM2A4.P1H1,Interest only,Owner occupier property use,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,327,327
+hs32,BSPA.MAM2A4.P1H2,Revolving credit,Owner occupier property use,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,328,328
+hs32,BSPA.MAM2A4.P1H3,Principal & interest,Owner occupier property use,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,329,329
+hs32,BSPA.MAM2A4.P1H6,Other,Owner occupier property use,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,330,330
+hs32,BSPA.MAM3A4.P1,Residential investor property use,Residential investor property use,Total,1,Use,NZDm,Residential investor property use,,Sum,NZDm,NZDm,",d",,331,331
+hs32,BSPA.MAM3A4.P1N1,Interest only,Residential investor property use,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,332,332
+hs32,BSPA.MAM3A4.P1N2,Revolving credit,Residential investor property use,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,333,333
+hs32,BSPA.MAM3A4.P1N3,Principal & interest,Residential investor property use,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,334,334
+hs32,BSPA.MAM3A4.P1N9,Other,Residential investor property use,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,335,335
+hs32,BSPAS.MAN1A4.P2,Personal consumer loans,Personal consumer loans,Total,1,Use,NZDm,Personal consumer loans,,Sum,NZDm,NZDm,",d",,336,336
+hs32,BSPA.MAN1A4.P2C1,Interest only,Personal consumer loans,Overdrafts,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,337,337
+hs32,BSPA.MAN1A4.P2C2,Revolving credit,Personal consumer loans,Credit cards,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,338,338
+hs32,BSPA.MAN1A4.P2C3,Principal & interest,Personal consumer loans,Term loans,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,339,339
+hs32,BSPA.MAN1A4.P2C9,Other,Personal consumer loans,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,340,340
+hs32,BSPAS.MALA4.P3,Business loans,Business loans,Total,1,Use,NZDm,Business loans,,Sum,NZDm,NZDm,",d",,341,341
+hs32,BSPA.MALA4.P3N1,Interest only,Business loans,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,342,342
+hs32,BSPA.MALA4.P3N2,Revolving credit,Business loans,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,343,343
+hs32,BSPA.MALA4.P3N3,Principal & interest,Business loans,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,344,344
+hs32,BSPA.MALA4.P3N6,Other,Business loans,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,345,345
+hs32,BSPAS.MALA4.P4ZA,Agriculture loans,Agriculture loans,Total,1,Use,NZDm,Agriculture loans,,Sum,NZDm,NZDm,",d",,346,346
+hs32,BSPA.MALA4.P4N1A,Interest only,Agriculture loans,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,347,347
+hs32,BSPA.MALA4.P4N2A,Revolving credit,Agriculture loans,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,348,348
+hs32,BSPA.MALA4.P4N3A,Principal & interest,Agriculture loans,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,349,349
+hs32,BSPA.MALA4.P4N6A,Other,Agriculture loans,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,350,350
+hs32,BSPA.MALA4.P5,Financial institutions loans,Financial institutions loans,Total,1,Use,NZDm,Financial institutions loans,,Sum,NZDm,NZDm,",d",,351,351
+hs32,BSPA.MALA4.P5N1,Interest only,Financial institutions loans,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,352,352
+hs32,BSPA.MALA4.P5N2,Revolving credit,Financial institutions loans,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,353,353
+hs32,BSPA.MALA4.P5N3,Principal & interest,Financial institutions loans,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,354,354
+hs32,BSPA.MALA4.P5N6,Other,Financial institutions loans,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,355,355
+hs32,BSPA.MALA4.P9,Other loans,Other loans,Total,1,Use,NZDm,Other loans,,Sum,NZDm,NZDm,",d",,356,356
+hs32,BSPA.MALA4.P9N1,Interest only,Other loans,Interest only,1,Type,NZDm,Interest only,,Sum,NZDm,NZDm,",d",,357,357
+hs32,BSPA.MALA4.P9N2,Revolving credit,Other loans,Revolving credit,1,Type,NZDm,Revolving credit,,Sum,NZDm,NZDm,",d",,358,358
+hs32,BSPA.MALA4.P9N3,Principal & interest,Other loans,Principal & interest,1,Type,NZDm,Principal & interest,,Sum,NZDm,NZDm,",d",,359,359
+hs32,BSPA.MALA4.P9N6,Other,Other loans,Other,1,Type,NZDm,Other,,Sum,NZDm,NZDm,",d",,360,360
+fuel,USD per Barrel,USD per Barrel,NA,USD per Barrel,1,NA,NA,USD per Barrel,,Sum,$,NA,",d",,361,361
+fuel,NZD per Barrel,NZD per Barrel,NA,NZD per Barrel,1,NA,NA,NZD per Barrel,,Sum,$,NA,",d",,362,362
+adp,Available monthly stay unit capacity,Available monthly stay unit capacity,NA,NA,1,NA,NA,Available monthly stay unit capacity,,Sum,NA,NA,",d",,363,380
+adp,Average guests per stay unit night,Average guests per stay unit night,NA,NA,2,NA,NA,Average guests per stay unit night,,Sum,NA,NA,",d",,364,380
+adp,Average nights stayed per guest,Average nights stayed per guest,NA,NA,3,NA,NA,Average nights stayed per guest,,Sum,NA,NA,",d",,365,380
+adp,Average stay units per establishment,Average stay units per establishment,NA,NA,4,NA,NA,Average stay units per establishment,,Sum,NA,NA,",d",,366,380
+adp,Capacity utilisation rate (%),Capacity utilisation rate (%),NA,NA,5,NA,NA,Capacity utilisation rate (%),,Sum,NA,NA,",d",,367,380
+adp,Domestic guest nights,Domestic guest nights,NA,NA,6,NA,NA,Domestic guest nights,,Sum,NA,NA,",d",,368,380
+adp,Guest arrivals,Guest arrivals,NA,NA,7,NA,NA,Guest arrivals,,Sum,NA,NA,",d",,369,380
+adp,International guest nights,International guest nights,NA,NA,8,NA,NA,International guest nights,,Sum,NA,NA,",d",,370,380
+adp,Monthly stay unit capacity,Monthly stay unit capacity,NA,NA,9,NA,NA,Monthly stay unit capacity,,Sum,NA,NA,",d",,371,380
+adp,Number of active establishments,Number of active establishments,NA,NA,10,NA,NA,Number of active establishments,,Sum,NA,NA,",d",,372,380
+adp,Number of establishments,Number of establishments,NA,NA,11,NA,NA,Number of establishments,,Sum,NA,NA,",d",,373,380
+adp,Number of stay units,Number of stay units,NA,NA,12,NA,NA,Number of stay units,,Sum,NA,NA,",d",,374,380
+adp,Occupancy rate (%),Occupancy rate (%),NA,NA,13,NA,NA,Occupancy rate (%),,Sum,NA,NA,",d",,375,380
+adp,Percentage of stay unit capacity available (%),Percentage of stay unit capacity available (%),NA,NA,14,NA,NA,Percentage of stay unit capacity available (%),,Sum,NA,NA,",d",,376,380
+adp,Proportion of domestic guests (%),Proportion of domestic guests (%),NA,NA,15,NA,NA,Proportion of domestic guests (%),,Sum,NA,NA,",d",,377,380
+adp,Proportion of international guests (%),Proportion of international guests (%),NA,NA,16,NA,NA,Proportion of international guests (%),,Sum,NA,NA,",d",,378,380
+adp,Stay unit nights occupied,Stay unit nights occupied,NA,NA,17,NA,NA,Stay unit nights occupied,,Sum,NA,NA,",d",,379,380
+adp,Total guest nights,Total guest nights,NA,NA,18,NA,NA,Total guest nights,,Sum,NA,NA,",d",,380,380
+bond,Lodged Bonds,Lodged Bonds,NA,NA,1,NA,NA,Lodged Bonds,,Sum,$,NA,",d",,381,388
+bond,Active Bonds,Active Bonds,NA,NA,2,NA,NA,Active Bonds,,Sum,$,NA,",d",,382,388
+bond,Closed Bonds,Closed Bonds,NA,NA,3,NA,NA,Closed Bonds,,Sum,$,NA,",d",,383,388
+bond,Median Rent,Median Rent,NA,NA,4,NA,NA,Median Rent,,Sum,$,NA,",d",,384,388
+bond,Geometric Mean Rent,Geometric Mean Rent,NA,NA,5,NA,NA,Geometric Mean Rent,,Sum,$,NA,",d",,385,388
+bond,Upper Quartile Rent,Upper Quartile Rent,NA,NA,6,NA,NA,Upper Quartile Rent,,Sum,$,NA,",d",,386,388
+bond,Lower Quartile Rent,Lower Quartile Rent,NA,NA,7,NA,NA,Lower Quartile Rent,,Sum,$,NA,",d",,387,388
+bond,Log Std Dev Weekly Rent,Log Std Dev Weekly Rent,NA,NA,8,NA,NA,Log Std Dev Weekly Rent,,Sum,$,NA,",d",,388,388
+border,Arrivals,Arrivals,-,-,1,-,-,Arrivals,,Sum,-,-,",d",,389,389
+NDM01,All house types,VALUE,All house types,All house types,1,Total,-,VALUE,,Sum,-,-,",d",,390,390
+NDM01,Single house,VALUE,Single house,Single house,1,Stack,-,VALUE,,Sum,-,-,",d",,391,391
+NDM01,Scheme house,VALUE,Scheme house,Scheme house,1,Stack,-,VALUE,,Sum,-,-,",d",,392,392
+NDM01,Apartment,VALUE,Apartment,Apartment,1,Stack,-,VALUE,,Sum,-,-,",d",,393,393

@@ -1,9 +1,9 @@
-mod_hm9_ui <- function(id) {
+mod_hm9_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hm9_ui loaded")
   ns <- NS(id)
 
   hm9_tier <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = c("Class_1", "Name", "Class_2"),
     apply_filters = list(Data = c("hm9"))
   ) |>
@@ -27,7 +27,7 @@ mod_hm9_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm9")
 }
 
-mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -53,7 +53,7 @@ mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       plot_function(
         data = hm9_data(),
         titles = c("Labour market", paste("RBNZ:", short_title(x))),
-        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm9"), Name = x)),
+        series = filter_series(series_guide, apply_filters = list(Data = c("hm9"), Name = x)),
         k = "Date"
       )
     })

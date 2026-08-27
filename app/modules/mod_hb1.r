@@ -1,6 +1,6 @@
-mod_hb1_ui <- function(id) {
+mod_hb1_ui <- function(id, series_guide = guide_rbnz) {
   ns <- NS(id)
-  class_1 <- filter_series_unlist(guide_rbnz, column = "Class_1", apply_filters = list(Data = c("hb1")))
+  class_1 <- filter_series_unlist(series_guide, column = "Class_1", apply_filters = list(Data = c("hb1")))
   ui_single(
     id = ns("hb1"),
     tagList(
@@ -16,7 +16,7 @@ mod_hb1_ui <- function(id) {
 }
 
 
-mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -34,7 +34,7 @@ mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = hb1_data(),
         titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          guide_rbnz,
+          series_guide,
           apply_filters = list(Data = "hb1", Class_1 = valid_inputs)
         ),
         k = "Date",

@@ -19,15 +19,15 @@ assign_series_colours <- function(series) {
 }
 
 normalise_standard_series <- function(series) {
-  aliases <- c(
-    DatasetColumn = "ID",
-    DisplayName = "Name",
-    Dim_Group = "Dim"
+  aliases <- list(
+    DatasetColumn = c("ID"),
+    DisplayName = c("ColumnName", "Name"),
+    Dim_Group = c("Dim")
   )
 
   for (target in names(aliases)) {
-    source <- aliases[[target]]
-    if (!target %in% names(series) && source %in% names(series)) {
+    source <- aliases[[target]][aliases[[target]] %in% names(series)][1]
+    if (!target %in% names(series) && !is.na(source)) {
       series[[target]] <- series[[source]]
     }
   }
@@ -35,7 +35,7 @@ normalise_standard_series <- function(series) {
   defaults <- list(
     DisplayName = NA_character_, Dim_Group = "value", Tick = ".2f",
     Prefix = "", Palette = "qual", ColourKey = "teal_base",
-    Style = "Line", Stack = FALSE, Rollup = "Sum"
+    Style = "Line", Stack = FALSE, Rollup = "Sum", Row = NA_real_
   )
   for (column in names(defaults)) {
     if (!column %in% names(series)) series[[column]] <- defaults[[column]]
@@ -91,6 +91,9 @@ standard_plot <- function(
   k,
   years = 10,
   clean_ui = FALSE,
+  area_fill = "tozeroy",
+  area_opacity = 0.7,
+  smooth_lines = TRUE,
   download = list(format = "png", width = 2000, height = 1200, scale = 2)
 ) {
   series <- normalise_standard_series(series)
@@ -111,6 +114,7 @@ standard_plot <- function(
   }
 
   series <- series |>
+    dplyr::arrange(Row) |>
     dplyr::arrange(factor(Style, levels = c("Fill", "Area", "Bar", "Dashed", "Line"))) |>
     assign_series_colours() |>
     dplyr::mutate(
@@ -144,9 +148,16 @@ standard_plot <- function(
     } else {
       common$type <- "scatter"
       common$mode <- if (s$Style %in% c("Fill", "Area")) "none" else "lines"
-      common$line <- list(color = s$colour, dash = if (s$Style == "Dashed") "dot" else "solid")
+      common$line <- list(
+        color = s$colour,
+        dash = if (s$Style == "Dashed") "dot" else "solid",
+        shape = if (isTRUE(smooth_lines)) "spline" else "linear"
+      )
       if (isTRUE(s$Stack)) common$stackgroup <- paste0(s$Axis, "_stack")
-      if (s$Style %in% c("Fill", "Area") && !isTRUE(s$Stack)) common$fill <- "tozeroy"
+      if (s$Style %in% c("Fill", "Area")) {
+        common$fillcolor <- to_rgba(s$colour, area_opacity)
+        if (!isTRUE(s$Stack)) common$fill <- area_fill
+      }
       p <- do.call(plotly::add_trace, common)
     }
   }

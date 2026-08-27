@@ -1,16 +1,16 @@
-mod_hc35_ui <- function(id) {
+mod_hc35_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hc35_ui loaded")
   ns <- NS(id)
 
   hc35_group <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_1",
     apply_filters = list(Data = c("hc35"))
   )$Class_1
   hc35_group <- hc35_group[!is.na(hc35_group)]
 
   hc35_split <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_2",
     apply_filters = list(Data = c("hc35"))
   )$Class_2
@@ -24,7 +24,7 @@ mod_hc35_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
 }
 
-mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -45,7 +45,7 @@ mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plo
           paste("RBNZ:", short_title(unique(c(input$hc35_group, input$hc35_split))))
         ),
         series = filter_series(
-          guide_rbnz,
+          series_guide,
           apply_filters = list(
             Data = c("hc35"),
             Class_2 = input$hc35_split,
