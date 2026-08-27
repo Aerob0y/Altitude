@@ -125,7 +125,10 @@ mod_bond_server_test <- function(id, selected_tab, activate_on) {
 
 standard_plot(
   data = d,
-  titles = "X Plotly Test",
+  titles = c(
+    "Bond",
+    paste("RBNZ:", short_title(input$bond_tier))
+  ),
   series = s,
   split_by = if (input$bond_split_metric != "-") "Location" else NULL,
   split_columns = if (input$bond_split_metric != "-") input$bond_split_metric else NULL,
