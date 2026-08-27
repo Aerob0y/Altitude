@@ -16,7 +16,7 @@ mod_hb1_ui <- function(id) {
 }
 
 
-mod_hb1_server <- function(id, selected_tab, activate_on) {
+mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -30,7 +30,7 @@ mod_hb1_server <- function(id, selected_tab, activate_on) {
     hb1_plot <- reactive({
       req(enabled())
       valid_inputs <- unique(c(input$Currency1_main, input$Currency2_main)) |> setdiff("-")
-      x_plotly(
+      plot_function(
         data = hb1_data(),
         titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(

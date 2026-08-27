@@ -211,6 +211,24 @@ ui <- fluidPage(
       nav_panel("BondTest", value = "bond_test", uiOutput("bond_test_ui"))
     ),
     nav_menu(
+      "Economic Indicators Update",
+      nav_panel("Exchange Rates", value = "hb1_update", uiOutput("hb1_update_ui")),
+      nav_panel("Interest Rates", value = "hb2_update", uiOutput("hb2_update_ui")),
+      nav_panel("Residential Mortgages", value = "hc35_update", uiOutput("hc35_update_ui")),
+      nav_panel("Inflation", value = "hm1_update", uiOutput("hm1_update_ui")),
+      nav_panel("Consumption", value = "hm2_update", uiOutput("hm2_update_ui")),
+      nav_panel("Investment", value = "hm3_update", uiOutput("hm3_update_ui")),
+      nav_panel("Domestic Trade", value = "hm4_update", uiOutput("hm4_update_ui")),
+      nav_panel("GDP", value = "hm5_update", uiOutput("hm5_update_ui")),
+      nav_panel("National Savings", value = "hm6_update", uiOutput("hm6_update_ui")),
+      nav_panel("Balance of Payments", value = "hm7_update", uiOutput("hm7_update_ui")),
+      nav_panel("Overseas Trade", value = "hm8_update", uiOutput("hm8_update_ui")),
+      nav_panel("Labour Market", value = "hm9_update", uiOutput("hm9_update_ui")),
+      nav_panel("CoreLogic", value = "hm10_update", uiOutput("hm10_update_ui")),
+      nav_panel("Survey of expectations", value = "hm14_update", uiOutput("hm14_update_ui")),
+      nav_panel("Banks: Loans by product", value = "hs32_update", uiOutput("hs32_update_ui"))
+    ),
+    nav_menu(
       "Tourism & Migration",
       nav_panel("Border", value = "border", uiOutput("border_ui")),
       nav_panel("Fuel", value = "fuel", uiOutput("fuel_ui")),

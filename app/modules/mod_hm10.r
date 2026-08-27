@@ -17,7 +17,7 @@ mod_hm10_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm10")
 }
 
-mod_hm10_server <- function(id, selected_tab, activate_on) {
+mod_hm10_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -39,7 +39,7 @@ mod_hm10_server <- function(id, selected_tab, activate_on) {
       req(enabled())
       valid_inputs <- unique(c(input$hm10_class_2_1, input$hm10_class_2_2)) |> setdiff("-")
 
-      x_plotly(
+      plot_function(
         data = hm10_data(),
         titles = c("Housing", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm10"), Class_2 = valid_inputs)),

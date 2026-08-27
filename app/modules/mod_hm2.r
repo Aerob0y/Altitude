@@ -31,7 +31,7 @@ mod_hm2_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm2")
 }
 
-mod_hm2_server <- function(id, selected_tab, activate_on) {
+mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -60,7 +60,7 @@ mod_hm2_server <- function(id, selected_tab, activate_on) {
 
       t <- if (checks$sourcenames) "Consumption - HM2" else "Consumption"
 
-      x_plotly(
+      plot_function(
         data = d,
         titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(

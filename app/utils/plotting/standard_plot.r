@@ -1,85 +1,89 @@
-to_rgba <- function(col, alpha = 0.25) {
-  rgb <- grDevices::col2rgb(col)
+to_rgba <- function(colour, alpha = 0.25) {
+  rgb <- grDevices::col2rgb(colour)
   sprintf("rgba(%d,%d,%d,%.3f)", rgb[1], rgb[2], rgb[3], alpha)
 }
 
-### assign_series_colours: Assigns colours to series based on the specified palette and colour key ----
 assign_series_colours <- function(series) {
-
-  if (!"Palette" %in% names(series)) {
-    series$Palette <- "qual"
-  }
-
-  if (!"ColourKey" %in% names(series)) {
-    series$ColourKey <- "teal_base"
-  }
-
   series |>
     dplyr::group_by(Palette) |>
     dplyr::mutate(
       colour = if (dplyr::first(Palette) == "manual") {
-
         unname(cc[ColourKey])
-
       } else {
-
-        pal <- palettes[[dplyr::first(Palette)]]
-
-        key_no <- match(
-          ColourKey,
-          unique(ColourKey)
-        )
-
-        pal[(key_no - 1) %% length(pal) + 1]
+        palette <- palettes[[dplyr::first(Palette)]]
+        keys <- match(ColourKey, unique(ColourKey))
+        palette[(keys - 1) %% length(palette) + 1]
       }
     ) |>
     dplyr::ungroup()
 }
 
-rollup_series <- function(data, value_col, rollup, group_col) {
+normalise_standard_series <- function(series) {
+  aliases <- c(
+    DatasetColumn = "ID",
+    DisplayName = "Name",
+    Dim_Group = "Dim"
+  )
+
+  for (target in names(aliases)) {
+    source <- aliases[[target]]
+    if (!target %in% names(series) && source %in% names(series)) {
+      series[[target]] <- series[[source]]
+    }
+  }
+
+  defaults <- list(
+    DisplayName = NA_character_, Dim_Group = "value", Tick = ".2f",
+    Prefix = "", Palette = "qual", ColourKey = "teal_base",
+    Style = "Line", Stack = FALSE, Rollup = "Sum"
+  )
+  for (column in names(defaults)) {
+    if (!column %in% names(series)) series[[column]] <- defaults[[column]]
+    series[[column]][is.na(series[[column]]) | series[[column]] == ""] <- defaults[[column]]
+  }
+
+  series$DisplayName[is.na(series$DisplayName)] <- series$DatasetColumn[is.na(series$DisplayName)]
+  series
+}
+
+rollup_standard_series <- function(data, value_col, rollup, group_col) {
+  summarise_value <- function(values, weights = NULL) {
+    if (all(is.na(values))) return(NA_real_)
+    if (is.null(weights)) return(sum(values, na.rm = TRUE))
+    keep <- !is.na(values) & !is.na(weights)
+    if (!any(keep) || sum(weights[keep]) == 0) return(NA_real_)
+    stats::weighted.mean(values[keep], weights[keep])
+  }
+
+  summarise_group <- function(group, key) {
+    values <- group[[value_col]]
+    value <- if (all(is.na(values))) {
+      NA_real_
+    } else if (rollup == "Min") {
+      min(values, na.rm = TRUE)
+    } else if (rollup == "Avg") {
+      mean(values, na.rm = TRUE)
+    } else if (rollup == "Max") {
+      max(values, na.rm = TRUE)
+    } else if (rollup %in% names(group)) {
+      summarise_value(values, group[[rollup]])
+    } else {
+      summarise_value(values)
+    }
+    tibble::tibble(value = value)
+  }
+
   data |>
     dplyr::group_by(.data[[group_col]]) |>
-    dplyr::group_modify(function(.x, .y) {
-      x <- .x[[value_col]]
-      value <- if (is.na(rollup) || rollup == "" || rollup == "Sum") { sum(x, na.rm = TRUE)
-      } else if (rollup == "Min") {
-        min(x, na.rm = TRUE)
-      } else if (rollup == "Avg") {
-        mean(x, na.rm = TRUE)
-      } else if (rollup == "Max") {
-        max(x, na.rm = TRUE)
-      } else if (rollup %in% names(.x)) {
-        sum(x * .x[[rollup]], na.rm = TRUE) /  sum(.x[[rollup]], na.rm = TRUE)
-      } else {
-        sum(x, na.rm = TRUE)
-      }
-      tibble::tibble(value = value)
-    }) |>
+    dplyr::group_modify(summarise_group) |>
     dplyr::ungroup()
 }
 
-standard_plot_defaults <- list(
-  title = "",
-  subtitle = "",
-  x = "Date",
-  format = "wide",
-  value = NULL,
-  series = NULL,
-  style = "line",
-  stack = FALSE,
-  years = 10,
-  y_title = "",
-  y2_title = "",
-  tickformat = ".2f",
-  prefix = "",
-  download = list(format = "png", width = 2000, height = 1200, scale = 2)
-)
-
 standard_plot <- function(
   data,
-  reference,
+  reference = NULL,
   chart = NULL,
-  titles       = c("", ""),
+  titles = c("", ""),
   yaxis_titles = c("", ""),
   series,
   split_columns = NULL,
@@ -89,118 +93,74 @@ standard_plot <- function(
   clean_ui = FALSE,
   download = list(format = "png", width = 2000, height = 1200, scale = 2)
 ) {
+  series <- normalise_standard_series(series)
+  if (!nrow(series)) return(plotly::plot_ly())
 
-  print(split_by)
-
-
-
-  if (!"Palette" %in% names(series))   series$Palette <- "qual"
-  if (!"ColourKey" %in% names(series)) series$ColourKey <- "teal_base"
-  series <- series |>
-    dplyr::mutate(
-      Palette = dplyr::if_else(is.na(Palette) | Palette == "", "qual", Palette),
-      ColourKey = dplyr::if_else(is.na(ColourKey) | ColourKey == "", "teal_base", ColourKey)
-    )
-  #if a split is specified, cut the data
-
-  if ((!is.null(split_by))) {
-
-
-
+  if (!is.null(split_by)) {
+    split_columns <- split_columns %||% series$DatasetColumn
+    split_values <- unique(as.character(data[[split_by]]))
     split_series <- series |>
       dplyr::filter(DatasetColumn %in% split_columns) |>
-      tidyr::crossing(Split = unique(data[[split_by]])) |>
-      dplyr::mutate(
-        ColourKey = paste0(ColourKey, "_", Split)
-      )
-
-    non_split_series <- series |>
+      tidyr::crossing(Split = split_values)
+    unsplit_series <- series |>
       dplyr::filter(!DatasetColumn %in% split_columns) |>
       dplyr::mutate(Split = NA_character_)
-
-    series <- dplyr::bind_rows(
-      non_split_series,
-      split_series
-    )
+    series <- dplyr::bind_rows(unsplit_series, split_series)
+  } else {
+    series$Split <- NA_character_
   }
 
-  # Add Style to series if not present
-  if (!"Style" %in% names(series)) series$Style <- "Line"
-  series <- series[order(factor(series$Style, levels = c("Fill", "Bar", "Line"))), ]
-
-  # asign colours to series
-  series <- assign_series_colours(series)
-
-
-  # asign sides to series
-  dims <- unique(series$Dim_Group)
-  unique_dims <- series %>% group_by(Dim_Group, Tick, Prefix) %>% summarise(colour  = first(colour), .groups = "keep")
-  series <- series %>% mutate(Axis = if_else(Dim_Group == dims[1], "y", "y2"))
-
-  # Always guarantee this column exists
-if (!"Split" %in% names(series)) {
-  series$Split <- NA_character_
-}
-
-  # Create plotly object
-  p <- plotly::plot_ly()
-  # Add traces to plotly object
-  for (i in seq_len(nrow(series))) {
-    s <- series[i, ]
-
-    if (!is.null(split_by) && !is.na(s$Split)) {
-
-      d <- data |>
-        dplyr::filter(.data[[split_by]] == s$Split)
-
-    } else {
-
-      d <- rollup_series(
-        data      = data,
-        value_col = s$DatasetColumn,
-        rollup    = s$Rollup,
-        group_col = k
-      )
-    }
-    common <- list(
-      p     = p,
-      x = d[[k]],
-      y = if ("value" %in% names(d)) d$value else d[[s$DatasetColumn]],
-      name = if (!is.na(s$Split)) {
-        paste0(s$DatasetColumn, " (", s$Split, ")")
-      } else {
-        s$DatasetColumn
-      },
-      yaxis = s$Axis,
-      line = list(
-        color = s$colour,
-        dash = if (s$Style == "Dashed") "dot" else "solid"
-      )
+  series <- series |>
+    dplyr::arrange(factor(Style, levels = c("Fill", "Area", "Bar", "Dashed", "Line"))) |>
+    assign_series_colours() |>
+    dplyr::mutate(
+      Axis = dplyr::if_else(Dim_Group == dplyr::first(Dim_Group), "y", "y2")
     )
 
-    if (series$Style[i] == "Bar") {
-      common$marker <- list(color = series$colour[i])
-      common$line <- NULL
+  dimensions <- series |>
+    dplyr::group_by(Axis, Dim_Group) |>
+    dplyr::summarise(Tick = dplyr::first(Tick), Prefix = dplyr::first(Prefix), colour = dplyr::first(colour), .groups = "drop") |>
+    dplyr::arrange(Axis)
+
+  p <- plotly::plot_ly()
+  for (i in seq_len(nrow(series))) {
+    s <- series[i, ]
+    if (!is.na(s$Split)) {
+      trace_data <- data |> dplyr::filter(as.character(.data[[split_by]]) == s$Split)
+      x <- trace_data[[k]]
+      y <- trace_data[[s$DatasetColumn]]
+      trace_name <- paste0(s$DisplayName, " (", s$Split, ")")
+    } else {
+      trace_data <- rollup_standard_series(data, s$DatasetColumn, s$Rollup, k)
+      x <- trace_data[[k]]
+      y <- trace_data$value
+      trace_name <- s$DisplayName
+    }
+
+    common <- list(p = p, x = x, y = y, name = trace_name, yaxis = s$Axis)
+    if (s$Style == "Bar") {
+      common$marker <- list(color = s$colour)
       p <- do.call(plotly::add_bars, common)
     } else {
-
       common$type <- "scatter"
-      common$mode <- if (s$Style == "Area") "none" else "lines"
-
-      if (isTRUE(s$Stack)) {
-        common$stackgroup <- paste0(s$Axis, "_stack")
-      }
-
-      if (s$Style == "Area" && !isTRUE(s$Stack)) {
-        common$fill <- "tozeroy"
-      }
-
+      common$mode <- if (s$Style %in% c("Fill", "Area")) "none" else "lines"
+      common$line <- list(color = s$colour, dash = if (s$Style == "Dashed") "dot" else "solid")
+      if (isTRUE(s$Stack)) common$stackgroup <- paste0(s$Axis, "_stack")
+      if (s$Style %in% c("Fill", "Area") && !isTRUE(s$Stack)) common$fill <- "tozeroy"
       p <- do.call(plotly::add_trace, common)
     }
   }
 
-  # 4. Apply one consistent layout and download configuration --------------
-  p <- p |> standard_layout(years = years, titles = titles, clean_ui = clean_ui) |> x_yaxis(unique_dims, yaxis_titles)
+  if (nrow(dimensions) == 1) dimensions$colour <- "black"
+  p <- p |>
+    standard_layout(years = years, titles = titles, clean_ui = clean_ui) |>
+    x_yaxis(dimensions, yaxis_titles)
 
+  download <- list(
+    format = as.character(download$format %||% "png"),
+    width = as.numeric(download$width %||% 2000),
+    height = as.numeric(download$height %||% 1200),
+    scale = as.numeric(download$scale %||% 2)
+  )
   plotly::config(p, displayModeBar = TRUE, toImageButtonOptions = download)
 }

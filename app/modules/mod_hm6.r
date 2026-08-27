@@ -16,7 +16,7 @@ mod_hm6_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm6")
 }
 
-mod_hm6_server <- function(id, selected_tab, activate_on) {
+mod_hm6_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -28,7 +28,7 @@ mod_hm6_server <- function(id, selected_tab, activate_on) {
 
     hm6_plot <- reactive({
       req(enabled())
-      x_plotly(
+      plot_function(
         data = hm6_data(),
         titles = c("National Saving", paste("RBNZ:", short_title(input$hm6_name))),
         series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm6"), Name = input$hm6_name)),

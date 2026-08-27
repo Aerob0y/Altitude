@@ -36,7 +36,7 @@ mod_hm4_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm4")
 }
 
-mod_hm4_server <- function(id, selected_tab, activate_on) {
+mod_hm4_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -52,7 +52,7 @@ mod_hm4_server <- function(id, selected_tab, activate_on) {
 
       t <- if (checks$sourcenames) "Domestic Trade - HM4" else "Domestic Trade"
 
-      x_plotly(
+      plot_function(
         data = d,
         titles = c(t, paste("RBNZ:", short_title(input$hm4_class_1))),
         series = filter_series(
