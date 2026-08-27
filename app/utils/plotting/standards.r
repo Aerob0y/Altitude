@@ -28,17 +28,9 @@ palettes <- list(
   navy = unlist(cc[c("navy_dark", "navy_base", "navy_lite", "navy_snow")]),
   ruby = unlist(cc[c("ruby_dark", "ruby_base", "ruby_lite", "ruby_snow")]),
   gold = unlist(cc[c("gold_dark", "gold_base", "gold_lite", "gold_snow")]),
-  grey = unlist(cc[c("grey_dark", "grey_base", "grey_lite")])
+  grey = unlist(cc[c("grey_dark", "grey_base", "grey_lite")]),
+  qual = unlist(cc[c("teal_base", "navy_base", "ruby_base", "gold_base", "grey_base")])
 )
-pal_qual_main <- c(
-  cc["teal_base"],
-  cc["navy_base"],
-  cc["ruby_base"],
-  cc["gold_base"],
-  cc["grey_base"]
-)
-pal_navy_seq <- palettes$navy  # dark → snow
-
 
 ### Sizing Definitions ----------------------------
 standard_margin <- list(

@@ -6,7 +6,7 @@ checks <- list(
   ui_module = TRUE
 )
 
-load_cached_rds <- function(csv_file, rds_file) {
+load_cached_rds_old <- function(csv_file, rds_file) {
 
   if (!file.exists(csv_file)) {
     stop("CSV file does not exist: ", csv_file)
@@ -30,6 +30,45 @@ load_cached_rds <- function(csv_file, rds_file) {
     data <- readRDS(rds_file)
 
   }
+
+  data
+}
+
+load_cached_rds <- function(file, rds_file, table = NULL, sheet = NULL) {
+
+  if (!file.exists(file)) {
+    stop("Source file does not exist: ", file)
+  }
+
+  rebuild <- !file.exists(rds_file) ||
+    file.info(file)$mtime > file.info(rds_file)$mtime
+
+  if (!rebuild) {
+    message("Loading RDS file: ", rds_file)
+    return(readRDS(rds_file))
+  }
+
+  message("Rebuilding RDS file from: ", file)
+
+  ext <- tolower(tools::file_ext(file))
+
+  data <- switch(
+    ext,
+
+    csv = readr::read_csv(
+      file,
+      show_col_types = FALSE
+    ),
+
+    xlsx = readxl::read_excel(
+      file,
+      sheet = sheet
+    ),
+
+    stop("Unsupported file type: ", ext)
+  )
+
+  saveRDS(data, rds_file)
 
   data
 }
@@ -98,6 +137,10 @@ load_data <- function(name, refresh_cache = FALSE) {
   cache[[name]]
 }
 
+guide <- load_cached_rds(
+  "app/data/Reference/guide.csv",
+  "app/data/Reference/guide.rds"
+)
 
 guide_rbnz <- load_cached_rds(
   "app/data/Reference/RBNZ_Series.csv",
@@ -110,6 +153,12 @@ guide_rbnz <- load_cached_rds(
     )
   )
 
+guide <- load_cached_rds(
+  "app/data/Reference/guide.xlsx",
+  "app/data/Reference/guide.rds",
+  table = "Guide", sheet = "Guide"
+)
+guide %>% glimpse()
 
 load_series <- function(data_name, drop_na = FALSE, max_unique = 100, refresh_cache = FALSE) {
   data_series <- paste(data_name, "series", sep = "_")

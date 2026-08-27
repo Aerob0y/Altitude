@@ -195,6 +195,7 @@ ui <- fluidPage(
       nav_panel("Consumption", value = "hm2", uiOutput("hm2_ui")),
       nav_panel("Investment", value = "hm3", uiOutput("hm3_ui")),
       nav_panel("Investment (reference test)", value = "hb3_test", uiOutput("hb3_test_ui")),
+      nav_panel("Test", value = "hm14_test", uiOutput("hm14_test_ui")),
       nav_panel("Investment", value = "hm4", uiOutput("hm4_ui")),
       nav_panel("GDP", value = "hm5", uiOutput("hm5_ui")),
       nav_panel("National Savings", value = "hm6", uiOutput("hm6_ui")),
@@ -206,7 +207,8 @@ ui <- fluidPage(
       nav_panel("Banks: Loans by product", value = "hs32", uiOutput("hs32_ui")),
 
       #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
-      nav_panel("Bond", value = "bond", uiOutput("bond_ui"))
+      nav_panel("Bond", value = "bond", uiOutput("bond_ui")),
+      nav_panel("BondTest", value = "bond_test", uiOutput("bond_test_ui"))
     ),
     nav_menu(
       "Tourism & Migration",

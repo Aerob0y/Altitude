@@ -17,6 +17,7 @@ server <- function(input, output, session) {
     "hm2",
     "hm3",
     "hb3_test",
+    "hm14_test",
     "hm4",
     "hm5",
     "hm6",
@@ -28,6 +29,7 @@ server <- function(input, output, session) {
     "hs32",
     "fuel_main",
     "bond_main",
+    "bond_test_main",
     "border_main",
     "ndm01"
   )
@@ -57,6 +59,7 @@ server <- function(input, output, session) {
   mod_hm2_server("hm2_main",  selected_tab = tab, activate_on = "hm2")
   mod_hm3_server("hm3_main",  selected_tab = tab, activate_on = "hm3")
   mod_hb3_test_server("hb3_test_main", selected_tab = tab, activate_on = "hb3_test")
+  #mod_hm14_test_server("hm14_test_main", selected_tab = tab, activate_on = "hm14_test")
   mod_hm4_server("hm4_main",  selected_tab = tab, activate_on = "hm4")
   mod_hm5_server("hm5_main",  selected_tab = tab, activate_on = "hm5")
   mod_hm6_server("hm6_main",  selected_tab = tab, activate_on = "hm6")
@@ -69,6 +72,7 @@ server <- function(input, output, session) {
   mod_fuel_server("fuel_main",  selected_tab = tab, activate_on = "fuel")
   #mod_adp_server("adp_main",  selected_tab = tab, activate_on = "adp")
   mod_bond_server("bond_main",  selected_tab = tab, activate_on = "bond")
+  mod_bond_server_test("bond_test_main",  selected_tab = tab, activate_on = "bond_test")
   mod_border_server("border_main",  selected_tab = tab, activate_on = "border")
   mod_ndm01_server("ndm01",  selected_tab = tab, activate_on = "ndm01")
 
@@ -81,6 +85,7 @@ server <- function(input, output, session) {
   output$hm2_ui <- renderUI({mod_hm2_ui("hm2_main")})
   output$hm3_ui <- renderUI({mod_hm3_ui("hm3_main")})
   output$hb3_test_ui <- renderUI({mod_hb3_test_ui("hb3_test_main")})
+  output$hm14_test_ui <- renderUI({mod_hm14_test_ui("hm14_test_main")})
   output$hm4_ui <- renderUI({mod_hm4_ui("hm4_main")})
   output$hm5_ui <- renderUI({mod_hm5_ui("hm5_main")})
   output$hm6_ui <- renderUI({mod_hm6_ui("hm6_main")})
@@ -93,6 +98,7 @@ server <- function(input, output, session) {
   output$fuel_ui <- renderUI({mod_fuel_ui("fuel_main")})
   #output$adp_ui <- renderUI({mod_adp_ui("adp_main")})
   output$bond_ui <- renderUI({mod_bond_ui("bond_main")})
+  output$bond_test_ui <- renderUI({mod_bond_ui_test("bond_test_main")})
   output$border_ui <- renderUI({mod_border_ui("border_main")})
   output$ndm01_ui <- renderUI({mod_ndm01_ui("ndm01")})
 

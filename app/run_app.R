@@ -16,8 +16,14 @@ source("app/ui.r")
 run_app <- function() {shiny::shinyApp(ui, server, options = list(port = 5555))}
 run_app()
 
-
-guide_rbnz <- load_cached_rds(
-  "app/data/Reference/RBNZ_Series.csv",
-  "app/data/Reference/RBNZ_Series.rds"
+guide <- load_cached_rds(
+  "app/data/Reference/Guide.xlsx",
+  "app/data/Reference/Guide.rds",
+  sheet = "Guide", table = "Guide"
 )
+
+
+#guide_rbnz <- load_cached_rds(
+#  "app/data/Reference/RBNZ_Series.csv",
+##  "app/data/Reference/RBNZ_Series.rds"
+#)

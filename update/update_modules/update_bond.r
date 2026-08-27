@@ -53,7 +53,7 @@ update_bond_data <- function(only_rds = FALSE) {
         `Log Std Dev Weekly Rent` = `Log.Std.Dev.Weekly.Rent`
       ) %>%
       mutate(
-        Date = as.Date(Date, format = "%d/%m/%Y"),
+        Date = as.Date(Date),
         across(
           c(
             `Lodged Bonds`,
@@ -73,3 +73,4 @@ update_bond_data <- function(only_rds = FALSE) {
   }
 }
 
+update_bond_data()

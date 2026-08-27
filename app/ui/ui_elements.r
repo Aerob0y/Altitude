@@ -6,6 +6,7 @@ module_notes <- list(
   hm2 = list("Consumption", "RBNZ and Stats NZ series", "Describes household spending on goods and services—an important signal of demand and confidence in the economy."),
   hm3 = list("Investment", "RBNZ and Stats NZ series · HM3", "Covers spending that builds future capacity. This view compares broad investment types."),
   hb3_test = list("Investment — reference test", "RBNZ and Stats NZ series · HM3", "Uses the same HM3 data and selectors as Investment, rendered by the new reference-driven plotting workflow for comparison."),
+  hb3_test2 = list("Investment — reference test 2", "RBNZ and Stats NZ series · HM3", "Uses the same HM3 data and selectors as Investment, rendered by the new reference-driven plotting workflow for comparison."),
   hm4 = list("Investment", "RBNZ and Stats NZ series · HM4", "A complementary investment view for exploring dimensions and domestic trade groups."),
   hm5 = list("GDP", "RBNZ and Stats NZ series", "Gross domestic product is the broadest measure of economic activity. Select up to four total, industry or per-person measures."),
   hm6 = list("National savings", "RBNZ and Stats NZ series", "Shows income retained rather than spent and the resources available to fund investment."),

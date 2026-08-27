@@ -6,6 +6,7 @@ mod_hb1_ui <- function(id) {
     tagList(
       selectInput(ns("Currency1_main"), "Currency", choices = class_1, selected = "NZD/USD"),
       selectInput(ns("Currency2_main"), "Secondary", choices = c("-", class_1), selected = "-"),
+      checkboxInput(ns("bond_split"), "Split by location", value = FALSE),
       tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
     ),
     p = ns("plot"),

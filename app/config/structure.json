@@ -1,0 +1,88 @@
+{
+  "datasets": {
+    "hm14": {
+      "id_cols": ["Date"],
+      "structures": [
+        {
+          "Group": "Perception of monetary conditions (net)",
+          "Columns": [
+            {  "ID": "SOE.Q.E100.na"  , "Period": "End of current quarter"},
+            {  "ID": "SOE.Q.E101.na"  , "Period": "Next quarter"},
+            {  "ID": "SOE.Q.E102.na"  , "Period": "1 year out"}
+          ]
+        },
+        {
+          "Group": "Annual CPI growth",
+          "Columns": [
+            {  "ID": "SOE.Q.E210.na"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E215.na"  , "Period": "2 years out"},
+            {  "ID": "SOE.Q.E220.na"  , "Period": "5 years out"},
+            {  "ID": "SOE.Q.E230.na"  , "Period": "10 years out"}
+          ]
+        },
+        {
+          "Group": "Official Cash Rate (OCR)",
+          "Columns": [
+            {  "ID": "SOE.Q.E350.na"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E351.na"  , "Period": "2 years out"},
+            {  "ID": "SOE.Q.E353.na"  , "Period": "10 years out"},
+            {  "ID": "SOE.Q.E356.na"  , "Period": "10 years out average"}
+          ]
+        },
+        {
+          "Group": "10 year government bond yields",
+          "Columns": [
+            {  "ID": "SOE.Q.E310.na"  , "Period": "End of current quarter"},
+            {  "ID": "SOE.Q.E311.na"  , "Period": "1 year out"}
+          ]
+        },
+        {
+          "Group": "Annual GDP growth",
+          "Columns": [
+            {  "ID": "SOE.Q.E402.ra"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E403.ra"  , "Period": "2 years out"}
+          ]
+        },
+        {
+          "Group": "Annual hourly wage growth",
+          "Columns": [
+            {  "ID": "SOE.Q.E460.na"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E461.na"  , "Period": "2 years out"}
+          ]
+        },
+        {
+          "Group": "Unemployment rate",
+          "Columns": [
+            {  "ID": "SOE.Q.E470.na"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E471.na"  , "Period": "2 years out"}
+          ]
+        },
+                
+
+        {
+          "Group": "US dollar exchange rate",
+          "Columns": [
+            {  "ID": "SOE.Q.E320.na"  , "Period": "Next quarter"},
+            {  "ID": "SOE.Q.E321.na"  , "Period": "1 year out"}
+          ]
+        },
+        {
+          "Group": "Australian dollar exchange rate",
+          "Columns": [
+            {  "ID": "SOE.Q.E330.na"  , "Period": "Next quarter"},
+            {  "ID": "SOE.Q.E331.na"  , "Period": "1 year out"}
+          ]
+        },
+        {
+          "Group": "House price index",
+          "Columns": [
+            {  "ID": "SOE.Q.E480.na"  , "Period": "1 year out"},
+            {  "ID": "SOE.Q.E481.na"  , "Period": "2 years out"}
+          ]
+        }
+      ]
+    }
+  }
+}
+
+

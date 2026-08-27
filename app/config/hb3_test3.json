@@ -1,0 +1,40 @@
+{
+  "title": "Investment - HM3",
+  "subtitle": "RBNZ: reference-driven plotting test",
+  "Data": "hm3",
+  "x": "Date",
+  "years": 10,
+  "structure": [
+    {
+      "Level 1": "Residential consents",
+      "Columns": [
+        { "ID": "QBLD.Q.B11N1BZR1.ns"   , "Name": "Residential Building Consents (s.a.)"         , "Unit": "no s.a."       , "Dim": "Number"    , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": "NA"   },
+        { "ID": "QBLD.Q.B11N1BZR1.nsq"  , "Name": "Residential Building Consents (q/q% s.a.)"    , "Unit": "% s.a."        , "Dim": "q/q%"      , "Tick": ".0f"  , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": "NA"   },
+      ]
+    },
+    {
+      "Level 1": "Gross fixed capital formation",
+      "Columns": [
+        { "ID": "GDE.Q.EI24.RA"         , "Name": "Residential buildings (GDP) (Real $m)"        , "Unit": "NZDm(r)"       , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": "NA"   },
+        { "ID": "GDE.Q.EI24.RS"         , "Name": "Residential buildings (GDP) (Real $m s.a.)"   , "Unit": "NZDm(r) s.a."  , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": "NA"   },
+        { "ID": "GDE.Q.EI24.rsq"        , "Name": "Residential buildings (GDP) (Real q/q% s.a)"  , "Unit": "%(r) s.a."     , "Dim": "Real q/q"  , "Tick": ".0f"  , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": "NA"   },
+        { "ID": "GDE.Q.EI24.ray"        , "Name": "Residential buildings (GDP) (Real y/y%)"      , "Unit": "%(r)"          , "Dim": "Real y/y"  , "Tick": ".0f"  , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": ""      },
+        { "ID": "GDE.Q.EI25.RA"         , "Name": "Other fixed assets (GDP) (Real $m)"           , "Unit": "NZDm(r)"       , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": ""      },
+        { "ID": "GDE.Q.EI25.RS"         , "Name": "Other fixed assets (GDP) (Real $m s.a.)"      , "Unit": "NZDm(r) s.a."  , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": ""      },
+        { "ID": "GDE.Q.EI25.rsq"        , "Name": "Other fixed assets (GDP) (Real q/q% s.a.)"    , "Unit": "%(r) s.a."     , "Dim": "Real q/q"  , "Tick": ".0f"  , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": ""      },
+        { "ID": "GDE.Q.EI25.ray"        , "Name": "Other fixed assets (GDP) (Real y/y%)"         , "Unit": "%(r)"          , "Dim": "Real y/y"  , "Tick": ".0f"  , "Palette": "qual"  , "ColourKey": ""       , "style": ""      , "Prefix": ""      }
+      ]
+    },
+    {
+      "Level 1": "Change in inventories",
+      "Columns": [
+        { "ID": "GDE.Q.EI23.RA"         , "Name": "Change in inventories (GDP) (Real $m)"        , "Unit": "NZDm(r)"       , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": "black"  , "style": "line"  , "Prefix": ""      },
+        { "ID": "GDE.Q.EI23.RS"         , "Name": "Change in inventories (GDP) (Real $m s.a.)"   , "Unit": "NZDm(r) s.a."  , "Dim": "Real $m"   , "Tick": ",d"   , "Palette": "qual"  , "ColourKey": ""       , "style": ""      , "Prefix": ""      }
+      ]
+    }
+  ]
+}
+
+
+
+

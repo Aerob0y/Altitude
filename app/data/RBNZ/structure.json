@@ -1,0 +1,114 @@
+{
+  "Data": "hm14",
+  "structure": 
+  [
+    {
+      "Group": "Perception of monetary conditions (net)",
+      "Unit": "%",
+      "Dim": "Total %",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E100.na"  , "Period": "End of current quarter"},
+        {  "ID": "SOE.Q.E101.na"  , "Period": "Next quarter"},
+        {  "ID": "SOE.Q.E102.na"  , "Period": "1 year out"}
+      ]
+    },
+    {
+      "Group": "Annual CPI growth",
+      "Unit": "%",
+      "Dim": "%",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E210.na"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E215.na"  , "Period": "2 years out"},
+        {  "ID": "SOE.Q.E220.na"  , "Period": "5 years out"},
+        {  "ID": "SOE.Q.E230.na"  , "Period": "10 years out"}
+      ]
+    },
+    {
+      "Group": "Official Cash Rate (OCR)",
+      "Unit": "pa%",
+      "Dim": "%",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E350.na"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E351.na"  , "Period": "2 years out"},
+        {  "ID": "SOE.Q.E355.na"  , "Period": "5 years out"},
+        {  "ID": "SOE.Q.E360.na"  , "Period": "10 years out"}
+      ]
+    },
+    {
+      "Group": "10 year government bond yields",
+      "Unit": "%pa",
+      "Dim": "%pa",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E310.na"  , "Period": "End of current quarter"},
+        {  "ID": "SOE.Q.E311.na"  , "Period": "1 year out"}
+      ]
+    },
+    {
+      "Group": "Annual GDP growth",
+      "Unit": "%pa",
+      "Dim": "%pa",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E402.ra"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E403.ra"  , "Period": "2 years out"}
+      ]
+    },
+    {
+      "Group": "Annual hourly wage growth",
+      "Unit": "%pa",
+      "Dim": "%pa",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E502.ra"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E503.ra"  , "Period": "2 years out"}
+      ]
+    },
+    {
+      "Group": "Unemployment rate",
+      "Unit": "%", 
+      "Dim": "%",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E602.ra"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E603.ra"  , "Period": "2 years out"}
+      ]
+    },
+    {
+      "Group": "US dollar exchange rate",
+      "Unit": "",
+      "Dim": "",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E702.ra"  , "Period": "Next quarter"},
+        {  "ID": "SOE.Q.E703.ra"  , "Period": "1 year out"}
+      ]
+    },
+    {
+      "Group": "Australian dollar exchange rate",
+      "Unit": "",
+      "Dim": "",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E330.na"  , "Period": "Next quarter"},
+        {  "ID": "SOE.Q.E331.na"  , "Period": "1 year out"}
+      ]
+    },
+    {
+      "Group": "House price index",
+      "Unit": "%",
+      "Dim": "%",
+      "Tick": ".2f",
+      "Columns": [
+        {  "ID": "SOE.Q.E480.na"  , "Period": "1 year out"},
+        {  "ID": "SOE.Q.E481.na"  , "Period": "2 years out"}
+      ]
+    }
+
+
+
+  ]
+}

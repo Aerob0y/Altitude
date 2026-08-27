@@ -1,10 +1,8 @@
 {
-  "title": "Investment - HM3",
-  "subtitle": "RBNZ: reference-driven plotting test",
-  "format": "wide",
+  "title": "Title",
+  "subtitle": "Subtitle",
   "x": "Date",
   "years": 10,
-  "stack": false,
   "y_title": "Level",
   "y2_title": "Percent change",
   "traces": [
