@@ -1,10 +1,10 @@
-mod_hm2_ui <- function(id) {
+mod_hm2_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hm2_ui loaded")
   ns <- NS(id)
 
   # Choices (force to character vector)
   hm2_class_2 <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_2",
     apply_filters = list(Data = c("hm2"))
   )$Class_2
@@ -31,7 +31,7 @@ mod_hm2_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm2")
 }
 
-mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -64,7 +64,7 @@ mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          guide_rbnz,
+          series_guide,
           apply_filters = list(Data = c("hm2"), Class_2 = valid_inputs)
         ),
         k = "Date"

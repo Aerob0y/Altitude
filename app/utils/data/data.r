@@ -137,11 +137,6 @@ load_data <- function(name, refresh_cache = FALSE) {
   cache[[name]]
 }
 
-guide <- load_cached_rds(
-  "app/data/Reference/guide.csv",
-  "app/data/Reference/guide.rds"
-)
-
 guide_rbnz <- load_cached_rds(
   "app/data/Reference/RBNZ_Series.csv",
   "app/data/Reference/RBNZ_Series.rds"
@@ -153,12 +148,25 @@ guide_rbnz <- load_cached_rds(
     )
   )
 
-guide <- load_cached_rds(
-  "app/data/Reference/guide.xlsx",
-  "app/data/Reference/guide.rds",
-  table = "Guide", sheet = "Guide"
+guide <- readr::read_csv(
+  "app/data/Reference/guide.csv",
+  show_col_types = FALSE
 )
-guide %>% glimpse()
+
+# Keep the module-facing names available while the updated plots consume the
+# richer, common guide schema. This lets a module receive either guide without
+# maintaining two versions of its filtering logic.
+guide <- guide |>
+  dplyr::mutate(
+    Data = Dataset,
+    ID = DatasetColumn,
+    Name = ColumnName,
+    Class_1 = Category_1,
+    Class_2 = Category_2,
+    Class_3 = Level_1,
+    Unit = Dim_Label,
+    Dim = Dim_Group
+  )
 
 load_series <- function(data_name, drop_na = FALSE, max_unique = 100, refresh_cache = FALSE) {
   data_series <- paste(data_name, "series", sep = "_")

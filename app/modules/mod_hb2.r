@@ -1,7 +1,7 @@
-mod_hb2_ui <- function(id) {
+mod_hb2_ui <- function(id, series_guide = guide_rbnz) {
   ns <- NS(id)
   hb2_tier <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = c("Class_1", "Name"),
     apply_filters = list(Data = c("hb2"))
   ) |>
@@ -24,7 +24,7 @@ mod_hb2_ui <- function(id) {
 }
 
 
-mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -48,7 +48,7 @@ mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       plot_function(
         data = d,
         titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),
+        series = filter_series(series_guide, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),
         k = "Date",
         years = 15
       )

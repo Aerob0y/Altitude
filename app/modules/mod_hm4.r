@@ -1,16 +1,16 @@
-mod_hm4_ui <- function(id) {
+mod_hm4_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hm4_ui loaded")
   ns <- NS(id)
 
   hm4_class_1 <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Class_1",
     apply_filters = list(Data = c("hm4"))
   )$Class_1
   hm4_class_1 <- hm4_class_1[!is.na(hm4_class_1)]
 
   hm4_dim <- filter_series(
-    guide_rbnz,
+    series_guide,
     column = "Dim",
     apply_filters = list(Data = c("hm4"))
   )$Dim
@@ -36,7 +36,7 @@ mod_hm4_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm4")
 }
 
-mod_hm4_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
+mod_hm4_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -56,7 +56,7 @@ mod_hm4_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c(t, paste("RBNZ:", short_title(input$hm4_class_1))),
         series = filter_series(
-          guide_rbnz,
+          series_guide,
           apply_filters = list(
             Data = c("hm4"),
             Class_1 = input$hm4_class_1,
