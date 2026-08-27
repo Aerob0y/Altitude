@@ -24,7 +24,7 @@ mod_hc35_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
 }
 
-mod_hc35_server <- function(id, selected_tab, activate_on) {
+mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -38,7 +38,7 @@ mod_hc35_server <- function(id, selected_tab, activate_on) {
       req(enabled())
       d <- hc35_data()
       print("X")
-      x_plotly(
+      plot_function(
         data = d,
         titles = c(
           "Residential mortgage loan reconciliation",

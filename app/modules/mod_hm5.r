@@ -28,7 +28,7 @@ mod_hm5_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm5")
 }
 
-mod_hm5_server <- function(id, selected_tab, activate_on) {
+mod_hm5_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -61,7 +61,7 @@ mod_hm5_server <- function(id, selected_tab, activate_on) {
 
       valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 4))]
 
-      x_plotly(
+      plot_function(
         data = d,
         titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(

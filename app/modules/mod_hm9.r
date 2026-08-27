@@ -27,7 +27,7 @@ mod_hm9_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm9")
 }
 
-mod_hm9_server <- function(id, selected_tab, activate_on) {
+mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -50,7 +50,7 @@ mod_hm9_server <- function(id, selected_tab, activate_on) {
       if (length(x) == 0) x <- c("Labour force participation rate       - % s.a.", "Labour cost index (LCI) - y/y%")
       x <- x[seq_len(min(length(x), 4))]
 
-      x_plotly(
+      plot_function(
         data = hm9_data(),
         titles = c("Labour market", paste("RBNZ:", short_title(x))),
         series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm9"), Name = x)),

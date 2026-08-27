@@ -24,7 +24,7 @@ mod_hm8_ui <- function(id) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm8")
 }
 
-mod_hm8_server <- function(id, selected_tab, activate_on) {
+mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -38,7 +38,7 @@ mod_hm8_server <- function(id, selected_tab, activate_on) {
       req(enabled())
       valid_inputs <- unique(input$hm8_split)
 
-      x_plotly(
+      plot_function(
         data = hm8_data(),
         titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_grouping, valid_inputs))))),
         series = filter_series(

@@ -24,7 +24,7 @@ mod_hb2_ui <- function(id) {
 }
 
 
-mod_hb2_server <- function(id, selected_tab, activate_on) {
+mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -45,7 +45,7 @@ mod_hb2_server <- function(id, selected_tab, activate_on) {
         valid_inputs <- c("Official Cash Rate (OCR)")
       }
       valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 5))]
-      x_plotly(
+      plot_function(
         data = d,
         titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(guide_rbnz, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),

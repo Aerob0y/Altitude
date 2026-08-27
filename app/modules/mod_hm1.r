@@ -50,7 +50,7 @@ mod_hm1_ui <- function(id) {
 }
 
 
-mod_hm1_server <- function(id, selected_tab, activate_on) {
+mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -99,7 +99,7 @@ mod_hm1_server <- function(id, selected_tab, activate_on) {
       print("Testing hm1_plot with:")
       print(valid_split)
       print(valid_metric)
-      x_plotly(
+      plot_function(
         data = d,
         titles = c(t, paste("RBNZ:", valid_metric)),
         series = filter_series(
