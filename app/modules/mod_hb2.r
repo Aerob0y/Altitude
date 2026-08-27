@@ -1,4 +1,5 @@
 mod_hb2_ui <- function(id, series_guide = guide_rbnz) {
+  head(series_guide)
   ns <- NS(id)
   hb2_tier <- filter_series(
     series_guide,
@@ -37,9 +38,15 @@ mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
 
 
 
+
+
     hb2_plot <- reactive({
       req(enabled())
       d <- hb2_data()
+      print("hb2_data loaded")
+      print(head(d))
+      print("series_guide")
+      print(head(series_guide))
       valid_inputs <- input$hb2_tier |> unlist(use.names = FALSE) |> unique()
       if (length(valid_inputs) == 0) {
         valid_inputs <- c("Official Cash Rate (OCR)")

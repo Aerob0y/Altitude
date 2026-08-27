@@ -173,5 +173,6 @@ standard_plot <- function(
     height = as.numeric(download$height %||% 1200),
     scale = as.numeric(download$scale %||% 2)
   )
+  print("standard plot used")
   plotly::config(p, displayModeBar = TRUE, toImageButtonOptions = download)
 }

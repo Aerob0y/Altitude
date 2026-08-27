@@ -69,7 +69,7 @@ server <- function(input, output, session) {
   mod_hm10_server("hm10_main",  selected_tab = tab, activate_on = "hm10")
   mod_hm14_server("hm14_main",  selected_tab = tab, activate_on = "hm14")
   mod_hs32_server("hs32_main",  selected_tab = tab, activate_on = "hs32")
-  mod_hb1_server("hb1_update_main", selected_tab = tab, activate_on = "hb1_update", plot_function = standard_plot, series_guide = guide)
+  mod_hb1_server_update("hb1_update_main", selected_tab = tab, activate_on = "hb1_update")
   mod_hb2_server("hb2_update_main", selected_tab = tab, activate_on = "hb2_update", plot_function = standard_plot, series_guide = guide)
   mod_hc35_server("hc35_update_main", selected_tab = tab, activate_on = "hc35_update", plot_function = standard_plot, series_guide = guide)
   mod_hm1_server("hm1_update_main", selected_tab = tab, activate_on = "hm1_update", plot_function = standard_plot, series_guide = guide)
@@ -86,14 +86,14 @@ server <- function(input, output, session) {
   mod_hs32_server("hs32_update_main", selected_tab = tab, activate_on = "hs32_update", plot_function = standard_plot, series_guide = guide)
   mod_fuel_server("fuel_main",  selected_tab = tab, activate_on = "fuel")
   #mod_adp_server("adp_main",  selected_tab = tab, activate_on = "adp")
+  mod_bond_server_test2("bond_test2_main",  selected_tab = tab, activate_on = "bond_test2")
   mod_bond_server("bond_main",  selected_tab = tab, activate_on = "bond")
   mod_bond_server_test("bond_test_main",  selected_tab = tab, activate_on = "bond_test")
   mod_border_server("border_main",  selected_tab = tab, activate_on = "border")
-  mod_ndm01_server("ndm01",  selected_tab = tab, activate_on = "ndm01")
+  mod_ndm01_server("ndm01_main",  selected_tab = tab, activate_on = "ndm01")
 
   # generate ui when needed
   output$hb1_ui <- renderUI({mod_hb1_ui("hb1_main")})
-  output$hb1_ui2 <- renderUI({mod_hb1_ui("hb1_main2")})
   output$hb2_ui <- renderUI({mod_hb2_ui("hb2_main")})
   output$hc35_ui <- renderUI({mod_hc35_ui("hc35_main")})
   output$hm1_ui <- renderUI({mod_hm1_ui("hm1_main")})
@@ -110,7 +110,7 @@ server <- function(input, output, session) {
   output$hm10_ui <- renderUI({mod_hm10_ui("hm10_main")})
   output$hm14_ui <- renderUI({mod_hm14_ui("hm14_main")})
   output$hs32_ui <- renderUI({mod_hs32_ui("hs32_main")})
-  output$hb1_update_ui <- renderUI({mod_hb1_ui("hb1_update_main", series_guide = guide)})
+  output$hb1_update_ui <- renderUI({mod_hb1_ui_update("hb1_update_main")})
   output$hb2_update_ui <- renderUI({mod_hb2_ui("hb2_update_main", series_guide = guide)})
   output$hc35_update_ui <- renderUI({mod_hc35_ui("hc35_update_main", series_guide = guide)})
   output$hm1_update_ui <- renderUI({mod_hm1_ui("hm1_update_main", series_guide = guide)})
@@ -129,9 +129,12 @@ server <- function(input, output, session) {
   #output$adp_ui <- renderUI({mod_adp_ui("adp_main")})
   output$bond_ui <- renderUI({mod_bond_ui("bond_main")})
   output$bond_test_ui <- renderUI({mod_bond_ui_test("bond_test_main")})
+  output$bond_test2_ui <- renderUI({mod_bond_ui_test2("bond_test2_main")})
   output$border_ui <- renderUI({mod_border_ui("border_main")})
   output$ndm01_ui <- renderUI({mod_ndm01_ui("ndm01")})
 
 
 
 }
+
+guide

@@ -47,3 +47,49 @@ mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
     output$plot <- renderPlotly(hb1_plot())
   })
 }
+
+
+mod_hb1_ui_update <- function(id, series_guide = guide_rbnz) {
+  # 1. Namespace
+  ns <- NS(id)
+
+  # 2. Series selection ----
+  currencies <- filter_series_unlist(guide, column = "Category_1", apply_filters = list(Dataset = c("hb1")))
+
+  # 3. Create inputs ----
+  insert_inputs <- tagList(
+    selectInput(ns("Currency1_main"), "Currency", choices = currencies, selected = "NZD/USD"),
+    selectInput(ns("Currency2_main"), "Secondary", choices = c("-", currencies), selected = "-"),
+    tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
+  )
+
+  # 4. Create UI ----
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb1_update")
+}
+
+
+mod_hb1_server_update <- function(id, selected_tab, activate_on) {
+  moduleServer(id, function(input, output, session) {
+
+    enabled <- reactive(identical(selected_tab(), activate_on))
+
+    # --------------------------------------------------------------------------
+    # Plot
+
+    output$plot <- renderPlotly({
+      req(enabled())
+      req(input$Currency1_main)
+      req(input$Currency2_main)
+      valid_inputs <- unique(c(input$Currency1_main, input$Currency2_main)) |> setdiff("-")
+
+      standard_plot(
+        data =          load_data("hb1"),
+        titles =        c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
+        series =        filter_series(guide, apply_filters = list(Dataset = "hb1", Category_1 = valid_inputs)),
+        split_by =      NULL,
+        split_columns = NULL,
+        k = "Date"
+      )
+    })
+  })
+}

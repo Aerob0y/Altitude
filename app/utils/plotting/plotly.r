@@ -183,5 +183,6 @@ x_plotly <- function(
     displayModeBar = TRUE,
     toImageButtonOptions = dl
   )
+  print("x_plotly used")
   p
 }

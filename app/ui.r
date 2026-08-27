@@ -208,12 +208,14 @@ ui <- fluidPage(
 
       #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
       nav_panel("Bond", value = "bond", uiOutput("bond_ui")),
-      nav_panel("BondTest", value = "bond_test", uiOutput("bond_test_ui"))
+      nav_panel("BondTest", value = "bond_test", uiOutput("bond_test_ui")),
+      nav_panel("BondTest2", value = "bond_test2", uiOutput("bond_test2_ui")),
+
     ),
     nav_menu(
       "Economic Indicators Update",
       nav_panel("Exchange Rates", value = "hb1_update", uiOutput("hb1_update_ui")),
-      nav_panel("Interest Rates", value = "hb2_update", uiOutput("hb2_update_ui")),
+      nav_panel("Interest Rates x", value = "hb2_update", uiOutput("hb2_update_ui")),
       nav_panel("Residential Mortgages", value = "hc35_update", uiOutput("hc35_update_ui")),
       nav_panel("Inflation", value = "hm1_update", uiOutput("hm1_update_ui")),
       nav_panel("Consumption", value = "hm2_update", uiOutput("hm2_update_ui")),
