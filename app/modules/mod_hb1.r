@@ -49,7 +49,7 @@ mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
 }
 
 
-mod_hb1_ui_update <- function(id, series_guide = guide_rbnz) {
+mod_hb1_ui_update <- function(id) {
   # 1. Namespace
   ns <- NS(id)
 
