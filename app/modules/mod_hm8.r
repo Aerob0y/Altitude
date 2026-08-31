@@ -1,16 +1,16 @@
-mod_hm8_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm8_ui <- function(id) {
   if (checks$ui_module) print("hm8_ui loaded")
   ns <- NS(id)
 
   hm8_split <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_2",
     apply_filters = list(Data = c("hm8"))
   )$Class_2
   hm8_split <- hm8_split[!is.na(hm8_split)]
 
   hm8_grouping <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_1",
     apply_filters = list(Data = c("hm8"))
   )$Class_1
@@ -24,7 +24,7 @@ mod_hm8_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm8")
 }
 
-mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -42,7 +42,7 @@ mod_hm8_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = hm8_data(),
         titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_grouping, valid_inputs))))),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(Data = c("hm8"), Class_2 = valid_inputs, Class_1 = input$hm8_grouping)
         ),
         k = "Date"
@@ -95,12 +95,12 @@ mod_hm8_server_update <- function(id, selected_tab, activate_on) {
       req(enabled())
       valid_inputs <- unique(input$hm8_split)
 
-      plot_function(
+      standard_plot(
         data = hm8_data(),
         titles = c("Overseas Trade", paste("RBNZ:", short_title(unique(c(input$hm8_grouping, valid_inputs))))),
         series = filter_series(
-          series_guide,
-          apply_filters = list(Data = c("hm8"), Class_2 = valid_inputs, Class_1 = input$hm8_grouping)
+          guide,
+          apply_filters = list(Dataset = c("hm8"), Category_2 = valid_inputs, Category_1 = input$hm8_grouping)
         ),
         k = "Date"
       )

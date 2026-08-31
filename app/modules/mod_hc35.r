@@ -1,16 +1,16 @@
-mod_hc35_ui <- function(id, series_guide = guide_rbnz) {
+mod_hc35_ui <- function(id) {
   if (checks$ui_module) print("hc35_ui loaded")
   ns <- NS(id)
 
   hc35_group <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_1",
     apply_filters = list(Data = c("hc35"))
   )$Class_1
   hc35_group <- hc35_group[!is.na(hc35_group)]
 
   hc35_split <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_2",
     apply_filters = list(Data = c("hc35"))
   )$Class_2
@@ -24,7 +24,7 @@ mod_hc35_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
 }
 
-mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -45,7 +45,7 @@ mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plo
           paste("RBNZ:", short_title(unique(c(input$hc35_group, input$hc35_split))))
         ),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(
             Data = c("hc35"),
             Class_2 = input$hc35_split,
@@ -60,7 +60,7 @@ mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plo
   })
 }
 
-mod_hc35_ui_update <- function(id, series_guide = guide_rbnz) {
+mod_hc35_ui_update <- function(id) {
   # 1. Namespace
   ns <- NS(id)
 
@@ -74,7 +74,7 @@ mod_hc35_ui_update <- function(id, series_guide = guide_rbnz) {
 
   hc35_split <- filter_series_unlist(
     guide,
-    column = "Class_2",
+    column = "Category_2",
     apply_filters = list(Dataset = c("hc35"))
   )
   hc35_split <- hc35_split[!is.na(hc35_split)]
@@ -88,7 +88,7 @@ mod_hc35_ui_update <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
 }
 
-mod_hc35_server_update <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hc35_server_update <- function(id, selected_tab, activate_on) {
   moduleServer(id, function(input, output, session) {
 
     # 1. Check if module is active
@@ -104,7 +104,14 @@ mod_hc35_server_update <- function(id, selected_tab, activate_on, plot_function 
       standard_plot(
         data =          load_data("hc35"),
         titles =        c("Residential mortgage loan reconciliation", paste("RBNZ:", short_title(valid_inputs))),
-        series =        filter_series(guide, apply_filters = list(Dataset = "hc35", Category_1 = valid_inputs)),
+        series = filter_series(
+          guide,
+          apply_filters = list(
+            Dataset = "hc35",
+            Category_1 = input$hc35_group,
+            Category_2 = input$hc35_split
+          )
+        ),
         split_by =      NULL,
         split_columns = NULL,
         k = "Date"

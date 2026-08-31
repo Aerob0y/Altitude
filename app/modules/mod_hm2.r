@@ -1,10 +1,10 @@
-mod_hm2_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm2_ui <- function(id) {
   # 1. Namespace
   ns <- NS(id)
 
   # Choices (force to character vector)
   hm2_class_2 <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_2",
     apply_filters = list(Data = c("hm2"))
   )$Class_2
@@ -31,7 +31,7 @@ mod_hm2_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm2")
 }
 
-mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -64,7 +64,7 @@ mod_hm2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(Data = c("hm2"), Class_2 = valid_inputs)
         ),
         k = "Date"
@@ -128,7 +128,7 @@ mod_hm2_server_update <- function(id, selected_tab, activate_on) {
       standard_plot(
         data =          load_data("hm2"),
         titles =        c("Consumption", paste("RBNZ:", short_title(valid_inputs))),
-        series =        filter_series(guide, apply_filters = list(Dataset = "hm2", Class_2 = valid_inputs)),
+        series =        filter_series(guide, apply_filters = list(Dataset = "hm2", Category_2 = valid_inputs)),
         split_by =      NULL,
         split_columns = NULL,
         k = "Date"

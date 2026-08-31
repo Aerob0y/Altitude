@@ -1,10 +1,10 @@
-mod_hm3_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm3_ui <- function(id) {
   if (checks$ui_module) print("hm3_ui loaded")
   ns <- NS(id)
 
   # Choices (force to character vector)
   hm3_class_1 <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_1",
     apply_filters = list(Data = c("hm3"))
   )$Class_1
@@ -31,7 +31,7 @@ mod_hm3_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm3")
 }
 
-mod_hm3_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm3_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -65,7 +65,7 @@ mod_hm3_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(Data = c("hm3"), Class_1 = valid_inputs)
         ),
         k = "Date"
@@ -84,7 +84,7 @@ mod_hm3_ui_update <- function(id) {
   # 2. Series selection ----
   hm3_class_1 <- filter_series_unlist(
     guide,
-    column = "Class_1",
+    column = "Category_1",
     apply_filters = list(Dataset = c("hm3"))
   )
 
@@ -141,12 +141,12 @@ mod_hm3_server_update <- function(id, selected_tab, activate_on) {
 
       t <- if (checks$sourcenames) "Investment - HM3" else "Investment"
 
-      plot_function(
+      standard_plot(
         data = d,
         titles = c(t, paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          series_guide,
-          apply_filters = list(Data = c("hm3"), Class_1 = valid_inputs)
+          guide,
+          apply_filters = list(Dataset = c("hm3"), Category_1 = valid_inputs)
         ),
         k = "Date"
       )

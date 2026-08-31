@@ -1,10 +1,10 @@
-mod_hm5_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm5_ui <- function(id) {
   if (checks$ui_module) print("hm5_ui loaded")
   ns <- NS(id)
 
   # Tiered choices: Class_1-style grouping via Split → Names
   hm5_tier <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = c("Class_1", "Name"),
     apply_filters = list(Data = c("hm5"))
   ) |>
@@ -28,7 +28,7 @@ mod_hm5_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm5")
 }
 
-mod_hm5_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm5_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -65,7 +65,7 @@ mod_hm5_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(
             Data = c("hm5"),
             Name = valid_inputs
@@ -86,11 +86,11 @@ mod_hm5_ui_update <- function(id) {
   # 2. Series selection ----
   hm5_tier <- filter_series(
     guide,
-    column = c("Category_1", "Name"),
+    column = c("Category_1", "ColumnName"),
     apply_filters = list(Dataset = c("hm5"))
   ) |>
     dplyr::group_by(Category_1) |>
-    dplyr::summarise(value = list(Name), .groups = "drop") |>
+    dplyr::summarise(value = list(ColumnName), .groups = "drop") |>
     tibble::deframe()
 
   # 3. Create inputs ----
@@ -143,14 +143,14 @@ mod_hm5_server_update <- function(id, selected_tab, activate_on) {
 
       valid_inputs <- valid_inputs[seq_len(min(length(valid_inputs), 4))]
 
-      plot_function(
+      standard_plot(
         data = d,
         titles = c("GDP", paste("RBNZ:", short_title(valid_inputs))),
         series = filter_series(
-          series_guide,
+          guide,
           apply_filters = list(
-            Data = c("hm5"),
-            Name = valid_inputs
+            Dataset = c("hm5"),
+            ColumnName = valid_inputs
           )
         ),
         k = "Date"
