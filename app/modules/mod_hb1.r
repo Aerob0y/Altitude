@@ -64,7 +64,7 @@ mod_hb1_ui_update <- function(id) {
   )
 
   # 4. Create UI ----
-  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb1_update")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb1")
 }
 
 
