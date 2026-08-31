@@ -205,6 +205,7 @@ ui <- fluidPage(
       nav_panel("CoreLogic", value = "hm10", uiOutput("hm10_ui")),
       nav_panel("Survey of expectations", value = "hm14", uiOutput("hm14_ui")),
       nav_panel("Banks: Loans by product", value = "hs32", uiOutput("hs32_ui")),
+      nav_panel("Canberra Catchment", value = "cbr_catchment",uiOutput("cbr_catchment_ui")),
 
       #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
       nav_panel("Bond", value = "bond", uiOutput("bond_ui")),

@@ -8,4 +8,5 @@ suppressPackageStartupMessages({
   library(bsicons)
   library(plotly)
   library(readxl)
+  library(sf)
 })
