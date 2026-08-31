@@ -21,7 +21,10 @@ normalise_standard_series <- function(series) {
   aliases <- list(
     DatasetColumn = c("ID"),
     DisplayName = c("ColumnName", "Name"),
-    Dim_Group = c("Dim")
+    Dim_Group = c("Dim"),
+    Style = c("style"),
+    Palette = c("Pallete", "palette", "pallete"),
+    ColourKey = c("colourKey", "colour_key", "colour")
   )
 
   for (target in names(aliases)) {
@@ -38,8 +41,16 @@ normalise_standard_series <- function(series) {
   )
   for (column in names(defaults)) {
     if (!column %in% names(series)) series[[column]] <- defaults[[column]]
+    # Guide columns may be factors (notably in the legacy RBNZ guide). Convert
+    # textual settings before filling blanks so supplied values are retained.
+    if (is.character(defaults[[column]])) series[[column]] <- as.character(series[[column]])
     series[[column]][is.na(series[[column]]) | series[[column]] == ""] <- defaults[[column]]
   }
+
+  # Both guides have historically used a mixture of title and lower case.
+  # Plot construction uses the title-case style names below.
+  series$Style <- tools::toTitleCase(tolower(series$Style))
+  series$Palette <- tolower(series$Palette)
 
   series$DisplayName[is.na(series$DisplayName)] <- series$DatasetColumn[is.na(series$DisplayName)]
   series
