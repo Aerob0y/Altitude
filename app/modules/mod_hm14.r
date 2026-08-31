@@ -1,9 +1,9 @@
-mod_hm14_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm14_ui <- function(id) {
   if (checks$ui_module) print("hm14_ui loaded")
   ns <- NS(id)
 
   hm14_tier <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = c("Class_1", "Name", "Class_2"),
     apply_filters = list(Data = c("hm14"))
   ) |>
@@ -31,7 +31,7 @@ mod_hm14_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm14")
 }
 
-mod_hm14_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm14_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -63,7 +63,7 @@ mod_hm14_server <- function(id, selected_tab, activate_on, plot_function = x_plo
       plot_function(
         data = hm14_data(),
         titles = c("Perceptions and Expectations", ""),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm14"), Name = x)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm14"), Name = x)),
         k = "Date"
       )
     })
@@ -78,7 +78,7 @@ mod_hm14_ui_update <- function(id) {
   # 2. Series selection ----
   hm14_tier <- filter_series(
     guide,
-    column = c("Category_1", "ColumnName", "Category_1"),
+    column = c("Category_1", "ColumnName", "Category_2"),
     apply_filters = list(Dataset = c("hm14"))
   ) |>
     dplyr::group_by(Category_1) |>
@@ -135,10 +135,10 @@ mod_hm14_server_update <- function(id, selected_tab, activate_on) {
       }
       x <- x[seq_len(min(length(x), 4))]
 
-      plot_function(
+      standard_plot(
         data = hm14_data(),
         titles = c("Perceptions and Expectations", ""),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm14"), Name = x)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hm14"), ColumnName = x)),
         k = "Date"
       )
     })

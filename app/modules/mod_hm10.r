@@ -1,9 +1,9 @@
-mod_hm10_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm10_ui <- function(id) {
   if (checks$ui_module) print("hm10_ui loaded")
   ns <- NS(id)
 
   hm10_class_2 <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_2",
     apply_filters = list(Data = c("hm10"))
   )$Class_2
@@ -17,7 +17,7 @@ mod_hm10_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm10")
 }
 
-mod_hm10_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm10_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -42,7 +42,7 @@ mod_hm10_server <- function(id, selected_tab, activate_on, plot_function = x_plo
       plot_function(
         data = hm10_data(),
         titles = c("Housing", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm10"), Class_2 = valid_inputs)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm10"), Class_2 = valid_inputs)),
         k = "Date"
       )
     })
@@ -95,10 +95,10 @@ mod_hm10_server_update <- function(id, selected_tab, activate_on) {
       req(enabled())
       valid_inputs <- unique(c(input$hm10_class_2_1, input$hm10_class_2_2)) |> setdiff("-")
 
-      plot_function(
+      standard_plot(
         data = hm10_data(),
         titles = c("Housing", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm10"), Class_2 = valid_inputs)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hm10"), Category_2 = valid_inputs)),
         k = "Date"
       )
     })

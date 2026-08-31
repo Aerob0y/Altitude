@@ -2,9 +2,9 @@ mod_hb2_ui <- function(id) {
   print("hb2_ui loaded")
   ns <- NS(id)
   hb2_tier <- filter_series(
-    guide,
+    guide_rbnz,
     column = c("Class_1", "Name"),
-    apply_filters = list(Dataset = c("hb2"))
+    apply_filters = list(Data = c("hb2"))
   ) |>
     dplyr::group_by(Class_1) |>
     dplyr::summarise(value = list(Name), .groups = "drop") |>
@@ -25,7 +25,7 @@ mod_hb2_ui <- function(id) {
 }
 
 
-mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -48,7 +48,7 @@ mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       plot_function(
         data = d,
         titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),
         k = "Date",
         years = 15
       )

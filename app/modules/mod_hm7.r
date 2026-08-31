@@ -1,9 +1,9 @@
-mod_hm7_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm7_ui <- function(id) {
   if (checks$ui_module) print("hm7_ui loaded")
   ns <- NS(id)
 
   hm7_group <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_1",
     apply_filters = list(Data = c("hm7"))
   )$Class_1
@@ -16,7 +16,7 @@ mod_hm7_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm7")
 }
 
-mod_hm7_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm7_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -31,7 +31,7 @@ mod_hm7_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       plot_function(
         data = hm7_data(),
         titles = c("Balance of Payments", paste("RBNZ:", input$hm7_group)),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm7"), Class_1 = input$hm7_group)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm7"), Class_1 = input$hm7_group)),
         k = "Date"
       )
     })
@@ -72,10 +72,10 @@ mod_hm7_server_update <- function(id, selected_tab, activate_on) {
 
     hm7_plot <- reactive({
       req(enabled())
-      plot_function(
+      standard_plot(
         data = hm7_data(),
         titles = c("Balance of Payments", paste("RBNZ:", input$hm7_group)),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm7"), Class_1 = input$hm7_group)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hm7"), Category_1 = input$hm7_group)),
         k = "Date"
       )
     })

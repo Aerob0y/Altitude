@@ -1,9 +1,9 @@
-mod_hm9_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm9_ui <- function(id) {
   if (checks$ui_module) print("hm9_ui loaded")
   ns <- NS(id)
 
   hm9_tier <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = c("Class_1", "Name", "Class_2"),
     apply_filters = list(Data = c("hm9"))
   ) |>
@@ -27,7 +27,7 @@ mod_hm9_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm9")
 }
 
-mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -53,7 +53,7 @@ mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       plot_function(
         data = hm9_data(),
         titles = c("Labour market", paste("RBNZ:", short_title(x))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm9"), Name = x)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hm9"), Name = x)),
         k = "Date"
       )
     })
@@ -62,7 +62,7 @@ mod_hm9_server <- function(id, selected_tab, activate_on, plot_function = x_plot
   })
 }
 
-mod_hm9_ui_update <- function(id, series_guide = guide_rbnz) {
+mod_hm9_ui_update <- function(id) {
   # 1. Namespace
   ns <- NS(id)
 
@@ -72,7 +72,7 @@ mod_hm9_ui_update <- function(id, series_guide = guide_rbnz) {
     column = c("Category_1", "ColumnName", "Category_2"),
     apply_filters = list(Dataset = c("hm9"))
   ) |>
-    dplyr::group_by(Class_1) |>
+    dplyr::group_by(Category_1) |>
     dplyr::summarise(
       value = list(as.list(stats::setNames(ColumnName, Category_2))),
       .groups = "drop"
@@ -93,7 +93,7 @@ mod_hm9_ui_update <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm9")
 }
 
-mod_hm9_server_update <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm9_server_update <- function(id, selected_tab, activate_on) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -116,10 +116,10 @@ mod_hm9_server_update <- function(id, selected_tab, activate_on, plot_function =
       if (length(x) == 0) x <- c("Labour force participation rate       - % s.a.", "Labour cost index (LCI) - y/y%")
       x <- x[seq_len(min(length(x), 4))]
 
-      plot_function(
+      standard_plot(
         data = hm9_data(),
         titles = c("Labour market", paste("RBNZ:", short_title(x))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hm9"), Name = x)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hm9"), ColumnName = x)),
         k = "Date"
       )
     })

@@ -1,9 +1,9 @@
-mod_hs32_ui <- function(id, series_guide = guide_rbnz) {
+mod_hs32_ui <- function(id) {
   if (checks$ui_module) print("hs32_ui loaded")
   ns <- NS(id)
 
   hs32_name <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Name",
     apply_filters = list(Data = c("hs32"))
   )$Name
@@ -22,7 +22,7 @@ mod_hs32_ui <- function(id, series_guide = guide_rbnz) {
   ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hs32")
 }
 
-mod_hs32_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hs32_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -47,7 +47,7 @@ mod_hs32_server <- function(id, selected_tab, activate_on, plot_function = x_plo
       plot_function(
         data = hs32_data(),
         titles = c("HS32", paste("RBNZ:", short_title(x))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hs32"), Name = x)),
+        series = filter_series(guide_rbnz, apply_filters = list(Data = c("hs32"), Name = x)),
         k = "Date"
       )
     })
@@ -104,10 +104,10 @@ mod_hs32_server_update <- function(id, selected_tab, activate_on) {
       x <- input$hs32_name
       x <- x[seq_len(min(length(x), 6))]
 
-      plot_function(
+      standard_plot(
         data = hs32_data(),
         titles = c("HS32", paste("RBNZ:", short_title(x))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hs32"), Name = x)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hs32"), ColumnName = x)),
         k = "Date"
       )
     })

@@ -1,17 +1,17 @@
 
-mod_hm1_ui <- function(id, series_guide = guide_rbnz) {
+mod_hm1_ui <- function(id) {
   if (checks$ui_module) print("hm1_ui loaded")
   ns <- NS(id)
 
   # Get Inputs (force to character vector)
   hm1_input <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Class_2",
     apply_filters = list(Data = c("hm1"))
   )$Class_2
 
   hm1_metric <- filter_series(
-    series_guide,
+    guide_rbnz,
     column = "Dim",
     apply_filters = list(Data = c("hm1"))
   )$Dim
@@ -51,7 +51,7 @@ mod_hm1_ui <- function(id, series_guide = guide_rbnz) {
 }
 
 
-mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
@@ -88,7 +88,7 @@ mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
       valid_metric <- input$hm1_metric
       if (is.null(valid_metric) || length(valid_metric) == 0) {
         # fallback if nothing selected
-        valid_metric <- if (length(filter_series(series_guide, column = "Dim", apply_filters = list(Data = c("hm1")))) > 0) {
+        valid_metric <- if (length(filter_series(guide_rbnz, column = "Dim", apply_filters = list(Data = c("hm1")))) > 0) {
           "y/y%"
         } else {
           NULL
@@ -104,7 +104,7 @@ mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
         data = d,
         titles = c(t, paste("RBNZ:", valid_metric)),
         series = filter_series(
-          series_guide,
+          guide_rbnz,
           apply_filters = list(
             Data = c("hm1"),
             Class_2 = valid_split,
@@ -127,7 +127,7 @@ mod_hm1_ui_update <- function(id) {
   hm1_input <- filter_series_unlist(
     guide,
     column = "Category_2",
-    apply_filters = list(Data = c("hm1"))
+    apply_filters = list(Dataset = c("hm1"))
   )
 
   hm1_metric <- filter_series_unlist(
@@ -177,11 +177,13 @@ mod_hm1_server_update <- function(id, selected_tab, activate_on) {
       req(enabled())
       req(input$hm1_input)
       valid_inputs <- input$hm1_input |> setdiff("-")
+      valid_metric <- input$hm1_metric
+      t <- if (checks$sourcenames) "Inflation - HM1" else "Inflation"
 
       standard_plot(
         data =          load_data("hm1"),
         titles =        c(t, paste("RBNZ:", valid_metric)),
-        series =        filter_series(guide, apply_filters = list(Dataset = "hm1", Category_1 = valid_inputs, Dim_Group = input$hm1_metric)),
+        series =        filter_series(guide, apply_filters = list(Dataset = "hm1", Category_2 = valid_inputs, Dim_Group = valid_metric)),
         split_by =      NULL,
         split_columns = NULL,
         k = "Date"
