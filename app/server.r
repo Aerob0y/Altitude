@@ -68,6 +68,7 @@ server <- function(input, output, session) {
   mod_bond_server("bond_main",  selected_tab = tab, activate_on = "bond")
   mod_ndm01_server("ndm01_main",  selected_tab = tab, activate_on = "ndm01")
   mod_cbr_catchment_server("cbr_catchment_main", selected_tab = tab, activate_on = "cbr_catchment")
+  mod_nz_catchment_server("nz_catchment_main", selected_tab = tab, activate_on = "nz_catchment")
 
   # generate ui when needed
   output$hb3_test_ui <- renderUI({mod_hb3_test_ui("hb3_test_main")})
@@ -88,6 +89,7 @@ server <- function(input, output, session) {
   output$hm14_update_ui <- renderUI({mod_hm14_ui_update("hm14_update_main")})
   output$hs32_update_ui <- renderUI({mod_hs32_ui_update("hs32_update_main")})
   output$cbr_catchment_ui <- renderUI({mod_cbr_catchment_ui("cbr_catchment_main")})
+  output$nz_catchment_ui <- renderUI({mod_nz_catchment_ui("nz_catchment_main")})
   output$fuel_ui <- renderUI({mod_fuel_ui("fuel_main")})
   #output$adp_ui <- renderUI({mod_adp_ui("adp_main")})
   output$bond_ui <- renderUI({mod_bond_ui("bond_main")})
@@ -96,5 +98,4 @@ server <- function(input, output, session) {
 
 
 }
-
 

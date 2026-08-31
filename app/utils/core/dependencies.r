@@ -7,6 +7,7 @@ suppressPackageStartupMessages({
   library(bslib)
   library(bsicons)
   library(plotly)
+  library(leaflet)
   library(readxl)
   library(sf)
   library(stats)

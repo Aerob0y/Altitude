@@ -212,7 +212,8 @@ ui <- fluidPage(
       nav_panel("Border", value = "border", uiOutput("border_ui")),
       nav_panel("Fuel", value = "fuel", uiOutput("fuel_ui")),
       nav_panel("NDM01", value = "ndm01", uiOutput("ndm01_ui")),
-      nav_panel("Canberra Catchment", value = "cbr_catchment", uiOutput("cbr_catchment_ui"))
+      nav_panel("Canberra Catchment", value = "cbr_catchment", uiOutput("cbr_catchment_ui")),
+      nav_panel("New Zealand Catchments", value = "nz_catchment", uiOutput("nz_catchment_ui"))
     ),
 
     id = "main_nav"
