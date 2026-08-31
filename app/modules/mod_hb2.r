@@ -78,7 +78,7 @@ mod_hb2_ui_update <- function(id) {
     tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
   )
   # 4. Create UI ----
-  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb2_update")
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb2")
 }
 
 
