@@ -5,14 +5,13 @@ to_rgba <- function(colour, alpha = 0.25) {
 
 assign_series_colours <- function(series) {
   series |>
-    dplyr::group_by(Palette) |>
+    dplyr::group_by(Palette, ColourKey) |>
     dplyr::mutate(
       colour = if (dplyr::first(Palette) == "manual") {
         unname(cc[ColourKey])
       } else {
         palette <- palettes[[dplyr::first(Palette)]]
-        keys <- match(ColourKey, unique(ColourKey))
-        palette[(keys - 1) %% length(palette) + 1]
+        palette[(dplyr::row_number() - 1) %% length(palette) + 1]
       }
     ) |>
     dplyr::ungroup()
