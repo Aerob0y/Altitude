@@ -34,7 +34,7 @@ mod_bond_ui_test <- function(id) {
 
 mod_bond_server_test <- function(id, selected_tab, activate_on) {
   moduleServer(id, function(input, output, session) {
-
+    # enabled
     enabled <- reactive(identical(selected_tab(), activate_on))
 
     # Change series when tier changes

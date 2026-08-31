@@ -1,9 +1,10 @@
-mod_hb2_ui <- function(id, series_guide = guide_rbnz) {
+mod_hb2_ui <- function(id) {
+  print("hb2_ui loaded")
   ns <- NS(id)
   hb2_tier <- filter_series(
-    series_guide,
+    guide,
     column = c("Class_1", "Name"),
-    apply_filters = list(Data = c("hb2"))
+    apply_filters = list(Dataset = c("hb2"))
   ) |>
     dplyr::group_by(Class_1) |>
     dplyr::summarise(value = list(Name), .groups = "drop") |>
@@ -36,9 +37,6 @@ mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
     }, ignoreInit = FALSE)
 
 
-
-
-
     hb2_plot <- reactive({
       req(enabled())
       d <- hb2_data()
@@ -60,13 +58,14 @@ mod_hb2_server <- function(id, selected_tab, activate_on, plot_function = x_plot
 }
 
 mod_hb2_ui_update <- function(id) {
+  
   # 1. Namespace
   ns <- NS(id)
 
   # 2. Series selection ----
-  tier <- filter_series(guide, column = c("Class_1", "Name"), apply_filters = list(Data = c("hb2"))) %>%
-    group_by(Class_1) |>
-    summarise(value = list(Name), .groups = "drop") |>
+  tier <- filter_series(guide, column = c("Category_1", "ColumnName"), apply_filters = list(Dataset = c("hb2"))) %>%
+    group_by(Category_1) |>
+    summarise(value = list(ColumnName), .groups = "drop") |>
     deframe()
 
   # 3. Create inputs ----
@@ -99,7 +98,7 @@ mod_hb2_server_update <- function(id, selected_tab, activate_on) {
       standard_plot(
         data = load_data("hb2"),
         titles = c("Daily wholesale interest rates", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(series_guide, apply_filters = list(Data = c("hb2"), Name = valid_inputs)),
+        series = filter_series(guide, apply_filters = list(Dataset = c("hb2"), ColumnName = valid_inputs)),
         k = "Date",
         years = 15
       )

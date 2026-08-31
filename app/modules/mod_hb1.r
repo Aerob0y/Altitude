@@ -71,11 +71,10 @@ mod_hb1_ui_update <- function(id) {
 mod_hb1_server_update <- function(id, selected_tab, activate_on) {
   moduleServer(id, function(input, output, session) {
 
+    # 1. Check if module is active
     enabled <- reactive(identical(selected_tab(), activate_on))
 
-    # --------------------------------------------------------------------------
-    # Plot
-
+    # 2. Load data only when hb2 tab is active
     output$plot <- renderPlotly({
       req(enabled())
       req(input$Currency1_main)

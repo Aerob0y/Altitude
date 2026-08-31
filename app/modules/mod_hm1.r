@@ -1,3 +1,4 @@
+
 mod_hm1_ui <- function(id, series_guide = guide_rbnz) {
   if (checks$ui_module) print("hm1_ui loaded")
   ns <- NS(id)
@@ -115,5 +116,76 @@ mod_hm1_server <- function(id, selected_tab, activate_on, plot_function = x_plot
     })
 
     output$plot <- renderPlotly(hm1_plot())
+  })
+}
+
+mod_hm1_ui_update <- function(id) {
+  # 1. Namespace
+  ns <- NS(id)
+
+  # 2. Series selection ----
+  hm1_input <- filter_series_unlist(
+    guide,
+    column = "Category_2",
+    apply_filters = list(Data = c("hm1"))
+  )
+
+  hm1_metric <- filter_series_unlist(
+    guide,
+    column = "Dim_Group",
+    apply_filters = list(Dataset = c("hm1"))
+  )
+
+  # Defensive cleaning
+  hm1_input  <- hm1_input[!is.na(hm1_input)]
+  hm1_metric <- hm1_metric[!is.na(hm1_metric)]
+
+  default_idx <- c(1, 4, 5, 6)
+  default_idx <- default_idx[default_idx <= length(hm1_input)]
+  default_inputs <- hm1_input[default_idx]
+
+  # 3. Create inputs ----
+  insert_inputs <- tagList(
+    selectInput(
+      ns("hm1_metric"),
+      "Metric",
+      choices = hm1_metric,
+      selected = if ("y/y%" %in% hm1_metric) "y/y%" else hm1_metric[1],
+      multiple = FALSE
+    ),
+    checkboxGroupInput(
+      ns("hm1_input"),
+      "Price Index (5 Max)",
+      choices = hm1_input,
+      selected = default_inputs
+    )
+  )
+
+  # 4. Create UI ----
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hm1")
+}
+
+
+mod_hm1_server_update <- function(id, selected_tab, activate_on) {
+  moduleServer(id, function(input, output, session) {
+
+    # 1. Check if module is active
+    enabled <- reactive(identical(selected_tab(), activate_on))
+
+    # 2. Load data only when hm1 tab is active
+    output$plot <- renderPlotly({
+      req(enabled())
+      req(input$hm1_input)
+      valid_inputs <- input$hm1_input |> setdiff("-")
+
+      standard_plot(
+        data =          load_data("hm1"),
+        titles =        c(t, paste("RBNZ:", valid_metric)),
+        series =        filter_series(guide, apply_filters = list(Dataset = "hm1", Category_1 = valid_inputs, Dim_Group = input$hm1_metric)),
+        split_by =      NULL,
+        split_columns = NULL,
+        k = "Date"
+      )
+    })
   })
 }

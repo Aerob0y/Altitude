@@ -59,3 +59,56 @@ mod_hc35_server <- function(id, selected_tab, activate_on, plot_function = x_plo
     output$plot <- renderPlotly(hc35_plot())
   })
 }
+
+mod_hc35_ui_update <- function(id, series_guide = guide_rbnz) {
+  # 1. Namespace
+  ns <- NS(id)
+
+  # 2. Series selection ----
+  hc35_group <- filter_series_unlist(
+    guide,
+    column = "Category_1",
+    apply_filters = list(Dataset = c("hc35"))
+  )
+  hc35_group <- hc35_group[!is.na(hc35_group)]
+
+  hc35_split <- filter_series_unlist(
+    guide,
+    column = "Class_2",
+    apply_filters = list(Dataset = c("hc35"))
+  )
+  hc35_split <- hc35_split[!is.na(hc35_split)]
+
+  # 3. Create inputs ----
+  insert_inputs <- tagList(
+    selectInput(ns("hc35_group"), "Lending Group", choices = hc35_group, selected = hc35_group[1], multiple = FALSE),
+    checkboxGroupInput(ns("hc35_split"), "Lending", choices = hc35_split, selected = hc35_split[c(1, 3, 4)])
+  )
+  # 4. Create UI ----
+  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hc35")
+}
+
+mod_hc35_server_update <- function(id, selected_tab, activate_on, plot_function = x_plotly, series_guide = guide_rbnz) {
+  moduleServer(id, function(input, output, session) {
+
+    # 1. Check if module is active
+    enabled <- reactive(identical(selected_tab(), activate_on))
+
+    # 2. Load data only when hb2 tab is active
+    output$plot <- renderPlotly({
+      req(enabled())
+      req(input$hc35_group)
+      req(input$hc35_split)
+      valid_inputs <- unique(c(input$hc35_group, input$hc35_split)) |> setdiff("-")
+
+      standard_plot(
+        data =          load_data("hc35"),
+        titles =        c("Residential mortgage loan reconciliation", paste("RBNZ:", short_title(valid_inputs))),
+        series =        filter_series(guide, apply_filters = list(Dataset = "hc35", Category_1 = valid_inputs)),
+        split_by =      NULL,
+        split_columns = NULL,
+        k = "Date"
+      )
+    })
+  })
+}

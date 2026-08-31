@@ -11,7 +11,7 @@ utility_files <- c(
   "app/utils/plotting/plotly.r",
   "app/utils/plotting/standard_plot.r",
   "app/utils/plotting/reference_plot.r",
-  "app/utils/plotting/standard_module.r",
+  "app/utils/plotting/standard_module.r"
 )
 
 
