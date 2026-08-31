@@ -1,0 +1,15 @@
+airport,airport_name,longitude,latitude,selectable,major_competitor,island
+AKL,Auckland Airport,174.7917,-37.0082,TRUE,TRUE,North
+CHC,Christchurch Airport,172.5370,-43.4894,TRUE,TRUE,South
+WLG,Wellington Airport,174.8069,-41.3272,TRUE,TRUE,North
+ZQN,Queenstown Airport,168.7392,-45.0211,TRUE,TRUE,South
+DUD,Dunedin Airport,170.1983,-45.9281,TRUE,TRUE,South
+HLZ,Hamilton Airport,175.3324,-37.8667,TRUE,FALSE,North
+TRG,Tauranga Airport,176.1960,-37.6719,TRUE,FALSE,North
+ROT,Rotorua Airport,176.3172,-38.1092,TRUE,FALSE,North
+NPE,Hawke's Bay Airport,176.8700,-39.4658,TRUE,FALSE,North
+NPL,New Plymouth Airport,174.1792,-39.0086,TRUE,FALSE,North
+PMR,Palmerston North Airport,175.6169,-40.3206,TRUE,FALSE,North
+NSN,Nelson Airport,173.2211,-41.2983,TRUE,FALSE,South
+BHE,Marlborough Airport,173.8692,-41.5183,TRUE,FALSE,South
+IVC,Invercargill Airport,168.3128,-46.4124,TRUE,FALSE,South
