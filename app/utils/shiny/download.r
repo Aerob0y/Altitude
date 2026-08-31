@@ -114,3 +114,8 @@ download_settings_ui <- function(ns) {
     )
   )
 }
+
+register_function("app/utils/shiny/download.r", "mod_download_ui", "UI module for download settings")
+register_function("app/utils/shiny/download.r", "mod_download_server", "Server module for download settings")
+register_function("app/utils/shiny/download.r", "download_button", "Adds a download button to a Plotly plot")
+register_function("app/utils/shiny/download.r", "download_settings_ui", "UI for download settings panel")

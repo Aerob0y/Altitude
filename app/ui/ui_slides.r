@@ -109,3 +109,6 @@ ui_overview <- tags$div(
     )
   )
 )
+
+register_function("app/ui/ui_slides.r", "overview_dataset_card", "Creates a card for the overview page dataset guide")
+register_function("app/ui/ui_slides.r", "ui_overview", "Generates the overview page UI with hero section, dataset guide, and data note")

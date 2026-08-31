@@ -1,47 +1,11 @@
-checks <- list(
-  load_data = FALSE,
-  filter_series = FALSE,
-  ui_elements = FALSE,
-  sourcenames = TRUE,
-  ui_module = TRUE
-)
+# cache: establish a cache environment to store loaded data and avoid redundant reads ----
+cache <- new.env(parent = emptyenv())
 
-load_cached_rds_old <- function(csv_file, rds_file) {
-
-  if (!file.exists(csv_file)) {
-    stop("CSV file does not exist: ", csv_file)
-  }
-
-  rebuild <- !file.exists(rds_file) ||
-    file.info(csv_file)$mtime > file.info(rds_file)$mtime
-
-  if (rebuild) {
-    print(paste0("Rebuilding RDS file from CSV: ", rds_file))
-
-    data <- readr::read_csv(
-      csv_file,
-      show_col_types = FALSE
-    )
-
-    saveRDS(data, rds_file)
-
-  } else {
-    print(paste0("Loading RDS file: ", rds_file))
-    data <- readRDS(rds_file)
-
-  }
-
-  data
-}
-
+# load_cached_rds: Load data from a CSV or Excel file and cache it as an RDS file for faster future access ----
 load_cached_rds <- function(file, rds_file, table = NULL, sheet = NULL) {
+  if (!file.exists(file)) {stop("Source file does not exist: ", file)}
 
-  if (!file.exists(file)) {
-    stop("Source file does not exist: ", file)
-  }
-
-  rebuild <- !file.exists(rds_file) ||
-    file.info(file)$mtime > file.info(rds_file)$mtime
+  rebuild <- !file.exists(rds_file) || file.info(file)$mtime > file.info(rds_file)$mtime
 
   if (!rebuild) {
     message("Loading RDS file: ", rds_file)
@@ -49,80 +13,68 @@ load_cached_rds <- function(file, rds_file, table = NULL, sheet = NULL) {
   }
 
   message("Rebuilding RDS file from: ", file)
-
   ext <- tolower(tools::file_ext(file))
 
-  data <- switch(
-    ext,
-
-    csv = readr::read_csv(
-      file,
-      show_col_types = FALSE
-    ),
-
-    xlsx = readxl::read_excel(
-      file,
-      sheet = sheet
-    ),
-
+  data <- switch(ext,
+    csv = readr::read_csv(file, show_col_types = FALSE),
+    xlsx = readxl::read_excel(file, sheet = sheet),
     stop("Unsupported file type: ", ext)
   )
 
   saveRDS(data, rds_file)
-
   data
 }
 
+local({
 
-cache <- new.env(parent = emptyenv())
-#guide_rbnz <- readRDS("data/Reference/RBNZ_Series.rds")
+  apply_series_filters <- function(data, filters) {
 
+    for (f in seq_along(filters)) {
 
-filter_series <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
-  t <- guide
-  if (!is.null(apply_filters) || !is.null(apply_fallbacks)) {
-    for (f in seq_along(apply_filters)) {
-      filter_name <- names(apply_filters)[f]
-      filter_values <- apply_filters[[f]]
+      filter_name <- names(filters)[f]
+      filter_values <- filters[[f]]
+
       if (length(filter_values) > 0) {
-        t <- t |>
-          filter(get(filter_name) %in% filter_values)
+        data <- data |>
+          dplyr::filter(.data[[filter_name]] %in% filter_values)
       }
     }
+
+    data
+  }
+
+
+  filter_series <<- function(
+      guide,
+      column = NULL,
+      apply_filters = NULL,
+      apply_fallbacks = NULL
+  ) {
+
+    t <- apply_series_filters(guide, apply_filters)
+
     if (nrow(t) == 0) {
-      for (f in seq_along(apply_fallbacks)) {
-        filter_name <- names(apply_fallbacks)[f]
-        filter_values <- apply_fallbacks[[f]]
-        if (length(filter_values) > 0) {
-          t <- guide |>
-            filter(get(filter_name) %in% filter_values)
-        }
-      }
+      t <- apply_series_filters(guide, apply_fallbacks)
     }
+    if (!is.null(column)) {
+      t <- t |>
+        select(all_of(column)) |>
+        unique()
+      t <- t[complete.cases(t), ]
+    }
+    if (length(column) == 1) {
+      t <- t[[1]] |>
+        as.vector() |>
+        unlist() |>
+        unname()
+    }
+    t
   }
-  if (!is.null(column)) {
-    t <- t |>
-      select(all_of(column)) |>
-      unique()
-    t <- t[complete.cases(t), ]
-  }
-  if (checks$filter_series) {print(t)}
-  t
-}
 
-filter_series_unlist <- function(guide, column = NULL, apply_filters = NULL, apply_fallbacks = NULL) {
-  t <- filter_series(guide, column, apply_filters, apply_fallbacks)
-  t <- t |>
-    as.vector() |>
-    unlist() |>
-    unname()
-  t
-}
+})
 
-
-
+## load_data: Load an RDS file into the cache ----
 load_data <- function(name, refresh_cache = FALSE) {
-  if (checks$load_data) print(paste0("load_data: ", name))
   if (exists(name, envir = cache) && !refresh_cache) {return(cache[[name]])}
   f <- list.files(
     ".",
@@ -137,6 +89,7 @@ load_data <- function(name, refresh_cache = FALSE) {
   cache[[name]]
 }
 
+#guide_rbnz - Load the RBNZ series guide and convert the Style column to an ordered factor ----
 guide_rbnz <- load_cached_rds(
   "app/data/Reference/RBNZ_Series.csv",
   "app/data/Reference/RBNZ_Series.rds"
@@ -148,6 +101,7 @@ guide_rbnz <- load_cached_rds(
     )
   )
 
+## guide: Load the common guide ----
 guide <- readr::read_csv(
   "app/data/Reference/guide.csv",
   show_col_types = FALSE
@@ -168,9 +122,9 @@ guide <- guide |>
     Dim = Dim_Group
   )
 
+# load_series: Load unique series values for a given dataset, with options to drop NAs and limit the number of unique values ----
 load_series <- function(data_name, drop_na = FALSE, max_unique = 100, refresh_cache = FALSE) {
   data_series <- paste(data_name, "series", sep = "_")
-  if (checks$load_data) print(paste0("load_series: ", data_series))
   if (exists(data_series, envir = cache) && !refresh_cache) {return(cache[[data_series]])}
   df <- load_data(data_name)
   out <- lapply(df, function(x) {
@@ -183,3 +137,14 @@ load_series <- function(data_name, drop_na = FALSE, max_unique = 100, refresh_ca
   cache[[data_series]] <- n
   cache[[data_series]]
 }
+
+guide <- load_cached_rds(
+  "app/data/Reference/Guide.xlsx",
+  "app/data/Reference/Guide.rds",
+  sheet = "Guide", table = "Guide"
+)
+
+register_function("app/utils/data/data.r", "load_cached_rds", "Loads data from a CSV or Excel file and caches it as an RDS file for faster future access")
+register_function("app/utils/data/data.r", "filter_series", "Filters a guide data frame based on specified columns and fallback options")
+register_function("app/utils/data/data.r", "load_data", "Loads an RDS file into the cache")
+register_function("app/utils/data/data.r", "load_series", "Loads unique series values for a given dataset, with options to drop NAs and limit the number of unique values")

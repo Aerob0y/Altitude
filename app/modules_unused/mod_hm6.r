@@ -1,5 +1,5 @@
 mod_hm6_ui <- function(id) {
-  if (checks$ui_module) print("hm6_ui loaded")
+
   ns <- NS(id)
 
   hm6_name <- filter_series(
@@ -42,6 +42,7 @@ mod_hm6_server <- function(id, selected_tab, activate_on, plot_function = x_plot
 
 mod_hm6_ui_update <- function(id) {
   # 1. Namespace
+  add_log("mod_hm6_ui_update", "ui function called")
   ns <- NS(id)
 
   # 2. Series selection ----
@@ -49,7 +50,7 @@ mod_hm6_ui_update <- function(id) {
     guide,
     column = "ColumnName",
     apply_filters = list(Dataset = c("hm6"))
-  )$ColumnName
+  )
   hm6_name <- hm6_name[!is.na(hm6_name)]
 
   # 3. Create inputs ----
@@ -61,12 +62,12 @@ mod_hm6_ui_update <- function(id) {
 }
 
 mod_hm6_server_update <- function(id, selected_tab, activate_on) {
+  add_log("mod_hm6_server_update", "server function called")
   moduleServer(id, function(input, output, session) {
     enabled <- reactive(identical(selected_tab(), activate_on))
 
     hm6_data <- eventReactive(enabled(), {
       req(enabled())
-      if (checks$ui_module) print("hm6_server loaded")
       load_data("hm6")
     }, ignoreInit = FALSE)
 

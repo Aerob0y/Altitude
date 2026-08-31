@@ -44,7 +44,6 @@ module_note <- function(module) {
 }
 
 ui_single <- function(insert_inputs, h = "600px", p, module = NULL) {
-  if (checks$ui_elements) print("Using ui_single")
 
   tags$div(
     class = "module-page",
@@ -67,3 +66,5 @@ ui_single <- function(insert_inputs, h = "600px", p, module = NULL) {
     )
   )
 }
+register_function("app/ui/ui_elements.r", "module_note", "Generates a module note section with title, source, and description for a given module")
+register_function("app/ui/ui_elements.r", "ui_single", "Generates a single-page UI layout with a sidebar for inputs and a main area for a Plotly output, including module notes if provided")

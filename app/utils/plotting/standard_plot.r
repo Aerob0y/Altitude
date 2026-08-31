@@ -1,8 +1,10 @@
+# to_rgba: Convert a colour to an RGBA string with specified alpha transparency ----
 to_rgba <- function(colour, alpha = 0.25) {
   rgb <- grDevices::col2rgb(colour)
   sprintf("rgba(%d,%d,%d,%.3f)", rgb[1], rgb[2], rgb[3], alpha)
 }
 
+# assign_series_colours: Assigns colours to series based on their palette and colour key ----
 assign_series_colours <- function(series) {
   series |>
     dplyr::group_by(Palette, ColourKey) |>
@@ -183,6 +185,14 @@ standard_plot <- function(
     height = as.numeric(download$height %||% 1200),
     scale = as.numeric(download$scale %||% 2)
   )
-  print("standard plot used")
+  add_log("app/utils/plotting/standard_plot.r", "standard plot used")
   plotly::config(p, displayModeBar = TRUE, toImageButtonOptions = download)
 }
+
+
+# register_function("app/utils/plotting/standard_plot.r", "standard_plot", "Creates a standard plot with the specified data, reference, chart, titles, series, and other options")
+register_function("app/utils/plotting/standard_plot.r", "assign_series_colours", "Assigns colours to series based on their palette and colour key")
+register_function("app/utils/plotting/standard_plot.r", "normalise_standard_series", "Normalises a standard series by applying aliases, defaults, and formatting")
+register_function("app/utils/plotting/standard_plot.r", "rollup_standard_series", "Rolls up a standard series by applying the specified aggregation function")
+register_function("app/utils/plotting/standard_plot.r", "standard_plot", "Creates a standard plot with the specified data, reference, chart, titles, series, and other options")
+register_function("app/utils/plotting/standard_plot.r", "to_rgba", "Convert a colour to an RGBA string with specified alpha transparency")

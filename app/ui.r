@@ -187,36 +187,9 @@ ui <- fluidPage(
   navset_tab(
     nav_panel("Overview", value = "overview", ui_overview),
     nav_menu(
-      "Economic indicators",
-      nav_panel("Exchange Rates",  value = "hb1",  uiOutput("hb1_ui")),
-      nav_panel("Interest Rates", value = "hb2", uiOutput("hb2_ui")),
-      nav_panel("Residential Mortgages", value = "hc35", uiOutput("hc35_ui")),
-      nav_panel("Inflation", value = "hm1", uiOutput("hm1_ui")),
-      nav_panel("Consumption", value = "hm2", uiOutput("hm2_ui")),
-      nav_panel("Investment", value = "hm3", uiOutput("hm3_ui")),
-      nav_panel("Investment (reference test)", value = "hb3_test", uiOutput("hb3_test_ui")),
-      nav_panel("Test", value = "hm14_test", uiOutput("hm14_test_ui")),
-      nav_panel("Investment", value = "hm4", uiOutput("hm4_ui")),
-      nav_panel("GDP", value = "hm5", uiOutput("hm5_ui")),
-      nav_panel("National Savings", value = "hm6", uiOutput("hm6_ui")),
-      nav_panel("Balance of Payments", value = "hm7", uiOutput("hm7_ui")),
-      nav_panel("Overseas Trade", value = "hm8", uiOutput("hm8_ui")),
-      nav_panel("Labour Market", value = "hm9", uiOutput("hm9_ui")),
-      nav_panel("CoreLogic", value = "hm10", uiOutput("hm10_ui")),
-      nav_panel("Survey of expectations", value = "hm14", uiOutput("hm14_ui")),
-      nav_panel("Banks: Loans by product", value = "hs32", uiOutput("hs32_ui")),
-      nav_panel("Canberra Catchment", value = "cbr_catchment",uiOutput("cbr_catchment_ui")),
-
-      #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
-      nav_panel("Bond", value = "bond", uiOutput("bond_ui")),
-      nav_panel("BondTest", value = "bond_test", uiOutput("bond_test_ui")),
-      nav_panel("BondTest2", value = "bond_test2", uiOutput("bond_test2_ui")),
-
-    ),
-    nav_menu(
-      "Economic Indicators Update",
+      "Economic",
       nav_panel("Exchange Rates", value = "hb1_update", uiOutput("hb1_update_ui")),
-      nav_panel("Interest Rates x", value = "hb2_update", uiOutput("hb2_update_ui")),
+      nav_panel("Interest Rates", value = "hb2_update", uiOutput("hb2_update_ui")),
       nav_panel("Residential Mortgages", value = "hc35_update", uiOutput("hc35_update_ui")),
       nav_panel("Inflation", value = "hm1_update", uiOutput("hm1_update_ui")),
       nav_panel("Consumption", value = "hm2_update", uiOutput("hm2_update_ui")),
@@ -229,13 +202,17 @@ ui <- fluidPage(
       nav_panel("Labour Market", value = "hm9_update", uiOutput("hm9_update_ui")),
       nav_panel("CoreLogic", value = "hm10_update", uiOutput("hm10_update_ui")),
       nav_panel("Survey of expectations", value = "hm14_update", uiOutput("hm14_update_ui")),
-      nav_panel("Banks: Loans by product", value = "hs32_update", uiOutput("hs32_update_ui"))
+      nav_panel("Banks: Loans by product", value = "hs32_update", uiOutput("hs32_update_ui")),
+      nav_panel("Rental Market", value = "bond", uiOutput("bond_ui"))
+      #nav_panel("ADP", value = "adp", uiOutput("adp_ui")),
     ),
+
     nav_menu(
       "Tourism & Migration",
       nav_panel("Border", value = "border", uiOutput("border_ui")),
       nav_panel("Fuel", value = "fuel", uiOutput("fuel_ui")),
-      nav_panel("NDM01", value = "ndm01", uiOutput("ndm01_ui"))
+      nav_panel("NDM01", value = "ndm01", uiOutput("ndm01_ui")),
+      nav_panel("Canberra Catchment", value = "cbr_catchment", uiOutput("cbr_catchment_ui"))
     ),
 
     id = "main_nav"

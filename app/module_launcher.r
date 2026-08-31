@@ -1,4 +1,4 @@
-
+fp <- FALSE
 # Altitude/
 # │
 # ├─ interactive                    # top level checker
@@ -6,14 +6,14 @@
 # ├─ app/                           # the app lives there
 # │  ├─ utils                       # utilities for data ----
 # │  │  ├─ <Code>                   ----
-source("app/utils/load_utils.r") # shared dependencies and helpers
-functions_by_file("app/utils/load_utils.r")
-functions_by_file("app/utils/plotting/standards.r")
-functions_by_file("app/utils/shiny/download.r")
-functions_by_file("app/utils/data/data.r")
-functions_by_file("app/utils/plotting/plotly.r") # not done
-functions_by_file("app/utils/plotting/standard_plot.r") # not done
-functions_by_file("app/utils/core/launch_module.r") # not done
+source("app/utils/core/load_utils.r") # shared dependencies and helpers
+functions_by_file("app/utils/load_utils.r", fp = fp)
+functions_by_file("app/utils/plotting/standards.r", fp = fp)
+functions_by_file("app/utils/shiny/download.r", fp = fp)
+functions_by_file("app/utils/data/data.r", fp = fp)
+functions_by_file("app/utils/plotting/plotly.r", fp = fp) # not done
+functions_by_file("app/utils/plotting/standard_plot.r", fp = fp) # not done
+functions_by_file("app/utils/core/launch_module.r", fp = fp) # not done
 
 # │  │  ├─ </Code>                  ----
 # │  │  ├─ core                     # utilities for data 
@@ -30,22 +30,25 @@ functions_by_file("app/utils/core/launch_module.r") # not done
 # │  ├─ ui                          # utilities for data ----
 # │  │  ├─ <Code>                   ----
 source("app/ui/ui_elements.r") # common UI elements
-functions_by_file("app/ui/ui_elements.r")
+functions_by_file("app/ui/ui_elements.r", fp = fp)
 source("app/ui/ui_slides.r") # slides and overview
-functions_by_file("app/ui/ui_slides.r")
+functions_by_file("app/ui/ui_slides.r", fp = fp)
 # │  │  ├─ </Code>                  ----
 # │  │  ├─ ui_elements.r        # common UI elements
 # │  │  └─ ui_slides.r          # tabbed UI elements
+# │
+# ├─ app.r
+# ├─ runapp.r
+# ├─ server.r
+# │  ├─ <Code>                   ----
+source("app/server.r")
+# │  └─ </Code>                  ----
+# ├─ ui.r
+# │  │  <Code>                   ----
+source("app/ui.r")
+# │  └─ </Code>                  ----
+# └─ module_launcher.r
 
+print(available_modules)
 
-
-functions_by_file() %>% filter(Function == "load_cached_rds")
-
-# Updates
-source("update/update.R", local = FALSE, echo = TRUE)
-updates(what = "", manual = FALSE) # do not fie unless we want to force an update
-updates(what = "border_all", manual = TRUE) # do not fie unless we want to force an update
-load_data("border_all", refresh_cache = TRUE)
-
-# This file is used to run the interactive app. It is not intended to be sourced by other scripts, but rather to be run directly.
-source("app/app.R", local = FALSE, echo = TRUE)
+launch_module("hm14", suffix = "_update")

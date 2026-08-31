@@ -1,91 +1,98 @@
-mod_hb1_ui <- function(id) {
+mod_hb1_ui_update <- function(id) {
+  add_log("mod_hb1_ui_update", "ui function called")
+
   ns <- NS(id)
-  class_1 <- filter_series_unlist(guide_rbnz, column = "Class_1", apply_filters = list(Data = c("hb1")))
-  ui_single(
-    id = ns("hb1"),
-    tagList(
-      selectInput(ns("Currency1_main"), "Currency", choices = class_1, selected = "NZD/USD"),
-      selectInput(ns("Currency2_main"), "Secondary", choices = c("-", class_1), selected = "-"),
-      checkboxInput(ns("bond_split"), "Split by location", value = FALSE),
-      tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
+
+  currencies <- filter_series(
+    guide,
+    column = "Category_1",
+    apply_filters = list(Dataset = "hb1")
+  ) 
+  insert_inputs <- tagList(
+    selectInput(
+      ns("Currency1_main"),
+      "Currency",
+      choices = currencies,
+      selected = "NZD/USD"
     ),
+    selectInput(
+      ns("Currency2_main"),
+      "Secondary",
+      choices = c("-", currencies),
+      selected = "-"
+    ),
+    tags$div(
+      class = "dl-compact dl-row",
+      download_settings_ui(ns)
+    )
+  )
+
+  ui_single(
+    insert_inputs,
     p = ns("plot"),
     h = "600px",
     module = "hb1"
   )
 }
 
+mod_hb1_server_update <- function(id, selected_tab, activate_on) {
+  add_log("mod_hb1_server_update", "starting server function")
 
-mod_hb1_server <- function(id, selected_tab, activate_on, plot_function = x_plotly) {
   moduleServer(id, function(input, output, session) {
-    enabled <- reactive(identical(selected_tab(), activate_on))
 
-    hb1_data <- eventReactive(enabled(), {
-      req(enabled())
-      load_data("hb1")
-    }, ignoreInit = FALSE)
+    enabled <- reactive(
+      identical(selected_tab(), activate_on)
+    )
 
-    dl <- mod_download_server("dl")
+    currencies <- filter_series(
+      guide,
+      column = "Category_1",
+      apply_filters = list(Dataset = "hb1")
+    ) 
 
-    hb1_plot <- reactive({
-      req(enabled())
-      valid_inputs <- unique(c(input$Currency1_main, input$Currency2_main)) |> setdiff("-")
-      plot_function(
-        data = hb1_data(),
-        titles = c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
-        series = filter_series(
-          guide_rbnz,
-          apply_filters = list(Data = "hb1", Class_1 = valid_inputs)
+    observeEvent(input$Currency1_main, {
+
+      updateSelectInput(
+        session,
+        "Currency2_main",
+        choices = c(
+          "-",
+          setdiff(currencies, input$Currency1_main)
         ),
-        k = "Date",
-        years = 15,
-        download   = dl$download(),
-        clean_ui   = dl$clean_export()
+        selected = if (
+          identical(input$Currency2_main, input$Currency1_main)
+        ) {
+          "-"
+        } else {
+          input$Currency2_main
+        }
       )
     })
 
-    output$plot <- renderPlotly(hb1_plot())
-  })
-}
-
-
-mod_hb1_ui_update <- function(id) {
-  # 1. Namespace
-  ns <- NS(id)
-
-  # 2. Series selection ----
-  currencies <- filter_series_unlist(guide, column = "Category_1", apply_filters = list(Dataset = c("hb1")))
-
-  # 3. Create inputs ----
-  insert_inputs <- tagList(
-    selectInput(ns("Currency1_main"), "Currency", choices = currencies, selected = "NZD/USD"),
-    selectInput(ns("Currency2_main"), "Secondary", choices = c("-", currencies), selected = "-"),
-    tags$div(class = "dl-compact dl-row", download_settings_ui(ns))
-  )
-
-  # 4. Create UI ----
-  ui_single(insert_inputs, p = ns("plot"), h = "600px", module = "hb1")
-}
-
-
-mod_hb1_server_update <- function(id, selected_tab, activate_on) {
-  moduleServer(id, function(input, output, session) {
-
-    # 1. Check if module is active
-    enabled <- reactive(identical(selected_tab(), activate_on))
-
-    # 2. Load data only when hb2 tab is active
     output$plot <- renderPlotly({
       req(enabled())
       req(input$Currency1_main)
       req(input$Currency2_main)
-      valid_inputs <- unique(c(input$Currency1_main, input$Currency2_main)) |> setdiff("-")
+
+      valid_inputs <- unique(
+        c(input$Currency1_main, input$Currency2_main)
+      ) |>
+        setdiff("-")
 
       standard_plot(
-        data =          load_data("hb1"),
-        titles =        c("Daily exchange rates and TWI", paste("RBNZ:", short_title(valid_inputs))),
-        series =        filter_series(guide, apply_filters = list(Dataset = "hb1", Category_1 = valid_inputs)),
-        split_by =      NULL,
+        data = load_data("hb1"),
+        titles = c(
+          "Daily exchange rates:",
+          paste("RBNZ:", short_title(valid_inputs))
+        ),
+        series = filter_series(
+          guide,
+          apply_filters = list(
+            Dataset = "hb1",
+            Category_1 = valid_inputs
+          )
+        ),
+        split_by = NULL,
         split_columns = NULL,
         k = "Date"
       )

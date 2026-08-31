@@ -1,4 +1,3 @@
-
 ### Colour definitions and plotly custom elements ----------------------------
 cc <- c(
   black      = "#000000",
@@ -23,6 +22,8 @@ cc <- c(
   grey_lite  = "#999999",
   grey_snow  = "#CCCCCC"
 )
+register_function("app/utils/plotting/standards.r", "cc", "Named list that defines colour constants for plotting")
+
 palettes <- list(
   teal = unlist(cc[c("teal_dark", "teal_base", "teal_lite", "teal_snow")]),
   navy = unlist(cc[c("navy_dark", "navy_base", "navy_lite", "navy_snow")]),
@@ -31,6 +32,7 @@ palettes <- list(
   grey = unlist(cc[c("grey_dark", "grey_base", "grey_lite")]),
   qual = unlist(cc[c("teal_base", "navy_base", "ruby_base", "gold_base", "grey_base")])
 )
+register_function("app/utils/plotting/standards.r", "palettes", "List of colour palettes derived from the colour constants")
 
 ### Sizing Definitions ----------------------------
 standard_margin <- list(
@@ -39,6 +41,8 @@ standard_margin <- list(
   b = 70,
   l = 60
 )
+register_function("app/utils/plotting/standards.r", "standard_margin", "List defining standard margins for plots")
+
 button_years_list <- list(
   list(count = 20, label = "20 yr", step = "year", stepmode = "backward"),
   list(count = 15, label = "15 yr", step = "year", stepmode = "backward"),
@@ -48,10 +52,12 @@ button_years_list <- list(
   list(count = 1,  label = "YTD",   step = "year", stepmode = "todate"),
   list(step = "all")
 )
+register_function("app/utils/plotting/standards.r", "button_years_list", "List defining button configurations for plotly range selector")
 rangeselector_top <- list(
   x = 1, xanchor = "right", y = 1, yanchor = "top",
   buttons = button_years_list
 )
+register_function("app/utils/plotting/standards.r", "rangeselector_top", "List defining the top range selector configuration for plotly")
 
 ### Standards ----------------------------
 standard_title <- function(main, subtitle = "", overrides = list()) {
@@ -71,6 +77,7 @@ standard_title <- function(main, subtitle = "", overrides = list()) {
     overrides
   )
 }
+register_function("app/utils/plotting/standards.r", "standard_title", "Function to create a standard title for plots with optional subtitle and overrides")
 
 standard_legend <- function(overrides = list()) {
   modifyList(
@@ -85,6 +92,7 @@ standard_legend <- function(overrides = list()) {
     overrides
   )
 }
+register_function("app/utils/plotting/standards.r", "standard_legend", "Function to create a standard legend configuration for plots with optional overrides")
 
 standard_yaxis <- function(formatting = list()) {
   f <- modifyList(
@@ -125,7 +133,7 @@ standard_yaxis <- function(formatting = list()) {
   }
   f
 }
-
+register_function("app/utils/plotting/standards.r", "standard_yaxis", "Function to create a standard y-axis configuration for plots with optional formatting")
 standard_date_xaxis <- function(title = list(text = NULL), y = 10, clean_ui = FALSE, overrides = list()) {
   rs <- rangeselector_top
   if (clean_ui) rs$visible <- FALSE
@@ -145,6 +153,7 @@ standard_date_xaxis <- function(title = list(text = NULL), y = 10, clean_ui = FA
     ), overrides
   )
 }
+register_function("app/utils/plotting/standards.r", "standard_date_xaxis", "Function to create a standard date x-axis configuration for plots with optional title, y-offset, clean UI, and overrides")
 
 ### Misc Plotly Elenents ----------------------------
 
@@ -162,3 +171,4 @@ short_title <- function(elements = c()) {
     ))
   }
 }
+register_function("app/utils/plotting/standards.r", "short_title", "Function to create a short title from a vector of elements, handling grammar for 0, 1, 2, or more elements")

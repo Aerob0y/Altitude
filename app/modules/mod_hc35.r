@@ -1,5 +1,5 @@
 mod_hc35_ui <- function(id) {
-  if (checks$ui_module) print("hc35_ui loaded")
+
   ns <- NS(id)
 
   hc35_group <- filter_series(
