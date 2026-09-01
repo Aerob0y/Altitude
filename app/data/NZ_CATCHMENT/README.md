@@ -68,3 +68,11 @@ size from being treated as a complete replacement.
 
 The app requires `leaflet`. Install `leaflet.extras2` as well to show the map's
 PNG download control.
+
+For quota-free local routing, follow `tools/openrouteservice/README.md` and add:
+
+```r
+ors_url = "http://localhost:8080/ors"
+```
+
+to `update_nz_catchment()`. A local URL skips the public API-key requirement.
