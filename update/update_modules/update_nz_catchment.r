@@ -214,6 +214,7 @@ update_nz_catchment <- function(
   batch_dir = file.path("app", "data", "NZ_CATCHMENT", "routing_batches"),
   progress_path = file.path("app", "data", "NZ_CATCHMENT", "routing_progress.rds"),
   route_airports = NULL,
+  ors_url = NULL,
   radius_km = 400,
   batch_size = 3000,
   simplify_metres = 100,
@@ -222,10 +223,28 @@ update_nz_catchment <- function(
   if (!requireNamespace("openrouteservice", quietly = TRUE)) {
     stop("Install 'openrouteservice' before refreshing NZ drive times.", call. = FALSE)
   }
-  if (!nzchar(Sys.getenv("ORS_API_KEY"))) {
-    stop("Set ORS_API_KEY in .Renviron before refreshing NZ drive times.", call. = FALSE)
+
+  use_local_ors <- !is.null(ors_url) && grepl(
+    "^https?://(localhost|127\\.0\\.0\\.1)(:|/|$)",
+    ors_url,
+    ignore.case = TRUE
+  )
+
+  if (!is.null(ors_url)) {
+    previous_ors_url <- getOption("openrouteservice.url")
+    options(openrouteservice.url = sub("/+$", "", ors_url))
+    on.exit(options(openrouteservice.url = previous_ors_url), add = TRUE)
   }
-  openrouteservice::ors_api_key(Sys.getenv("ORS_API_KEY"))
+
+  if (!use_local_ors && !nzchar(Sys.getenv("ORS_API_KEY"))) {
+    stop(
+      "Set ORS_API_KEY in .Renviron, or provide ors_url for a local ORS instance.",
+      call. = FALSE
+    )
+  }
+  if (!use_local_ors) {
+    openrouteservice::ors_api_key(Sys.getenv("ORS_API_KEY"))
+  }
 
   airports <- readr::read_csv(airports_path, show_col_types = FALSE) |>
     dplyr::mutate(
