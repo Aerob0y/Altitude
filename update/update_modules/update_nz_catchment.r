@@ -96,7 +96,7 @@ nz_catchment_cache_path <- file.path(
   airports,
   candidates,
   batch_dir,
-  batch_size = 45,
+  batch_size = 3000,
   pause_seconds = 1
 ) {
   dir.create(batch_dir, recursive = TRUE, showWarnings = FALSE)
@@ -111,9 +111,18 @@ nz_catchment_cache_path <- file.path(
   purrr::map_dfr(jobs, function(job) {
     airport_code <- job$airport[[1]]
     batch_number <- job$batch[[1]]
+    first_sa2 <- min(job$sa2_code)
+    last_sa2 <- max(job$sa2_code)
     batch_path <- file.path(
       batch_dir,
-      sprintf("%s_%03d.rds", airport_code, batch_number)
+      sprintf(
+        "%s_%03d_n%04d_%s_%s.rds",
+        airport_code,
+        batch_number,
+        nrow(job),
+        first_sa2,
+        last_sa2
+      )
     )
 
     if (file.exists(batch_path)) return(readRDS(batch_path))
@@ -133,6 +142,41 @@ nz_catchment_cache_path <- file.path(
     if (pause_seconds > 0) Sys.sleep(pause_seconds)
     result
   })
+}
+
+.nz_read_route_batches <- function(batch_dir) {
+  files <- list.files(
+    batch_dir,
+    pattern = "_n[0-9]{4}_.+\\.rds$",
+    full.names = TRUE
+  )
+
+  if (!length(files)) {
+    return(tibble::tibble(
+      sa2_code = character(),
+      airport = character(),
+      drive_minutes = double(),
+      drive_km = double(),
+      straight_line_km = double()
+    ))
+  }
+
+  purrr::map_dfr(files, readRDS) |>
+    dplyr::distinct(.data$sa2_code, .data$airport, .keep_all = TRUE)
+}
+
+.nz_complete_airports <- function(routes, required_routes) {
+  required_routes |>
+    dplyr::anti_join(
+      dplyr::select(routes, .data$sa2_code, .data$airport),
+      by = c("sa2_code", "airport")
+    ) |>
+    dplyr::count(.data$airport, name = "missing_routes") |>
+    dplyr::right_join(
+      dplyr::distinct(required_routes, .data$airport),
+      by = "airport"
+    ) |>
+    dplyr::mutate(missing_routes = dplyr::coalesce(.data$missing_routes, 0L))
 }
 
 .nz_add_competitors <- function(access, airports) {
@@ -168,8 +212,10 @@ update_nz_catchment <- function(
   airports_path = nz_catchment_airports_path,
   output_path = nz_catchment_cache_path,
   batch_dir = file.path("app", "data", "NZ_CATCHMENT", "routing_batches"),
+  progress_path = file.path("app", "data", "NZ_CATCHMENT", "routing_progress.rds"),
+  route_airports = NULL,
   radius_km = 400,
-  batch_size = 45,
+  batch_size = 3000,
   simplify_metres = 100,
   pause_seconds = 1
 ) {
@@ -249,14 +295,53 @@ update_nz_catchment <- function(
     dplyr::arrange(.data$sa2_code, is.na(.data$straight_line_km)) |>
     dplyr::distinct(.data$sa2_code, .data$airport, .keep_all = TRUE)
 
-  access <- .nz_route_candidates(
-    points = points,
-    airports = airports,
-    candidates = required_routes,
-    batch_dir = batch_dir,
-    batch_size = batch_size,
-    pause_seconds = pause_seconds
-  ) |>
+  if (is.null(route_airports)) route_airports <- airports$airport
+  unknown_airports <- setdiff(route_airports, airports$airport)
+  if (length(unknown_airports)) {
+    stop("Unknown airport(s): ", paste(unknown_airports, collapse = ", "), call. = FALSE)
+  }
+
+  routes_to_run <- required_routes |>
+    dplyr::filter(.data$airport %in% route_airports)
+
+  if (nrow(routes_to_run)) {
+    .nz_route_candidates(
+      points = points,
+      airports = airports,
+      candidates = routes_to_run,
+      batch_dir = batch_dir,
+      batch_size = batch_size,
+      pause_seconds = pause_seconds
+    )
+  }
+
+  saved_routes <- .nz_read_route_batches(batch_dir)
+  completion <- .nz_complete_airports(saved_routes, required_routes)
+  complete_airports <- completion$airport[completion$missing_routes == 0L]
+  major_codes <- airports$airport[airports$major_competitor]
+  missing_major_airports <- setdiff(major_codes, complete_airports)
+
+  progress <- list(
+    metadata = list(
+      updated_at = format(Sys.time(), tz = "UTC", usetz = TRUE),
+      radius_km = radius_km
+    ),
+    completion = completion,
+    routes = saved_routes
+  )
+  dir.create(dirname(progress_path), recursive = TRUE, showWarnings = FALSE)
+  saveRDS(progress, progress_path, compress = "gzip")
+
+  if (length(missing_major_airports)) {
+    message(
+      "Saved routing progress. Run the remaining major airport(s): ",
+      paste(missing_major_airports, collapse = ", ")
+    )
+    return(invisible(progress))
+  }
+
+  access <- saved_routes |>
+    dplyr::filter(.data$airport %in% complete_airports) |>
     dplyr::left_join(
       eligible_pairs |>
         dplyr::transmute(
@@ -297,6 +382,11 @@ update_nz_catchment <- function(
 
   dir.create(dirname(output_path), recursive = TRUE, showWarnings = FALSE)
   saveRDS(cache, output_path, compress = "gzip")
-  message("Wrote NZ airport catchment cache: ", normalizePath(output_path, winslash = "/", mustWork = FALSE))
+  message(
+    "Wrote NZ airport catchment cache for: ",
+    paste(sort(unique(access$airport[access$eligible_within_radius])), collapse = ", "),
+    "\n",
+    normalizePath(output_path, winslash = "/", mustWork = FALSE)
+  )
   invisible(cache)
 }
