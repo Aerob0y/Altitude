@@ -1,0 +1,20 @@
+services:
+  ors-app:
+    image: openrouteservice/openrouteservice:v9.10.0
+    container_name: altitude-ors-nz
+    ports:
+      - "8080:8082"
+    volumes:
+      - ./ors-docker:/home/ors
+    environment:
+      REBUILD_GRAPHS: "False"
+      CONTAINER_LOG_LEVEL: INFO
+      XMS: 2g
+      XMX: 6g
+      "ors.engine.profile_default.build.source_file": /home/ors/files/new-zealand-latest.osm.pbf
+      "ors.engine.profile_default.graph_path": /home/ors/graphs
+      "ors.engine.profile_default.build.elevation": "false"
+      "ors.engine.profiles.driving-car.enabled": "true"
+      "ors.endpoints.matrix.maximum_routes": "10000"
+      "logging.level.org.heigit": INFO
+    restart: unless-stopped
