@@ -96,7 +96,7 @@ nz_catchment_cache_path <- file.path(
   airports,
   candidates,
   batch_dir,
-  batch_size = 45,
+  batch_size = 3000,
   pause_seconds = 1
 ) {
   dir.create(batch_dir, recursive = TRUE, showWarnings = FALSE)
@@ -111,9 +111,18 @@ nz_catchment_cache_path <- file.path(
   purrr::map_dfr(jobs, function(job) {
     airport_code <- job$airport[[1]]
     batch_number <- job$batch[[1]]
+    first_sa2 <- min(job$sa2_code)
+    last_sa2 <- max(job$sa2_code)
     batch_path <- file.path(
       batch_dir,
-      sprintf("%s_%03d.rds", airport_code, batch_number)
+      sprintf(
+        "%s_%03d_n%04d_%s_%s.rds",
+        airport_code,
+        batch_number,
+        nrow(job),
+        first_sa2,
+        last_sa2
+      )
     )
 
     if (file.exists(batch_path)) return(readRDS(batch_path))
@@ -169,7 +178,7 @@ update_nz_catchment <- function(
   output_path = nz_catchment_cache_path,
   batch_dir = file.path("app", "data", "NZ_CATCHMENT", "routing_batches"),
   radius_km = 400,
-  batch_size = 45,
+  batch_size = 3000,
   simplify_metres = 100,
   pause_seconds = 1
 ) {
