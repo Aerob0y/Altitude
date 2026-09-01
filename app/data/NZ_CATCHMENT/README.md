@@ -34,5 +34,11 @@ Completed routing batches are retained in
 batches only when the SA2 routing points, airport coordinates or routing method
 change.
 
+The default batch size is 3,000 origins with one airport destination. This stays
+below OpenRouteService's limit of 3,500 origin-destination pairs while normally
+requiring only one matrix request per airport. Batch filenames include their
+row count and SA2 range, preventing a partial batch created with an older batch
+size from being treated as a complete replacement.
+
 The app requires `leaflet`. Install `leaflet.extras2` as well to show the map's
 PNG download control.
