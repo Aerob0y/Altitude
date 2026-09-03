@@ -148,25 +148,39 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
       shiny::req(enabled())
       shiny::validate(shiny::need(!is.null(.nz_catchment_cache$data), cache_message()))
       cache <- .nz_catchment_cache$data
+      map_sa2 <- cache$sa2 |>
+        dplyr::mutate(
+          map_population_density = dplyr::if_else(
+            is.finite(.data$population_density) & .data$population_density >= 0,
+            .data$population_density,
+            NA_real_
+          )
+        )
+      density_values <- log1p(map_sa2$map_population_density)
+      finite_density_values <- density_values[is.finite(density_values)]
+      shiny::validate(shiny::need(
+        length(finite_density_values) > 0L,
+        "The catchment cache contains no finite population-density values. Rebuild the cache and restart the app."
+      ))
       density_palette <- leaflet::colorNumeric(
         palette = "YlGnBu",
-        domain = log1p(cache$sa2$population_density),
+        domain = finite_density_values,
         na.color = "#E5E7E9"
       )
 
-      map <- leaflet::leaflet(cache$sa2, options = leaflet::leafletOptions(preferCanvas = TRUE)) |>
+      map <- leaflet::leaflet(map_sa2, options = leaflet::leafletOptions(preferCanvas = TRUE)) |>
         leaflet::addProviderTiles(leaflet::providers$CartoDB.Positron, group = "Base map") |>
         leaflet::addPolygons(
           group = "Population density",
           stroke = FALSE,
-          fillColor = ~density_palette(log1p(population_density)),
+          fillColor = ~density_palette(log1p(map_population_density)),
           fillOpacity = 0.62,
           smoothFactor = 0.5
         ) |>
         leaflet::addLegend(
           position = "bottomright",
           pal = density_palette,
-          values = log1p(cache$sa2$population_density),
+          values = finite_density_values,
           title = "Population density<br>(log scale)",
           group = "Population density"
         ) |>
@@ -316,4 +330,3 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
     )
   })
 }
-
