@@ -6,6 +6,86 @@ nz_catchment_cache_path <- getOption(
   file.path("app", "data", "NZ_CATCHMENT", "nz_airport_catchment.rds")
 )
 
+.nz_add_straight_line_fallback <- function(cache, fallback_speed_kmh = 60) {
+  access <- cache$access
+  missing_drive_time <- !is.finite(access$drive_minutes)
+
+  if (any(missing_drive_time)) {
+    points <- suppressWarnings(
+      sf::st_point_on_surface(sf::st_transform(cache$sa2, 2193))
+    )
+    airports <- cache$airports |>
+      sf::st_as_sf(
+        coords = c("longitude", "latitude"),
+        crs = 4326,
+        remove = FALSE
+      ) |>
+      sf::st_transform(2193)
+    distances <- sf::st_distance(points, airports)
+
+    distance_lookup <- tibble::tibble(
+      sa2_code = rep(points$sa2_code, each = nrow(airports)),
+      airport = rep(airports$airport, times = nrow(points)),
+      fallback_straight_line_km = as.numeric(t(distances)) / 1000
+    )
+
+    access <- access |>
+      dplyr::left_join(distance_lookup, by = c("sa2_code", "airport")) |>
+      dplyr::mutate(
+        straight_line_km = dplyr::coalesce(
+          .data$straight_line_km,
+          .data$fallback_straight_line_km
+        )
+      ) |>
+      dplyr::select(-.data$fallback_straight_line_km)
+  }
+
+  access <- access |>
+    dplyr::mutate(
+      travel_method = dplyr::if_else(
+        is.finite(.data$drive_minutes),
+        "Road route",
+        paste0("Straight-line estimate at ", fallback_speed_kmh, " km/h")
+      ),
+      travel_minutes = dplyr::if_else(
+        is.finite(.data$drive_minutes),
+        .data$drive_minutes,
+        .data$straight_line_km / fallback_speed_kmh * 60
+      ),
+      travel_km = dplyr::if_else(
+        is.finite(.data$drive_km),
+        .data$drive_km,
+        .data$straight_line_km
+      )
+    )
+
+  major_codes <- cache$airports$airport[cache$airports$major_competitor]
+  competitors <- access |>
+    dplyr::filter(
+      .data$airport %in% major_codes,
+      is.finite(.data$travel_minutes)
+    ) |>
+    dplyr::select(
+      .data$sa2_code,
+      competitor_airport = .data$airport,
+      competitor_minutes = .data$travel_minutes,
+      competitor_method = .data$travel_method
+    )
+
+  access |>
+    dplyr::select(-dplyr::any_of(c(
+      "competitor_airport", "competitor_minutes", "advantage_minutes"
+    ))) |>
+    dplyr::left_join(competitors, by = "sa2_code", relationship = "many-to-many") |>
+    dplyr::filter(.data$airport != .data$competitor_airport) |>
+    dplyr::group_by(.data$sa2_code, .data$airport) |>
+    dplyr::slice_min(.data$competitor_minutes, n = 1, with_ties = FALSE) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(
+      advantage_minutes = .data$competitor_minutes - .data$travel_minutes
+    )
+}
+
 .nz_catchment_cache <- local({
   result <- list(data = NULL, error = NULL)
   tryCatch({
@@ -15,6 +95,7 @@ nz_catchment_cache_path <- getOption(
       missing <- setdiff(required, names(cache))
       if (length(missing)) stop("Cache is missing: ", paste(missing, collapse = ", "))
       if (!inherits(cache$sa2, "sf")) stop("Cache $sa2 object is not an sf layer.")
+      cache$access <- .nz_add_straight_line_fallback(cache)
       result$data <- cache
     }
   }, error = function(e) result$error <- conditionMessage(e))
@@ -22,16 +103,20 @@ nz_catchment_cache_path <- getOption(
 })
 
 .nz_default_airport <- local({
-  airports <- .nz_catchment_cache$data$airports
+  cache <- .nz_catchment_cache$data
+  airports <- cache$airports
   if (is.null(airports)) return("ZQN")
-  selectable <- airports$airport[airports$selectable]
+  selectable <- intersect(
+    airports$airport[airports$selectable],
+    unique(cache$access$airport)
+  )
   if ("ZQN" %in% selectable) "ZQN" else selectable[[1]]
 })
 
 if (exists("module_notes", inherits = TRUE)) {
   module_notes$nz_catchment <- list(
     "New Zealand airport catchments",
-    "2025 SA2 population and cached OpenRouteService drive times",
+    "SA2 population and cached OpenRouteService drive times",
     paste(
       "Select an airport and the minimum time advantage it must have over",
       "the nearest other major airport. Routing is limited to populated SA2s",
@@ -49,7 +134,10 @@ mod_nz_catchment_ui <- function(id) {
     c("Queenstown Airport" = "ZQN")
   } else {
     selectable_airports <- airports |>
-      dplyr::filter(.data$selectable) |>
+      dplyr::filter(
+        .data$selectable,
+        .data$airport %in% unique(cache$access$airport)
+      ) |>
       dplyr::arrange(.data$airport_name)
     stats::setNames(
       selectable_airports$airport,
@@ -67,7 +155,7 @@ mod_nz_catchment_ui <- function(id) {
         shiny::selectInput(ns("airport"), "Airport", choices, selected = .nz_default_airport),
         shiny::sliderInput(
           ns("threshold"),
-          "Minimum drive-time advantage",
+          "Required time saving versus nearest major airport",
           min = 0,
           max = 180,
           value = 0,
@@ -78,7 +166,11 @@ mod_nz_catchment_ui <- function(id) {
         shiny::checkboxInput(ns("show_density"), "Show population-density heatmap", TRUE),
         #shiny::actionButton(ns("zoom"), "Zoom to selected airport", icon = bsicons::bs_icon("geo-alt")),
         shiny::helpText(
-          "At zero, the selected airport must be at least as quick to reach as the nearest other major airport."
+          paste(
+            "An SA2 is included when the selected airport is at least this many minutes",
+            "quicker than its nearest other major airport. At zero, it only needs to be",
+            "the quickest or tied. Missing road routes use a straight-line estimate at 60 km/h."
+          )
         ),
         shiny::tags$hr(),
         shiny::uiOutput(ns("summary")),
@@ -136,10 +228,12 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
             "<strong>", .data$sa2_name, "</strong><br>",
             "Population: ", scales::comma(.data$population_2025), "<br>",
             "Density: ", scales::comma(.data$population_density, accuracy = 0.1), " people/km²<br>",
-            input$airport, " drive time: ", round(.data$drive_minutes), " min<br>",
+            input$airport, " travel time: ", round(.data$travel_minutes), " min<br>",
+            "Method: ", .data$travel_method, "<br>",
             "Nearest major alternative: ", .data$competitor_airport, " (",
             round(.data$competitor_minutes), " min)<br>",
-            "Advantage: ", round(.data$advantage_minutes), " min"
+            "Alternative method: ", .data$competitor_method, "<br>",
+            "Time saving: ", round(.data$advantage_minutes), " min"
           )
         )
     })
@@ -169,7 +263,7 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
       )
 
       map <- leaflet::leaflet(map_sa2, options = leaflet::leafletOptions(preferCanvas = TRUE)) |>
-        leaflet::addProviderTiles(leaflet::providers$CartoDB.Positron, group = "Base map") |>
+        leaflet::addTiles(group = "Base map") |>
         leaflet::addPolygons(
           group = "Population density",
           stroke = FALSE,
@@ -199,7 +293,8 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
         leaflet::addLayersControl(
           overlayGroups = c("Population density", "Catchment", "Airports"),
           options = leaflet::layersControlOptions(collapsed = FALSE)
-        )
+        ) |>
+        leaflet::setView(lng = 172.5, lat = -41.2, zoom = 5)
 
       if (requireNamespace("leaflet.extras2", quietly = TRUE)) {
         map <- leaflet.extras2::addEasyprint(
@@ -233,7 +328,7 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
             opacity = 0.95,
             fillColor = "#F4C86A",
             fillOpacity = 0.34,
-            label = ~htmltools::HTML(popup),
+            label = lapply(highlighted$popup, htmltools::HTML),
             highlightOptions = leaflet::highlightOptions(weight = 3, bringToFront = TRUE)
           )
       }
@@ -276,14 +371,17 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
     waterfall_data <- shiny::reactive({
       data <- selected_data() |>
         sf::st_drop_geometry() |>
-        dplyr::filter(.data$included, is.finite(.data$drive_minutes)) |>
-        dplyr::mutate(band_end = pmax(30, ceiling(.data$drive_minutes / 30) * 30)) |>
+        dplyr::filter(.data$included, is.finite(.data$travel_minutes)) |>
+        dplyr::mutate(band_end = pmax(30, ceiling(.data$travel_minutes / 30) * 30)) |>
         dplyr::group_by(.data$band_end) |>
         dplyr::summarise(population = sum(.data$population_2025, na.rm = TRUE), .groups = "drop")
       if (!nrow(data)) return(data)
       data |>
         tidyr::complete(band_end = seq(30, max(.data$band_end), by = 30), fill = list(population = 0)) |>
-        dplyr::mutate(band_label = paste0(.data$band_end - 30, "–", .data$band_end, " min"))
+        dplyr::arrange(.data$band_end) |>
+        dplyr::mutate(
+          band_label = paste0(.data$band_end - 30, "–", .data$band_end, " min")
+        )
     })
 
     output$waterfall <- plotly::renderPlotly({
@@ -303,7 +401,11 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
       ) |>
         plotly::layout(
           title = list(text = "Catchment population by drive time"),
-          xaxis = list(title = ""),
+          xaxis = list(
+            title = "",
+            categoryorder = "array",
+            categoryarray = c(data$band_label, "Total")
+          ),
           yaxis = list(title = "Estimated residents", tickformat = ",d"),
           showlegend = FALSE,
           margin = list(b = 110)
@@ -323,7 +425,10 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
           dplyr::select(
             .data$sa2_code, .data$sa2_name, .data$population_2025,
             .data$population_density, .data$area_sq_km, .data$drive_minutes,
-            .data$competitor_airport, .data$competitor_minutes, .data$advantage_minutes
+            .data$drive_km, .data$straight_line_km, .data$travel_minutes,
+            .data$travel_km, .data$travel_method, .data$competitor_airport,
+            .data$competitor_minutes, .data$competitor_method,
+            .data$advantage_minutes
           ) |>
           readr::write_csv(file)
       }
