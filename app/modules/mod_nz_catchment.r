@@ -76,7 +76,7 @@ mod_nz_catchment_ui <- function(id) {
           width = "100%"
         ),
         shiny::checkboxInput(ns("show_density"), "Show population-density heatmap", TRUE),
-        shiny::actionButton(ns("zoom"), "Zoom to selected airport", icon = bsicons::bs_icon("geo-alt")),
+        #shiny::actionButton(ns("zoom"), "Zoom to selected airport", icon = bsicons::bs_icon("geo-alt")),
         shiny::helpText(
           "At zero, the selected airport must be at least as quick to reach as the nearest other major airport."
         ),
@@ -316,3 +316,4 @@ mod_nz_catchment_server <- function(id, selected_tab, activate_on) {
     )
   })
 }
+

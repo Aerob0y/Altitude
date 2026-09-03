@@ -19,6 +19,9 @@ suppressPackageStartupMessages({
   library(fs)
   library(svglite)
   library(httr2)
+  library(leaflet)
+  library(leaflet.extras2)
+  library(openrouteservice)
 })
 
 add_log("app/utils/core/dependencies.r", "libraries_loaded")
