@@ -31,5 +31,5 @@ update_nz_catchment(
 
   area_column = "LAND_AREA_",
   radius_km = 400,
-  route_airports = "IVC"
+  route_airports = "DUD"
 )

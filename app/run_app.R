@@ -12,5 +12,3 @@ source("app/ui.r")
 # Function to run the app
 run_app <- function() {shiny::shinyApp(ui, server, options = list(port = 5555))}
 run_app()
-
-exists("mod_hm1_server_update")
