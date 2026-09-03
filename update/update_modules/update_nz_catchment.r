@@ -268,11 +268,15 @@ update_nz_catchment <- function(
   polygons <- polygons |>
     dplyr::mutate(
       area_sq_km = dplyr::if_else(
-        is.na(.data$source_area_sq_km),
-        calculated_area_sq_km,
-        .data$source_area_sq_km
+        is.finite(.data$source_area_sq_km) & .data$source_area_sq_km > 0,
+        .data$source_area_sq_km,
+        calculated_area_sq_km
       ),
-      population_density = .data$population_2025 / .data$area_sq_km
+      population_density = dplyr::if_else(
+        is.finite(.data$area_sq_km) & .data$area_sq_km > 0,
+        .data$population_2025 / .data$area_sq_km,
+        NA_real_
+      )
     )
 
   points <- .nz_representative_points(polygons) |>
