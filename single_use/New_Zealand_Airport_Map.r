@@ -3,7 +3,7 @@ library(sf)
 library(readr)
 library(dplyr)
 # Load SA2 shapefile and population data
-sa2_path <- "C:/Users/MichaelHawley/OneDrive - CSV Limited/03_Data/Mapping/NZ/2025/statsnz-statistical-area-2-2025-SHP/statistical-area-2-2025.shp"
+sa2_path <- "C:/Users/MichaelHawley/OneDrive - CSV Limited/03_Data/Mapping/NZ/2018/statsnz-statistical-area-2-2018-generalised-SHP/statistical-area-2-2018-generalised.shp"
 sa2 <- st_read(sa2_path)
 population_path <- "C:/Users/MichaelHawley/OneDrive - CSV Limited/03_Data/Mapping/NZ/2025/Statistical area 2 population projections, by age and sex, 2018(base)-2048 (update) - 2023.csv"
 population <- read_csv(population_path)
@@ -23,8 +23,8 @@ update_nz_catchment(
   sa2 = sa2_path,
   population = population_path,
 
-  sa2_code_column = "SA22025_V1",
-  sa2_name_column = "SA22025__2",
+  sa2_code_column = "SA22018_V1",
+  sa2_name_column = "SA22018__1",
 
   population_code_column = "AREA_POPPR_SUB_007",
   population_column = "OBS_VALUE",
